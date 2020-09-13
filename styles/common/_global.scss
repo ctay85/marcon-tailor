@@ -6,7 +6,7 @@
 html,body{
 	font-size:$font-size-base;
 	line-height:$line-height-base;
-	font-family:$font-sans-serif;
+	font-family:$font-serif;
 	font-weight:$font-weight-base;
 	color:$color-body;
 	box-sizing: border-box;
@@ -116,5 +116,11 @@ img{
 	}
 	&--wide{
 		max-width:$max-width-wide;
+	}
+}
+
+.bg{
+	&--dark-blue{
+		background:$brand-blue-dark;
 	}
 }

@@ -1,4 +1,38 @@
 
 .global__footer{
+  padding:5rem 2rem;
+  display: flex;
+  justify-content: space-between;
 
+  &[data-slug="/"]{
+    background:$brand-blue-dark;
+    color:white;
+
+    a{
+      color:white;
+    }
+  }
+
+  a{
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .left{
+    flex:0 0 70%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .right{
+    flex:0 0 20%;
+    text-align:right;
+  }
+
+  .text-link{
+    font-weight:800;
+    font-size:1.5rem;
+    line-height:1em;
+  }
 }

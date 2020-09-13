@@ -1,7 +1,7 @@
 
 module.exports = {
   env : {
-    PROJECT_NAME : 'React Seed TS',
+    PROJECT_NAME : 'The Tailor',
     GTM_ID : '',
 
     CONTENTFUL_SPACE_ID : '',

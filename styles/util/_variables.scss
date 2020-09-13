@@ -4,13 +4,14 @@ $max-width-narrow:800px;
 $max-width-reg:1200px;
 $max-width-wide:1400px;
 $font-size-base:14px;
-$font-weight-base:400;
+$font-weight-base:normal;
 $line-height-base:2rem;
 $input-height:50px;
 $button-height:50px;
 
 // Fonts
-$font-sans-serif: sans-serif;
+$font-serif: 'Americana BT', serif;
+$font-sans-serif: 'Gotham', sans-serif;
 
 // Google Material Grey's
 $color-grey-50: #FAFAFA;
@@ -26,6 +27,10 @@ $color-grey-900: #212121;
 
 // Brand Colors
 $color-body: $color-grey-900;
+$brand-indigo:#01516B;
+$brand-dusk:#AABCCE;
+$brand-blue-dark:#041C2A;
+
 
 // Breakpoints
 $screen-xs-min: 'only screen and (min-width:480px)';  /* Extra small screen / phone */

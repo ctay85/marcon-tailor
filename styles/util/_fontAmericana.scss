@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Americana BT';
+    src: url('/fonts/americana/AmericanaBT-ExtraBold.woff2') format('woff2'),
+        url('/fonts/americana/AmericanaBT-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Americana BT';
+    src: url('/fonts/americana/AmericanaBT-Roman.woff2') format('woff2'),
+        url('/fonts/americana/AmericanaBT-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Americana BT';
+    src: url('/fonts/americana/AmericanaBT-Bold.woff2') format('woff2'),
+        url('/fonts/americana/AmericanaBT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Americana BT';
+    src: url('/fonts/americana/AmericanaBT-Italic.woff2') format('woff2'),
+        url('/fonts/americana/AmericanaBT-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

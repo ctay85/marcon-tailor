@@ -1,15 +1,52 @@
 .btn{
 	text-decoration: none;
 	outline:0;
-	display: inline-block;
+	user-select: none;
+	cursor:pointer;
 	color:$color-body;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size:0.7rem;
-	user-select: none;
-	outline:0;
-	cursor:pointer;
-	font-weight:500;
+	line-height:1em;
+	display: inline-block;
+	height:$button-height;
+	text-align:center;
+	font-family: $font-sans-serif;
+
+	&--line-hover{
+		position: relative;
+
+		&:hover{
+			&:after{
+				height:50%;
+			}
+		}
+
+		&:after{
+			content:'';
+			position: absolute;
+			bottom:0;
+			left:-2%;
+			width:105%;
+			height:0;
+			background:rgba(white,0.1);
+			display: block;
+			transition:height .5s cubic-bezier(.02,.66,.24,.91);
+			transform: translate3d(0,0,0);
+		}
+	}
+
+	&--text{
+		font-family:$font-serif;
+		text-transform: none;
+		font-size:1.75rem;
+		line-height:1.5em;
+		height:auto;
+
+		&.btn--white{
+			color:white;
+		}
+	}
 
 	&--outline,
 	&--solid{
@@ -27,6 +64,10 @@
 	&--solid{
 		background:$color-body;
 		color:white;
+
+		&.btn--dusk{
+			background:$brand-dusk;
+		}
 	}
 
 }
