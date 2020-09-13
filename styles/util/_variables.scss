@@ -1,0 +1,34 @@
+
+/// Misc Vars
+$max-width-narrow:800px;
+$max-width-reg:1200px;
+$max-width-wide:1400px;
+$font-size-base:14px;
+$font-weight-base:400;
+$line-height-base:2rem;
+$input-height:50px;
+$button-height:50px;
+
+// Fonts
+$font-sans-serif: sans-serif;
+
+// Google Material Grey's
+$color-grey-50: #FAFAFA;
+$color-grey-100: #F5F5F5;
+$color-grey-200: #EEEEEE;
+$color-grey-300: #E0E0E0;
+$color-grey-400: #BDBDBD;
+$color-grey-500: #9E9E9E;
+$color-grey-600: #757575;
+$color-grey-700: #616161;
+$color-grey-800: #424242;
+$color-grey-900: #212121;
+
+// Brand Colors
+$color-body: $color-grey-900;
+
+// Breakpoints
+$screen-xs-min: 'only screen and (min-width:480px)';  /* Extra small screen / phone */
+$screen-sm-min: 'only screen and (min-width:768px)';  /* Small screen / tablet */
+$screen-md-min: 'only screen and (min-width:992px)';  /* Medium screen / desktop */
+$screen-lg-min: 'only screen and (min-width:1400px)'; /* Large screen / wide desktop */

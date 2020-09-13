@@ -1,0 +1,21 @@
+
+input,
+button,
+select,
+textarea,
+label{
+  font-family:$font-sans-serif;
+  color:$color-body;
+  user-select: none;
+}
+
+input{
+  &[type="text"],
+  &[type="email"],
+  &[type="phone"]{
+    width:100%;
+    height:$input-height;
+    padding:0 1rem;
+    border:solid 1px $color-grey-400;
+  }
+}

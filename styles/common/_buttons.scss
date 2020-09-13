@@ -1,0 +1,32 @@
+.btn{
+	text-decoration: none;
+	outline:0;
+	display: inline-block;
+	color:$color-body;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size:0.7rem;
+	user-select: none;
+	outline:0;
+	cursor:pointer;
+	font-weight:500;
+
+	&--outline,
+	&--solid{
+		padding:0 4rem;
+		height:$button-height;
+		line-height:calc(#{$button-height} - 2px);
+	}
+
+	&--outline{
+		border:solid 2px $color-body;
+		color:$color-body;
+		background:transparent;
+	}
+
+	&--solid{
+		background:$color-body;
+		color:white;
+	}
+
+}

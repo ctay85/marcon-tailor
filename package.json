@@ -1,0 +1,34 @@
+{
+  "name": "ReactSeedTs",
+  "version": "0.6.0",
+  "dependencies": {
+    "framer-motion": "^2.6.13",
+    "next": "^9.5.3",
+    "normalize.css": "^8.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-inlinesvg": "^2.1.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.26.10"
+  },
+  "scripts": {
+    "clean": "rm -rf .next",
+    "start": "npm run clean && next dev",
+    "build": "npm run clean && next build",
+    "prod": "npm run build && next start -p 3100",
+    "rb:dev": "ssh -t USER@HOST \"cd /var/www/PROJECT_DIR/ && npm run build && npm run rs:dev\"",
+    "rs:dev": "pm2 restart PROJECTNAME_dev",
+    "dp:dev": "git push dev master && npm run rb:dev",
+    "rb:prod": "ssh -t USER@HOST \"cd /var/www/PROJECT_DIR/ && npm run build && npm run rs:prod\"",
+    "rs:prod": "pm2 restart PROJECTNAME",
+    "dp:prod": "git push prod master && npm run rb:prod"
+  },
+  "devDependencies": {
+    "@types/node": "^14.10.1",
+    "@types/react": "^16.9.49",
+    "@types/react-redux": "^7.1.9",
+    "typescript": "^4.0.2"
+  }
+}
