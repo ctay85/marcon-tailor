@@ -1,0 +1,147 @@
+
+.page__design{
+  padding:10rem 0 0 0;
+
+
+
+
+
+
+  &__architecture{
+    padding:10rem 0 0 0;
+
+    .gallery-grid{
+      .row-1,
+      .row-2{
+        display: grid;
+        grid-gap:2rem;
+      }
+
+      .row-1{
+        grid-template-columns:2fr 1fr;
+        margin:0 0 2rem 0;
+
+        figure{
+          &:last-child{
+            img{
+              &:nth-child(1),
+              &:nth-child(2){
+                margin-bottom:2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .row-2{
+        grid-template-columns:1fr 2fr;
+      }
+
+      figure{
+        position: relative;
+
+        .bg-image{
+          background-position: top right;
+        }
+      }
+
+      img{
+        width:100%;
+        height:auto;
+        display: block;
+        margin:0;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+  &__windveil{
+    padding:10rem 0 0 0;
+  }
+
+
+
+
+
+
+
+
+
+  &__interiors{
+    padding:10rem 0 0 0;
+
+    .gallery{
+      nav{
+        margin:0 0 4rem 0;
+
+        button{
+          font-family: $font-sans-serif;
+          font-size:1rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin:0 4rem 0 0;
+
+          &[data-active="true"] {
+            &:after{
+              height:50%;
+            }
+          }
+        }
+      }
+
+      .grid{
+        display: none;
+
+        &[data-active="true"]{
+          display: block;
+        }
+
+        &.two-beds{
+          .row-1{
+            grid-template-columns:2fr 1fr;
+            margin:0 0 2rem 0;
+          }
+
+          .row-2{
+            grid-template-columns:1.5fr 1.5fr 1fr;
+          }
+        }
+
+        &.one-beds{
+          .row-1{
+            grid-template-columns:1fr 2fr;
+            margin:0 0 2rem 0;
+          }
+
+          .row-2{
+            grid-template-columns:1fr 1fr .93fr;
+          }
+        }
+
+        .row-1,
+        .row-2{
+          display: grid;
+          grid-gap:2rem;
+        }
+
+        figure{
+          position: relative;
+        }
+
+        img{
+          width:100%;
+          height:auto;
+          display: block;
+          margin:0;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
 	letter-spacing: 3px;
 	font-size:0.7rem;
 	line-height:1em;
+	font-weight:500;
 	display: inline-block;
 	height:$button-height;
 	text-align:center;
@@ -29,7 +30,7 @@
 			left:-2%;
 			width:105%;
 			height:0;
-			background:rgba(white,0.1);
+			background:rgba($brand-dusk,0.3);
 			display: block;
 			transition:height .5s cubic-bezier(.02,.66,.24,.91);
 			transform: translate3d(0,0,0);
@@ -67,6 +68,7 @@
 
 		&.btn--dusk{
 			background:$brand-dusk;
+			color:white;
 		}
 	}
 

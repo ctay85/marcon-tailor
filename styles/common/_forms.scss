@@ -10,6 +10,56 @@ label{
   outline:0;
 }
 
+form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+  &[data-reversed="true"]{
+    input{
+      &[type="text"],
+      &[type="email"],
+      &[type="phone"]{
+        border-color:white;
+        color:white;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active  {
+        -webkit-box-shadow: 0 0 0 $input-height $brand-blue-dark inset !important;
+        -webkit-text-fill-color:white !important;
+        caret-color: white;
+      }
+    }
+    select{
+      border-color:white;
+      color:white;
+    }
+    .btn__register{
+      background:white;
+      color:$brand-blue-dark;
+    }
+  }
+
+  .half{
+    flex:0 0 48%;
+  }
+
+  .btn__register{
+    height:70px;
+    display: inline-block;
+    background:$brand-blue-dark;
+    color:white;
+    padding:0 5rem;
+    font-family: $font-serif;
+    font-size:1.75rem;
+    line-height:1em;
+    margin:2rem auto 4rem auto;
+  }
+}
+
 input{
   &[type="text"],
   &[type="email"],
@@ -18,9 +68,18 @@ input{
     height:$input-height;
     padding:1.5rem 0 0 0;
     background:transparent;
-    border:solid white;
+    border:solid $color-body;
     border-width:0 0 1px 0;
-    color:white;
+    color:$color-body;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color:$color-body !important;
+    caret-color: $color-body;
   }
 }
 
@@ -28,25 +87,15 @@ select{
   width:100%;
   height:$input-height;
   background:transparent;
-  border:solid white;
+  border:solid $color-body;
   border-width:0 0 1px 0;
-  color:white;
+  color:$color-body;
   font-size:1.2rem;
 }
 
 label{
   font-size:1.2rem;
   line-height:1em;
-}
-
-form{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-
-  .half{
-    flex:0 0 48%;
-  }
 }
 
 .input-group{

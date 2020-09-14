@@ -9,12 +9,40 @@
   display: flex;
   justify-content:center;
 
+
+
+
+  // Homepage
+  &[data-slug="/"] {
+    a{
+      color:white;
+    }
+
+    .btn__logo{
+      svg{
+        path{
+          fill:white;
+        }
+      }
+    }
+
+    .btn__register{
+      background:$brand-dusk;
+    }
+  }
+
+
+
+
+
   .left{
     flex:0 1 50%;
   }
+
   .center{
     flex:0 0 auto;
   }
+
   .right{
     flex:0 1 50%;
     text-align:right;
@@ -22,7 +50,7 @@
 
   a{
     text-decoration: none;
-    color:white;
+    color:$brand-indigo-dark;
   }
 
   nav{
@@ -43,14 +71,23 @@
   }
 
   .btn__logo{
-    background-image:url('/img/common/Logo-Tailor-01-White-188x30.svg');
-    background-size:100% auto;
-    background-repeat:no-repeat;
-    background-position: top left;
     display: block;
-    width:190px;
+    width:auto;
     height:30px;
-    text-indent:-9999px;
-    overflow:hidden;
+
+    svg{
+      width:100%;
+      height:100%;
+
+      path{
+        fill:$brand-indigo-dark;
+      }
+    }
   }
+
+  .btn__register{
+    background:$brand-indigo-dark;
+    color:white;
+  }
+
 }

@@ -1,11 +1,11 @@
 
 // Component
-const Register = () => (
-  <section className="page__index__register bg--dark-blue">
+const Register = ({ reversed = false }) => (
+  <section className="global__register" id="register">
     <div className="wrap--narrow">
       <h2>Register for more details.</h2>
 
-      <form>
+      <form data-reversed={ reversed }>
         <div className="input-group half">
           <input type="text" name="firstName" required autoComplete="off" />
           <label>First Name*</label>
@@ -32,8 +32,8 @@ const Register = () => (
         </div>
 
         <div className="select-group">
-          <select>
-            <option selected disabled>What Type of home are you looking for?*</option>
+          <select defaultValue="label">
+            <option value="label" disabled>What Type of home are you looking for?*</option>
             <option>Studio</option>
             <option>One Bedroom</option>
             <option>Two Bedroom</option>
@@ -42,8 +42,8 @@ const Register = () => (
         </div>
 
         <div className="select-group">
-          <select>
-            <option selected disabled>How did you hear about us?*</option>
+          <select defaultValue="label">
+            <option value="label" disabled>How did you hear about us?*</option>
             <option>Lorem ipsum</option>
             <option>Lorem ipsum</option>
             <option>Lorem ipsum</option>

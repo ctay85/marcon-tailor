@@ -1,9 +1,7 @@
 
-// Dependencies
-import { Seo } from 'components/common'
-
 // Components
-import { Cover, Gallery, Register } from 'components/index'
+import { Seo, Register } from 'components/common'
+import { Cover, Gallery } from 'components/index'
 
 // Component
 const Index = () => (
@@ -11,7 +9,7 @@ const Index = () => (
 		<Seo />
 		<Cover />
 		<Gallery />
-		<Register />
+		<Register reversed={ true } />
 	</main>
 )
 

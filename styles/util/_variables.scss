@@ -26,11 +26,11 @@ $color-grey-800: #424242;
 $color-grey-900: #212121;
 
 // Brand Colors
-$color-body: $color-grey-900;
 $brand-indigo:#01516B;
+$brand-indigo-dark:#00506A;
 $brand-dusk:#AABCCE;
 $brand-blue-dark:#041C2A;
-
+$color-body: $brand-indigo-dark;
 
 // Breakpoints
 $screen-xs-min: 'only screen and (min-width:480px)';  /* Extra small screen / phone */

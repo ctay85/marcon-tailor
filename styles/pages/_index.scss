@@ -46,30 +46,9 @@
 
   &__gallery{
     color:white;
-    padding:10rem 0;
+    padding:10rem 0 0 0;
     width:100%;
     overflow:hidden;
-
-    .masthead{
-      display: flex;
-      margin-bottom:10rem;
-
-      h2{
-        flex:0 0 100%;
-
-        @media #{$screen-sm-min} {
-          max-width:400px;
-        }
-      }
-      aside{
-        flex:0 0 100%;
-        margin:0 0 0 auto;
-
-        @media #{$screen-sm-min} {
-          max-width:600px;
-        }
-      }
-    }
 
     .swiper-container{
       width:100%;
@@ -110,10 +89,9 @@
 
 
 
-  &__register{
+  .global__register{
     color:white;
-    padding:0 0 10rem 0;
-    color:white;
+    background:$brand-blue-dark;
 
     h2{
       text-align: center;
