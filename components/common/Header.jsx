@@ -7,18 +7,21 @@ import SVG from 'react-inlinesvg'
 // Component
 const Header = () => {
   const router = useRouter()
-  console.log(router);
 
   return (
     <header className="global__header" data-slug={ router.pathname }>
       <div className="left">
-        <nav>
-          <ul>
-            <li><Link href="/design/#architecture"><a className="btn btn--line-hover">Architecture</a></Link></li>
-            <li><Link href="/design/#wind-veil"><a className="btn btn--line-hover">Wind Veil</a></Link></li>
-            <li><Link href="/design/#interiors"><a className="btn btn--line-hover">Interiors</a></Link></li>
-          </ul>
-        </nav>
+        {
+          router.pathname === '/design' && (
+            <nav>
+              <ul>
+                <li><Link href="/design/#architecture"><a className="btn btn--line-hover">Architecture</a></Link></li>
+                <li><Link href="/design/#wind-veil"><a className="btn btn--line-hover">Wind Veil</a></Link></li>
+                <li><Link href="/design/#interiors"><a className="btn btn--line-hover">Interiors</a></Link></li>
+              </ul>
+            </nav>
+          )
+        }
       </div>
 
       <div className="center">

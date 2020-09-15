@@ -56,7 +56,7 @@ const Register = ({ reversed = false }) => (
 
           <div className="inputs">
             <input type="radio" name="isRealtor[]" id="isRealtorYes" /> <label htmlFor="isRealtorYes">Yes</label>
-            <input type="radio" name="isRealtor[]" id="isRealtorNo" checked /> <label htmlFor="isRealtorNo">No</label>
+            <input type="radio" name="isRealtor[]" id="isRealtorNo" defaultChecked /> <label htmlFor="isRealtorNo">No</label>
           </div>
         </div>
 
@@ -65,7 +65,7 @@ const Register = ({ reversed = false }) => (
 
           <div className="inputs">
             <input type="radio" name="futureOptIn[]" id="futureOptInYes" /> <label htmlFor="futureOptInYes">Yes</label>
-            <input type="radio" name="futureOptIn[]" id="futureOptInNo" checked /> <label htmlFor="futureOptInNo">No</label>
+            <input type="radio" name="futureOptIn[]" id="futureOptInNo" defaultChecked /> <label htmlFor="futureOptInNo">No</label>
           </div>
         </div>
 

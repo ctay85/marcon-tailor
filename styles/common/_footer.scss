@@ -5,6 +5,8 @@
   align-items: center;
   background:$brand-indigo-dark;
   color:white;
+  position: relative;
+  z-index:1; // to be above the homepage animation
 
   &[data-slug="/"]{
     background:$brand-blue-dark;
