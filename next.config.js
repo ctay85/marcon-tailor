@@ -1,7 +1,7 @@
 
 module.exports = {
   env : {
-    PROJECT_NAME : 'The Tailor',
+    PROJECT_NAME : 'Tailor',
     GTM_ID : '',
 
     CONTENTFUL_SPACE_ID : '',

@@ -22,7 +22,7 @@ const Index = () => {
 	//
 	return (
 		<main className="page__index">
-			<Seo />
+			<Seo title="Made For Brentwood" />
 			<Intro />
 			<Cover />
 			<Gallery />
