@@ -89,10 +89,20 @@
       transform: translate3d(-50%,-10vh,0);
       overflow:hidden;
 
+      video{
+        position: absolute;
+        top:50%;
+        left:50%;
+        width:auto;
+        height:100%;
+        transform: translate3d(-50%,-50%,0);
+      }
+
       .bg-image{
         opacity:0;
         z-index:0;
         transition:opacity .4s ease;
+        background-position: bottom center;
 
         &[data-active="true"]{
           opacity:1;

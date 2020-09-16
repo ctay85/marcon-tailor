@@ -14,7 +14,13 @@ html,body{
 }
 
 html {
+	&.no-scroll{
+		overflow:hidden;
 
+		body{
+			overflow:hidden;
+		}
+	}
 }
 
 body {
@@ -157,4 +163,12 @@ img{
 			margin-top:2rem;
 		}
 	}
+}
+
+[data-reveal="hidden"] {
+	opacity:0;
+}
+[data-reveal="show"] {
+	opacity:1;
+	transition:opacity .5s ease;
 }

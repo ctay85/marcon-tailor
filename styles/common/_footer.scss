@@ -5,6 +5,7 @@
   color:white;
   position: relative;
   z-index:1; // to be above the homepage animation
+  transition:background 1s ease;
 
   @media #{$screen-sm-min} {
     padding:5rem 2rem;

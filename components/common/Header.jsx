@@ -3,13 +3,22 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import SVG from 'react-inlinesvg'
+import { useRef, useEffect, useState } from 'react'
 
 // Component
 const Header = () => {
+  const [ isVisible, setIsVisible ] = useState(false)
   const router = useRouter()
 
+  //
+  useEffect( () => {
+    setTimeout( () => setIsVisible(true), 500)
+    return () => setIsVisible(false)
+  }, [])
+
+  //
   return (
-    <header className="global__header" data-slug={ router.pathname }>
+    <header className="global__header" data-slug={ router.pathname } data-visible={ isVisible }>
       <div className="left">
         {
           router.pathname === '/design' && (
@@ -33,7 +42,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        <Link href="#register"><a className="btn btn__register">Register Today</a></Link>
+        <Link href="#register"><a className="btn__register">Register</a></Link>
       </div>
     </header>
   )

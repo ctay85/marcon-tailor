@@ -13,9 +13,9 @@ const Gallery = () => (
     <div className="wrap--reg">
 
       <div className="section-intro">
-        <h2>Tailor Made for Brentwood</h2>
+        <h2 data-reveal="hidden">Tailor Made for Brentwood</h2>
 
-        <aside>
+        <aside data-reveal="hidden">
           <p className="text--display">The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</p>
 
           <Link href="/design"><a className="btn btn--text btn--white btn--line-hover">Learn More</a></Link>
@@ -28,13 +28,13 @@ const Gallery = () => (
         speed={ 500 }
       >
         <SwiperSlide>
-          <img src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
+          <img src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_1920x1920.jpg" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_1920x1920.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_1920x1920.jpg" />
+          <img src="/img/index/B&TB_MARCON_TAILOR_ARTWORK_DAY_FINAL_NO_PEOPLE.jpg" />
         </SwiperSlide>
       </Swiper>
 

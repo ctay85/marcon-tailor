@@ -15,7 +15,7 @@ const Intro = () => {
   }
 
   //
-  useEffect( () => {
+  const setupLottieAnimation = () => {
     const anim = lottie.loadAnimation({
       container: bmContainer.current,
       renderer: 'svg',
@@ -25,6 +25,11 @@ const Intro = () => {
     })
 
     anim.addEventListener('complete', onComplete)
+  }
+
+  //
+  useEffect( () => {
+    setupLottieAnimation()
   }, [])
 
   //

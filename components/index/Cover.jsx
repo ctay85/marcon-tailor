@@ -63,12 +63,13 @@ const Cover = () => {
       })
       .to( motionContainer.current, {
         width : '100vw',
-        onComplete : () => console.log("finished"),
         onReverseComplete : () => setActiveImageIndex(1)
       })
 
     return () => {
       setActiveImageIndex(0)
+      globalElementsTimeline.kill()
+      imageTimeline.kill()
     }
   }, [])
 
@@ -85,19 +86,20 @@ const Cover = () => {
       <div ref={ motionContainer } className="motion-container">
         <div
           className="bg-image"
-          style={{ backgroundImage : `url(/img/index/cover/1_Tailor_Graphics_Girl_01_2400x1601.jpg)` }}
           data-active={ activeImageIndex === 0 }
-        ></div>
+        >
+          <video src="/vid/TailorGraphicsGirl1080x1080Loop.mp4" autoPlay muted playsInline loop></video>
+        </div>
 
         <div
           className="bg-image"
-          style={{ backgroundImage : `url(/img/index/cover/2_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_2400x2400.jpg)` }}
+          style={{ backgroundImage : `url(/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg)` }}
           data-active={ activeImageIndex === 1 }
         ></div>
 
         <div
           className="bg-image"
-          style={{ backgroundImage : `url(/img/index/cover/3_200619-152_2400x1599.jpg)` }}
+          style={{ backgroundImage : `url(/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg)` }}
           data-active={ activeImageIndex === 2 }
         ></div>
       </div>

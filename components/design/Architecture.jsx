@@ -44,6 +44,12 @@ const Overlay = ({ overlayState, closeOverlay }) => {
   }, [ overlayState.index ])
 
   //
+  useEffect( () => {
+    const method = overlayState.visible ? 'add' : 'remove'
+    document.documentElement.classList[method]('no-scroll')
+  }, [ overlayState.visible ])
+
+  //
   return (
     <div className="overlay" data-active={ overlayState.active } data-visible={ overlayState.visible }>
       <button onClick={ closeOverlay } className="btn__close"></button>
@@ -90,9 +96,9 @@ const Architecture = () => {
       <div className="wrap--reg">
 
         <div className="section-intro">
-          <h2>More Thought.</h2>
+          <h2 data-reveal="hidden">More Thought.</h2>
 
-          <aside>
+          <aside data-reveal="hidden">
             <p className="text--display">Designed by Shift Architecture, Tailor is a sleek, twenty-seven storey tower with a sculpted base.</p>
           </aside>
         </div>
@@ -100,20 +106,20 @@ const Architecture = () => {
         <div className="gallery-grid">
           <div className="row-1">
             <figure>
-              <div onClick={ () => openOverlay(0) } className="bg-image" style={{ backgroundImage : `url(${images[0].file})` }}></div>
+              <div data-reveal="hidden" onClick={ () => openOverlay(0) } className="bg-image" style={{ backgroundImage : `url(${images[0].file})` }}></div>
             </figure>
             <figure>
-              <img onClick={ () => openOverlay(1) } src={ images[1].file } />
-              <img onClick={ () => openOverlay(2) } src={ images[2].file } />
-              <img onClick={ () => openOverlay(3) } src={ images[3].file } />
+              <img data-reveal="hidden" onClick={ () => openOverlay(1) } src={ images[1].file } />
+              <img data-reveal="hidden" onClick={ () => openOverlay(2) } src={ images[2].file } />
+              <img data-reveal="hidden" onClick={ () => openOverlay(3) } src={ images[3].file } />
             </figure>
           </div>
           <div className="row-2">
             <figure>
-              <img onClick={ () => openOverlay(4) } src={ images[4].file } />
+              <img data-reveal="hidden" onClick={ () => openOverlay(4) } src={ images[4].file } />
             </figure>
             <figure>
-              <div onClick={ () => openOverlay(5) } className="bg-image" style={{ backgroundImage : `url(${images[5].file})` }}></div>
+              <div data-reveal="hidden" onClick={ () => openOverlay(5) } className="bg-image" style={{ backgroundImage : `url(${images[5].file})` }}></div>
             </figure>
           </div>
         </div>

@@ -22,6 +22,10 @@ const HeadComponent = () => (
          })(window,document,'script','dataLayer','${process.env.GTM_ID}');` }}></script>
        )
     }
+
+    <script src="//app.lassocrm.com/analytics.js" type="text/javascript"></script>
+    <script type="text/javascript" dangerouslySetInnerHTML={{ __html : `var LassoCRM = LassoCRM || {}; (function(ns){ ns.tracker = new LassoAnalytics('LAS-541914-15'); })(LassoCRM); try { LassoCRM.tracker.setTrackingDomain("//app.lassocrm.com"); LassoCRM.tracker.init(); LassoCRM.tracker.track(); LassoCRM.tracker.patchRegistrationForms(); } catch(error) {}` }}></script>
+
   </Head>
 )
 
