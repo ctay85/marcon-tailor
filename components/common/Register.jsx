@@ -61,8 +61,8 @@ const Register = ({ reversed = false }) => (
           <label className="title">Are you a realtor?</label>
 
           <div className="inputs">
-            <input type="radio" name="10736[49630]" id="isRealtorYes" /> <label htmlFor="isRealtorYes">Yes</label>
-            <input type="radio" name="10736[49631]" id="isRealtorNo" defaultChecked /> <label htmlFor="isRealtorNo">No</label>
+            <input type="radio" name="10736[]" value="49630" id="isRealtorYes" /> <label htmlFor="isRealtorYes">Yes</label>
+            <input type="radio" name="10736[]" value="49631" id="isRealtorNo" defaultChecked /> <label htmlFor="isRealtorNo">No</label>
           </div>
         </div>
 
@@ -70,8 +70,8 @@ const Register = ({ reversed = false }) => (
           <label className="title">I would like to receive future e-communications from Marcon and Rennie Marketing Systems.</label>
 
           <div className="inputs">
-            <input type="radio" name="59107[240201]" id="futureOptInYes" /> <label htmlFor="futureOptInYes">Yes</label>
-            <input type="radio" name="59107[999999]" id="futureOptInNo" defaultChecked /> <label htmlFor="futureOptInNo">No</label>
+            <input type="radio" name="59107[]" value="240201" id="futureOptInYes" /> <label htmlFor="futureOptInYes">Yes</label>
+            <input type="radio" name="59107[]" value="999999" id="futureOptInNo" defaultChecked /> <label htmlFor="futureOptInNo">No</label>
           </div>
         </div>
 
