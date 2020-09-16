@@ -51,6 +51,147 @@
         display: block;
         margin:0;
       }
+
+      .bg-image,
+      img{
+        cursor:pointer;
+        transition:opacity 1s ease;
+        transform: translate3d(0,0,0);
+
+        &:hover{
+          opacity:0.8;
+        }
+      }
+    }
+
+    .overlay{
+      position: fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100vh;
+      z-index:100;
+      background:white;
+      display: none;
+      opacity:0;
+      transition:opacity 1s ease;
+
+      &[data-active="true"] {
+        display: flex;
+      }
+      &[data-visible="true"] {
+        opacity:1;
+      }
+
+      .btn__close{
+        position: absolute;
+        top:2rem;
+        right:2rem;
+        //background:$color-grey-100;
+        width:25px;
+        height:25px;
+        z-index:2;
+
+        &:before,
+        &:after{
+          content:'';
+          display: block;
+          position: absolute;
+          left:0;
+          height:80%;
+          width:1px;
+          background:$color-body;
+        }
+        &:before{
+          top:0;
+          transform: translate3d(12.5px,2.5px,0) rotate(45deg);
+        }
+        &:after{
+          bottom:0;
+          transform: translate3d(12.5px,-2.5px,0) rotate(-45deg);
+        }
+      }
+
+      aside{
+        flex:0 0 30%;
+        padding:5rem 0 5rem 3rem;
+        display: flex;
+        flex-wrap:wrap;
+
+        .bottom{
+          align-self:flex-end;
+        }
+
+        .caption{
+          font-family:$font-sans-serif;
+          text-transform:uppercase;
+          letter-spacing: 2px;
+          font-size:0.8rem;
+          line-height:1em;
+          display: block;
+          margin:0 0 2rem 0;
+        }
+
+        .pagination{
+          display: flex;
+          align-items: center;
+
+          button{
+            width:25px;
+            height:35px;
+            display: block;
+            position: relative;
+
+            &.btn__next{
+              transform: rotate(180deg);
+            }
+
+            &:before,
+            &:after{
+              content:'';
+              display: block;
+              position: absolute;
+              left:0;
+              height:50%;
+              width:1px;
+              background:$color-body;
+            }
+            &:before{
+              top:0;
+              transform: translate3d(12.5px,2.5px,0) rotate(45deg);
+            }
+            &:after{
+              bottom:0;
+              transform: translate3d(12.5px,-2.5px,0) rotate(-45deg);
+            }
+          }
+          .count{
+            margin:0 1rem;
+          }
+        }
+      }
+
+      figure{
+        flex:0 0 70%;
+        position: relative;
+
+        img{
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate3d(-50%,-50%,0);
+          max-width:80%;
+          max-height:80%;
+          opacity:0;
+          z-index:0;
+          transition:opacity 1s ease;
+
+          &[data-active="true"]{
+            opacity:1;
+            z-index:1;
+          }
+        }
+      }
     }
   }
 
