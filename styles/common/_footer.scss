@@ -1,22 +1,32 @@
 
 .global__footer{
-  padding:5rem 2rem;
-  display: flex;
-  align-items: center;
+  padding:2.5rem 2rem;
   background:$brand-indigo-dark;
   color:white;
   position: relative;
   z-index:1; // to be above the homepage animation
+
+  @media #{$screen-sm-min} {
+    padding:5rem 2rem;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+  }
 
   &[data-slug="/"]{
     background:$brand-blue-dark;
   }
 
   a{
-    display: inline-block;
+    display: block;
     text-decoration: none;
-    margin:0 3vw 0 0;
+    margin:0 0 2rem 0;
     color:white;
+
+    @media #{$screen-sm-min} {
+      display: inline-block;
+      margin-right:3vw;
+    }
   }
 
   .text-link{

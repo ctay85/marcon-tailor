@@ -40,9 +40,13 @@
 	&--text{
 		font-family:$font-serif;
 		text-transform: none;
-		font-size:1.75rem;
+		font-size:1.25rem;
 		line-height:1.5em;
 		height:auto;
+
+		@media #{$screen-sm-min} {
+			font-size:1.75rem;
+		}
 
 		&.btn--white{
 			color:white;

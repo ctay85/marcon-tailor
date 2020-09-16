@@ -127,7 +127,12 @@ img{
 
 .section-intro{
 	display: flex;
-	margin-bottom:10rem;
+	flex-wrap:wrap;
+	margin-bottom:5rem;
+
+	@media #{$screen-sm-min} {
+		margin-bottom:10rem;
+	}
 
 	h2{
 		flex:0 0 100%;
@@ -142,6 +147,14 @@ img{
 
 		@media #{$screen-sm-min} {
 			max-width:600px;
+		}
+
+		p{
+			margin:0;
+		}
+
+		.btn{
+			margin-top:2rem;
 		}
 	}
 }

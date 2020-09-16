@@ -33,7 +33,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        <Link href="#register"><a className="btn btn__register btn--solid">Register Today</a></Link>
+        <Link href="#register"><a className="btn btn__register">Register Today</a></Link>
       </div>
     </header>
   )

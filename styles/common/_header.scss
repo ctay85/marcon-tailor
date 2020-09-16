@@ -5,11 +5,13 @@
   left:0;
   width:100%;
   z-index:100;
-  padding:4rem 2rem 0 2rem;
+  padding:1rem 5% 0 5%;
   display: flex;
   justify-content:center;
 
-
+  @media #{$screen-sm-min} {
+    padding:4rem 2rem 0 2rem;
+  }
 
 
   // Homepage
@@ -27,7 +29,7 @@
     }
 
     .btn__register{
-      background:$brand-dusk;
+      border-color:white;
     }
   }
 
@@ -37,15 +39,33 @@
 
   .left{
     flex:0 1 50%;
+    display: none;
+
+    @media #{$screen-sm-min} {
+      display: block;
+    }
   }
 
   .center{
     flex:0 0 auto;
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+
+    @media #{$screen-sm-min} {
+      align-items: flex-start;
+      margin:0;
+    }
   }
 
   .right{
     flex:0 1 50%;
-    text-align:right;
+    display: flex;
+    align-items: center;
+
+    @media #{$screen-sm-min} {
+      align-items: flex-start;
+    }
   }
 
   a{
@@ -73,10 +93,15 @@
   .btn__logo{
     display: block;
     width:auto;
-    height:30px;
+    height:15px;
+    line-height:1em;
+
+    @media #{$screen-sm-min} {
+      height:30px;
+    }
 
     svg{
-      width:100%;
+      width:auto;
       height:100%;
 
       path{
@@ -86,8 +111,22 @@
   }
 
   .btn__register{
-    background:$brand-indigo-dark;
-    color:white;
+    letter-spacing:1px;
+    margin:0 0 0 auto;
+    padding:0;
+    height:auto;
+    line-height:1.5rem;
+    border-bottom:solid 1px $color-body;
+
+    @media #{$screen-sm-min} {
+      border:none;
+      height:$button-height;
+  		line-height:calc(#{$button-height} - 2px);
+      letter-spacing: 3px;
+      padding:0 4rem;
+      background:$brand-indigo-dark;
+      color:white;
+    }
   }
 
 }

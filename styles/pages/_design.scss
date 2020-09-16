@@ -8,7 +8,9 @@
 
 
   &__architecture{
-    padding:10rem 0 0 0;
+    @media #{$screen-sm-min} {
+      padding:10rem 0 0 0;
+    }
 
     .gallery-grid{
       .row-1,
@@ -73,11 +75,19 @@
       z-index:100;
       background:white;
       display: none;
+      flex-wrap:wrap;
       opacity:0;
       transition:opacity 1s ease;
+      overflow-x:hidden;
+      overflow-y:scroll;
+      -webkit-overflow-scrolling:touch;
 
       &[data-active="true"] {
-        display: flex;
+        display: block;
+
+        @media #{$screen-sm-min} {
+          display: flex;
+        }
       }
       &[data-visible="true"] {
         opacity:1;
@@ -87,7 +97,6 @@
         position: absolute;
         top:2rem;
         right:2rem;
-        //background:$color-grey-100;
         width:25px;
         height:25px;
         z-index:2;
@@ -113,13 +122,20 @@
       }
 
       aside{
-        flex:0 0 30%;
-        padding:5rem 0 5rem 3rem;
+        padding:2rem;
         display: flex;
+        align-items: flex-start;
         flex-wrap:wrap;
 
+        @media #{$screen-sm-min} {
+          flex:0 0 30%;
+          padding:5rem 0 5rem 3rem;
+        }
+
         .bottom{
-          align-self:flex-end;
+          @media #{$screen-sm-min} {
+            align-self:flex-end;
+          }
         }
 
         .caption{
@@ -172,23 +188,40 @@
       }
 
       figure{
-        flex:0 0 70%;
         position: relative;
+        margin:0 2rem 2rem 2rem;
+
+        @media #{$screen-sm-min} {
+          margin:0;
+          flex:0 0 70%;
+        }
 
         img{
           position: absolute;
-          top:50%;
-          left:50%;
-          transform: translate3d(-50%,-50%,0);
-          max-width:80%;
-          max-height:80%;
+          top:0;
+          left:0;
+          max-width:100%;
+          max-height:100%;
           opacity:0;
           z-index:0;
           transition:opacity 1s ease;
 
+          @media #{$screen-sm-min} {
+            max-width:80%;
+            max-height:80%;
+            top:50%;
+            left:50%;
+            transform: translate3d(-50%,-50%,0);
+          }
+
           &[data-active="true"]{
             opacity:1;
             z-index:1;
+            position: relative;
+
+            @media #{$screen-sm-min} {
+              position: absolute;
+            }
           }
         }
       }
@@ -204,7 +237,11 @@
 
 
   &__windveil{
-    padding:10rem 0 0 0;
+    padding:5rem 0 0 0;
+
+    @media #{$screen-sm-min} {
+      padding:10rem 0 0 0;
+    }
   }
 
 
@@ -216,11 +253,19 @@
 
 
   &__interiors{
-    padding:10rem 0 0 0;
+    padding:5rem 0 0 0;
+
+    @media #{$screen-sm-min} {
+      padding:10rem 0 0 0;
+    }
 
     .gallery{
       nav{
-        margin:0 0 4rem 0;
+        margin:0 0 1rem 0;
+
+        @media #{$screen-sm-min} {
+          margin:0 0 4rem 0;
+        }
 
         button{
           font-family: $font-sans-serif;

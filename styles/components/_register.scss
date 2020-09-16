@@ -1,6 +1,10 @@
 
 .global__register{
-  padding:10rem 0 10rem 0;
+  padding:5rem 0;
+
+  @media #{$screen-sm-min} {
+    padding:10rem 0;
+  }
 
   h2{
     text-align: center;
