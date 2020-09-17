@@ -143,9 +143,10 @@ img{
 		grid-gap:10rem;
 	}
 
-	h2{
-
+	&.less-border{
+		margin-bottom:2.5rem;
 	}
+
 	aside{
 		p{
 			margin:0;

@@ -14,7 +14,7 @@ const Interiors = () => {
     <section className="page__design__interiors" id="interiors">
       <div className="wrap--reg">
 
-        <div className="section-intro">
+        <div className="section-intro less-border">
           <h2 data-reveal="hidden">More Home.</h2>
 
           <aside>
@@ -29,7 +29,7 @@ const Interiors = () => {
               data-active={ activeGallery === GALLERY_TWO_BEDS }
               onClick={ () => setActiveGallery(GALLERY_TWO_BEDS) }
             >
-              Two Bedroom Home
+              Two Bedroom
             </button>
 
             <button
@@ -37,7 +37,7 @@ const Interiors = () => {
               data-active={ activeGallery === GALLERY_ONE_BEDS }
               onClick={ () => setActiveGallery(GALLERY_ONE_BEDS) }
             >
-              One Bedroom Home
+              One Bedroom
             </button>
           </nav>
 
