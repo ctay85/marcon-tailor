@@ -1,32 +1,84 @@
 
 .global__footer{
-  padding:2.5rem 2rem;
+  padding:2rem;
   background:$brand-indigo-dark;
   color:white;
   position: relative;
   z-index:1; // to be above the homepage animation
   transition:background 1s ease;
+  display: flex;
+  flex-wrap:wrap;
 
   @media #{$screen-sm-min} {
-    padding:5rem 2rem;
-    display: flex;
-    flex-wrap:wrap;
-    align-items: center;
+    padding-top:4rem;
   }
 
   &[data-slug="/"]{
     background:$brand-blue-dark;
   }
 
-  a{
-    display: block;
-    text-decoration: none;
-    margin:0 0 2rem 0;
-    color:white;
+  &__top{
+    flex:0 0 100%;
+    margin-bottom:2rem;
 
     @media #{$screen-sm-min} {
-      display: inline-block;
-      margin-right:3vw;
+      margin-bottom:3rem;
+    }
+  }
+
+  &__bottom{
+    &--left{
+      flex:0 0 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @media #{$screen-sm-min} {
+        flex:0 0 calc(100% - 150px);
+        justify-content: flex-start;
+      }
+
+      a{
+        flex:0 0 45%;
+
+        @media #{$screen-sm-min} {
+          flex:0 0 auto;
+        }
+      }
+    }
+    &--right{
+      flex:0 0 150px;
+      display: none;
+
+      @media #{$screen-sm-min} {
+        display: block;
+      }
+    }
+  }
+
+  &__disclaimer{
+    margin:2rem 0 0 0;
+    font-family: $font-sans-serif;
+    color:$brand-dusk;
+
+    p{
+      margin:0;
+    }
+  }
+
+  a{
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+    margin:0 0 0 0;
+
+    @media #{$screen-sm-min} {
+      margin:0 3rem 0 0;
+    }
+
+    &:last-child{
+      @media #{$screen-sm-min} {
+        margin-right:0;
+      }
     }
   }
 
@@ -34,9 +86,26 @@
     font-weight:800;
     font-size:1.5rem;
     line-height:1em;
+    margin-bottom:1rem;
+
+    @media #{$screen-sm-min} {
+      margin-bottom:0;
+    }
+  }
+
+  .logo-link{
+    &:last-child{
+      margin-bottom:0;
+    }
+
+    svg{
+      width:100%;
+    }
   }
 
   .logo-building-for-life{
-    margin:0 0 0 auto;
+    width:100%;
+    height:auto;
+    display: block;
   }
 }

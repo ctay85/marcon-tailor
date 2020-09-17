@@ -1,6 +1,6 @@
 
 // Dependencies
-import { useRef, useLayoutEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 
 // Component
@@ -11,61 +11,48 @@ const Cover = () => {
   const [ activeImageIndex, setActiveImageIndex ] = useState(0)
 
   //
-  useLayoutEffect( () => {
+  useEffect( () => {
     const duration = window.innerHeight * 3
     const [ h1, h2 ] = header.current.children
-    const ScrollTrigger = require('gsap/ScrollTrigger')
+    const ScrollTrigger = require('gsap/ScrollTrigger').default
+    const scrollTriggerDefaults = { trigger : cover.current, start : 0, scrub : 1 }
+    const imageTLStep2 = { height : '100vh', y : 0, onComplete : () => setActiveImageIndex(2), onReverseComplete : () => setActiveImageIndex(0) }
+    const imageTlStep3 = { width : '100vw', onReverseComplete : () => setActiveImageIndex(1) }
 
     //
     gsap.registerPlugin(ScrollTrigger)
 
     //
-    const globalElementsTimeline = gsap.timeline({
-      scrollTrigger : {
-        trigger : cover.current,
-        start : 0,
-        end : () => `+=${window.innerHeight}`,
-        scrub : 1
+    ScrollTrigger.matchMedia({
+
+      // Portrait Screens
+      "(max-width:1023px)" : () => {
+        gsap.timeline({ scrollTrigger : { ...scrollTriggerDefaults, end : () => `+=${duration}` }})
+          .to( motionContainer.current, { width : '80vw', height : '70vh', onComplete : () => setActiveImageIndex(1) })
+          .to( motionContainer.current, imageTLStep2)
+          .to( motionContainer.current, imageTlStep3)
+      },
+
+      // Desktop screens
+      "(min-width:1024px)" : () => {
+        gsap.timeline({ scrollTrigger : { ...scrollTriggerDefaults, end : () => `+=${duration}` }})
+          .to( motionContainer.current, { width : '35vw', height : '80vh', onComplete : () => setActiveImageIndex(1) })
+          .to( motionContainer.current, imageTLStep2)
+          .to( motionContainer.current, imageTlStep3)
+      },
+
+      // Global
+      "all" : () => {
+        gsap.timeline({ scrollTrigger : { ...scrollTriggerDefaults, end : () => `+=${window.innerHeight}` }})
+          .to( h1, { y : '-50px', opacity : 0 }, 0 )
+          .to( h2, { y : '-60px', opacity : 0, duration : 1.1 }, 0 )
       }
+
     })
-
-    globalElementsTimeline
-      .to( h1, { y : '-50px', opacity : 0 }, 0 )
-      .to( h2, { y : '-60px', opacity : 0, duration : 1.1 }, 0 )
-
 
     //
-    const imageTimeline = gsap.timeline({
-      scrollTrigger : {
-        trigger : cover.current,
-        start : 0,
-        end : () => `+=${duration}`,
-        scrub : 1
-      }
-    })
+    ScrollTrigger.update()
 
-    imageTimeline
-      .to( motionContainer.current, {
-        width : '35vw',
-        height : '80vh',
-        onComplete : () => setActiveImageIndex(1)
-      })
-      .to( motionContainer.current, {
-        height : '100vh',
-        y : 0,
-        onComplete : () => setActiveImageIndex(2),
-        onReverseComplete : () => setActiveImageIndex(0)
-      })
-      .to( motionContainer.current, {
-        width : '100vw',
-        onReverseComplete : () => setActiveImageIndex(1)
-      })
-
-    return () => {
-      setActiveImageIndex(0)
-      globalElementsTimeline.seek(0).kill()
-      imageTimeline.seek(0).kill()
-    }
   }, [])
 
   //
@@ -74,8 +61,10 @@ const Cover = () => {
       <div className="bg-image background"></div>
 
       <header ref={ header }>
-        <h1>Celebrate More in Brentwood</h1>
-        <h2>170 homes starting $606,000</h2>
+        <div className="wrap--reg">
+          <h1>Celebrate More in Brentwood</h1>
+          <h2>One bedroom homes from Mid-$500,000</h2>
+        </div>
       </header>
 
       <div ref={ motionContainer } className="motion-container">
