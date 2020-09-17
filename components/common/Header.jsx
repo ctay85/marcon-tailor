@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import SVG from 'react-inlinesvg'
 import { useRef, useEffect, useState } from 'react'
+import gsap from 'gsap'
+
 
 // Component
 const Header = () => {
@@ -11,7 +13,13 @@ const Header = () => {
   const router = useRouter()
 
   //
+  const scrollTo = scrollTo => gsap.to( window, { duration : 1, scrollTo, ease : 'power2' })
+
+  //
   useEffect( () => {
+    const ScrollToPlugin = require('gsap/ScrollToPlugin')
+    gsap.registerPlugin(ScrollToPlugin);
+
     setTimeout( () => setIsVisible(true), 500)
     return () => setIsVisible(false)
   }, [])
@@ -24,9 +32,9 @@ const Header = () => {
           router.pathname === '/design' && (
             <nav>
               <ul>
-                <li><Link href="/design/#architecture"><a className="btn btn--line-hover">Architecture</a></Link></li>
-                <li><Link href="/design/#wind-veil"><a className="btn btn--line-hover">Wind Veil</a></Link></li>
-                <li><Link href="/design/#interiors"><a className="btn btn--line-hover">Interiors</a></Link></li>
+                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#architecture') }>Architecture</button></li>
+                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#wind-veil') }>Wind Veil</button></li>
+                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#interiors') }>Interiors</button></li>
               </ul>
             </nav>
           )
@@ -42,7 +50,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        <Link href="#register"><a className="btn__register">Register</a></Link>
+        { router.pathname !== '/thank-you' && <Link href="#register"><a className="btn__register">Register</a></Link> }
       </div>
     </header>
   )

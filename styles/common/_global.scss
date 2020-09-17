@@ -10,7 +10,6 @@ html,body{
 	font-weight:$font-weight-base;
 	color:$color-body;
 	box-sizing: border-box;
-	scroll-behavior: smooth;
 }
 
 html {
@@ -132,29 +131,22 @@ img{
 }
 
 .section-intro{
-	display: flex;
-	flex-wrap:wrap;
 	margin-bottom:5rem;
 
 	@media #{$screen-sm-min} {
 		margin-bottom:10rem;
 	}
 
-	h2{
-		flex:0 0 100%;
+	@media #{$screen-md-min} {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-gap:10rem;
+	}
 
-		@media #{$screen-sm-min} {
-			max-width:400px;
-		}
+	h2{
+
 	}
 	aside{
-		flex:0 0 100%;
-		margin:0 0 0 auto;
-
-		@media #{$screen-sm-min} {
-			max-width:600px;
-		}
-
 		p{
 			margin:0;
 		}

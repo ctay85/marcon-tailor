@@ -1,6 +1,6 @@
 
 // Dependencies
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap'
 
 // Component
@@ -11,24 +11,20 @@ const Cover = () => {
   const [ activeImageIndex, setActiveImageIndex ] = useState(0)
 
   //
-  useEffect( () => {
+  useLayoutEffect( () => {
+    const duration = window.innerHeight * 3
+    const [ h1, h2 ] = header.current.children
+    const ScrollTrigger = require('gsap/ScrollTrigger')
 
     //
-    const ScrollTrigger = require('gsap/ScrollTrigger')
     gsap.registerPlugin(ScrollTrigger)
 
     //
-    const duration = window.innerHeight * 3
-    const [ h1, h2 ] = header.current.children
-
-
-    //
     const globalElementsTimeline = gsap.timeline({
-      paused : true,
       scrollTrigger : {
         trigger : cover.current,
-        start : 'top top',
-        end : `+=${window.innerHeight}`,
+        start : 0,
+        end : () => `+=${window.innerHeight}`,
         scrub : 1
       }
     })
@@ -40,11 +36,10 @@ const Cover = () => {
 
     //
     const imageTimeline = gsap.timeline({
-      paused : true,
       scrollTrigger : {
         trigger : cover.current,
-        start : 'top top',
-        end : `+=${duration}`,
+        start : 0,
+        end : () => `+=${duration}`,
         scrub : 1
       }
     })
@@ -68,8 +63,8 @@ const Cover = () => {
 
     return () => {
       setActiveImageIndex(0)
-      globalElementsTimeline.kill()
-      imageTimeline.kill()
+      globalElementsTimeline.seek(0).kill()
+      imageTimeline.seek(0).kill()
     }
   }, [])
 

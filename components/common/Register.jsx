@@ -2,9 +2,11 @@
 // Component
 const Register = ({ reversed = false }) => (
   <section className="global__register" id="register">
-    <div className="wrap--narrow">
+    <div className="wrap--reg">
       <h2 data-reveal="hidden">Register for more details.</h2>
+    </div>
 
+    <div className="wrap--narrow">
       <form data-reveal="hidden" data-reversed={ reversed } method="post" action="https://app.lassocrm.com/registrant_signup/">
         <div className="input-group half">
           <input type="text" name="FirstName" required autoComplete="off" />

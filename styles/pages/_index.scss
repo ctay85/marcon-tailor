@@ -13,14 +13,14 @@
     width:100%;
     height:100vh;
     background:$brand-blue-dark;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     z-index:200;
     transition:opacity 1s ease;
 
-    &[data-visible="true"] {
-      display: flex;
+    &[data-visible="false"] {
+      display: none;
     }
     &[data-faded="true"] {
       opacity:0;
@@ -62,7 +62,11 @@
     }
 
     header{
-      margin:10rem 0 0 0;
+      margin:5rem 0 0 0;
+
+      @media #{$screen-sm-min} {
+        margin-top:10rem;
+      }
     }
     h1{
       text-align:center;
@@ -73,21 +77,29 @@
       font-family:$font-sans-serif;
       text-transform: uppercase;
       font-weight:100;
-      font-size:1.2rem;
+      font-size:1rem;
       line-height:1.5em;
       letter-spacing: 3px;
       color:$brand-dusk;
       margin:0 0 4rem 0;
+
+      @media #{$screen-sm-min} {
+        font-size:1.2rem;
+      }
     }
 
     .motion-container{
       position: absolute;
       bottom:0;
       left:50%;
-      width:30vw;
+      width:80vw;
       height:50vh;
       transform: translate3d(-50%,-10vh,0);
       overflow:hidden;
+
+      @media #{$screen-sm-min} {
+        width:30vw;
+      }
 
       video{
         position: absolute;

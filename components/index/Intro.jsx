@@ -9,13 +9,7 @@ const Intro = () => {
   const [ state, setState ] = useState({ visible : true, faded : false })
 
   //
-  const onComplete = () => {
-    setState({ visible : true, faded : true })
-    setTimeout( () => setState({ visible : false, faded : true }), 1000)
-  }
-
-  //
-  const setupLottieAnimation = () => {
+  useEffect( () => {
     const anim = lottie.loadAnimation({
       container: bmContainer.current,
       renderer: 'svg',
@@ -24,12 +18,15 @@ const Intro = () => {
       path : '/json/tailor-logo-v1.json'
     })
 
-    anim.addEventListener('complete', onComplete)
-  }
+    anim.addEventListener('complete', () => {
+      setTimeout( () => setState({ visible : true, faded : true }), 500)
+      setTimeout( () => setState({ visible : false, faded : true }), 1500)
+    })
 
-  //
-  useEffect( () => {
-    setupLottieAnimation()
+    return () => {
+      anim.destroy()
+      setState({ visible : true, faded : false })
+    }
   }, [])
 
   //
