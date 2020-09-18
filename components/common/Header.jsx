@@ -50,7 +50,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        { router.pathname !== '/thank-you' && <Link href="#register"><a className="btn__register">Register</a></Link> }
+        { router.pathname !== '/thank-you' && <button className="btn__register" onClick={ () => scrollTo('#register') }>Register</button> }
       </div>
     </header>
   )
