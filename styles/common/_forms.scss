@@ -52,15 +52,25 @@ form{
   }
 
   .btn__register{
-    height:70px;
-    display: inline-block;
+    // Old Styles
+    // height:70px;
+    // display: inline-block;
+    // background:$brand-blue-dark;
+    // color:white;
+    // padding:0 5rem;
+    // font-family: $font-serif;
+    // font-size:1.75rem;
+    // line-height:1em;
+    margin:2rem auto 2rem auto;
+    padding:0 4rem;
+    height:$button-height;
+    line-height:calc(#{$button-height} - 2px);
+    transition:background 1s ease;
+    font-family:$font-serif;
     background:$brand-blue-dark;
     color:white;
-    padding:0 5rem;
-    font-family: $font-serif;
-    font-size:1.75rem;
-    line-height:1em;
-    margin:2rem auto 4rem auto;
+    font-size:1.3rem;
+    letter-spacing: 2px;
   }
 }
 
@@ -103,6 +113,11 @@ label{
 
   @media #{$screen-lg-min} {
     font-size:1.2rem;
+  }
+
+  &.small-italic{
+    font-size:0.8rem;
+    font-style:italic;
   }
 }
 

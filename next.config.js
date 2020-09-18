@@ -8,8 +8,8 @@ module.exports = {
     GTM_ID : '',
     BASE_PATH : isProd ? basePath : '',
 
-    CONTENTFUL_SPACE_ID : '',
-    CONTENTFUL_TOKEN : ''
+    RECAPTCHA_SITE_KEY : '6LcI8c0ZAAAAAK77Jw_Nx5MsptdE-aLZAZtctyh4',
+    RECAPTCHA_SECRET : '6LcI8c0ZAAAAAPnGy3iOBqvptWdhvlWdK8uU0Onc'
   },
 
   basePath : isProd ? basePath : ''

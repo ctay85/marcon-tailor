@@ -87,6 +87,8 @@ const Cover = () => {
           data-active={ activeImageIndex === 2 }
         ></div>
       </div>
+
+      <div className="icon-scroll"></div>
     </section>
   )
 }

@@ -9,6 +9,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-inlinesvg": "^2.1.0",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
