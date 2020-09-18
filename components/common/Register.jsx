@@ -68,7 +68,7 @@ const Register = ({ reversed = false }) => {
           </div>
 
           <div className="select-group">
-            <select name="94569" defaultValue="label">
+            <select name="Questions[94569]" defaultValue="label">
               <option value="label" disabled>What Type of home are you looking for?*</option>
               <option value="281558">One Bedroom</option>
               <option value="281559">Two Bedroom</option>
@@ -76,7 +76,7 @@ const Register = ({ reversed = false }) => {
           </div>
 
           <div className="select-group">
-            <select name="59106" defaultValue="label">
+            <select name="Questions[59106]" defaultValue="label">
               <option value="label" disabled>How did you hear about us?*</option>
               <option value="240191">Friends & Family</option>
               <option value="240192">Realtor</option>
@@ -99,8 +99,8 @@ const Register = ({ reversed = false }) => {
             <label className="title">Are you a realtor?</label>
 
             <div className="inputs">
-              <input type="radio" name="10736[]" value="49630" id="isRealtorYes" /> <label htmlFor="isRealtorYes">Yes</label>
-              <input type="radio" name="10736[]" value="49631" id="isRealtorNo" defaultChecked /> <label htmlFor="isRealtorNo">No</label>
+              <input type="radio" name="Questions[10736]" value="49630" id="isRealtorYes" /> <label htmlFor="isRealtorYes">Yes</label>
+              <input type="radio" name="Questions[10736]" value="49631" id="isRealtorNo" defaultChecked /> <label htmlFor="isRealtorNo">No</label>
             </div>
           </div>
 
@@ -108,8 +108,8 @@ const Register = ({ reversed = false }) => {
             <label className="title small-italic">I would like to receive future e-communications from Marcon and Rennie Marketing Systems.</label>
 
             <div className="inputs">
-              <input type="radio" name="59107[]" value="240201" id="futureOptInYes" defaultChecked /> <label htmlFor="futureOptInYes">Yes</label>
-              <input type="radio" name="59107[]" value="999999" id="futureOptInNo" /> <label htmlFor="futureOptInNo">No</label>
+              <input type="radio" name="Questions[59107]" value="240201" id="futureOptInYes" defaultChecked /> <label htmlFor="futureOptInYes">Yes</label>
+              <input type="radio" name="Questions[59107]" value="999999" id="futureOptInNo" /> <label htmlFor="futureOptInNo">No</label>
             </div>
           </div>
 
