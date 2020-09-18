@@ -44,7 +44,7 @@ const Header = () => {
       <div className="center">
         <Link href="/">
           <a className="btn__logo">
-            <SVG src="/img/common/Logo-Tailor-01-White-188x30.svg" />
+            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Tailor-01-White-188x30.svg` } />
           </a>
         </Link>
       </div>

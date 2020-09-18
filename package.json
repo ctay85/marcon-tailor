@@ -17,7 +17,7 @@
     "swiper": "^6.2.0"
   },
   "scripts": {
-    "export": "next build && next export",
+    "export": "rm -rf out && next build && next export",
     "clean": "rm -rf .next",
     "start": "npm run clean && next dev",
     "build": "next build",

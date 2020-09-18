@@ -44,21 +44,21 @@ const Interiors = () => {
           <div className="grid two-beds" data-active={ activeGallery === GALLERY_TWO_BEDS }>
             <div className="row-1">
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/Tailor-2-bedroom-living-5000x3626.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/Tailor-2-bedroom-living-5000x3626.jpg)` }}></div>
               </div>
               <div className="grid__item">
-                <img src="/img/design/interiors/Tailor-2-bedroom-bath-2400x3572.jpg" />
+                <img src={ `${process.env.BASE_PATH}/img/design/interiors/Tailor-2-bedroom-bath-2400x3572.jpg` } />
               </div>
             </div>
             <div className="row-2">
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/Tailor-2-bedroom-living-kitchen-1920x1279.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/Tailor-2-bedroom-living-kitchen-1920x1279.jpg)` }}></div>
               </div>
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/Tailor-2-bedroom-bedroom-5000x3626.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/Tailor-2-bedroom-bedroom-5000x3626.jpg)` }}></div>
               </div>
               <div className="grid__item">
-                <img src="/img/design/interiors/Tailor-2-bedroom-living-02-2400x2476.jpg" />
+                <img src={ `${process.env.BASE_PATH}/img/design/interiors/Tailor-2-bedroom-living-02-2400x2476.jpg` } />
               </div>
             </div>
           </div>
@@ -66,21 +66,21 @@ const Interiors = () => {
           <div className="grid one-beds"  data-active={ activeGallery === GALLERY_ONE_BEDS }>
             <div className="row-1">
               <div className="grid__item">
-                <img src="/img/design/interiors/Tailor-1-bedroom-bath-2400x3295.jpg" />
+                <img src={ `${process.env.BASE_PATH}/img/design/interiors/Tailor-1-bedroom-bath-2400x3295.jpg` } />
               </div>
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/3_200619-152_2400x1599.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/3_200619-152_2400x1599.jpg)` }}></div>
               </div>
             </div>
             <div className="row-2">
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/Tailor-1-bedroom-kitchen-2400x1586.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/Tailor-1-bedroom-kitchen-2400x1586.jpg)` }}></div>
               </div>
               <div className="grid__item">
-                <div className="bg-image" style={{ backgroundImage : `url(/img/design/interiors/Tailor-1-bedroom-bedroom-2400x1617.jpg)` }}></div>
+                <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/design/interiors/Tailor-1-bedroom-bedroom-2400x1617.jpg)` }}></div>
               </div>
               <div className="grid__item">
-                <img src="/img/design/interiors/Tailor-1-bedroom-kitchen-02-2400x2917.jpg" />
+                <img src={ `${process.env.BASE_PATH}/img/design/interiors/Tailor-1-bedroom-kitchen-02-2400x2917.jpg` } />
               </div>
             </div>
           </div>

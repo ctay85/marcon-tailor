@@ -11,16 +11,16 @@ const Footer = () => {
     <footer className="global__footer" data-slug={ router.pathname }>
       <div className="global__footer__top">
         <a href="tel:6042991001" className="text-link" target="_blank">604.299.1001</a>
-        <a href="mailto:Sales@TailorbyMarcon.ca" className="text-link" target="_blank">Sales@TailorbyMarcon.ca</a>
+        <a href="mailto:sales@tailorbymarcon.ca" className="text-link" target="_blank">sales@tailorbymarcon.ca</a>
       </div>
 
       <div className="global__footer__bottom--left">
-        <a href="http://marcon.ca/en/" className="logo-link" target="_blank"><SVG src="/img/common/Logo-Marcon-01-231x34.svg" /></a>
-        <a href="https://rennie.com/" className="logo-link" target="_blank"><SVG src="/img/common/Logo-Marketing-by-rennie-113x37.svg" /></a>
+        <a href="http://marcon.ca/en/" className="logo-link" target="_blank"><SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Marcon-01-231x34.svg` } /></a>
+        <a href="https://rennie.com/" className="logo-link" target="_blank"><SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Marketing-by-rennie-113x37.svg` } /></a>
       </div>
 
       <div className="global__footer__bottom--right">
-        <SVG className="logo-building-for-life" src="/img/common/Buildingforlife.svg" />
+        <SVG className="logo-building-for-life" src={ `${process.env.BASE_PATH}/img/common/Buildingforlife.svg` } />
       </div>
 
       <div className="global__footer__disclaimer">

@@ -13,7 +13,7 @@ const WindVeil = () => (
       </div>
 
       <figure>
-        <img data-reveal="hidden" src="/img/design/wind-veil/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_2400x2400.jpg" />
+        <img data-reveal="hidden" src={ `${process.env.BASE_PATH}/img/design/wind-veil/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_2400x2400.jpg` } />
       </figure>
 
     </div>

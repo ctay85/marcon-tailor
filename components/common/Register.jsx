@@ -81,12 +81,14 @@ const Register = ({ reversed = false }) => (
 
         <p className="disclaimer"><small>By clicking the SUBMIT button, you consent to: (1) Rennie Marketing and Marcon and their current and future affiliates and partners sending you emails with promotional messages such as newsletters, announcements, press releases and event invitations regarding their products and services; (2) receiving calls on behalf of Rennie Marketing to discuss products and services; and (3) the collection, use and disclosure of the personal information you have provided, by or on behalf of the members of the Rennie Marketing, for the above purposes, in accordance with Rennie Marketing’s Privacy Policy. You may withdraw your consent at any time.</small></p>
 
-        <input type="hidden" name="domainAccountId" value="LAS-541914-15" />
-        <input type="hidden" name="guid" value="" />
-        <input type="hidden" name="LassoUID" value="HPsHyMvsqf" />
-        <input type="hidden" name="ClientID" value="374" />
-        <input type="hidden" name="ProjectID" value="10032" />
-        <input type="hidden" name="SignupThankyouLink" value="http://128.199.3.106:3100/thank-you" />
+        {/*
+          <input type="hidden" name="domainAccountId" value="LAS-541914-15" />
+          <input type="hidden" name="guid" value="" />
+          <input type="hidden" name="LassoUID" value="HPsHyMvsqf" />
+          <input type="hidden" name="ClientID" value="374" />
+          <input type="hidden" name="ProjectID" value="10032" />
+          <input type="hidden" name="SignupThankyouLink" value="http://128.199.3.106:3100/thank-you" />
+        */}
       </form>
     </div>
   </section>

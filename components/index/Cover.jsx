@@ -58,7 +58,7 @@ const Cover = () => {
   //
   return (
     <section className="page__index__cover" ref={ cover }>
-      <div className="bg-image background"></div>
+      <div className="bg-image background" style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/index/index-cover-bg.jpg)` }}></div>
 
       <header ref={ header }>
         <div className="wrap--reg">
@@ -72,18 +72,18 @@ const Cover = () => {
           className="bg-image"
           data-active={ activeImageIndex === 0 }
         >
-          <video src="/vid/TailorGraphicsGirl1080x1080Loop.mp4" autoPlay muted playsInline loop></video>
+          <video src={ `${process.env.BASE_PATH}/vid/TailorGraphicsGirl1080x1080Loop.mp4` } autoPlay muted playsInline loop></video>
         </div>
 
         <div
           className="bg-image"
-          style={{ backgroundImage : `url(/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg)` }}
+          style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg)` }}
           data-active={ activeImageIndex === 1 }
         ></div>
 
         <div
           className="bg-image"
-          style={{ backgroundImage : `url(/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg)` }}
+          style={{ backgroundImage : `url(${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg)` }}
           data-active={ activeImageIndex === 2 }
         ></div>
       </div>

@@ -4,12 +4,12 @@ import { useState, useRef, useEffect } from 'react'
 
 //
 const images = [
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg', caption : 'Lorem ipsum dolor' },
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg', caption : 'Lorem ipsum dolor' },
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_2400x2400.jpg', caption : 'Lorem ipsum dolor' },
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_2400x2400.jpg', caption : 'Lorem ipsum dolor' },
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_OUTDOOR_AMENITY_FINAL_2400x2400.jpg', caption : 'Lorem ipsum dolor' },
-  { file : '/img/design/architecture/B&TB_MARCON_TAILOR_STREET_VIEW_FINAL_2400x1357.jpg', caption : 'Lorem ipsum dolor' }
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg`, caption : 'Lorem ipsum dolor' },
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg`, caption : 'Lorem ipsum dolor' },
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_2400x2400.jpg`, caption : 'Lorem ipsum dolor' },
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_2400x2400.jpg`, caption : 'Lorem ipsum dolor' },
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_OUTDOOR_AMENITY_FINAL_2400x2400.jpg`, caption : 'Lorem ipsum dolor' },
+  { file : `${process.env.BASE_PATH}/img/design/architecture/B&TB_MARCON_TAILOR_STREET_VIEW_FINAL_2400x1357.jpg`, caption : 'Lorem ipsum dolor' }
 ]
 
 //

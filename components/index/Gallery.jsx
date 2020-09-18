@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import SwiperCore, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useRouter } from 'next/router'
 
 //
 SwiperCore.use([ Pagination ])
@@ -28,13 +29,13 @@ const Gallery = () => (
         speed={ 500 }
       >
         <SwiperSlide>
-          <img src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_1920x1920.jpg" />
+          <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_1920x1920.jpg` } />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_1920x1920.jpg" />
+          <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_1920x1920.jpg` } />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/img/index/B&TB_MARCON_TAILOR_ARTWORK_DAY_FINAL_NO_PEOPLE.jpg" />
+          <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_ARTWORK_DAY_FINAL_NO_PEOPLE.jpg` } />
         </SwiperSlide>
       </Swiper>
 
