@@ -16,7 +16,8 @@
 	&--line-hover{
 		position: relative;
 
-		&:hover{
+		&:hover,
+		&.hover{
 			&:after{
 				height:50%;
 			}

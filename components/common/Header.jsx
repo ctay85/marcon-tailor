@@ -6,6 +6,8 @@ import SVG from 'react-inlinesvg'
 import { useRef, useEffect, useState } from 'react'
 import gsap from 'gsap'
 
+//
+let lastSt = 10
 
 // Component
 const Header = () => {
@@ -20,9 +22,24 @@ const Header = () => {
     const ScrollToPlugin = require('gsap/ScrollToPlugin')
     gsap.registerPlugin(ScrollToPlugin);
 
-    setTimeout( () => setIsVisible(true), 500)
+    setTimeout( () => setIsVisible(true), 1000)
     return () => setIsVisible(false)
   }, [])
+
+  //
+  useEffect( () => {
+    const onScroll = () => {
+      const dir = window.pageYOffset > lastSt ? 'down' : 'up'
+
+      if ( dir === 'down' && isVisible ) setIsVisible(false)
+      if ( dir === 'up' && !isVisible ) setIsVisible(true)
+
+      lastSt = window.pageYOffset
+    }
+
+    window.addEventListener( 'scroll', onScroll )
+    return () => window.removeEventListener( 'scroll', onScroll )
+  }, [ isVisible ])
 
   //
   return (

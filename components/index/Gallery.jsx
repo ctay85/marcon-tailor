@@ -19,7 +19,7 @@ const Gallery = () => (
         <aside data-reveal="hidden">
           <p className="text--display">The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</p>
 
-          <Link href="/design"><a className="btn btn--text btn--white btn--line-hover">Learn More</a></Link>
+          <Link href="/design"><a className="btn btn--text btn--white btn--line-hover hover">Learn More</a></Link>
         </aside>
       </div>
 

@@ -41,7 +41,7 @@ const Register = ({ reversed = false }) => {
       </div>
 
       <div className="wrap--narrow">
-        <form data-reveal="hidden" data-reversed={ reversed } ref={ form } method="post">
+        <form data-reveal="hidden" data-reversed={ reversed } ref={ form } method="post" validate="true">
           <div className="input-group half">
             <input type="text" name="FirstName" required autoComplete="off" />
             <label>First Name*</label>
