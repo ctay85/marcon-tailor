@@ -126,6 +126,15 @@ label{
   margin:0 0 2rem 0;
   flex:0 0 100%;
 
+  &.error{
+    input{
+      border-color:red;
+    }
+    label{
+      color:red;
+    }
+  }
+
   input{
     &:focus,
     &:valid{
@@ -146,6 +155,13 @@ label{
 .select-group{
   flex:0 0 100%;
   margin:0 0 2rem 0;
+
+  &.error{
+    select{
+      border-color:red;
+      color:red;
+    }
+  }
 }
 
 .radio-group{

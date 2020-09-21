@@ -9,20 +9,65 @@ const Register = ({ reversed = false }) => {
   const form = useRef(null)
 
   //
-  const onChange = () => {
+  const onChange = () => null
 
+  //
+  const validateFormFields = () => {
+    let formIsValid = true
+    const textInputs = [...form.current.querySelectorAll('input[type="text"], input[type="phone"]')]
+    const emailInput = form.current.querySelector('input[type="email"]')
+    const selectInputs = [...form.current.querySelectorAll('select')]
+
+    //
+    textInputs.forEach( input => {
+      if ( input.value.length === 0 ) {
+        input.parentNode.classList.add('error')
+        formIsValid = false
+      } else {
+        input.parentNode.classList.remove('error')
+      }
+    })
+
+    //
+    if ( emailInput.value.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/g) === null ) {
+      emailInput.parentNode.classList.add('error')
+      formIsValid = false
+    } else {
+      emailInput.parentNode.classList.remove('error')
+    }
+
+    //
+    selectInputs.forEach( select => {
+      if ( select.selectedIndex === 0 ) {
+        select.parentNode.classList.add('error')
+        formIsValid = false
+      } else {
+        select.parentNode.classList.remove('error')
+      }
+    })
+
+    return formIsValid
   }
 
   //
   const onSubmit = async e => {
     e.preventDefault()
-    const token = await recaptchaRef.current.executeAsync();
 
+    //
+    const formIsValid = validateFormFields()
+    if ( !formIsValid ) {
+      return
+    }
+
+    //
+    const token = await recaptchaRef.current.executeAsync();
     if ( !token ) {
       return
     }
 
-    form.current.setAttribute('action', 'https://app.lassocrm.com/registrant_signup/')
+    //
+    form.current.querySelector('.g-recaptcha-response').remove()
+    form.current.setAttribute('action', 'https://app.lassocrm.com/registrant_signup/test')
     form.current.querySelector('[name="domainAccountId"]').value = 'LAS-541914-15'
     form.current.querySelector('[name="LassoUID"]').value = 'HPsHyMvsqf'
     form.current.querySelector('[name="ClientID"]').value = '374'
@@ -30,6 +75,15 @@ const Register = ({ reversed = false }) => {
     form.current.querySelector('[name="SignupThankyouLink"]').value = 'https://marcon.ca/tailor/thank-you'
     //form.current.querySelector('[name="guid"]', '')
 
+    // Just to debug
+    // const formData = new FormData(form.current)
+    // let params = ''
+    // for(var pair of formData.entries()) {
+    //   params += `&${pair[0]}=${pair[1]}`
+    // }
+    // console.log(params);
+
+    //
     return form.current.submit()
   }
 
