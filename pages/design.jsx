@@ -22,7 +22,7 @@ const Design = () => {
 	//
 	return (
 		<main className="page__design">
-			<Seo title="Design" />
+			<Seo title="Design" description="Designed by Shift Architecture, Tailor is a sleek, twenty-seven storey tower with a sculpted base." />
 			<Architecture />
 			<WindVeil />
 			<Interiors />

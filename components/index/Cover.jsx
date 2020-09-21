@@ -53,6 +53,9 @@ const Cover = () => {
     //
     ScrollTrigger.update()
 
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill())
+    }
   }, [])
 
   //

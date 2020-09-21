@@ -22,7 +22,7 @@ const Index = () => {
 	//
 	return (
 		<main className="page__index">
-			<Seo title="Made For Brentwood" />
+			<Seo title="Made For Brentwood" description="The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon." />
 			<Intro />
 			<Cover />
 			<Gallery />
