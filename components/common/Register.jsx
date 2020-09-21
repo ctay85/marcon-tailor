@@ -66,7 +66,7 @@ const Register = ({ reversed = false }) => {
     }
 
     //
-    form.current.setAttribute('action', 'https://app.lassocrm.com/registrant_signup/test')
+    form.current.setAttribute('action', 'https://app.lassocrm.com/registrant_signup/')
     form.current.querySelector('[name="domainAccountId"]').value = 'LAS-541914-15'
     form.current.querySelector('[name="LassoUID"]').value = 'HPsHyMvsqf'
     form.current.querySelector('[name="ClientID"]').value = '374'
