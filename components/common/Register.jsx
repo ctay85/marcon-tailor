@@ -167,7 +167,7 @@ const Register = ({ reversed = false }) => {
           </div>
 
           <input type="hidden" name="domainAccountId" value="" />
-          {/* <input type="hidden" name="guid" value="" /> */}
+          <input type="hidden" name="guid" value="" />
           <input type="hidden" name="LassoUID" value="" />
           <input type="hidden" name="ClientID" value="" />
           <input type="hidden" name="ProjectID" value="" />
