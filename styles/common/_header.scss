@@ -22,6 +22,11 @@
 
   // Homepage
   &[data-slug="/"] {
+    nav{
+      button{
+        color:white;
+      }
+    }
     a{
       color:white;
     }

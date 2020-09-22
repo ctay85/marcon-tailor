@@ -15,7 +15,16 @@ const Header = () => {
   const router = useRouter()
 
   //
-  const scrollTo = scrollTo => gsap.to( window, { duration : 1, scrollTo, ease : 'power2' })
+  const scrollTo = scrollTo => {
+    const args = { duration : 1, scrollTo, ease : 'power2' }
+
+    if ( router.pathname !== '/design' ) {
+      router.push('/design')
+      setTimeout( () => gsap.to( window, args ), 1500)
+    } else {
+      gsap.to( window, args )
+    }
+  }
 
   //
   useEffect( () => {
@@ -45,17 +54,13 @@ const Header = () => {
   return (
     <header className="global__header" data-slug={ router.pathname } data-visible={ isVisible }>
       <div className="left">
-        {
-          router.pathname === '/design' && (
-            <nav>
-              <ul>
-                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#architecture') }>Architecture</button></li>
-                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#wind-veil') }>Wind Veil</button></li>
-                <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#interiors') }>Interiors</button></li>
-              </ul>
-            </nav>
-          )
-        }
+        <nav>
+          <ul>
+            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#architecture') }>Architecture</button></li>
+            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#wind-veil') }>Wind Veil</button></li>
+            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#interiors') }>Interiors</button></li>
+          </ul>
+        </nav>
       </div>
 
       <div className="center">

@@ -9,7 +9,10 @@ const Register = ({ reversed = false }) => {
   const form = useRef(null)
 
   //
-  const onChange = () => null
+  const onChange = value => console.log(`reCAPTCHA value: ${value}`)
+
+  //
+  const onExpired = () => console.log(`reCAPTCHA expired`)
 
   //
   const validateFormFields = () => {
@@ -72,15 +75,6 @@ const Register = ({ reversed = false }) => {
     form.current.querySelector('[name="ClientID"]').value = '374'
     form.current.querySelector('[name="ProjectID"]').value = '10032'
     form.current.querySelector('[name="SignupThankyouLink"]').value = 'https://marcon.ca/tailor/thank-you'
-    //form.current.querySelector('[name="guid"]', '')
-
-    // Just to debug
-    // const formData = new FormData(form.current)
-    // let params = ''
-    // for(var pair of formData.entries()) {
-    //   params += `&${pair[0]}=${pair[1]}`
-    // }
-    // console.log(params);
 
     //
     return form.current.submit()
@@ -136,15 +130,6 @@ const Register = ({ reversed = false }) => {
               <option value="240194">Online Search</option>
               <option value="240196">Online Ad</option>
               <option value="240200">Other</option>
-
-
-              {/*
-                <option value="240193">Signage/Walk-by/Drive-by</option>
-                <option value="240195">Social Media</option>
-                <option value="240197">English Print Ad</option>
-                <option value="240198">Chinese Print Ad</option>
-                <option value="240199">Korean Print Ad</option>
-              */}
             </select>
           </div>
 
@@ -178,6 +163,7 @@ const Register = ({ reversed = false }) => {
             size="invisible"
             sitekey={ process.env.RECAPTCHA_SITE_KEY }
             onChange={ onChange }
+            onExpired={ onExpired }
           />
 
         <button className="btn__register" type="submit" onClick={ onSubmit }>Register</button>
