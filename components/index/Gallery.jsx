@@ -23,6 +23,7 @@ const Gallery = () => (
         </aside>
       </div>
 
+    {/*
       <Swiper
         slidesPerView={ 2 }
         pagination={{ type : 'progressbar' }}
@@ -38,7 +39,14 @@ const Gallery = () => (
           <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_ARTWORK_DAY_FINAL_NO_PEOPLE.jpg` } />
         </SwiperSlide>
       </Swiper>
+    */}
 
+    </div>
+
+    <div className="full-width-grid">
+      <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_1920x1920.jpg` } />
+      <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_1920x1920.jpg` } />
+      <img src={ `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_ARTWORK_DAY_FINAL_NO_PEOPLE.jpg` } />
     </div>
   </section>
 )

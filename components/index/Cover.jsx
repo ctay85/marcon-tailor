@@ -66,7 +66,7 @@ const Cover = () => {
       <header ref={ header }>
         <div className="wrap--reg">
           <h1>Celebrate More in Brentwood</h1>
-          <h2>One bedroom homes from Mid-$500,000</h2>
+          <h2>Homes starting from the mid-500’s</h2>
         </div>
       </header>
 
@@ -91,7 +91,11 @@ const Cover = () => {
         ></div>
       </div>
 
-      <div className="icon-scroll"></div>
+      <svg className="icon-scroll" viewBox="0 0 50 50">
+        <line x1="25" x2="25" y1="0" y2="50" />
+        <line x1="5" x2="25" y1="30" y2="50" />
+        <line x1="45" x2="25" y1="30" y2="50" />
+      </svg>
     </section>
   )
 }

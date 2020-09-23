@@ -8,7 +8,7 @@ const WindVeil = () => (
         <h2 data-reveal="hidden">More Function.</h2>
 
         <aside data-reveal="hidden">
-          <p className="text--display">The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.</p>
+          <p className="text--display">With only 7 homes on each floor, the homes at Tailor are for your clients to celebrate. Expansive balconies up to 319 sf, bedrooms large enough for king beds, view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</p>
         </aside>
       </div>
 

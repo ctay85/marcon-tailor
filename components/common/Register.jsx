@@ -1,18 +1,19 @@
 
 // Dependencies
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 
 // Component
 const Register = ({ reversed = false }) => {
   const recaptchaRef = useRef(null)
   const form = useRef(null)
+  const [ recapValue, setRecapValue ] = useState(null)
 
   //
-  const onChange = value => console.log(`reCAPTCHA value: ${value}`)
+  const onChange = value => setRecapValue(value)
 
   //
-  const onExpired = () => console.log(`reCAPTCHA expired`)
+  const onExpired = () => setRecapValue(null)
 
   //
   const validateFormFields = () => {
@@ -63,8 +64,8 @@ const Register = ({ reversed = false }) => {
     }
 
     //
-    const token = await recaptchaRef.current.executeAsync();
-    if ( !token ) {
+    if ( !recapValue ) {
+      console.log('reCAPTCHA not set');
       return
     }
 
@@ -89,6 +90,13 @@ const Register = ({ reversed = false }) => {
 
       <div className="wrap--narrow">
         <form data-reveal="hidden" data-reversed={ reversed } ref={ form } method="post" validate="true">
+          <input type="hidden" name="domainAccountId" value="" />
+          <input type="hidden" name="guid" value="" />
+          <input type="hidden" name="LassoUID" value="" />
+          <input type="hidden" name="ClientID" value="" />
+          <input type="hidden" name="ProjectID" value="" />
+          <input type="hidden" name="SignupThankyouLink" value="" />
+
           <div className="input-group half">
             <input type="text" name="FirstName" required autoComplete="off" />
             <label>First Name*</label>
@@ -151,22 +159,16 @@ const Register = ({ reversed = false }) => {
             </div>
           </div>
 
-          <input type="hidden" name="domainAccountId" value="" />
-          <input type="hidden" name="guid" value="" />
-          <input type="hidden" name="LassoUID" value="" />
-          <input type="hidden" name="ClientID" value="" />
-          <input type="hidden" name="ProjectID" value="" />
-          <input type="hidden" name="SignupThankyouLink" value="" />
+          <div className="recaptcha-container">
+            <ReCAPTCHA
+              ref={ recaptchaRef }
+              sitekey={ process.env.RECAPTCHA_SITE_KEY }
+              onChange={ onChange }
+              onExpired={ onExpired }
+            />
+          </div>
 
-          <ReCAPTCHA
-            ref={ recaptchaRef }
-            size="invisible"
-            sitekey={ process.env.RECAPTCHA_SITE_KEY }
-            onChange={ onChange }
-            onExpired={ onExpired }
-          />
-
-        <button className="btn__register" type="submit" onClick={ onSubmit }>Register</button>
+          <button className="btn__register" type="submit" onClick={ onSubmit }>Register</button>
 
           <p className="disclaimer"><small>By clicking the SUBMIT button, you consent to: (1) Rennie Marketing and Marcon and their current and future affiliates and partners sending you emails with promotional messages such as newsletters, announcements, press releases and event invitations regarding their products and services; (2) receiving calls on behalf of Rennie Marketing to discuss products and services; and (3) the collection, use and disclosure of the personal information you have provided, by or on behalf of the members of the Rennie Marketing, for the above purposes, in accordance with Rennie Marketing’s Privacy Policy. You may withdraw your consent at any time.</small></p>
         </form>
