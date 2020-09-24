@@ -10,9 +10,10 @@
   justify-content:center;
   transition:transform .5s ease;
   transform: translate3d(0,-100%,0);
+  //background:white;
 
   @media #{$screen-sm-min} {
-    padding:3rem 2rem 0 2rem;
+    padding:2rem 2rem 0 2rem;
   }
 
   &[data-visible="true"]{
@@ -22,6 +23,8 @@
 
   // Homepage
   &[data-slug="/"] {
+    //background:$brand-blue-dark;
+
     nav{
       button{
         color:white;

@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import Reveal from 'classes/Reveal'
 
 // Components
-import { Seo, Register } from 'components/common'
+import { Seo, RegisterSalesforce } from 'components/common'
 import { Intro, Cover, Gallery } from 'components/index'
 
 // Component
@@ -26,7 +26,7 @@ const Index = () => {
 			<Intro />
 			<Cover />
 			<Gallery />
-			<Register reversed={ true } />
+			<RegisterSalesforce reversed={ true } />
 		</main>
 	)
 }

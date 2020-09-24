@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import Reveal from 'classes/Reveal'
 
 // Components
-import { Seo, Register } from 'components/common'
+import { Seo, RegisterSalesforce } from 'components/common'
 import { Architecture, WindVeil, Interiors } from 'components/design'
 
 // Component
@@ -26,7 +26,7 @@ const Design = () => {
 			<Architecture />
 			<WindVeil />
 			<Interiors />
-			<Register />
+			<RegisterSalesforce />
 		</main>
 	)
 }

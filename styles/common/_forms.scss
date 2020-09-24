@@ -195,3 +195,25 @@ label{
     }
   }
 }
+
+.checkbox-group{
+  margin:0 0 2rem 0;
+
+  &.error{
+    label{
+      color:red;
+    }
+  }
+
+  div{
+    display: flex;
+    align-items: center;
+
+    input{
+      margin-right:1rem;
+    }
+    label{
+      line-height:1.5em;
+    }
+  }
+}

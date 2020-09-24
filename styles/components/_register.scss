@@ -17,11 +17,13 @@
   }
 
   .disclaimer{
-    margin:4rem 0 0 0;
-
     small{
       color:$brand-dusk;
       font-family: $font-sans-serif;
     }
+  }
+
+  .btn__register{
+    width:100%;
   }
 }
