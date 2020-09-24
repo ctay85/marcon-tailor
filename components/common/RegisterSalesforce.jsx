@@ -87,7 +87,7 @@ const Register = ({ reversed = false }) => {
     form.current.querySelector('[name="00N3Z00000CeYiQ"]').value = '1'
     form.current.querySelector('[name="00N3Z00000CeVw1"]').value = 'Web Registration'
     form.current.querySelector('[name="language"]').value = 'en'
-    //form.current.querySelector('[name="redirect_uri"]').value = 'https://marcon.ca/tailor/thank-you'
+    form.current.querySelector('[name="retURL"]').value = 'https://marcon.ca/tailor/thank-you'
 
     //
     return form.current.submit()
@@ -109,7 +109,7 @@ const Register = ({ reversed = false }) => {
           <input name="00N3Z00000CeYiQ" type="hidden" value="" />
           <input name="00N3Z00000CeVw1" type="hidden" value="" />
           <input name="language" type="hidden" value="" />
-          {/* <input name="redirect_uri" type="hidden" value="" /> */}
+          <input name="retURL" type="hidden" value="" />
 
           <div style={{ position : 'absolute', left : '-9999px', top : '-9999px' }}>
             <label htmlFor="pardot_extra_field">Comments</label>
