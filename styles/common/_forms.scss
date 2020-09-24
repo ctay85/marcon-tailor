@@ -124,10 +124,10 @@ label{
 
   &.error{
     input{
-      border-color:red;
+      border-color:red !important;
     }
     label{
-      color:red;
+      color:red !important;
     }
   }
 
@@ -201,7 +201,7 @@ label{
 
   &.error{
     label{
-      color:red;
+      color:red !important;
     }
   }
 
