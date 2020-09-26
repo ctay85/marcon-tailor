@@ -10,7 +10,7 @@ SwiperCore.use([ Pagination ])
 
 // Component
 const Gallery = () => (
-  <section className="page__index__gallery bg--dark-blue">
+  <section className="page__index__gallery bg--dark-blue" data-transparent-header-trigger>
     <div className="wrap--reg">
 
       <div className="section-intro">

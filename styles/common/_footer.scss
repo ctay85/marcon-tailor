@@ -1,111 +1,108 @@
 
 .global__footer{
-  padding:2rem;
-  background:$brand-indigo-dark;
-  color:white;
   position: relative;
-  z-index:1; // to be above the homepage animation
-  transition:background 1s ease;
-  display: flex;
-  flex-wrap:wrap;
+  z-index:2;
+  transform: translate3d(0,0,0);
 
-  @media #{$screen-sm-min} {
-    padding-top:4rem;
-  }
+  &__top,
+  &__bottom{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    padding:4rem 2rem;
 
-  &[data-slug="/"]{
-    background:$brand-blue-dark;
+    @media #{$screen-sm-min} {
+      padding:4rem
+    }
+
+    &__left,
+    &__right{
+      flex:0 0 100%;
+
+      @media #{$screen-sm-min} {
+        flex:0 0 auto;
+      }
+    }
+
+    &__left{
+      margin-bottom:2rem;
+
+      @media #{$screen-sm-min} {
+        margin-bottom:0;
+      }
+    }
+
+    a{
+      text-decoration: none;
+      display: inline-block;
+    }
   }
 
   &__top{
-    flex:0 0 100%;
-    margin-bottom:2rem;
+    background:$brand-blue-dark;
 
-    @media #{$screen-sm-min} {
-      margin-bottom:3rem;
+    a{
+      color:white;
     }
   }
 
   &__bottom{
-    &--left{
+    background:white;
+
+    &__bottom{
       flex:0 0 100%;
-      display: flex;
-      justify-content: space-between;
+      margin:2rem 0 0 0;
 
       @media #{$screen-sm-min} {
-        flex:0 0 calc(100% - 150px);
-        justify-content: flex-start;
-      }
-
-      a{
-        flex:0 0 45%;
-
-        @media #{$screen-sm-min} {
-          flex:0 0 auto;
-        }
+        margin-top:3rem;
       }
     }
-    &--right{
-      flex:0 0 150px;
-      display: none;
 
-      @media #{$screen-sm-min} {
-        display: block;
-      }
+    a{
+      color:$brand-blue-dark;
     }
   }
 
-  &__disclaimer{
-    margin:2rem 0 0 0;
-    font-family: $font-sans-serif;
-    color:$brand-dusk;
-
-    p{
-      margin:0;
-    }
+  .logo-marcon{
+    margin:0 0 1.5rem 0;
   }
 
-  a{
-    display: inline-block;
-    text-decoration: none;
-    color:white;
-    margin:0 0 0 0;
-
-    @media #{$screen-sm-min} {
-      margin:0 3rem 0 0;
-    }
-
-    &:last-child{
-      @media #{$screen-sm-min} {
-        margin-right:0;
-      }
-    }
+  .refresh-link{
+    font-family:$font-sans-serif;
+    font-weight:bold;
+    letter-spacing: 2px;
   }
 
   .text-link{
-    font-weight:800;
     font-size:1.5rem;
-    line-height:1em;
-    margin-bottom:1rem;
+    line-height:1.5em;
 
     @media #{$screen-sm-min} {
-      margin-bottom:0;
+      font-size:2.25rem;
     }
   }
 
-  .logo-link{
-    &:last-child{
-      margin-bottom:0;
-    }
+  .logo-rennie{
+    width:125px;
 
     svg{
       width:100%;
+      height:100%;
+    }
+    path{
+      fill:$brand-blue-dark;
     }
   }
 
-  .logo-building-for-life{
-    width:100%;
-    height:auto;
-    display: block;
+  .disclaimer{
+    line-height:2em;
+    font-size:0.8rem;
+    font-family: $font-sans-serif;
+    color:$color-grey-700;
+    margin:0;
+
+    @media #{$screen-sm-min} {
+      text-align: center;
+    }
   }
 }

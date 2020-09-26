@@ -12,7 +12,9 @@ let lastSt = 10
 // Component
 const Header = () => {
   const [ isVisible, setIsVisible ] = useState(false)
+  const [ isTransparent, setIsTransparent ] = useState(true)
   const router = useRouter()
+  const header = useRef(null)
 
   //
   const scrollTo = scrollTo => {
@@ -37,7 +39,9 @@ const Header = () => {
 
   //
   useEffect( () => {
-    const onScroll = () => {
+
+    //
+    const setHeaderVisibility = () => {
       const dir = window.pageYOffset > lastSt ? 'down' : 'up'
 
       if ( dir === 'down' && isVisible ) setIsVisible(false)
@@ -46,13 +50,54 @@ const Header = () => {
       lastSt = window.pageYOffset
     }
 
+    //
+    const shouldHeaderBeTransparent = () => {
+      const trigger = document.querySelector('[data-transparent-header-trigger]')
+
+      if ( !trigger ) {
+        if ( isTransparent ) {
+          console.log('setting not transparent, no trigger');
+          setIsTransparent(false)
+        }
+        return
+      }
+
+      const triggerPos = trigger.getBoundingClientRect().top
+      if ( triggerPos < 0 && isTransparent ) {
+        console.log('setting not transparent');
+        setIsTransparent(false)
+      }
+      if ( triggerPos > 0 && !isTransparent ) {
+        console.log('setting transparent');
+        setIsTransparent(true)
+      }
+    }
+
+    //
+    const onScroll = () => {
+      setHeaderVisibility()
+      shouldHeaderBeTransparent()
+    }
+
+    //
     window.addEventListener( 'scroll', onScroll )
     return () => window.removeEventListener( 'scroll', onScroll )
-  }, [ isVisible ])
+  }, [ isVisible, isTransparent ])
+
+  //
+  useEffect( () => {
+    setIsTransparent(true)
+  }, [ router.pathname ])
 
   //
   return (
-    <header className="global__header" data-slug={ router.pathname } data-visible={ isVisible }>
+    <header
+      className="global__header"
+      ref={ header }
+      data-slug={ router.pathname }
+      data-visible={ isVisible }
+      data-transparent={ isTransparent }
+    >
       <div className="left">
         <nav>
           <ul>

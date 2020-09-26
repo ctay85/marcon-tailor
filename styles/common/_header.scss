@@ -5,15 +5,15 @@
   left:0;
   width:100%;
   z-index:100;
-  padding:1rem 5% 0 5%;
+  padding:1rem 5% 1rem 5%;
   display: flex;
   justify-content:center;
   transition:transform .5s ease;
   transform: translate3d(0,-100%,0);
-  //background:white;
+  background:white;
 
   @media #{$screen-sm-min} {
-    padding:2rem 2rem 0 2rem;
+    padding:2rem 2rem 1rem 2rem;
   }
 
   &[data-visible="true"]{
@@ -23,7 +23,7 @@
 
   // Homepage
   &[data-slug="/"] {
-    //background:$brand-blue-dark;
+    background:$brand-blue-dark;
 
     nav{
       button{
@@ -52,7 +52,9 @@
     }
   }
 
-
+  &[data-transparent="true"] {
+    background:transparent;
+  }
 
 
 
