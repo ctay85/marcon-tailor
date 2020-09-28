@@ -56,11 +56,8 @@ const Header = () => {
     const shouldHeaderBeTransparent = () => {
       const trigger = document.querySelector('[data-transparent-header-trigger]')
 
-      console.log(router.pathname);
-
       if ( !trigger ) {
         if ( isTransparent && router.pathname !== '/' ) {
-          console.log('setting not transparent, no trigger');
           setIsTransparent(false)
         }
         return
@@ -68,11 +65,9 @@ const Header = () => {
 
       const triggerPos = trigger.getBoundingClientRect().top
       if ( triggerPos < 0 && isTransparent ) {
-        console.log('setting not transparent');
         setIsTransparent(false)
       }
       if ( triggerPos > 0 && !isTransparent ) {
-        console.log('setting transparent');
         setIsTransparent(true)
       }
     }

@@ -13,7 +13,7 @@ const Cover = () => {
   //
   useEffect( () => {
     const duration = window.innerHeight * 3
-    const [ h1, h2 ] = header.current.children
+    const [ h1, h2 ] = header.current.children[0].children
     const ScrollTrigger = require('gsap/ScrollTrigger').default
     const scrollTriggerDefaults = { trigger : cover.current, start : 0, scrub : 1 }
     const imageTLStep2 = { height : '100vh', y : 0, onComplete : () => setActiveImageIndex(2), onReverseComplete : () => setActiveImageIndex(0) }
@@ -44,8 +44,8 @@ const Cover = () => {
       // Global
       "all" : () => {
         gsap.timeline({ scrollTrigger : { ...scrollTriggerDefaults, end : () => `+=${window.innerHeight}` }})
-          .to( h1, { y : '-50px', opacity : 0 }, 0 )
-          .to( h2, { y : '-60px', opacity : 0, duration : 1.1 }, 0 )
+          .to( h1, { y : '-90px', opacity : 0 }, 0 )
+          .to( h2, { y : '-80px', opacity : 0 }, 0 )
       }
 
     })

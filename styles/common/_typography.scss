@@ -11,7 +11,7 @@ h1 {
 	line-height:1.2em;
 
 	@media #{$screen-sm-min} {
-		font-size:3.5rem;
+		font-size:3rem;
 	}
 }
 
@@ -38,6 +38,7 @@ h4{
 	&--display{
 		font-size:1.25rem;
 		line-height:1.5em;
+		margin-bottom:1.25rem;
 
 		@media #{$screen-sm-min} {
 			font-size:1.5rem;
