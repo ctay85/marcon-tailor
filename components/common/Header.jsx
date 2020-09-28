@@ -17,13 +17,15 @@ const Header = () => {
   const header = useRef(null)
 
   //
-  const scrollTo = scrollTo => {
+  const scrollTo = ( e, scrollTo ) => {
     const args = { duration : 1, scrollTo, ease : 'power2' }
 
-    if ( router.pathname !== '/design' ) {
-      router.push('/design')
-      setTimeout( () => gsap.to( window, args ), 1500)
-    } else {
+    if ( scrollTo === '#register' ) {
+      gsap.to( window, args )
+    }
+
+    if ( router.pathname === '/design' && scrollTo !== '#register' ) {
+      e.preventDefault()
       gsap.to( window, args )
     }
   }
@@ -54,8 +56,10 @@ const Header = () => {
     const shouldHeaderBeTransparent = () => {
       const trigger = document.querySelector('[data-transparent-header-trigger]')
 
+      console.log(router.pathname);
+
       if ( !trigger ) {
-        if ( isTransparent ) {
+        if ( isTransparent && router.pathname !== '/' ) {
           console.log('setting not transparent, no trigger');
           setIsTransparent(false)
         }
@@ -101,9 +105,21 @@ const Header = () => {
       <div className="left">
         <nav>
           <ul>
-            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#architecture') }>Architecture</button></li>
-            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#wind-veil') }>Wind Veil</button></li>
-            <li><button className="btn btn--line-hover" onClick={ () => scrollTo('#interiors') }>Interiors</button></li>
+            <li>
+              <Link href={{ pathname : '/design', query : { anchor : 'architecture' } }} as="/design">
+                <a onClick={ e => scrollTo(e, '#architecture') } className="btn btn--line-hover">Architecture</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname : '/design', query : { anchor : 'wind-veil' } }} as="/design">
+                <a onClick={ e => scrollTo(e, '#wind-veil') } className="btn btn--line-hover">Wind Veil</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ pathname : '/design', query : { anchor : 'interiors' } }} as="/design">
+                <a onClick={ e => scrollTo(e, '#interiors') } className="btn btn--line-hover">Interiors</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -117,7 +133,7 @@ const Header = () => {
       </div>
 
       <div className="right">
-        { router.pathname !== '/thank-you' && <button className="btn__register" onClick={ () => scrollTo('#register') }>Register</button> }
+        { router.pathname !== '/thank-you' && <button className="btn__register" onClick={ e => scrollTo(e, '#register') }>Register</button> }
       </div>
     </header>
   )
