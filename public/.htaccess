@@ -3,7 +3,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
-AuthName "Dialog prompt"
-AuthType Basic
-AuthUserFile ./.htpasswd
-Require valid-user
+#AuthName "Dialog prompt"
+#AuthType Basic
+#AuthUserFile ./.htpasswd
+#Require valid-user
