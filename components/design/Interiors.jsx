@@ -18,7 +18,7 @@ const Interiors = () => {
           <h2 data-reveal="hidden">More Home.</h2>
 
           <aside>
-            <p data-reveal="hidden" className="text--display">The interiors were planned to maximize space and finished to stand the test of time.</p>
+            <p data-reveal="hidden" className="text--display">Our interiors have been planned to maximize space and are finished to stand the test of time.</p>
           </aside>
         </div>
 

@@ -107,7 +107,7 @@ const Header = () => {
             </li>
             <li>
               <Link href={{ pathname : '/design', query : { anchor : 'wind-veil' } }} as="/design">
-                <a onClick={ e => scrollTo(e, '#wind-veil') } className="btn btn--line-hover">Wind Veil</a>
+                <a onClick={ e => scrollTo(e, '#wind-veil') } className="btn btn--line-hover">Design</a>
               </Link>
             </li>
             <li>

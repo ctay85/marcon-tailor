@@ -32,6 +32,8 @@ form{
         -webkit-box-shadow: 0 0 0 $input-height $brand-blue-dark inset !important;
         -webkit-text-fill-color:white !important;
         caret-color: white;
+        background-color: $brand-blue-dark !important;
+        background-clip: content-box !important;
       }
     }
     select{
@@ -91,6 +93,8 @@ input{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
     -webkit-text-fill-color:$color-body !important;
     caret-color: $color-body;
+    background-color: white !important;
+    background-clip: content-box !important;
   }
 }
 
@@ -145,7 +149,7 @@ label{
     top:calc( 100% - 2rem );
     left:0;
     transition:all .25s ease;
-    z-index:-1;
+    //z-index:-1;
   }
 }
 

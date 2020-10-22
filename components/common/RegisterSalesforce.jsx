@@ -117,28 +117,28 @@ const Register = ({ reversed = false }) => {
         	</div>
 
           <div className="input-group half">
-            <input type="text" name="first_name" required autoComplete="off" />
-            <label>First Name*</label>
+            <input id="first_name" type="text" name="first_name" required autoComplete="off" />
+            <label htmlFor="first_name">First Name*</label>
           </div>
 
           <div className="input-group half">
-            <input type="text" name="last_name" required autoComplete="off" />
-            <label>Last Name*</label>
+            <input id="last_name" type="text" name="last_name" required autoComplete="off" />
+            <label htmlFor="last_name">Last Name*</label>
           </div>
 
           <div className="input-group half">
-            <input type="email" name="email" required autoComplete="off" />
-            <label>Email*</label>
+            <input id="email" type="email" name="email" required autoComplete="off" />
+            <label htmlFor="email">Email*</label>
           </div>
 
           <div className="input-group half">
-            <input type="phone" name="phone" required autoComplete="off" />
-            <label>Phone Number*</label>
+            <input id="phone" type="phone" name="phone" required autoComplete="off" />
+            <label htmlFor="phone">Phone Number*</label>
           </div>
 
           <div className="input-group">
-            <input type="text" name="zip" required autoComplete="off" />
-            <label>Postal Code/Zip*</label>
+            <input id="zip" type="text" name="zip" required autoComplete="off" />
+            <label htmlFor="zip">Postal Code/Zip*</label>
           </div>
 
           <div className="select-group">
@@ -146,6 +146,8 @@ const Register = ({ reversed = false }) => {
               <option value="label" disabled>What Type of home are you looking for?*</option>
               <option value="1 Bed">One Bedroom</option>
               <option value="2 Bed">Two Bedroom</option>
+              <option value="Townhome">Townhome</option>
+              <option value="Studio">Studio</option>
             </select>
           </div>
 

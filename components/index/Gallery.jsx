@@ -14,7 +14,7 @@ const Gallery = () => (
     <div className="wrap--reg">
 
       <div className="section-intro">
-        <h2 data-reveal="hidden">Tailor Made for Brentwood</h2>
+        <h2 data-reveal="hidden">Tailor<br /> Made for Brentwood</h2>
 
         <aside data-reveal="hidden">
           <p className="text--display">The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</p>
