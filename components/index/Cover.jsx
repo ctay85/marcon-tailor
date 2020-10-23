@@ -66,7 +66,7 @@ const Cover = () => {
       <header ref={ header }>
         <div className="wrap--reg">
           <h1>Celebrate More in Brentwood</h1>
-          <h2>Homes starting from the low-400’s</h2>
+          <h2>{/* Homes starting from the low-400’s */}</h2>
         </div>
       </header>
 
