@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="global__footer__bottom__right">
           <a href="https://rennie.com/" className="logo-rennie" target="_blank">
-            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Marketing-by-rennie-113x37.svg` } />
+            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Rennie-Sales-By.svg` } />
           </a>
         </div>
         <div className="global__footer__bottom__bottom">
