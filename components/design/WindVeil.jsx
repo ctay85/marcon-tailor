@@ -8,7 +8,7 @@ const WindVeil = () => (
         <h2 data-reveal="hidden">More Function.</h2>
 
         <aside data-reveal="hidden">
-          <p className="text--display">With only 8 homes on each floor, the homes at Tailor are for your clients to celebrate. Expansive balconies up to 319 sf, select homes with bedrooms large enough for king beds, view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</p>
+          <p className="text--display">Modern architecture paired with a rare level of intimacy and connection, with only 8 homes on each floor. Expansive balconies up to 319 sf, select homes with bedrooms large enough for king beds, view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</p>
         </aside>
       </div>
 
