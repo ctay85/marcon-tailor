@@ -26,6 +26,8 @@ const HeadComponent = () => (
         : null
     }
 
+    <script type="application/javascript" dangerouslySetInnerHTML={{ __html : `(function(b,o,n,g,s,r,c){if(b[s])return;b[s]={};b[s].scriptToken="XzI4NDgxNjUyNA";b[s].callsQueue=[];b[s].api=function(){b[s].callsQueue.push(arguments);};r=o.createElement(n);c=o.getElementsByTagName(n)[0];r.async=1;r.src=g;r.id=s+n;c.parentNode.insertBefore(r,c);})(window,document,"script","https://cdn.oribi.io/XzI4NDgxNjUyNA/oribi.js","ORIBI");` }}></script>
+
     {/*
       <script src="//app.lassocrm.com/analytics.js" type="text/javascript"></script>
       <script type="text/javascript" dangerouslySetInnerHTML={{ __html : `var LassoCRM = LassoCRM || {}; (function(ns){ ns.tracker = new LassoAnalytics('LAS-541914-15'); })(LassoCRM); try { LassoCRM.tracker.setTrackingDomain("//app.lassocrm.com"); LassoCRM.tracker.init(); LassoCRM.tracker.track(); LassoCRM.tracker.patchRegistrationForms(); } catch(error) {}` }}></script>
