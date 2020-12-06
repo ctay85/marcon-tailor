@@ -29,7 +29,7 @@ const Interiors = () => {
               data-active={ activeGallery === GALLERY_TWO_BEDS }
               onClick={ () => setActiveGallery(GALLERY_TWO_BEDS) }
             >
-              Two Bedroom
+              Modern Interiors
             </button>
 
             <button
@@ -37,7 +37,7 @@ const Interiors = () => {
               data-active={ activeGallery === GALLERY_ONE_BEDS }
               onClick={ () => setActiveGallery(GALLERY_ONE_BEDS) }
             >
-              One Bedroom
+              Premium Finishes
             </button>
           </nav>
 

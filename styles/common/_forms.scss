@@ -140,6 +140,7 @@ label{
     &:valid{
       & + label{
         top:0;
+        transform: translate3d(0,0,0) scale(0.8);
       }
     }
   }
@@ -149,7 +150,7 @@ label{
     top:calc( 100% - 2rem );
     left:0;
     transition:all .25s ease;
-    //z-index:-1;
+    transform-origin: top left;
   }
 }
 

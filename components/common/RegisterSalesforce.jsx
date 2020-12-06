@@ -143,11 +143,12 @@ const Register = ({ reversed = false }) => {
 
           <div className="select-group">
             <select name="00Nf100000CBrGQ" defaultValue="label">
-              <option value="label" disabled>What Type of home are you looking for?*</option>
+              <option value="label" disabled>What type of home are you looking for?*</option>
+              <option value="Studio">Studio</option>
+              <option value="Jr. 1 Bedroom">Jr. 1 Bedroom</option>
               <option value="1 Bed">One Bedroom</option>
               <option value="2 Bed">Two Bedroom</option>
               <option value="Townhome">Townhome</option>
-              <option value="Studio">Studio</option>
             </select>
           </div>
 

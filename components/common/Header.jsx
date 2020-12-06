@@ -46,10 +46,13 @@ const Header = () => {
     const setHeaderVisibility = () => {
       const dir = window.pageYOffset > lastSt ? 'down' : 'up'
 
+      if ( window.innerWidth < 768 ) return false
       if ( dir === 'down' && isVisible ) setIsVisible(false)
       if ( dir === 'up' && !isVisible ) setIsVisible(true)
 
-      lastSt = window.pageYOffset
+      lastSt = window.pageYOffset < 10
+        ? 10
+        : window.pageYOffset
     }
 
     //
