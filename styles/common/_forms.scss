@@ -6,7 +6,6 @@ textarea,
 label{
   font-family:$font-sans-serif;
   color:$color-body;
-  //user-select: none;
   outline:0;
   border-radius: 0;
 }
@@ -39,6 +38,7 @@ form{
     select{
       border-color:white;
       color:white;
+      background:$brand-blue-dark;
     }
     .btn__register{
       background:white;
