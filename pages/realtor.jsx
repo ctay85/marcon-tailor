@@ -35,20 +35,20 @@ export default function Realtor () {
 
           <h3>Floorplans</h3>
           <div className="grid" rel="2">
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/plans/` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/plans` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/` }>
+              <img src={ `${process.env.BASE_PATH}/rel/plans` } />
             </a>
 
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/plans/` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/plans` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/` }>
+              <img src={ `${process.env.BASE_PATH}/rel/plans` } />
             </a>
 
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/plans/` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/plans` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/` }>
+              <img src={ `${process.env.BASE_PATH}/rel/plans` } />
             </a>
 
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/plans/` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/plans` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/` }>
+              <img src={ `${process.env.BASE_PATH}/rel/plans` } />
             </a>
           </div>
 
@@ -70,17 +70,17 @@ export default function Realtor () {
 
           <h3>Gallery</h3>
           <div className="grid" rel="2">
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/gallery/hires/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` }>
+              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/gallery/hires/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/gallery/web/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` }>
+              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/gallery/hires/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/gallery/web/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` }>
+              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/realtor/gallery/hires/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/realtor/gallery/web/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` } />
+            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` }>
+              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` } />
             </a>
           </div>
 
