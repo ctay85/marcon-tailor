@@ -1,6 +1,6 @@
 
 .page__index{
-  padding-top:450vh;
+  padding-top:100vh;
   background:$brand-blue-dark;
 
 
@@ -53,78 +53,77 @@
     height:100vh;
     color:white;
     z-index:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .background{
-      z-index:-1;
-      height:100vh;
-      position: fixed;
-    }
-
-    header{
-      margin:5rem 0 0 0;
-
-      @media #{$screen-sm-min} {
-        margin-top:10rem;
-      }
-    }
     h1{
-      text-align:center;
-      margin:0 auto 0.75rem auto;
+      margin:-50px 0 0 0;
       max-width:350px;
+      text-align:center;
 
       @media #{$screen-sm-min} {
         max-width:none;
+        margin:0;
       }
     }
-    h2{
-      text-align:center;
-      font-family:$font-sans-serif;
-      text-transform: uppercase;
-      font-weight:100;
-      font-size:1rem;
-      line-height:1.5em;
-      color:$brand-dusk;
-      margin:0 0 4rem 0;
-    }
 
-    .motion-container{
+    video{
       position: absolute;
-      bottom:0;
+      top:50%;
       left:50%;
-      width:80vw;
-      height:50vh;
-      transform: translate3d(-50%,-10vh,0);
-      overflow:hidden;
+      transform: translate3d(-50%,-50%,0);
+      opacity:0.8;
       z-index:-1;
 
-      @media #{$screen-sm-min} {
-        width:30vw;
+      @media (min-aspect-ratio:16/9) {
+        width:100%;
+        height:auto;
       }
 
-      video{
-        position: absolute;
-        top:50%;
-        left:50%;
+      @media (max-aspect-ratio:16/9) {
         width:auto;
         height:100%;
-        transform: translate3d(-50%,-50%,0);
-      }
-
-      .bg-image{
-        opacity:0;
-        z-index:0;
-        transition:opacity .4s ease;
-        background-position: bottom center;
-
-        &[data-active="true"]{
-          opacity:1;
-          z-index:1;
-        }
       }
     }
 
+    // .motion-container{
+    //   position: absolute;
+    //   bottom:0;
+    //   left:50%;
+    //   width:80vw;
+    //   height:50vh;
+    //   transform: translate3d(-50%,-10vh,0);
+    //   overflow:hidden;
+    //   z-index:-1;
+    //
+    //   @media #{$screen-sm-min} {
+    //     width:30vw;
+    //   }
+    //
+    //   video{
+    //     position: absolute;
+    //     top:50%;
+    //     left:50%;
+    //     width:auto;
+    //     height:100%;
+    //     transform: translate3d(-50%,-50%,0);
+    //   }
+    //
+    //   .bg-image{
+    //     opacity:0;
+    //     z-index:0;
+    //     transition:opacity .4s ease;
+    //     background-position: bottom center;
+    //
+    //     &[data-active="true"]{
+    //       opacity:1;
+    //       z-index:1;
+    //     }
+    //   }
+    // }
+
     .icon-scroll {
-      //background:red;
       width:50px;
       height:50px;
       position: absolute;
