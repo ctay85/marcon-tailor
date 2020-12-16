@@ -1,6 +1,9 @@
 
-import Intro from './Intro'
 import Cover from './Cover'
-import Gallery from './Gallery'
+import Design from './Design'
+import Homes from './Homes'
+import Interiors from './Interiors'
+import PublicArt from './PublicArt'
+import Brentwood from './Brentwood'
 
-export { Intro, Cover, Gallery }
+export { Cover, Design, Homes, Interiors, PublicArt, Brentwood }

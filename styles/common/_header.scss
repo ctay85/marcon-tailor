@@ -4,155 +4,26 @@
   top:0;
   left:0;
   width:100%;
+  height:$header-height;
   z-index:100;
-  padding:1rem 5% 1rem 5%;
   display: flex;
+  align-items: center;
   justify-content:center;
-  transition:transform .5s ease;
-  transform: translate3d(0,-100%,0);
-  background:white;
-
-  @media #{$screen-sm-min} {
-    padding:2rem 2rem 1rem 2rem;
-  }
-
-  &[data-visible="true"]{
-    transform: translate3d(0,0,0);
-  }
-
-
-  // Homepage
-  &[data-slug="/"] {
-    background:$brand-blue-dark;
-
-    nav{
-      button{
-        color:white;
-      }
-    }
-    a{
-      color:white;
-    }
-
-    .btn__logo{
-      svg{
-        path{
-          fill:white;
-        }
-      }
-    }
-
-    .btn__register{
-      border-color:white;
-      color:white;
-
-      @media #{$screen-sm-min} {
-        background:$brand-dusk;
-      }
-    }
-  }
-
-  &[data-transparent="true"] {
-    background:transparent;
-  }
-
-
-
-  .left{
-    flex:0 1 50%;
-    display: none;
-
-    @media #{$screen-sm-min} {
-      display: block;
-    }
-  }
-
-  .center{
-    flex:0 0 auto;
-    margin-right:auto;
-    display: flex;
-    align-items: center;
-
-    @media #{$screen-sm-min} {
-      align-items: flex-start;
-      margin:0;
-    }
-  }
-
-  .right{
-    flex:0 1 50%;
-    display: flex;
-    align-items: center;
-
-    @media #{$screen-sm-min} {
-      align-items: flex-start;
-    }
-  }
-
-  a{
-    text-decoration: none;
-    color:$brand-indigo-dark;
-  }
-
-  nav{
-    ul,li{
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-    button,
-    a{
-      display: inline-block;
-      font-family:$font-sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size:0.8rem;
-      line-height:2em;
-      height:auto;
-    }
-  }
 
   .btn__logo{
     display: block;
     width:auto;
-    height:15px;
+    height:30px;
     line-height:1em;
-
-    @media #{$screen-sm-min} {
-      height:30px;
-    }
 
     svg{
       width:auto;
       height:100%;
 
       path{
-        fill:$brand-indigo-dark;
+        fill:white;
         transition:fill 1s ease;
       }
     }
   }
-
-  .btn__register{
-    margin:0 0 0 auto;
-    padding:0;
-    height:auto;
-    line-height:1.5rem;
-    border-bottom:solid 1px $color-body;
-    transition:background 1s ease;
-    font-family:$font-serif;
-    letter-spacing: 1px;
-
-    @media #{$screen-sm-min} {
-      border:none;
-      height:$button-height;
-  		line-height:calc(#{$button-height} - 2px);
-      padding:0 4rem;
-      background:$brand-indigo-dark;
-      font-size:1.3rem;
-      letter-spacing: 2px;
-      color:white;
-    }
-  }
-
 }

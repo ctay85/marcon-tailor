@@ -1,45 +1,90 @@
 
 // Dependencies
-import { useRef, useEffect, useState } from 'react'
-import { gsap } from 'gsap'
+import Image from 'next/image'
+import SVG from 'react-inlinesvg'
+
+// Components
+import { BgImage } from 'components/ui'
 
 // Component
 export default function Cover () {
-  const h1 = useRef(null)
-  const video = useRef(null)
-
-  //
-  useEffect( () => {
-    const ScrollTrigger = require('gsap/ScrollTrigger').default
-    gsap.registerPlugin(ScrollTrigger)
-
-    const timeline = gsap.timeline({
-      scrollTrigger : {
-        trigger : document.documentElement,
-        start : 0,
-        scrub : 1,
-        end : () => `+=${window.innerHeight}`
-      }
-    })
-
-    timeline
-      .to( h1.current, { y : '-100px', opacity : 0 }, 0)
-      .to( video.current, { opacity : 0 }, 0)
-
-  }, [])
-
-  //
   return (
     <section className="page__index__cover">
-      <video ref={ video } src={ `${process.env.BASE_PATH}/vid/lobby-exterior-loop.mp4` } autoPlay muted playsInline loop></video>
+      <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
 
-      <h1 ref={ h1 }>Celebrate More in Brentwood</h1>
+      <div className="left-column">
+        <nav>
+          <button>Design</button>
+          <button>Homes</button>
+          <button>Interiors</button>
+          <button>Public Art</button>
+          <button>Brentwood</button>
+        </nav>
 
-      <svg className="icon-scroll" viewBox="0 0 50 50">
-        <line x1="25" x2="25" y1="0" y2="50" />
-        <line x1="5" x2="25" y1="30" y2="50" />
-        <line x1="45" x2="25" y1="30" y2="50" />
-      </svg>
+        <button className="btn__enquire">
+          <span>Enquire</span>
+          <SVG src="/svg/thin-arrow-down.svg" />
+        </button>
+      </div>
+
+      <div className="floorplans">
+        <span className="section-title">Floorplans</span>
+
+        <figure>
+          <Image src="/img/index/image2.jpg" width="343" height="154" />
+        </figure>
+
+        <div className="stat">
+          <div className="left">
+            <span className="title">Studios</span>
+            <div className="progress"><span style={{ width : '40%' }}></span></div>
+          </div>
+          <div className="right">
+            <span className="number">46</span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="left">
+            <span className="title">One Bedrooms</span>
+            <div className="progress"><span style={{ width : '60%' }}></span></div>
+          </div>
+          <div className="right">
+            <span className="number">69</span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="left">
+            <span className="title">Two Bedrooms</span>
+            <div className="progress"><span style={{ width : '60%' }}></span></div>
+          </div>
+          <div className="right">
+            <span className="number">69</span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="left">
+            <span className="title">Penthouses</span>
+            <div className="progress"><span style={{ width : '10%' }}></span></div>
+          </div>
+          <div className="right">
+            <span className="number">4&nbsp;</span>
+          </div>
+        </div>
+
+        <div className="stat">
+          <div className="left">
+            <span className="title">Townhomes</span>
+            <div className="progress"><span style={{ width : '10%' }}></span></div>
+          </div>
+          <div className="right">
+            <span className="number">5&nbsp;</span>
+          </div>
+        </div>
+      </div>
+
     </section>
   )
 }
