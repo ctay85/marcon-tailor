@@ -2,7 +2,7 @@
   "name": "ReactSeedTs",
   "version": "0.6.0",
   "dependencies": {
-    "framer-motion": "^2.9.5",
+    "framer-motion": "^3.0.0",
     "gsap": "^3.5.1",
     "lottie-web": "^5.7.5",
     "next": "^10.0.3",

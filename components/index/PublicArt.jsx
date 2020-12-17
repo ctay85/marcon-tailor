@@ -1,27 +1,46 @@
 
+// Dependencies
+import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+
+// Utils
+import { indexPanelAnimations } from 'utils'
+
 // Components
 import { BgImage } from 'components/ui'
 
 // Component
-export default function PublicArt () {
+export default function PublicArt ({ active }) {
+  const sectionClass = useRef('page__index__public-art')
+  const [ animationState, setAnimationState ] = useState('initial')
+
+  //
+  useEffect( () => {
+    const isActive = active === sectionClass.current
+    if ( isActive ) setAnimationState('enter')
+    if ( !isActive ) setAnimationState('exit')
+  }, [ active ])
+
+  //
   return (
-    <section className="page__index__public-art">
+    <motion.section className={ sectionClass.current } data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <article>
-        <span className="panel-name">Public Art</span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>Public Art</motion.span>
 
-        <h2 className="panel-tagline">More Function.</h2>
+        <motion.h2 className="panel-tagline" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelTagline }>More Function.</motion.h2>
 
-        <p className="panel-description">The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.</p>
+        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.</motion.p>
 
-        <button className="btn__more">
+        <motion.button className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
           <i className="material-icons">add</i>
           <span>More on public art</span>
-        </button>
+        </motion.button>
       </article>
 
       <figure>
+        <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
       </figure>
-    </section>
+    </motion.section>
   )
 }
