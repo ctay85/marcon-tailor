@@ -23,7 +23,7 @@
     "start": "npm run clean && next dev",
     "build": "next build",
     "prod": "npm run build && next start -p 3103",
-    "rb:dev": "ssh -t root@128.199.3.106 \"cd /var/www/tailor/ && npm run build && npm run rs:dev\"",
+    "rb:dev": "ssh -t root@128.199.3.106 \"cd /var/www/tailor/ && npm run rs:dev\"",
     "rs:dev": "pm2 restart tailor_dev",
     "dp:dev": "git push dev master && npm run rb:dev",
     "rb:prod": "ssh -t USER@HOST \"cd /var/www/PROJECT_DIR/ && npm run build && npm run rs:prod\"",
