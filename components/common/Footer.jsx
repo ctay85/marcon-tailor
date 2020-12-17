@@ -12,13 +12,13 @@ const Footer = () => {
       <div className="global__footer__top">
         <div className="global__footer__top__left">
           <a href="http://marcon.ca/en/" className="logo-marcon" target="_blank">
-            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Marcon-01-231x34.svg` } />
+            <SVG src={ `/img/common/Logo-Marcon-01-231x34.svg` } />
           </a>
           <br />
           <a href="https://marcon.ca/tailor" className="refresh-link">marcon.ca/tailor</a>
         </div>
         <div className="global__footer__top__right">
-          <SVG className="logo-building-for-life" src={ `${process.env.BASE_PATH}/img/common/Buildingforlife.svg` } />
+          <SVG className="logo-building-for-life" src={ `/img/common/Buildingforlife.svg` } />
         </div>
       </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="global__footer__bottom__right">
           <a href="https://rennie.com/" className="logo-rennie" target="_blank">
-            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Rennie-Sales-By.svg` } />
+            <SVG src={ `/img/common/Logo-Rennie-Sales-By.svg` } />
           </a>
         </div>
         <div className="global__footer__bottom__bottom">
