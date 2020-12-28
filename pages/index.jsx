@@ -3,8 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Components
-import { Cover, Design, Homes, Interiors, PublicArt, Brentwood } from 'components/index'
+import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign } from 'components/index'
 import { Seo } from 'components/common'
+
+// Store
+import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART } from 'store/constants'
 
 // Component
 export default function Index () {
@@ -12,6 +15,7 @@ export default function Index () {
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
+  const [ activeOverlayKey, setActiveOverlayKey ] = useState(INDEX_OVERLAY_KEY_DESIGN)
 
   //
   const blockExecution = () => {
@@ -23,6 +27,8 @@ export default function Index () {
   //
   const changePanel = direction => {
     if ( isAnimating ) return false
+    window.scrollTo(0,0)
+
     const activePanel = document.querySelector(`.${activePanelClass}`)
     const nextPanel = direction === 'down'
       ? activePanel.nextElementSibling
@@ -30,11 +36,22 @@ export default function Index () {
 
     if ( nextPanel ) {
       setActivePanelClass(nextPanel.className)
-      if ( lastPanelActive ) setLastPanelActive(false)
-    } else {
-      setLastPanelActive(true)
     }
   }
+
+  //
+  const isLastPanel = () => {
+    const lastPanel = document.querySelector('.page__index__brentwood[data-active="true"]')
+
+    if ( lastPanel ) {
+      setTimeout( () => document.documentElement.classList.remove('no-scroll'), config.current.transitionDuration )
+    } else {
+      document.documentElement.classList.add('no-scroll')
+    }
+  }
+
+  //
+  const closeOverlay = () => setActiveOverlayKey(null)
 
   //
   useEffect( () => {
@@ -48,17 +65,24 @@ export default function Index () {
       if ( Math.abs(deltaY) > config.current.wheelDelta ) {
         blockExecution()
         changePanel(direction)
+        isLastPanel()
       }
     }
 
-    window.addEventListener( 'scroll', onScroll )
+    //window.addEventListener( 'scroll', onScroll )
     window.addEventListener( 'mousewheel', onMouseWheel )
 
     return () => {
-      window.removeEventListener( 'scroll', onScroll )
+      //window.removeEventListener( 'scroll', onScroll )
       window.removeEventListener( 'mousewheel', onMouseWheel )
     }
   }, [ isAnimating, activePanelClass ])
+
+  //
+  useEffect( () => {
+    window.scrollTo(0,0)
+    document.documentElement.classList.add('no-scroll')
+  }, [])
 
   //
   return (
@@ -67,12 +91,14 @@ export default function Index () {
 
       <main className="page__index">
         <Cover active={ activePanelClass } />
-        <Design active={ activePanelClass } />
+        <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Homes active={ activePanelClass } />
         <Interiors active={ activePanelClass } />
         <PublicArt active={ activePanelClass } />
         <Brentwood active={ activePanelClass } />
       </main>
+
+      <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
     </>
   )
 }

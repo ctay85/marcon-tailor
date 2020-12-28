@@ -9,7 +9,7 @@ export default function Header () {
     <header className="global__header">
       <Link href="/">
         <a className="btn__logo">
-          <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Tailor-01-White-188x30.svg` } />
+          <SVG src={ `/img/common/Logo-Tailor-01-White-188x30.svg` } />
         </a>
       </Link>
     </header>

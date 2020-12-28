@@ -1,0 +1,45 @@
+.accordion{
+  &__item{
+    border-bottom:solid 1px $brand-dusk;
+    padding:1.25rem 0;
+
+    &[data-open="true"] {
+      .acordion__item__header{
+        i{
+          transform: rotate(180deg);
+        }
+      }
+      .accordion__item__content{
+        display: block;
+      }
+    }
+
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor:pointer;
+
+      span{
+        font-size:1.75rem;
+        font-wight:100;
+        user-select: none;
+      }
+
+      &:after{
+        user-select: none;
+        content:'\e313';
+        display:block;
+        font-family:'Material Icons';
+        font-size:2rem;
+        line-height:1em;
+      }
+    }
+    &__content{
+      display: none;
+      margin:3rem 0 0 0;
+      font-family:$font-sans-serif;
+      font-size:1.25rem;
+    }
+  }
+}

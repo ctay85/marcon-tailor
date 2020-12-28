@@ -1,3 +1,4 @@
 import BgImage from './BgImage'
+import { Accordion, AccordionItem } from './Accordion'
 
-export { BgImage }
+export { BgImage, Accordion, AccordionItem }

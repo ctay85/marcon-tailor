@@ -6,11 +6,14 @@ import { motion } from 'framer-motion'
 // Utils
 import { indexPanelAnimations } from 'utils'
 
+// Store
+import { INDEX_OVERLAY_KEY_DESIGN } from 'store/constants'
+
 // Components
 import { BgImage } from 'components/ui'
 
 // Component
-export default function Design ({ active }) {
+export default function Design ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__design')
   const [ animationState, setAnimationState ] = useState('initial')
 
@@ -37,7 +40,7 @@ export default function Design ({ active }) {
           Designed by Shift Architecture, Tailor is a sleek, twenty-seven storey tower with a sculpted base.
         </motion.p>
 
-        <motion.button className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
+        <motion.button className="btn__more" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
           <i className="material-icons">add</i>
           <span>More on the design</span>
         </motion.button>
