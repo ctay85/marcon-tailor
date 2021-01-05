@@ -2,6 +2,7 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -34,10 +35,14 @@ export default function Homes ({ active }) {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </motion.p>
 
-        <motion.button className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
-          <i className="material-icons">add</i>
-          <span>More on the homes</span>
-        </motion.button>
+        <motion.div className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
+          <Link href="/homes">
+            <a>
+              <i className="material-icons">add</i>
+              <span>More on the homes</span>
+            </a>
+          </Link>
+        </motion.div>
       </article>
     </motion.section>
   )
