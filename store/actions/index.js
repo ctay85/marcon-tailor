@@ -1,8 +1,8 @@
 
 // Actions
-import { locale } from './locale'
+import { uiUpdateHeaderTheme } from './ui'
 
 // Export
 export {
-  locale
+  uiUpdateHeaderTheme
 }

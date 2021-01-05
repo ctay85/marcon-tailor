@@ -1,8 +1,8 @@
 
 //
-export const LOCALE_ENGLISH = 'en'
-export const LOCALE_CHINESE = 'zh'
-export const LOCALE_UPDATE_SUCCESS = 'LOCALE_UPDATE_SUCCESS'
+export const UI_HEADER_THEME_WHITE = 'white'
+export const UI_HEADER_THEME_BLUE = 'blue'
+export const UI_UPDATE_HEADER_THEME_SUCCESS = 'UI_UPDATE_HEADER_THEME_SUCCESS'
 
 //
 export const INDEX_PANEL_TRANSITION_DURATION = 1

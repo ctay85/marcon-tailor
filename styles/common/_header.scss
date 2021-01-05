@@ -10,6 +10,16 @@
   align-items: center;
   justify-content:center;
 
+  &[data-theme="blue"] {
+    .btn__logo{
+      svg{
+        path{
+          fill:$brand-indigo;
+        }
+      }
+    }
+  }
+
   .btn__logo{
     display: block;
     width:auto;

@@ -1,0 +1,115 @@
+.page__homes{
+  padding:10rem 0;
+
+  .wrap--flex{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  aside{
+    flex:0 0 20%;
+    position: relative;
+
+    .elevation-view{
+      margin:0 0 4rem 0;
+
+      svg{
+        width:50%;
+        height:auto;
+        display: block;
+        margin:0 0 0.5rem 0;
+      }
+    }
+
+    .elevation-label{
+      font-family:$font-sans-serif;
+      text-transform: uppercase;
+      font-size:0.6rem;
+      letter-spacing: 1px;
+      display: block;
+      width:50%;
+      text-align: center;
+    }
+
+    .level-label{
+      position: absolute;
+      top:0;
+      right:0;
+      font-family:$font-sans-serif;
+      text-transform: uppercase;
+      font-size:0.8rem;
+      letter-spacing: 1px;
+      border-bottom:solid 1px $brand-dusk;
+      width:50%;
+      text-align: right;
+      transform: translateY(-50%);
+    }
+
+    .floor-plate{
+      width:50%;
+    }
+  }
+
+  .grid{
+    flex:0 0 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:5rem 10rem;
+
+    &__item{
+      border-bottom:solid 2px $brand-dusk;
+      padding:0 0 2rem 0;
+      display: flex;
+      flex-wrap:wrap;
+
+      &:hover{
+        border-color:$brand-blue-dark;
+      }
+
+      span{
+        display: block;
+      }
+
+      .unit-info{
+        align-self: flex-start;
+      }
+
+      .unit-name{
+        font-size:2.5rem;
+        line-height:1em;
+        margin:0 0 1rem 0;
+      }
+
+      .unit-type{
+        font-size:1.5rem;
+        line-height: 1em;
+        margin:0 0 2rem 0;
+      }
+
+      figure{
+        margin:0 0 2rem 0;
+        align-self:center;
+        flex:0 0 100%;
+
+        img{
+          width:100%;
+          height:auto;
+          display: block;
+          margin:0;
+        }
+      }
+
+      .areas{
+        align-self:flex-end;
+      }
+
+      .area{
+        font-size:0.8rem;
+        line-height:2em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: $font-sans-serif;
+      }
+    }
+  }
+}

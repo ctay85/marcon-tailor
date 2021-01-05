@@ -3,9 +3,9 @@
 import { combineReducers } from 'redux'
 
 // Reducers
-import { locale } from './locale'
+import { ui } from './ui'
 
 // Export
 export default combineReducers({
-  locale
+  ui
 })
