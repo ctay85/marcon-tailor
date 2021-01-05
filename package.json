@@ -2,7 +2,7 @@
   "name": "ReactSeedTs",
   "version": "0.6.0",
   "dependencies": {
-    "framer-motion": "^3.1.1",
+    "framer-motion": "^3.1.3",
     "gsap": "^3.5.1",
     "lottie-web": "^5.7.5",
     "next": "^10.0.4",
@@ -14,7 +14,7 @@
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.30.0",
+    "sass": "^1.32.0",
     "swiper": "^6.4.5"
   },
   "scripts": {
@@ -31,9 +31,9 @@
     "dp:prod": "git push prod master && npm run rb:prod"
   },
   "devDependencies": {
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
-    "@types/react-redux": "^7.1.14",
+    "@types/react-redux": "^7.1.15",
     "typescript": "^4.1.3"
   }
 }

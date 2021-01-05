@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Components
-import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign } from 'components/index'
+import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
@@ -15,7 +15,7 @@ export default function Index () {
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
-  const [ activeOverlayKey, setActiveOverlayKey ] = useState(INDEX_OVERLAY_KEY_DESIGN)
+  const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
 
   //
   const blockExecution = () => {
@@ -93,12 +93,14 @@ export default function Index () {
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Homes active={ activePanelClass } />
-        <Interiors active={ activePanelClass } />
-        <PublicArt active={ activePanelClass } />
+        <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
+        <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Brentwood active={ activePanelClass } />
       </main>
 
       <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
+      <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />
+      <OverlayPublicArt active={ activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART } fnClose={ closeOverlay } />
     </>
   )
 }

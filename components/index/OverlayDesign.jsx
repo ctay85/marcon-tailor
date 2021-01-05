@@ -7,7 +7,7 @@ import { Accordion, AccordionItem } from 'components/ui'
 export default function OverlayDesign (props) {
   return (
     <Overlay {...props}>
-      <OverlayContent category="Design" title="More Thought">
+      <OverlayContent category="Design" title="More Thought.">
         <Accordion>
           <AccordionItem title="Green Initiatives">
             <p>Improved indoor air quality thanks to low VOC paints and flooring throughout</p>

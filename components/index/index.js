@@ -7,5 +7,7 @@ import PublicArt from './PublicArt'
 import Brentwood from './Brentwood'
 import { Overlay, OverlayContent, OverlayImage } from './Overlay'
 import OverlayDesign from './OverlayDesign'
+import OverlayInteriors from './OverlayInteriors'
+import OverlayPublicArt from './OverlayPublicArt'
 
-export { Cover, Design, Homes, Interiors, PublicArt, Brentwood, Overlay, OverlayContent, OverlayImage, OverlayDesign }
+export { Cover, Design, Homes, Interiors, PublicArt, Brentwood, Overlay, OverlayContent, OverlayImage, OverlayDesign, OverlayInteriors, OverlayPublicArt }

@@ -6,11 +6,14 @@ import { motion } from 'framer-motion'
 // Utils
 import { indexPanelAnimations } from 'utils'
 
+// Store
+import { INDEX_OVERLAY_KEY_PUBLICART } from 'store/constants'
+
 // Components
 import { BgImage } from 'components/ui'
 
 // Component
-export default function PublicArt ({ active }) {
+export default function PublicArt ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__public-art')
   const [ animationState, setAnimationState ] = useState('initial')
 
@@ -31,7 +34,7 @@ export default function PublicArt ({ active }) {
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.</motion.p>
 
-        <motion.button className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
+        <motion.button className="btn__more" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
           <i className="material-icons">add</i>
           <span>More on public art</span>
         </motion.button>

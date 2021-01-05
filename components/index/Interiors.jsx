@@ -6,11 +6,14 @@ import { motion } from 'framer-motion'
 // Utils
 import { indexPanelAnimations } from 'utils'
 
+// Store
+import { INDEX_OVERLAY_KEY_INTERIORS } from 'store/constants'
+
 // Components
 import { BgImage } from 'components/ui'
 
 // Component
-export default function Interiors ({ active }) {
+export default function Interiors ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__interiors')
   const [ animationState, setAnimationState ] = useState('initial')
 
@@ -35,7 +38,7 @@ export default function Interiors ({ active }) {
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</motion.p>
 
-        <motion.button className="btn__more" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
+        <motion.button className="btn__more" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
           <i className="material-icons">add</i>
           <span>More on the interiors</span>
         </motion.button>
