@@ -11,7 +11,7 @@ import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KE
 
 // Component
 export default function Index () {
-  const config = useRef({ wheelDelta : 200, transitionDuration : 1000 })
+  const config = useRef({ wheelDelta : 150, touchDelta : 30, transitionDuration : 1000 })
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
@@ -59,29 +59,28 @@ export default function Index () {
       if ( !lastPanelActive ) window.scrollTo(0,0)
     }
 
-    const onMouseWheel = ({ deltaY }) => {
-      const direction = deltaY > 0 ? 'down' : 'up'
+    const onMouseWheel = e => {
+      const isTouchPad = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0
+      const delta = isTouchPad ? config.current.touchDelta : config.current.wheelDelta
+      const direction = e.deltaY > 0 ? 'down' : 'up'
 
-      if ( Math.abs(deltaY) > config.current.wheelDelta ) {
+      if ( Math.abs(e.deltaY) > delta ) {
         blockExecution()
         changePanel(direction)
         isLastPanel()
       }
     }
 
-    //window.addEventListener( 'scroll', onScroll )
     window.addEventListener( 'mousewheel', onMouseWheel )
-
-    return () => {
-      //window.removeEventListener( 'scroll', onScroll )
-      window.removeEventListener( 'mousewheel', onMouseWheel )
-    }
+    return () => window.removeEventListener( 'mousewheel', onMouseWheel )
   }, [ isAnimating, activePanelClass ])
 
   //
   useEffect( () => {
     window.scrollTo(0,0)
     document.documentElement.classList.add('no-scroll')
+
+    return () => document.documentElement.classList.remove('no-scroll')
   }, [])
 
   //
