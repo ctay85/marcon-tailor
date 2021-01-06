@@ -29,26 +29,18 @@ export default function Design ({ active, setActiveOverlayKey }) {
     <motion.section className={ sectionClass.current } data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <article className="text--blue">
         <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>
-          Design
+          Design &mdash; More Thought
         </motion.span>
-
-        <motion.h2 className="panel-tagline" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelTagline }>
-          More Thought.
-        </motion.h2>
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>
           Designed by Shift Architecture, Tailor is a sleek, twenty-seven storey tower with a sculpted base.
         </motion.p>
-
-        <motion.button className="btn__more" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.btnMore }>
-          <i className="material-icons">add</i>
-          <span>More on the design</span>
-        </motion.button>
       </article>
 
-      <figure>
+      <figure className="image-trigger" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }>
         <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" />
+        <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>
       </figure>
     </motion.section>
   )

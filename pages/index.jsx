@@ -1,6 +1,7 @@
 
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
+import SVG from 'react-inlinesvg'
 
 // Components
 import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt } from 'components/index'
@@ -54,6 +55,9 @@ export default function Index () {
   const closeOverlay = () => setActiveOverlayKey(null)
 
   //
+  const reset = () => setActivePanelClass('page__index__cover')
+
+  //
   useEffect( () => {
     const onScroll = () => {
       if ( !lastPanelActive ) window.scrollTo(0,0)
@@ -86,7 +90,7 @@ export default function Index () {
   //
   return (
     <>
-      <Seo />
+      <Seo title="Made For Brentwood" />
 
       <main className="page__index">
         <Cover active={ activePanelClass } />
@@ -96,6 +100,15 @@ export default function Index () {
         <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Brentwood active={ activePanelClass } />
       </main>
+
+      <button className="page__index__enquire">
+        <span>Enquire</span>
+        <SVG src="/svg/thin-arrow-down.svg" />
+      </button>
+
+      <button className="page__index__back-to-top" onClick={ reset }>
+        <SVG src="/svg/thin-arrow-down.svg" />
+      </button>
 
       <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
       <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />

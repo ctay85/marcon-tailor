@@ -34,30 +34,17 @@ export default function Cover ({ active }) {
       exit : { opacity : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }}
     }}>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
+        <video src="/vid/lobby-exterior-loop.mp4" autoPlay muted playsInline loop />
       </motion.div>
 
       <div className="left-column">
-        <motion.nav initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
+        <motion.h1 initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
           initial : { opacity : 1, y : 100 },
           enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.7 }},
           exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION }}
         }}>
-          <button>Design</button>
-          <button>Homes</button>
-          <button>Interiors</button>
-          <button>Public Art</button>
-          <button>Brentwood</button>
-        </motion.nav>
-
-        <motion.button className="btn__enquire" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
-          initial : { opacity : 0, y : 100 },
-          enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.6 }},
-          exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.1 }}
-        }}>
-          <span>Enquire</span>
-          <SVG src="/svg/thin-arrow-down.svg" />
-        </motion.button>
+          Celebrate More<br /> in Brentwood
+        </motion.h1>
       </div>
 
       <motion.div className="floorplans" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
