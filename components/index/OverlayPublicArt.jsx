@@ -21,7 +21,11 @@ export default function OverlayPublicArt (props) {
         </Accordion>
       </OverlayContent>
 
-      <OverlayImage src="/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg" />
+      <OverlayImage images={[
+        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg",
+        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg",
+        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg"
+      ]} />
     </Overlay>
   )
 }

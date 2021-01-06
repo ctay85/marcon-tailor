@@ -36,7 +36,11 @@ export default function OverlayDesign (props) {
         </Accordion>
       </OverlayContent>
 
-      <OverlayImage src="/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg" />
+      <OverlayImage images={[
+        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
+        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
+        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg"
+      ]} />
     </Overlay>
   )
 }

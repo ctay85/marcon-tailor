@@ -48,7 +48,11 @@ export default function OverlayInteriors (props) {
         </Accordion>
       </OverlayContent>
 
-      <OverlayImage src="/img/index/Tailor-1-bedroom-kitchen-02-3600x4376.jpg" />
+      <OverlayImage images={[
+        "/img/index/Tailor-1-bedroom-kitchen-02-3600x4376.jpg",
+        "/img/index/Tailor-1-bedroom-kitchen-02-3600x4376.jpg",
+        "/img/index/Tailor-1-bedroom-kitchen-02-3600x4376.jpg"
+      ]} />
     </Overlay>
   )
 }

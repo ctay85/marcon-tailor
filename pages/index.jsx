@@ -16,7 +16,7 @@ export default function Index () {
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
-  const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
+  const [ activeOverlayKey, setActiveOverlayKey ] = useState(INDEX_OVERLAY_KEY_DESIGN)
 
   //
   const blockExecution = () => {

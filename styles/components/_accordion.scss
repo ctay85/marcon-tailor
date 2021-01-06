@@ -4,13 +4,8 @@
     padding:1.25rem 0;
 
     &[data-open="true"] {
-      .acordion__item__header{
-        i{
-          transform: rotate(180deg);
-        }
-      }
       .accordion__item__content{
-        display: block;
+        height:auto;
       }
     }
 
@@ -21,25 +16,36 @@
       cursor:pointer;
 
       span{
-        font-size:1.75rem;
-        font-wight:100;
+        font-size:1.5rem;
         user-select: none;
       }
 
-      &:after{
-        user-select: none;
-        content:'\e313';
-        display:block;
-        font-family:'Material Icons';
-        font-size:2rem;
-        line-height:1em;
+      svg{
+        width:15px;
+        height:auto;
+        display: block;
+        margin:0 1rem 0 0;
+
+        path{
+          stroke:$color-body;
+        }
       }
     }
     &__content{
-      display: none;
-      margin:3rem 0 0 0;
+      display: block;
       font-family:$font-sans-serif;
       font-size:1.25rem;
+      height:0;
+      overflow:hidden;
+      transition:height 1s ease;
+
+      &__wrap{
+        padding:2rem 0 0 0;
+
+        p:last-child{
+          margin:0;
+        }
+      }
     }
   }
 }

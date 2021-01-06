@@ -6,10 +6,18 @@ import { useState, useEffect } from 'react'
 import { BgImage } from 'components/ui'
 
 //
-export function OverlayImage ({ src }) {
+export function OverlayImage ({ images }) {
+  const [ activeImageIndex, setActiveImageIndex ] = useState(0)
+
+  //
+  useEffect( () => {
+    setTimeout( () => setActiveImageIndex( images[ activeImageIndex + 1 ] ? activeImageIndex + 1 : 0 ), 3000)
+  }, [ activeImageIndex ])
+
+  //
   return (
     <figure>
-      <BgImage src={ src } />
+      { images.map(( image, i ) => <div className="image" data-active={ activeImageIndex === i }><BgImage src={ image } key={ i } /></div> )}
     </figure>
   )
 }
@@ -19,8 +27,7 @@ export function OverlayContent ({ category, title, children }) {
   return (
     <article>
       <div className="wrap">
-        <span className="category">{ category }</span>
-        <h2 className="title">{ title }</h2>
+        <span className="category">{ category } &mdash; { title }</span>
         { children }
       </div>
     </article>
