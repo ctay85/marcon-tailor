@@ -2,16 +2,19 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import SVG from 'react-inlinesvg'
+import { useDispatch } from 'react-redux'
 
 // Components
 import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
-import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART } from 'store/constants'
+import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
+import { uiUpdateHeaderTheme } from 'store/actions'
 
 // Component
 export default function Index () {
+  const dispatch = useDispatch()
   const config = useRef({ wheelDelta : 150, touchDelta : 30, transitionDuration : 1000 })
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
@@ -56,6 +59,26 @@ export default function Index () {
 
   //
   const reset = () => setActivePanelClass('page__index__cover')
+
+  //
+  useEffect( () => {
+    let newTheme
+
+    switch ( activePanelClass ) {
+      case 'page__index__cover' :
+      case 'page__index__homes' :
+      case 'page__index__interiors' :
+      case 'page__index__public-art' :
+      case 'page__index__brentwood' :
+        newTheme = UI_HEADER_THEME_WHITE;
+      break;
+      case 'page__index__design' :
+        newTheme = UI_HEADER_THEME_BLUE;
+      break;
+    }
+
+    dispatch( uiUpdateHeaderTheme(newTheme) )
+  }, [ activePanelClass ])
 
   //
   useEffect( () => {

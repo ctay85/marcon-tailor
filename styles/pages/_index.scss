@@ -7,8 +7,8 @@
 
   &__back-to-top{
     position: fixed;
-    bottom:2.5vw;
-    right:5vw;
+    bottom:2.5rem;
+    right:3rem;
     z-index:3;
     background:rgba(white,0.1);
     backdrop-filter:blur(15px);
@@ -32,8 +32,8 @@
 
   &__enquire {
     position: fixed;
-    bottom:2.5vw;
-    left:5vw;
+    bottom:2.5rem;
+    left:3rem;
     z-index:3;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@
     position: absolute;
     top:0;
     left:0;
-    padding:calc(#{$header-height} + 3rem) 5vw;
+    padding:$header-height 3rem 8rem 3rem;
     display: flex;
     flex-wrap:wrap;
     background-color:white;
@@ -142,18 +142,23 @@
 
       .panel-name{
         display: block;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin:0 0 1.5rem 0;
-        font-size:0.9rem;
+        font-size:1rem;
         line-height:2em;
         font-weight:bold;
         flex:0 0 100%;
         align-self:flex-start;
+        font-family:$font-sans-serif;
+        font-weight:100;
+
+        span{
+          text-transform: uppercase;
+        }
       }
 
       .panel-description {
-        font-size:1.5rem;
+        font-size:1.25rem;
         margin:0;
         align-self: flex-end;
       }
@@ -182,15 +187,16 @@
     }
 
     .image-trigger{
-      padding-top:35%;
-      margin:0 auto 0 auto;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate3d(-15%,-50%,0);
       transition: all .3s ease;
-      cursor:url('/svg/cursor-more.svg'), pointer;
-      transform: translate3d(0,0,0);
+      width:40%;
+      height:50%;
 
       &:hover{
-        flex:0 0 52%;
-        padding-top:40%;
+        height:60%;
 
         .caption{
           opacity:1;
@@ -269,6 +275,7 @@
       font-family:$font-sans-serif;
       align-self:center;
       z-index:2;
+      flex:0 0 30%;
 
       .section-title{
         text-transform: uppercase;
@@ -282,6 +289,11 @@
 
       figure{
         margin:0 0 1.5rem 0;
+      }
+
+      .description{
+        font-family: $font-serif;
+        padding:0 2rem;
       }
 
       .stat{

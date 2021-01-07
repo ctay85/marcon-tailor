@@ -29,7 +29,7 @@ export default function Brendwood ({ active }) {
       </motion.div>
 
       <article>
-        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>Brentwood &mdash; Celebrate More</motion.span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Brentwood</span> &mdash; Celebrate More</motion.span>
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</motion.p>
       </article>

@@ -16,7 +16,7 @@
       cursor:pointer;
 
       span{
-        font-size:1.5rem;
+        font-size:1.25rem;
         user-select: none;
       }
 
@@ -34,7 +34,6 @@
     &__content{
       display: block;
       font-family:$font-sans-serif;
-      font-size:1.25rem;
       height:0;
       overflow:hidden;
       transition:height 1s ease;

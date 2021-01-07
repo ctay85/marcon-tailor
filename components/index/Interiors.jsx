@@ -32,7 +32,7 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
       </motion.div>
 
       <article>
-        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>Interiors &mdash; More Space</motion.span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Interiors</span> &mdash; More Space</motion.span>
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Our interiors have been planned to maximize space and are finished to stand the test of time.</motion.p>
       </article>

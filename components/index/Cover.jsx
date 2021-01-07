@@ -58,55 +58,59 @@ export default function Cover ({ active }) {
           <Image src="/img/index/image2.jpg" width="343" height="154" />
         </figure>
 
-        <div className="stat">
-          <div className="left">
-            <span className="title">Studios</span>
-            <div className="progress"><span style={{ width : '40%' }}></span></div>
-          </div>
-          <div className="right">
-            <span className="number">46</span>
-          </div>
-        </div>
+        <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <div className="stat">
-          <div className="left">
-            <span className="title">One Bedrooms</span>
-            <div className="progress"><span style={{ width : '60%' }}></span></div>
+        {/*
+          <div className="stat">
+            <div className="left">
+              <span className="title">Studios</span>
+              <div className="progress"><span style={{ width : '40%' }}></span></div>
+            </div>
+            <div className="right">
+              <span className="number">46</span>
+            </div>
           </div>
-          <div className="right">
-            <span className="number">69</span>
-          </div>
-        </div>
 
-        <div className="stat">
-          <div className="left">
-            <span className="title">Two Bedrooms</span>
-            <div className="progress"><span style={{ width : '60%' }}></span></div>
+          <div className="stat">
+            <div className="left">
+              <span className="title">One Bedrooms</span>
+              <div className="progress"><span style={{ width : '60%' }}></span></div>
+            </div>
+            <div className="right">
+              <span className="number">69</span>
+            </div>
           </div>
-          <div className="right">
-            <span className="number">69</span>
-          </div>
-        </div>
 
-        <div className="stat">
-          <div className="left">
-            <span className="title">Penthouses</span>
-            <div className="progress"><span style={{ width : '10%' }}></span></div>
+          <div className="stat">
+            <div className="left">
+              <span className="title">Two Bedrooms</span>
+              <div className="progress"><span style={{ width : '60%' }}></span></div>
+            </div>
+            <div className="right">
+              <span className="number">69</span>
+            </div>
           </div>
-          <div className="right">
-            <span className="number">4&nbsp;</span>
-          </div>
-        </div>
 
-        <div className="stat">
-          <div className="left">
-            <span className="title">Townhomes</span>
-            <div className="progress"><span style={{ width : '10%' }}></span></div>
+          <div className="stat">
+            <div className="left">
+              <span className="title">Penthouses</span>
+              <div className="progress"><span style={{ width : '10%' }}></span></div>
+            </div>
+            <div className="right">
+              <span className="number">4&nbsp;</span>
+            </div>
           </div>
-          <div className="right">
-            <span className="number">5&nbsp;</span>
+
+          <div className="stat">
+            <div className="left">
+              <span className="title">Townhomes</span>
+              <div className="progress"><span style={{ width : '10%' }}></span></div>
+            </div>
+            <div className="right">
+              <span className="number">5&nbsp;</span>
+            </div>
           </div>
-        </div>
+        */}
       </motion.div>
 
     </motion.section>

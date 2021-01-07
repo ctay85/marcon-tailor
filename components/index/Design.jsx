@@ -26,10 +26,10 @@ export default function Design ({ active, setActiveOverlayKey }) {
 
   //
   return (
-    <motion.section className={ sectionClass.current } data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
+    <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }>
       <article className="text--blue">
         <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>
-          Design &mdash; More Thought
+          <span>Design</span> &mdash; More Thought
         </motion.span>
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>
@@ -37,7 +37,7 @@ export default function Design ({ active, setActiveOverlayKey }) {
         </motion.p>
       </article>
 
-      <figure className="image-trigger" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }>
+      <figure className="image-trigger">
         <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" />
         <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>

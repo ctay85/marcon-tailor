@@ -17,7 +17,7 @@ export function OverlayImage ({ images }) {
   //
   return (
     <figure>
-      { images.map(( image, i ) => <div className="image" data-active={ activeImageIndex === i }><BgImage src={ image } key={ i } /></div> )}
+      { images.map(( image, i ) => <div className="image" key={ i } data-active={ activeImageIndex === i }><BgImage src={ image } /></div> )}
     </figure>
   )
 }
@@ -27,7 +27,7 @@ export function OverlayContent ({ category, title, children }) {
   return (
     <article>
       <div className="wrap">
-        <span className="category">{ category } &mdash; { title }</span>
+        <span className="category"><span>{ category }</span> &mdash; { title }</span>
         { children }
       </div>
     </article>

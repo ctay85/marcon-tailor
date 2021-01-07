@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background:$color-grey-400;
+    background:$brand-dusk;
     border-radius: 100%;
     align-self: center;
     margin:0 2rem 0 0;
@@ -55,7 +55,7 @@
     i{
       font-size:1rem;
       line-height:1em;
-      color:black;
+      color:white;
     }
   }
 
@@ -75,11 +75,16 @@
 
     .category{
       display: block;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       margin:0 0 1.5rem 0;
-      font-size:0.9rem;
+      font-size:1rem;
       line-height:2em;
+      font-family:$font-sans-serif;
+      font-weight:100;
+
+      span{
+        text-transform: uppercase;
+      }
     }
 
     .title{
