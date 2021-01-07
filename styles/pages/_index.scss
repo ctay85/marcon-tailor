@@ -80,7 +80,7 @@
     position: absolute;
     top:0;
     left:0;
-    padding:$header-height 3rem 8rem 3rem;
+    padding:2.25rem 3rem 8rem 3rem;
     display: flex;
     flex-wrap:wrap;
     background-color:white;
@@ -144,21 +144,24 @@
         display: block;
         letter-spacing: 1px;
         margin:0 0 1.5rem 0;
-        font-size:1rem;
         line-height:2em;
-        font-weight:bold;
         flex:0 0 100%;
         align-self:flex-start;
-        font-family:$font-sans-serif;
-        font-weight:100;
+        font-family:$font-serif;
+        font-size:1.1rem;
 
         span{
           text-transform: uppercase;
+          font-family:$font-sans-serif;
+          font-weight:100;
+          font-size:0.8rem;
+          letter-spacing: 2px;
         }
       }
 
       .panel-description {
-        font-size:1.25rem;
+        font-size:1.1rem;
+        line-height:1.5em;
         margin:0;
         align-self: flex-end;
       }
