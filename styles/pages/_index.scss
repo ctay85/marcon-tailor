@@ -261,8 +261,8 @@
 
       h1{
         color:white;
-        line-height:1.25em;
-        font-size:5rem;
+        line-height:1.15em;
+        font-size:4rem;
         align-self:center;
         flex:0 0 100%;
         margin:0;
@@ -279,6 +279,7 @@
       align-self:center;
       z-index:2;
       flex:0 0 30%;
+      max-width:350px;
 
       .section-title{
         text-transform: uppercase;
@@ -292,6 +293,12 @@
 
       figure{
         margin:0 0 1.5rem 0;
+
+        img{
+          width:100%;
+          height:auto;
+          display: block;
+        }
       }
 
       .description{

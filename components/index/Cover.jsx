@@ -43,7 +43,7 @@ export default function Cover ({ active }) {
           enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.7 }},
           exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION }}
         }}>
-          Celebrate More<br /> in Brentwood
+          Celebrate More<br /> in Brentwood.
         </motion.h1>
       </div>
 
@@ -55,10 +55,10 @@ export default function Cover ({ active }) {
         <span className="section-title">Floorplans</span>
 
         <figure>
-          <Image src="/img/index/image2.jpg" width="343" height="154" />
+          <img src="/img/index/image2.jpg" />
         </figure>
 
-        <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 
         {/*
           <div className="stat">
