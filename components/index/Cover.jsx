@@ -34,7 +34,7 @@ export default function Cover ({ active }) {
       exit : { opacity : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }}
     }}>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <video src="/vid/lobby-exterior-loop.mp4" autoPlay muted playsInline loop />
+        <video src="/vid/lobby-exterior-loop-v2.mp4" autoPlay muted playsInline loop />
       </motion.div>
 
       <div className="left-column">
