@@ -1,7 +1,12 @@
 .accordion{
   &__item{
     border-bottom:solid 1px $brand-dusk;
-    padding:1.25rem 0;
+    padding:1rem 0 1rem 0;
+
+    &:last-child{
+      padding-bottom:0;
+      border:none;
+    }
 
     &[data-open="true"] {
       .accordion__item__content{
@@ -36,13 +41,42 @@
       font-family:$font-sans-serif;
       height:0;
       overflow:hidden;
-      transition:height 1s ease;
+      transition:height .5s ease;
 
       &__wrap{
-        padding:2rem 0 0 0;
+        padding:1rem 0 0 0;
 
         p:last-child{
           margin:0;
+        }
+
+        .list-title{
+          margin-bottom:1rem;
+          line-height:1.5em;
+        }
+
+        ul{
+          padding:0;
+          list-style: none;
+
+          &:last-child{
+            margin:0;
+          }
+
+          li{
+            border-bottom:solid 1px $color-grey-300;
+            padding:1rem 2rem 1rem 0;
+            font-size:0.9rem;
+            line-height:1.5em;
+
+            &:first-child{
+              padding-top:0;
+            }
+            &:last-child{
+              border:none;
+              padding-bottom:0;
+            }
+          }
         }
       }
     }

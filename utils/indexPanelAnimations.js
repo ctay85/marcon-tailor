@@ -35,14 +35,14 @@ export default {
   },
 
   blind : {
-    initial : { width : '100%' },
+    initial : { width : '110%' },
     enter : { width : '0%', transition : { duration : 0.5, delay : 1.3 }},
-    exit : { width : '100%', transition : { duration : 0.5 }}
+    exit : { width : '110%', transition : { duration : 0.5 }}
   },
 
   bgAnimation : {
     initial : { scale : 1.05 },
     enter : { scale : 1, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }},
     exit : { scale : 1.05, transition : { duration : INDEX_PANEL_TRANSITION_DURATION }}
-  } 
+  }
 }

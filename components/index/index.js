@@ -9,9 +9,11 @@ import { Overlay, OverlayContent, OverlayImage, OverlayGallery } from './Overlay
 import OverlayDesign from './OverlayDesign'
 import OverlayInteriors from './OverlayInteriors'
 import OverlayPublicArt from './OverlayPublicArt'
+import OverlayHomes from './OverlayHomes'
+import OverlayBrentwood from './OverlayBrentwood'
 
 export {
   Cover, Design, Homes, Interiors, PublicArt, Brentwood,
-  Overlay, OverlayContent, OverlayImage, OverlayGallery, 
-  OverlayDesign, OverlayInteriors, OverlayPublicArt
+  Overlay, OverlayContent, OverlayImage, OverlayGallery,
+  OverlayDesign, OverlayHomes, OverlayInteriors, OverlayPublicArt, OverlayBrentwood
 }

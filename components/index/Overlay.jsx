@@ -57,7 +57,6 @@ export function OverlayContent ({ category, title, children }) {
 
 //
 export function OverlayGallery ({ images }) {
-  const imageContainer = useRef(null)
   const [ activeIndex, setActiveIndex ] = useState(0)
 
   //
@@ -79,24 +78,9 @@ export function OverlayGallery ({ images }) {
   }
 
   //
-  // useEffect( () => {
-  //   if ( overlayState.index === null ) {
-  //     return
-  //   }
-  //
-  //   setActiveIndex(overlayState.index)
-  // }, [ overlayState.index ])
-
-  //
-  // useEffect( () => {
-  //   const method = overlayState.visible ? 'add' : 'remove'
-  //   document.documentElement.classList[method]('no-scroll')
-  // }, [ overlayState.visible ])
-
-  //
   return (
     <div className="overlay-gallery">
-      <aside>
+      <div className="info">
         <p className="text--display">{ images[activeIndex].blurb }</p>
 
         <div className="bottom">
@@ -108,11 +92,11 @@ export function OverlayGallery ({ images }) {
             <button className="btn__next" onClick={ next }></button>
           </div>
         </div>
-      </aside>
+      </div>
 
-      <figure ref={ imageContainer }>
+      <div className="images">
         { images.map(({ file, caption }, i ) => <img src={ file } key={ i } data-active={ i === activeIndex } /> )}
-      </figure>
+      </div>
     </div>
   )
 }

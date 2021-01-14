@@ -28,7 +28,7 @@ export function AccordionItem ({ title, children }) {
       setTimeout( () => {
         setIsOpen(true)
         removeHeight()
-      }, 1000)
+      }, 500)
     }
   }
 

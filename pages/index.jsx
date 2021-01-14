@@ -2,20 +2,21 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import SVG from 'react-inlinesvg'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 // Components
-import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt } from 'components/index'
+import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
-import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
+import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_BRENTWOOD, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
 import { uiUpdateHeaderTheme } from 'store/actions'
 
 // Component
 export default function Index () {
   const dispatch = useDispatch()
   const config = useRef({ wheelDelta : 150, touchDelta : 30, transitionDuration : 1000 })
+  const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
@@ -118,24 +119,26 @@ export default function Index () {
       <main className="page__index">
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
-        <Homes active={ activePanelClass } />
+        <Homes active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
-        <Brentwood active={ activePanelClass } />
+        <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
 
-      <button className="page__index__enquire">
+      <button className="page__index__enquire" data-theme={ ui.headerTheme }>
         <span>Enquire</span>
         <SVG src="/svg/thin-arrow-down.svg" />
       </button>
 
-      <button className="page__index__back-to-top" onClick={ reset }>
+      <button className="page__index__back-to-top" data-theme={ ui.headerTheme } onClick={ reset }>
         <SVG src="/svg/thin-arrow-down.svg" />
       </button>
 
       <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
       <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />
       <OverlayPublicArt active={ activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART } fnClose={ closeOverlay } />
+      <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
+      <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
     </>
   )
 }
