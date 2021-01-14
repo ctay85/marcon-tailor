@@ -25,7 +25,7 @@ export default function Homes ({ active }) {
       <article>
         <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Homes</span> &mdash; More Intimate</motion.span>
 
-        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Modern architecture paired with a rare level of intimacy and connection, with only 8 homes on each floor. Expansive balconies up to 319 sf, select homes with bedrooms large enough for king beds, view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</motion.p>
+        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Modern architecture paired with a rare level of intimacy and connection, with only 8 homes on each floor.</motion.p>
       </article>
     </motion.section>
   )
