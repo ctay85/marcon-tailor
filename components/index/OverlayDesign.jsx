@@ -1,45 +1,19 @@
 
 //
-import { Overlay, OverlayContent, OverlayImage } from 'components/index'
+import { Overlay, OverlayContent, OverlayImage, OverlayGallery } from 'components/index'
 import { Accordion, AccordionItem } from 'components/ui'
 
 //
 export default function OverlayDesign (props) {
   return (
     <Overlay {...props}>
-      <OverlayContent category="Design" title="More Thought.">
-        <Accordion>
-          <AccordionItem title="Green Initiatives">
-            <p>Improved indoor air quality thanks to low VOC paints and flooring throughout</p>
-            <p>Water conservation: low-flow toilets, showerheads and faucet aerators, as well as drought-tolerant landscaping</p>
-            <p>Energy conservation: high-efficiency domestic hot water, heating & cooling system; energy-efficient common area lighting; Energy Star® windows, refrigerator, dishwasher and laundry</p>
-            <p>Emissions reduction: pre-wired power to select parking stall locations in the underground parkade for Level 2 electric vehicle charging</p>
-            <p>Recycling program: recycling facilities for residents; recycled materials used in construction; demolition material and up to 75% of construction waste recycled</p>
-            <p>Extra-green efforts: native plantings to reduce the need for pesticides and fertilizers; erosion control and vegetation safeguards; and environmental workshops with trades and suppliers</p>
-          </AccordionItem>
-          <AccordionItem title="Exterior">
-            <p>Improved indoor air quality thanks to low VOC paints and flooring throughout</p>
-            <p>Water conservation: low-flow toilets, showerheads and faucet aerators, as well as drought-tolerant landscaping</p>
-            <p>Energy conservation: high-efficiency domestic hot water, heating & cooling system; energy-efficient common area lighting; Energy Star® windows, refrigerator, dishwasher and laundry</p>
-            <p>Emissions reduction: pre-wired power to select parking stall locations in the underground parkade for Level 2 electric vehicle charging</p>
-            <p>Recycling program: recycling facilities for residents; recycled materials used in construction; demolition material and up to 75% of construction waste recycled</p>
-            <p>Extra-green efforts: native plantings to reduce the need for pesticides and fertilizers; erosion control and vegetation safeguards; and environmental workshops with trades and suppliers</p>
-          </AccordionItem>
-          <AccordionItem title="Connected & Convenient">
-            <p>Improved indoor air quality thanks to low VOC paints and flooring throughout</p>
-            <p>Water conservation: low-flow toilets, showerheads and faucet aerators, as well as drought-tolerant landscaping</p>
-            <p>Energy conservation: high-efficiency domestic hot water, heating & cooling system; energy-efficient common area lighting; Energy Star® windows, refrigerator, dishwasher and laundry</p>
-            <p>Emissions reduction: pre-wired power to select parking stall locations in the underground parkade for Level 2 electric vehicle charging</p>
-            <p>Recycling program: recycling facilities for residents; recycled materials used in construction; demolition material and up to 75% of construction waste recycled</p>
-            <p>Extra-green efforts: native plantings to reduce the need for pesticides and fertilizers; erosion control and vegetation safeguards; and environmental workshops with trades and suppliers</p>
-          </AccordionItem>
-        </Accordion>
-      </OverlayContent>
-
-      <OverlayImage images={[
-        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
-        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
-        "/img/index/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg"
+      <OverlayGallery images={[
+        { file : `/img/design/architecture/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg`, caption : 'Southwest View — Tower', blurb : 'Tailor sits at the corner of Alpha and Alaska' },
+        { file : `/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg`, caption : 'West View — Lobby', blurb : 'The residential lobby fronts Alpha St.' },
+        { file : `/img/design/architecture/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_2400x2400.jpg`, caption : 'Northwest View — Lobby', blurb : 'Expansive glazing welcomes sun from the south' },
+        { file : `/img/design/architecture/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg`, caption : 'North View — Lobby', blurb : 'Public art as seen from Alaska St.' },
+        { file : `/img/design/architecture/B&TB_MARCON_TAILOR_OUTDOOR_AMENITY_FINAL_2400x2400.jpg`, caption : 'East View — Landscape', blurb : 'Extensive landscaping by PWL Partnership defines the back yard' },
+        { file : `/img/design/architecture/B&TB_MARCON_TAILOR_STREET_VIEW_FINAL_2400x1357.jpg`, caption : 'North View — Townhomes', blurb : 'Contemporary townhomes front Alaska St. at the South End' }
       ]} />
     </Overlay>
   )
