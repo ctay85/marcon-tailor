@@ -35,14 +35,20 @@ form{
         background-clip: content-box !important;
       }
     }
+
     select{
       border-color:white;
       color:white;
       background:$brand-blue-dark;
     }
+
     .btn__register{
-      background:white;
-      color:$brand-blue-dark;
+      background:$brand-indigo-dark;
+      color:white;
+    }
+
+    label{
+      color:white;
     }
   }
 
@@ -123,7 +129,7 @@ label{
 
 .input-group{
   position: relative;
-  margin:0 0 2rem 0;
+  margin:0 0 1rem 0;
   flex:0 0 100%;
 
   &.error{
@@ -156,7 +162,7 @@ label{
 
 .select-group{
   flex:0 0 100%;
-  margin:0 0 2rem 0;
+  margin:0 0 1rem 0;
 
   &.error{
     select{
@@ -170,7 +176,7 @@ label{
   display: flex;
   flex-wrap:wrap;
   flex:0 0 100%;
-  margin:0 0 2rem 0;
+  margin:0 0 1rem 0;
 
   .title{
     flex:0 0 100%;

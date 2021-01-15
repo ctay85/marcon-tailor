@@ -37,11 +37,11 @@ export function OverlayImage ({ images }) {
 
 
 //
-export function OverlayContent ({ category, title, children }) {
+export function OverlayContent ({ category, title = null, children }) {
   return (
     <article>
       <div className="wrap">
-        <span className="category"><span>{ category }</span> &mdash; { title }</span>
+        <span className="category"><span>{ category }</span> { title && `&mdash; ${title}` }</span>
         { children }
       </div>
     </article>
@@ -81,7 +81,7 @@ export function OverlayGallery ({ images }) {
   return (
     <div className="overlay-gallery">
       <div className="info">
-        <p className="text--display">{ images[activeIndex].blurb }</p>
+        <p className="description">{ images[activeIndex].blurb }</p>
 
         <div className="bottom">
           <span className="caption">{ images[activeIndex].caption }</span>

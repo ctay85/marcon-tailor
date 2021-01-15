@@ -103,7 +103,7 @@
     }
 
     &[data-panel-trigger="true"]{
-      cursor:url('/svg/cursor-more_Americana.svg'), pointer;
+      cursor:url('/svg/cursor-more_Americana.svg') 37.5 37.5, pointer;
     }
 
     &:before{

@@ -97,11 +97,11 @@ const Register = ({ reversed = false }) => {
   return (
     <section className="global__register" id="register">
       <div className="wrap--reg">
-        <h2 data-reveal="hidden">Register for more details.</h2>
+        <p className="enquire__title">Register for more details.</p>
       </div>
 
       <div className="wrap--narrow">
-        <form data-reveal="hidden" data-reversed={ reversed } ref={ form } method="post" validate="true">
+        <form data-reversed={ reversed } ref={ form } method="post" validate="true">
           <input name="00N3Z00000CeVvt" type="hidden" value="" />
           <input name="00N3Z00000CeVw9" type="hidden" value="" />
           <input name="00N3Z00000CeVw2" type="hidden" value=""/>

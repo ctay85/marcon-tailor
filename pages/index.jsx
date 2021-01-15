@@ -5,11 +5,11 @@ import SVG from 'react-inlinesvg'
 import { useDispatch, useSelector } from 'react-redux'
 
 // Components
-import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood } from 'components/index'
+import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
-import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_BRENTWOOD, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
+import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_BRENTWOOD, INDEX_OVERLAY_KEY_ENQUIRE, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
 import { uiUpdateHeaderTheme } from 'store/actions'
 
 // Component
@@ -125,7 +125,7 @@ export default function Index () {
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
 
-      <button className="page__index__enquire" data-theme={ ui.headerTheme }>
+      <button className="page__index__enquire" data-theme={ ui.headerTheme } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
         <span>Enquire</span>
         <SVG src="/svg/thin-arrow-down.svg" />
       </button>
@@ -139,6 +139,7 @@ export default function Index () {
       <OverlayPublicArt active={ activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART } fnClose={ closeOverlay } />
       <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
       <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
+      <OverlayEnquire active={ activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE } fnClose={ closeOverlay } />
     </>
   )
 }

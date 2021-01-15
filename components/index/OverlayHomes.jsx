@@ -7,7 +7,9 @@ import { Accordion, AccordionItem } from 'components/ui'
 export default function OverlayPublicArt (props) {
   return (
     <Overlay {...props}>
-      <OverlayContent category="Homes" title="More Intimate">
+      <OverlayContent category="Specifications">
+        <p>Expansive balconies up to 319 sf, bedrooms large enough for king beds, & view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</p>
+        
         <Accordion>
           <AccordionItem title="Homes">
             <ul>
@@ -80,9 +82,9 @@ export default function OverlayPublicArt (props) {
       </OverlayContent>
 
       <OverlayImage images={[
-        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg",
-        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg",
-        "/img/index/B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL_3600x3600.jpg"
+        "/img/design/interiors/Tailor-2-bedroom-living-5000x3626.jpg",
+        "/img/design/interiors/Tailor-1-bedroom-kitchen-2400x1586.jpg",
+        "/img/design/interiors/Tailor-2-bedroom-living-kitchen-1920x1279.jpg"
       ]} />
     </Overlay>
   )
