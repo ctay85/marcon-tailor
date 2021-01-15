@@ -32,7 +32,6 @@ export default function Index () {
   //
   const changePanel = direction => {
     if ( isAnimating || activeOverlayKey !== null ) return false
-    console.log(activeOverlayKey, 'change panel');
     window.scrollTo(0,0)
 
     const activePanel = document.querySelector(`.${activePanelClass}`)
