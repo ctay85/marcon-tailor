@@ -29,7 +29,7 @@ export default function Homes ({ active, setActiveOverlayKey }) {
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_HOMES) }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <BgImage src="/img/design/interiors/3_200619-152_2400x1599.jpg" />
+        <BgImage src="/img/index/3_200619-152_2400x1599.jpg" />
       </motion.div>
 
       <article>

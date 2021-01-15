@@ -31,7 +31,8 @@ export default function Index () {
 
   //
   const changePanel = direction => {
-    if ( isAnimating ) return false
+    if ( isAnimating || activeOverlayKey !== null ) return false
+    console.log(activeOverlayKey, 'change panel');
     window.scrollTo(0,0)
 
     const activePanel = document.querySelector(`.${activePanelClass}`)
@@ -101,7 +102,7 @@ export default function Index () {
 
     window.addEventListener( 'mousewheel', onMouseWheel )
     return () => window.removeEventListener( 'mousewheel', onMouseWheel )
-  }, [ isAnimating, activePanelClass ])
+  }, [ isAnimating, activePanelClass, activeOverlayKey ])
 
   //
   useEffect( () => {

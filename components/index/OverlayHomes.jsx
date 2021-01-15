@@ -9,7 +9,7 @@ export default function OverlayPublicArt (props) {
     <Overlay {...props}>
       <OverlayContent category="Specifications">
         <p>Expansive balconies up to 319 sf, bedrooms large enough for king beds, & view windows above kitchen sinks, Tailor offers more space and function than Brentwood has ever seen.</p>
-        
+
         <Accordion>
           <AccordionItem title="Homes">
             <ul>
@@ -82,9 +82,9 @@ export default function OverlayPublicArt (props) {
       </OverlayContent>
 
       <OverlayImage images={[
-        "/img/design/interiors/Tailor-2-bedroom-living-5000x3626.jpg",
-        "/img/design/interiors/Tailor-1-bedroom-kitchen-2400x1586.jpg",
-        "/img/design/interiors/Tailor-2-bedroom-living-kitchen-1920x1279.jpg"
+        "/img/index/homes/Tailor-Web-26.jpg",
+        "/img/index/homes/Tailor-Web-28.jpg",
+        "/img/index/homes/Tailor-Web-29.jpg"
       ]} />
     </Overlay>
   )

@@ -8,16 +8,16 @@ export default function OverlayInteriors (props) {
   return (
     <Overlay {...props}>
       <OverlayGallery images={[
-        { file : `/img/design/interiors/3_200619-152_2400x1599.jpg`, caption : '1 Bedroom', blurb : 'Kitchen' },
-        { file : `/img/design/interiors/Tailor-1-bedroom-bath-2400x3295.jpg`, caption : '1 Bedroom', blurb : 'Bathroom' },
-        { file : `/img/design/interiors/Tailor-1-bedroom-bedroom-2400x1617.jpg`, caption : '1 Bedroom', blurb : 'Bedroom' },
-        { file : `/img/design/interiors/Tailor-1-bedroom-kitchen-02-2400x2917.jpg`, caption : '1 Bedroom', blurb : 'Kitchen' },
-        { file : `/img/design/interiors/Tailor-1-bedroom-kitchen-2400x1586.jpg`, caption : '1 Bedroom', blurb : 'Kitchen' },
-        { file : `/img/design/interiors/Tailor-2-bedroom-bath-2400x3572.jpg`, caption : '2 Bedroom', blurb : 'Bathroom' },
-        { file : `/img/design/interiors/Tailor-2-bedroom-bedroom-5000x3626.jpg`, caption : '2 Bedroom', blurb : 'Bedroom' },
-        { file : `/img/design/interiors/Tailor-2-bedroom-living-02-2400x2476.jpg`, caption : '2 Bedroom', blurb : 'Living Room' },
-        { file : `/img/design/interiors/Tailor-2-bedroom-living-5000x3626.jpg`, caption : '2 Bedroom', blurb : 'Living Room' },
-        { file : `/img/design/interiors/Tailor-2-bedroom-living-kitchen-1920x1279.jpg`, caption : '2 Bedroom', blurb : 'Kitchen' }
+        { file : `/img/index/interiors/Tailor-Web-25.jpg`, caption : '2 Bedroom', blurb : 'Bedroom' },
+        { file : `/img/index/interiors/3_200619-152_3600x2399.jpg`, caption : '1 Bedroom', blurb : 'Living' },
+        { file : `/img/index/interiors/200619-291.jpg`, caption : '2 Bedroom', blurb : 'Living' },
+        { file : `/img/index/interiors/200619-419.jpg`, caption : '2 Bedroom', blurb : 'Kitchen' },
+        { file : `/img/index/interiors/Tailor-Web-7.jpg`, caption : '2 Bedroom', blurb : 'Living' },
+        { file : `/img/index/interiors/Tailor-Web-14.jpg`, caption : '1 Bedroom', blurb : 'Bathroom' },
+        { file : `/img/index/interiors/Tailor-Web-17.jpg`, caption : '1 Bedroom', blurb : 'Kitchen' },
+        { file : `/img/index/interiors/Tailor-Web-18.jpg`, caption : '1 Bedroom', blurb : 'Bedroom' },
+        { file : `/img/index/interiors/Tailor-Web-22.jpg`, caption : '2 Bedroom', blurb : 'Bedroom' },
+        { file : `/img/index/interiors/Tailor-Web-23.jpg`, caption : '2 Bedroom', blurb : 'Living' }
       ]} />
     </Overlay>
   )

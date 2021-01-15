@@ -41,7 +41,7 @@ export function OverlayContent ({ category, title = null, children }) {
   return (
     <article>
       <div className="wrap">
-        <span className="category"><span>{ category }</span> { title && `&mdash; ${title}` }</span>
+        <span className="category"><span>{ category }</span> { title && `\u2014 ${title}` }</span>
         { children }
       </div>
     </article>
