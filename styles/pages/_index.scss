@@ -7,8 +7,8 @@
 
   &__back-to-top{
     position: fixed;
-    bottom:2.5rem;
-    right:3rem;
+    bottom:1rem;
+    right:1rem;
     z-index:3;
     background:rgba(white,0.1);
     backdrop-filter:blur(15px);
@@ -19,6 +19,11 @@
     align-items: center;
     justify-content: center;
     transition:background 1s ease;
+
+    @media #{$screen-sm-min} {
+      bottom:2.5rem;
+      right:3rem;
+    }
 
     &[data-theme="blue"]{
       background:rgba($brand-blue-dark,0.7);
@@ -37,8 +42,8 @@
 
   &__enquire {
     position: fixed;
-    bottom:2.5rem;
-    left:3rem;
+    bottom:1rem;
+    left:1rem;
     z-index:3;
     display: flex;
     align-items: center;
@@ -53,6 +58,11 @@
     margin:auto 0 0 0;
     width:200px;
     transition:all 1s ease;
+
+    @media #{$screen-sm-min} {
+      bottom:2.5rem;
+      left:3rem;
+    }
 
     &[data-theme="blue"]{
       border-color:$brand-indigo;
@@ -91,19 +101,30 @@
     position: absolute;
     top:0;
     left:0;
-    padding:2.25rem 3rem 8rem 3rem;
+    padding:5rem 1rem 11rem 1rem;
     display: flex;
     flex-wrap:wrap;
     background-color:white;
     z-index:0;
     opacity:0;
+    overflow:hidden;
+
+    @media #{$screen-sm-min} {
+      padding:5rem 3rem 8rem 3rem;
+    }
+
+    @media #{$screen-md-min} {
+      padding-top:2.25rem;
+    }
 
     &[data-active="true"] {
       z-index:1;
     }
 
     &[data-panel-trigger="true"]{
-      cursor:url('/svg/cursor-more_Americana.svg') 37.5 37.5, pointer;
+      @media #{$screen-md-min} {
+        cursor:url('/svg/cursor-more_Americana.svg') 37.5 37.5, pointer;
+      }
     }
 
     &:before{
@@ -132,10 +153,18 @@
 
     article{
       color:white;
-      flex:0 0 30%;
+      flex:0 0 100%;
       z-index:2;
       display: flex;
       flex-wrap:wrap;
+
+      @media #{$screen-sm-min} {
+        flex:0 0 40%;
+      }
+
+      @media #{$screen-md-min} {
+        flex:0 0 30%;
+      }
 
       &.text--blue{
         color:$brand-indigo;
@@ -175,6 +204,7 @@
         line-height:1.5em;
         margin:0;
         align-self: flex-end;
+        max-width:300px;
       }
     }
 
@@ -202,18 +232,33 @@
 
     .image-trigger{
       position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate3d(-15%,-50%,0);
+      top:20%;
+      left:25%;
       transition: all .3s ease;
-      width:40%;
-      height:50%;
+      width:60%;
+      height:35%;
+
+      @media #{$screen-sm-min} {
+        transform: translate3d(-15%,-50%,0);
+        width:50%;
+        height:50%;
+      }
+
+      @media #{$screen-md-min} {
+        transform: translate3d(-15%,-50%,0);
+        width:40%;
+        height:50%;
+      }
 
       &:hover{
-        height:60%;
+        @media #{$screen-sm-min} {
+          height:60%;
+        }
 
         .caption{
-          opacity:1;
+          @media #{$screen-sm-min} {
+            opacity:1;
+          }
         }
       }
 
@@ -269,14 +314,23 @@
       display: flex;
       flex-wrap:wrap;
       z-index:2;
+      flex:0 0 100%;
+
+      @media #{$screen-md-min} {
+        flex:0 0 auto;
+      }
 
       h1{
         color:white;
         line-height:1.15em;
-        font-size:4rem;
+        font-size:3rem;
         align-self:center;
         flex:0 0 100%;
         margin:0;
+
+        @media #{$screen-sm-min} {
+          font-size:4rem;
+        }
       }
     }
 
@@ -285,12 +339,21 @@
       backdrop-filter:blur(15px);
       color:white;
       padding:1.5rem 0 0 0;
-      margin:0 0 0 auto;
+      margin:0 0 10rem auto;
       font-family:$font-sans-serif;
       align-self:center;
       z-index:2;
-      flex:0 0 30%;
+      flex:0 0 60%;
       max-width:350px;
+
+      @media #{$screen-sm-min} {
+        margin-bottom:0;
+        flex:0 0 50%;
+      }
+
+      @media #{$screen-md-min} {
+        flex:0 0 30%;
+      }
 
       .section-title{
         text-transform: uppercase;
@@ -303,7 +366,11 @@
       }
 
       figure{
-        margin:0 0 1.5rem 0;
+        margin:0 0 1rem 0;
+
+        @media #{$screen-sm-min} {
+          margin-bottom:1.5rem;
+        }
 
         img{
           width:100%;
@@ -314,7 +381,17 @@
 
       .description{
         font-family: $font-serif;
-        padding:0 2rem;
+        padding:0 1rem;
+        line-height:1.3rem;
+        font-size:0.8rem;
+        margin-bottom:1rem;
+
+        @media #{$screen-sm-min} {
+          margin-bottom:2rem;
+          padding:0 2rem;
+          font-size:1rem;
+          line-height:$line-height-base;
+        }
       }
 
       .stat{

@@ -83,10 +83,30 @@ export default function Index () {
 
   //
   useEffect( () => {
+
+    //
     const onScroll = () => {
       if ( !lastPanelActive ) window.scrollTo(0,0)
     }
 
+    //
+    let touchYStart = 0
+    const onTouchStart = e => touchYStart = e.changedTouches[0].clientY
+    const onTouchEnd = e => {
+      const touchYEnd = e.changedTouches[0].clientY
+      const direction = touchYEnd < touchYStart ? 'down' : 'up'
+      const distance = direction === 'down'
+        ? touchYStart - touchYEnd
+        : touchYEnd - touchYStart
+
+      if ( distance > config.current.wheelDelta ) {
+        blockExecution()
+        changePanel(direction)
+        isLastPanel()
+      }
+    }
+
+    //
     const onMouseWheel = e => {
       const isTouchPad = e.wheelDeltaY ? e.wheelDeltaY === -3 * e.deltaY : e.deltaMode === 0
       const delta = isTouchPad ? config.current.touchDelta : config.current.wheelDelta
@@ -99,8 +119,17 @@ export default function Index () {
       }
     }
 
+    //
+    window.addEventListener( 'touchstart', onTouchStart )
+    window.addEventListener( 'touchend', onTouchEnd )
     window.addEventListener( 'mousewheel', onMouseWheel )
-    return () => window.removeEventListener( 'mousewheel', onMouseWheel )
+
+    //
+    return () => {
+      window.removeEventListener( 'touchstart', onTouchStart )
+      window.removeEventListener( 'touchend', onTouchEnd )
+      window.removeEventListener( 'mousewheel', onMouseWheel )
+    }
   }, [ isAnimating, activePanelClass, activeOverlayKey ])
 
   //

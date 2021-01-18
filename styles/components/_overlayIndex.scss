@@ -26,9 +26,16 @@
     backdrop-filter:blur(10px);
     background:rgba(white,0.1);
 
+    .btn__close{
+      transform: translate3d(-50%,0,0);
+
+      @media #{$screen-md-min} {
+        transform: translate3d(0,0,0);
+      }
+    }
+
     article,
     figure,
-    .btn__close,
     .overlay-gallery,
     .brentwood{
       transform: translate3d(0,0,0);
@@ -50,9 +57,18 @@
     background:$brand-dusk;
     border-radius: 100%;
     align-self: center;
-    margin:0 calc( 4rem - 25px ) 0 0;
-    transform: translate3d(calc(-100% - 50px),0,0);
     transition:transform .5s ease;
+    position: absolute;
+    top:1rem;
+    left:50%;
+    transform: translate3d(-50%,calc(-100% - 1rem),0);
+    z-index:3;
+
+    @media #{$screen-md-min} {
+      transform: translate3d(calc(-100% - 50px),0,0);
+      margin:0 calc( 4rem - 25px ) 0 0;
+      position: static;
+    }
 
     i{
       font-size:1rem;
@@ -64,22 +80,38 @@
   article{
     transform: translate3d(200%,0,0);
     transition:transform .5s ease;
-    flex:0 0 calc(100% - 8rem);
+    flex:0 0 100%;
     overflow:auto;
     z-index:0;
+
+    @media #{$screen-md-min} {
+      flex:0 0 calc(100% - 8rem);
+    }
 
     &.enquire{
       display: flex;
       flex-wrap:wrap;
 
       .wrap{
-        flex:0 0 50%;
+        flex:0 0 100%;
+        order:2;
+
+        @media #{$screen-md-min} {
+          order:1;
+          flex:0 0 50%;
+        }
       }
 
       .global__register{
-        flex:0 0 50%;
+        flex:0 0 100%;
         background:$brand-blue-dark;
         color:white;
+        order:1;
+
+        @media #{$screen-md-min} {
+          order:2;
+          flex:0 0 50%;
+        }
       }
     }
 
@@ -89,9 +121,14 @@
 
     .wrap{
       background:white;
-      width:50%;
+      //width:50%;
       min-height:100%;
-      padding:10rem 2rem 10rem 2rem;
+      padding:5rem 2rem;
+
+      @media #{$screen-md-min} {
+        padding:10rem 2rem;
+        width:50%;
+      }
     }
 
     .category{
@@ -126,6 +163,11 @@
     z-index:1;
     transform: translate3d(100%,0,0);
     transition:transform .5s ease;
+    display: none;
+
+    @media #{$screen-md-min} {
+      display: block;
+    }
 
     &.enquire{
       background:$brand-blue-dark;
@@ -143,7 +185,7 @@
   }
 
   .overlay-gallery{
-    width:calc( 100% - 8rem );
+    width:100%;
     height:100vh;
     background:white;
     display: flex;
@@ -151,9 +193,14 @@
     box-shadow:0 0 10px 0 rgba(black,0.1);
     transition:transform .5s ease;
     transform: translate3d(100%,0,0);
+    overflow:auto;
+
+    @media #{$screen-md-min} {
+      width:calc( 100% - 8rem );
+    }
 
     .info{
-      padding:2rem 4rem 2rem 2rem;
+      padding:5.75rem 2rem 2rem 2rem;
       display: flex;
       align-items: flex-start;
       flex-wrap:wrap;
@@ -174,6 +221,11 @@
       .description{
         font-size: 1.1rem;
         line-height: 1.5em;
+        margin-bottom:0.5rem;
+
+        @media #{$screen-sm-min} {
+          margin-bottom:2rem;
+        }
       }
 
       .caption{
@@ -183,7 +235,11 @@
         font-size: 0.8rem;
         letter-spacing: 2px;
         display: block;
-        margin:0 0 2rem 0;
+        margin:0 0 1rem 0;
+
+        @media #{$screen-sm-min} {
+          margin-bottom:2rem;
+        }
       }
 
       .pagination{
@@ -227,7 +283,7 @@
 
     .images{
       position: relative;
-      margin:0 2rem 2rem 2rem;
+      margin:0 2rem 7rem 2rem;
 
       @media #{$screen-sm-min} {
         margin:0;
@@ -266,7 +322,7 @@
   }
 
   .brentwood{
-    width:calc( 100% - 8rem );
+    width:100%;
     height:100vh;
     //background:white;
     display: flex;
@@ -275,6 +331,10 @@
     justify-content: flex-end;
     transition:transform .5s ease;
     transform: translate3d(100%,0,0);
+
+    @media #{$screen-sm-min} {
+    width:calc( 100% - 8rem );
+    }
 
     .image-wrap{
       max-width:80%;

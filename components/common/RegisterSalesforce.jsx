@@ -150,6 +150,8 @@ const Register = ({ reversed = false }) => {
               <option value="2 Bed">Two Bedroom</option>
               <option value="Townhome">Townhome</option>
             </select>
+
+            <i className="material-icons">keyboard_arrow_down</i>
           </div>
 
           <div className="select-group">
@@ -160,6 +162,8 @@ const Register = ({ reversed = false }) => {
               <option value="Online Search">Online Search</option>
               <option value="Other">Other</option>
             </select>
+
+            <i className="material-icons">keyboard_arrow_down</i>
           </div>
 
           <div className="select-group">
@@ -168,6 +172,8 @@ const Register = ({ reversed = false }) => {
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
+
+            <i className="material-icons">keyboard_arrow_down</i>
           </div>
 
           <div className="checkbox-group">
