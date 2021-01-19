@@ -23,8 +23,14 @@ export default function Cover ({ active }) {
   //
   useEffect( () => {
     const isActive = active === sectionClass.current
-    if ( isActive ) setAnimationState('enter')
+
+    if ( isActive ) {
+      const delay = animationState === 'initial' ? 2500 : 0
+      setTimeout( () => setAnimationState('enter'), delay )
+    }
+
     if ( !isActive ) setAnimationState('exit')
+
   }, [ active ])
 
   //
@@ -45,6 +51,7 @@ export default function Cover ({ active }) {
       enter : { opacity : 1, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }},
       exit : { opacity : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }}
     }}>
+
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
         <video src={ isMobile ? '/vid/lobby-loop-mobile.mp4' : '/vid/lobby-exterior-loop-v2.mp4' } autoPlay muted playsInline loop />
       </motion.div>

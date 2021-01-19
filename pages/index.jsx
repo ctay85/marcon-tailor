@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link'
 
 // Components
-import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire } from 'components/index'
+import { Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
@@ -145,9 +145,10 @@ export default function Index () {
   //
   return (
     <>
-      <Seo title="Made For Brentwood" />
+      <Seo title="Made For Brentwood" description="The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon." />
 
       <main className="page__index">
+        <Intro />
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Homes active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />

@@ -1,4 +1,5 @@
 
+import Intro from './Intro'
 import Cover from './Cover'
 import Design from './Design'
 import Homes from './Homes'
@@ -14,7 +15,7 @@ import OverlayBrentwood from './OverlayBrentwood'
 import OverlayEnquire from './OverlayEnquire'
 
 export {
-  Cover, Design, Homes, Interiors, PublicArt, Brentwood,
+  Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood,
   Overlay, OverlayContent, OverlayImage, OverlayGallery,
   OverlayDesign, OverlayHomes, OverlayInteriors, OverlayPublicArt, OverlayBrentwood, OverlayEnquire
 }
