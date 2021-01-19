@@ -154,14 +154,15 @@ export default function Index () {
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
 
-      <button className="page__index__enquire" data-theme={ ui.headerTheme } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
-        <span>Enquire</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
-      </button>
+      <div className="page__index__global-actions">
+        <button className="btn__enquire" data-theme={ ui.headerTheme } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
+          <span>Enquire</span>
+        </button>
 
-      <button className="page__index__back-to-top" data-theme={ ui.headerTheme } onClick={ reset }>
-        <SVG src="/svg/thin-arrow-down.svg" />
-      </button>
+        <button className="btn__back-to-top" data-theme={ ui.headerTheme } onClick={ reset } title="Back To Top">
+          <SVG src="/svg/thin-arrow-down.svg" />
+        </button>
+      </div>
 
       <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
       <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />
