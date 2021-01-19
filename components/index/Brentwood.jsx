@@ -36,6 +36,8 @@ export default function Brendwood ({ active, setActiveOverlayKey }) {
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</motion.p>
       </article>
+
+      <div className="mobile-tap-indicator"><span>Learn More</span></div>
     </motion.section>
   )
 }

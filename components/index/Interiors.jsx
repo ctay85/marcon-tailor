@@ -36,6 +36,8 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Our interiors have been planned to maximize space and are finished to stand the test of time.</motion.p>
       </article>
+
+      <div className="mobile-tap-indicator"><span>Learn More</span></div>
     </motion.section>
   )
 }

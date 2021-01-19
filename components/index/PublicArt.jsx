@@ -38,6 +38,8 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
         <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>
       </figure>
+
+      <div className="mobile-tap-indicator"><span>Learn More</span></div>
     </motion.section>
   )
 }

@@ -37,6 +37,8 @@ export default function Homes ({ active, setActiveOverlayKey }) {
 
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Modern architecture paired with a rare level of intimacy and connection, with only 8 homes on each floor.</motion.p>
       </article>
+
+      <div className="mobile-tap-indicator"><span>Learn More</span></div>
     </motion.section>
   )
 }

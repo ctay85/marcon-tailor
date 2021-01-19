@@ -42,6 +42,8 @@ export default function Design ({ active, setActiveOverlayKey }) {
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" />
         <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>
       </figure>
+
+      <div className="mobile-tap-indicator"><span>Learn More</span></div>
     </motion.section>
   )
 }

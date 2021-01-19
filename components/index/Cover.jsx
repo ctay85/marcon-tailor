@@ -113,6 +113,13 @@ export default function Cover ({ active }) {
         */}
       </motion.div>
 
+      <div class="icon-scroll">
+        <div class="icon-arrows">
+          <span></span>
+        </div>
+      </div>
+
+
     </motion.section>
   )
 }
