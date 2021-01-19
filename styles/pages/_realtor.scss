@@ -9,7 +9,7 @@
     input{
       border:solid $brand-indigo;
       border-width:0 0 1px 0;
-      width:50%;
+      width:100%;
       padding:0;
       height:30px;
 
@@ -24,6 +24,14 @@
 
     @media #{$screen-sm-min} {
       margin-bottom:5rem;
+    }
+
+    h2{
+      font-size:2rem;
+
+      @media #{$screen-sm-min} {
+        font-size:3.5rem;
+      }
     }
   }
 

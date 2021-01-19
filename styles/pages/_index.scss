@@ -264,7 +264,7 @@
 
     .mobile-tap-indicator {
       position: absolute;
-      top:calc(5rem + 17.5vh);
+      top:calc(30vh);
       left:50%;
       transform: translate3d(-50%,-50%,0);
       z-index:2;
@@ -273,6 +273,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      //background:red;
 
       @media #{$screen-sm-min} {
         display: none;
@@ -448,6 +449,13 @@
         opacity:0;
         transition: all .3s ease;
       }
+    }
+  }
+
+  &__design,
+  &__public-art{
+    .mobile-tap-indicator{
+      top:calc(6rem + 17.5vh);
     }
   }
 
