@@ -17,6 +17,7 @@ import { BgImage } from 'components/ui'
 export default function Homes ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__homes')
   const [ animationState, setAnimationState ] = useState('initial')
+  const [ isMobile, setIsMobile ] = useState(false)
 
   //
   useEffect( () => {
@@ -26,10 +27,21 @@ export default function Homes ({ active, setActiveOverlayKey }) {
   }, [ active ])
 
   //
+  useEffect( () => {
+    const onResize = () => {
+      if ( window.innerWidth < 767 && !isMobile ) setIsMobile(true)
+      if ( window.innerWidth > 767 && isMobile ) setIsMobile(false)
+    }
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [ isMobile ])
+
+  //
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_HOMES) }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <BgImage src="/img/index/3_200619-152_2400x1599.jpg" />
+        <BgImage src={ isMobile ? '/img/index/tailor-int-01-1080x1920.png' : '/img/index/3_200619-152_2400x1599.jpg' } />
       </motion.div>
 
       <article>

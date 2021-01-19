@@ -97,7 +97,7 @@ const Register = ({ reversed = false }) => {
   return (
     <section className="global__register" id="register">
       <div className="wrap--reg">
-        <p className="enquire__title">Register for more details.</p>
+        <p className="enquire__title">Arrange A Preview</p>
       </div>
 
       <div className="wrap--narrow">

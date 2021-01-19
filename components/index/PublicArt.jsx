@@ -17,12 +17,15 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__public-art')
   const [ animationState, setAnimationState ] = useState('initial')
 
+
   //
   useEffect( () => {
     const isActive = active === sectionClass.current
     if ( isActive ) setAnimationState('enter')
     if ( !isActive ) setAnimationState('exit')
   }, [ active ])
+
+  
 
   //
   return (

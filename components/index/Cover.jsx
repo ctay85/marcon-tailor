@@ -18,6 +18,7 @@ import { BgImage } from 'components/ui'
 export default function Cover ({ active }) {
   const sectionClass = useRef('page__index__cover')
   const [ animationState, setAnimationState ] = useState('initial')
+  const [ isMobile, setIsMobile ] = useState(false)
 
   //
   useEffect( () => {
@@ -27,6 +28,17 @@ export default function Cover ({ active }) {
   }, [ active ])
 
   //
+  useEffect( () => {
+    const onResize = () => {
+      if ( window.innerWidth < 767 && !isMobile ) setIsMobile(true)
+      if ( window.innerWidth > 767 && isMobile ) setIsMobile(false)
+    }
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [ isMobile ])
+
+  //
   return (
     <motion.section className={ sectionClass.current } data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
       initial : { opacity : 0 },
@@ -34,7 +46,7 @@ export default function Cover ({ active }) {
       exit : { opacity : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }}
     }}>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <video src="/vid/lobby-exterior-loop-v2.mp4" autoPlay muted playsInline loop />
+        <video src={ isMobile ? '/vid/lobby-loop-mobile.mp4' : '/vid/lobby-exterior-loop-v2.mp4' } autoPlay muted playsInline loop />
       </motion.div>
 
       <div className="left-column">
@@ -113,8 +125,8 @@ export default function Cover ({ active }) {
         */}
       </motion.div>
 
-      <div class="icon-scroll">
-        <div class="icon-arrows">
+      <div className="icon-scroll">
+        <div className="icon-arrows">
           <span></span>
         </div>
       </div>

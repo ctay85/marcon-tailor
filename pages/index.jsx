@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import SVG from 'react-inlinesvg'
 import { useDispatch, useSelector } from 'react-redux'
+import Link from 'next/link'
 
 // Components
 import { Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire } from 'components/index'
@@ -21,6 +22,7 @@ export default function Index () {
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
+  const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
 
   //
   const blockExecution = () => {
@@ -154,12 +156,26 @@ export default function Index () {
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
 
-      <div className="page__index__global-actions">
-        <button className="btn__enquire" data-theme={ ui.headerTheme } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
-          <span>Enquire</span>
-        </button>
+      <div className="page__index__global-actions" data-theme={ ui.headerTheme }>
+        <div className="btn__enquire" data-open={ isEnquireOpen } onClick={ () => setIsEnquireOpen(!isEnquireOpen) }>
+          <button className="btn__toggle">
+            <span>Enquire</span>
+          </button>
 
-        <button className="btn__back-to-top" data-theme={ ui.headerTheme } onClick={ reset } title="Back To Top">
+          <div className="menu">
+            <Link href="/realtor">
+              <a className="btn__realtor-hub">
+                <span>Realtor Hub</span>
+              </a>
+            </Link>
+
+            <button onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
+              <span>Arrange A Preview</span>
+            </button>
+          </div>
+        </div>
+
+        <button className="btn__back-to-top" onClick={ reset } title="Back To Top">
           <SVG src="/svg/thin-arrow-down.svg" />
         </button>
       </div>

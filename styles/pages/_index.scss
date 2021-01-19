@@ -11,8 +11,6 @@
     left:0;
     z-index:3;
     display: flex;
-    background:rgba(white,0.1);
-    backdrop-filter:blur(15px);
     height:$button-height;
     width:100%;
 
@@ -22,20 +20,86 @@
       width:calc( 200px + #{$button-height} );
     }
 
+    &[data-theme="blue"]{
+      .btn__enquire{
+        .btn__toggle{
+          background:rgba($brand-blue-dark,0.7);
+        }
+      }
+
+      .btn__back-to-top{
+        border-color:rgba($brand-indigo, 0.3);
+        background:rgba($brand-blue-dark,0.7);
+      }
+    }
+
     .btn__enquire {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color:white;
       height:100%;
-      padding:0 1rem 0 1rem;
-      line-height:1em;
-      margin:auto 0 0 0;
       width:calc( 100% - #{$button-height} );
       transition:all 1s ease;
+      position: relative;
 
-      &[data-theme="blue"]{
-        background:rgba($brand-blue-dark,0.7);
+      &[data-open="true"] {
+        .menu{
+          opacity:1;
+
+          a,
+          button{
+            transform: translateY(0);
+          }
+          a{
+            transition-delay:.05s;
+          }
+          button{
+            transition-delay:0s;
+          }
+        }
+      }
+
+      .btn__toggle{
+        background:rgba(white,0.1);
+        backdrop-filter:blur(15px);
+        width:100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 1rem 0 1rem;
+        line-height:1em;
+      }
+
+      .menu{
+        position: absolute;
+        bottom:100%;
+        left:0;
+        width:calc( 100% + #{$button-height} );
+        z-index:-1;
+        opacity:0;
+        transition:all .5s ease;
+
+        a,
+        button{
+          display:flex;
+          align-items: center;
+          padding:0 1rem;
+          width:100%;
+          height:$button-height;
+          text-align: left;
+          background:$brand-blue-dark;
+          font-family: $font-sans-serif;
+          transition:all .5s ease;
+        }
+
+        a{
+          text-decoration: none;
+          border-bottom:solid 1px rgba(white,0.1);
+          transform: translateY(200%);
+        }
+
+        button{
+          transform: translateY(100%);
+          transition-delay:.05s;
+        }
       }
 
       span{
@@ -44,6 +108,7 @@
         font-size:0.9rem;
         line-height:1em;
         display: block;
+        color:white;
       }
 
       svg{
@@ -62,11 +127,8 @@
       justify-content: center;
       transition:all 1s ease;
       border-left:solid 1px rgba(white, 0.2);
-
-      &[data-theme="blue"]{
-        border-color:rgba($brand-indigo, 0.3);
-        background:rgba($brand-blue-dark,0.7);
-      }
+      background:rgba(white,0.1);
+      backdrop-filter:blur(15px);
 
       svg{
         transform: translateY(-1px) rotate(180deg);
@@ -166,9 +228,9 @@
 
     .mobile-tap-indicator {
       position: absolute;
-      top:20%;
+      top:calc(5rem + 17.5vh);
       left:50%;
-      transform: translateX(-50%);
+      transform: translate3d(-50%,-50%,0);
       z-index:2;
       width:125px;
       height:125px;
@@ -376,15 +438,19 @@
         top:50%;
         left:50%;
         transform: translate3d(-50%,-50%,0);
+        width:100%;
+        height:auto;
 
-        @media (min-aspect-ratio: 16/9) {
-          width:102%;
-          height:auto;
-        }
+        @media #{$screen-sm-min} {
+          @media (min-aspect-ratio: 16/9) {
+            width:102%;
+            height:auto;
+          }
 
-        @media (max-aspect-ratio: 16/9) {
-          width:auto;
-          height:102%;
+          @media (max-aspect-ratio: 16/9) {
+            width:auto;
+            height:102%;
+          }
         }
       }
     }
