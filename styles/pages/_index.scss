@@ -29,11 +29,12 @@
 
     .bm-container{
       width:100vw;
-      height:100vh;
+      height:50vh;
+      transform: translateY(-15%);
 
       @media #{$screen-md-min} {
         width:50vw;
-        height:50vh;
+        transform: none;
       }
     }
   }

@@ -1,8 +1,8 @@
 
-import { UI_UPDATE_HEADER_THEME_SUCCESS, UI_HEADER_THEME_WHITE } from 'store/constants'
+import { UI_UPDATE_HEADER_THEME_SUCCESS, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
 
 const initialState = {
-  headerTheme : UI_HEADER_THEME_WHITE
+  headerTheme : UI_HEADER_THEME_BLUE
 }
 
 export function ui (state = initialState, action) {
