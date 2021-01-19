@@ -1,0 +1,235 @@
+.page__realtor{
+  padding:7rem 0 5rem 0;
+
+  @media #{$screen-sm-min} {
+    padding-top:15rem;
+  }
+
+  &__password{
+    input{
+      border:solid $brand-indigo;
+      border-width:0 0 1px 0;
+      width:50%;
+      padding:0;
+      height:30px;
+
+      &::placeholder{
+        color:$brand-dusk;
+      }
+    }
+  }
+
+  .section-intro{
+    margin-bottom:2.5rem;
+
+    @media #{$screen-sm-min} {
+      margin-bottom:5rem;
+    }
+  }
+
+  .feature-box{
+    background:$brand-indigo;
+    color:white;
+    max-width:400px;
+    padding:1rem 2rem;
+  }
+
+  .hero-image{
+    width:100%;
+    height:300px;
+    position: relative;
+    margin-bottom:2.5rem;
+
+    @media #{$screen-sm-min} {
+      height:600px;
+      margin-bottom:10rem;
+    }
+
+    .bg-image{
+      background-position: bottom center;
+    }
+  }
+
+  .marketing{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    margin:5rem 0;
+
+    .left{
+      @media #{$screen-sm-min} {
+        flex:0 0 50%;
+      }
+    }
+
+    .right{
+      @media #{$screen-sm-min} {
+        flex:0 0 40%;
+      }
+
+      img{
+        &:first-child{
+          margin:0 0 2rem 0;
+        }
+      }
+    }
+  }
+
+  .grid{
+    display: grid;
+    grid-gap:2rem;
+    margin:0 0 5rem 0;
+
+    &[rel="2"]{
+      @media #{$screen-sm-min} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    &[rel="3"]{
+      @media #{$screen-sm-min} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media #{$screen-md-min} {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &__gallery{
+      a{
+        position: relative;
+        background:$brand-blue-dark;
+
+        &:hover{
+          img{
+            opacity:0.6;
+          }
+        }
+
+        &:after{
+          content:'Download JPG';
+          text-transform: uppercase;
+          color:white;
+          position: absolute;
+          bottom:2rem;
+          right:2rem;
+          font-family:$font-sans-serif;
+        }
+
+        img{
+          transition:opacity 1s ease;
+        }
+      }
+    }
+
+    &__floorplans{
+      margin:3rem 0 10rem 0;
+      grid-gap:5rem;
+
+      .grid__item{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: flex-start;
+        border-bottom:solid 1px $brand-dusk;
+        padding-bottom:5rem;
+
+        div{
+          flex:0 0 100%;
+
+          &:last-child{
+            align-self:flex-end;
+          }
+        }
+        span{
+          display: block;
+          flex:0 0 100%;
+        }
+        .plan-type{
+          font-size:2rem;
+          line-height:1em;
+        }
+        .plan-style{
+
+        }
+        img{
+          margin:2rem auto;
+          max-width:50%;
+
+          @media #{$screen-sm-min} {
+            max-width:70%;
+          }
+
+          &.landscape{
+            max-width:100%;
+          }
+        }
+        .total-living,
+        .interior,
+        .outdoor{
+          text-transform: uppercase;
+          font-family: $font-sans-serif;
+          font-size:0.9rem;
+          line-height:1.75em;
+        }
+
+        a{
+          margin:1rem 0 0 0;
+        }
+      }
+    }
+  }
+
+  .table{
+    margin:0 0 1rem 0;
+    width:100%;
+
+    ul{
+      display: flex;
+      flex-wrap:wrap;
+      border-bottom:solid 1px $color-grey-300;
+      list-style:none;
+      margin:0;
+      align-items: center;
+      padding:0.75rem 0;
+
+      @media #{$screen-sm-min} {
+        padding:0;
+      }
+
+      &:last-child{
+        border:none;
+      }
+
+      li{
+        flex:0 0 50%;
+        line-height:1.75em;
+        font-size:0.9rem;
+
+        @media #{$screen-sm-min} {
+          flex:0 0 25%;
+          line-height:1.25em;
+          padding:0.75rem 0;
+        }
+
+        &:nth-child(3){
+          flex:0 0 100%;
+
+          @media #{$screen-sm-min} {
+            flex:0 0 50%;
+          }
+        }
+      }
+    }
+
+    &__commissions,
+    &__incentives,
+    &__starting{
+      max-width:400px;
+
+      ul{
+        li{
+          flex:0 0 50%;
+        }
+      }
+    }
+  }
+}

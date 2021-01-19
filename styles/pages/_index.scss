@@ -36,7 +36,6 @@
     .btn__enquire {
       height:100%;
       width:calc( 100% - #{$button-height} );
-      transition:all 1s ease;
       position: relative;
 
       &[data-open="true"] {
@@ -66,6 +65,7 @@
         justify-content: space-between;
         padding:0 1rem 0 1rem;
         line-height:1em;
+        transition:all 1s ease;
       }
 
       .menu{

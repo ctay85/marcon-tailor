@@ -1,17 +1,24 @@
 
 // Dependencies
 import { useState, useRef, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 // Components
 import { Seo } from 'components/common'
+
+// Store
+import { UI_HEADER_THEME_BLUE } from 'store/constants'
+import { uiUpdateHeaderTheme } from 'store/actions'
 
 //
 const REALTOR_AUTHENTICATED = 'REALTOR_AUTHENTICATED'
 
 // Component
 export default function Realtor () {
+  const dispatch = useDispatch()
   const password = useRef('alpha')
   const [ userAuthorized, setUserAuthorized ] = useState(false)
+  const ui = useSelector( state => state.ui )
 
   //
   const onChange = ({ currentTarget : input }) => {
@@ -30,6 +37,8 @@ export default function Realtor () {
     if ( lsEntry && lsEntry === 'true' ) {
       setUserAuthorized(true)
     }
+
+    dispatch( uiUpdateHeaderTheme(UI_HEADER_THEME_BLUE) )
   }, [])
 
   //
@@ -53,7 +62,7 @@ export default function Realtor () {
   //
   return (
     <>
-      <Seo title="REALTOR Portal" />
+      <Seo title="Realtor Hub" />
 
       <main className="page__realtor">
         <div className="wrap--reg">
@@ -71,7 +80,7 @@ export default function Realtor () {
 
 
           <figure className="hero-image">
-            <div className="bg-image" style={{ backgroundImage : `url(${process.env.BASE_PATH}/rel/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg)` }}></div>
+            <div className="bg-image" style={{ backgroundImage : `url(/rel/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg)` }}></div>
           </figure>
 
 
@@ -83,7 +92,7 @@ export default function Realtor () {
               <p>
                 Website &mdash; http://marcon.ca/tailor/
                 <br />
-                Exclusive Preview Package &mdash; <a href={ `${process.env.BASE_PATH}/rel/Tailor_by_Marcon_Preview_Package.pdf` } target="_blank">Download</a>
+                Exclusive Preview Package &mdash; <a href={ `/rel/Tailor_by_Marcon_Preview_Package.pdf` } target="_blank">Download</a>
                 <br />
                 Logo &mdash; <a href="https://www.dropbox.com/sh/a45thjibeiz2xqn/AACjjQJVUvAm9pSVgLJCoob6a?dl=0" target="_blank">JPG</a> <a href="https://www.dropbox.com/sh/trxy2n71qmc9oom/AADqh4T1o1GmsPinnJcwbyBta?dl=0" target="_blank">PNG</a>
                 <br />
@@ -114,8 +123,8 @@ export default function Realtor () {
             </div>
 
             <div className="right">
-              <img src={ `${process.env.BASE_PATH}/rel/Tailor PC.jpeg` } />
-              <img src={ `${process.env.BASE_PATH}/rel/Tailor_RIGHT TIME RIGHT PLACE.jpg` } />
+              <img src={ `/rel/Tailor PC.jpeg` } />
+              <img src={ `/rel/Tailor_RIGHT TIME RIGHT PLACE.jpg` } />
             </div>
           </div>
 
@@ -127,17 +136,17 @@ export default function Realtor () {
 
           <h2>Gallery</h2>
           <div className="grid grid__gallery" rel="2">
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` } />
+            <a target="_blank" download href={ `/rel/gallery/hires/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` }>
+              <img src={ `/rel/gallery/web/B&TB_MARCON_TAILOR_DUSK_UP_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` } />
+            <a target="_blank" download href={ `/rel/gallery/hires/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` }>
+              <img src={ `/rel/gallery/web/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` } />
+            <a target="_blank" download href={ `/rel/gallery/hires/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` }>
+              <img src={ `/rel/gallery/web/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg` } />
             </a>
-            <a target="_blank" download href={ `${process.env.BASE_PATH}/rel/gallery/hires/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` }>
-              <img src={ `${process.env.BASE_PATH}/rel/gallery/web/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` } />
+            <a target="_blank" download href={ `/rel/gallery/hires/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` }>
+              <img src={ `/rel/gallery/web/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_PEOPLE_FINAL.jpg` } />
             </a>
           </div>
 
@@ -272,7 +281,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">A</span>
                 <span className="plan-style">1 Bedroom + 1 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-A.svg` } />
+                <img src={ `/rel/plans/Plan-A.svg` } />
               </div>
 
               <div>
@@ -280,7 +289,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 538 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 132 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_A.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_A.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -288,7 +297,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">A1</span>
                 <span className="plan-style">1 Bedroom + 1 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-A1.svg` } />
+                <img src={ `/rel/plans/Plan-A1.svg` } />
               </div>
 
               <div>
@@ -296,7 +305,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 538 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 121 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_A1.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_A1.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -304,7 +313,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">B</span>
                 <span className="plan-style">1 Bedroom + 1 bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-B.svg` } />
+                <img className="landscape" src={ `/rel/plans/Plan-B.svg` } />
               </div>
 
               <div>
@@ -312,7 +321,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 646 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 77 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_B.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_B.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -320,7 +329,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">C</span>
                 <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-C.svg` } />
+                <img src={ `/rel/plans/Plan-C.svg` } />
               </div>
 
               <div>
@@ -328,7 +337,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 764 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 227 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_C.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_C.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -336,7 +345,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">C1</span>
                 <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-C1.svg` } />
+                <img src={ `/rel/plans/Plan-C1.svg` } />
               </div>
 
               <div>
@@ -344,7 +353,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 786 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 174 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_C1.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_C1.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -352,7 +361,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">D</span>
                 <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-D.svg` } />
+                <img className="landscape" src={ `/rel/plans/Plan-D.svg` } />
               </div>
 
               <div>
@@ -360,7 +369,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 893 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 223 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_D.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_D.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -368,7 +377,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">D1</span>
                 <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-D1.svg` } />
+                <img className="landscape" src={ `/rel/plans/Plan-D1.svg` } />
               </div>
 
               <div>
@@ -376,7 +385,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 893 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 223 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_D1.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_D1.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -384,7 +393,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">E</span>
                 <span className="plan-style">Jr. 1 Bedroom + 1 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-E.svg` } />
+                <img className="landscape" src={ `/rel/plans/Plan-E.svg` } />
               </div>
 
               <div>
@@ -392,7 +401,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 484 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 156 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_E.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_E.pdf` }>Download PDF</a>
               </div>
             </div>
 
@@ -400,7 +409,7 @@ export default function Realtor () {
               <div>
                 <span className="plan-type">F</span>
                 <span className="plan-style">Studio + 1 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-F.svg` } />
+                <img className="landscape" src={ `/rel/plans/Plan-F.svg` } />
               </div>
 
               <div>
@@ -408,7 +417,7 @@ export default function Realtor () {
                 <span className="interior"><strong>Interior</strong> 366 sf</span>
                 <span className="outdoor"><strong>Outdoor</strong> 163 sf</span>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_F.pdf` }>Download PDF</a>
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_F.pdf` }>Download PDF</a>
               </div>
             </div>
           </div>
