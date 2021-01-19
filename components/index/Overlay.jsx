@@ -80,10 +80,9 @@ export function OverlayGallery ({ images }) {
   //
   return (
     <div className="overlay-gallery">
-      <div className="info">
-        <p className="description">{ images[activeIndex].blurb }</p>
 
-        <div className="bottom">
+      <div className="top">
+        <div className="wrap">
           <span className="caption">{ images[activeIndex].caption }</span>
 
           <div className="pagination">
@@ -97,6 +96,11 @@ export function OverlayGallery ({ images }) {
       <div className="images">
         { images.map(({ file, caption }, i ) => <img src={ file } key={ i } data-active={ i === activeIndex } /> )}
       </div>
+
+      <div className="bottom">
+        <p className="description">{ images[activeIndex].blurb }</p>
+      </div>
+
     </div>
   )
 }
