@@ -25,7 +25,7 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
     if ( !isActive ) setAnimationState('exit')
   }, [ active ])
 
-  
+
 
   //
   return (
@@ -39,7 +39,7 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
       <figure className="image-trigger">
         <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" />
-        <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>
+        <span className="caption">The image is an abstraction of points of light on water.</span>
       </figure>
 
       <div className="mobile-tap-indicator"><span>Learn More</span></div>

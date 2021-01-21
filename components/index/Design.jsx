@@ -26,8 +26,8 @@ export default function Design ({ active, setActiveOverlayKey }) {
 
   //
   return (
-    <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }>
-      <article className="text--blue">
+    <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
+      <article>
         <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }>
           <span>Design</span> &mdash; More Thought
         </motion.span>
@@ -40,10 +40,15 @@ export default function Design ({ active, setActiveOverlayKey }) {
       <figure className="image-trigger">
         <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
         <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" />
-        <span className="caption">Lorem ipsum &mdash; Dolor Sit</span>
+        <span className="caption">A new perspective on intimate high-rise living in Brentwood.</span>
       </figure>
 
       <div className="mobile-tap-indicator"><span>Learn More</span></div>
+
+      <motion.button class="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
+        <span>More</span>
+        <i className="material-icons">arrow_right_alt</i>
+      </motion.button>
     </motion.section>
   )
 }

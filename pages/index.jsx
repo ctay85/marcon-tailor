@@ -73,10 +73,8 @@ export default function Index () {
       case 'page__index__interiors' :
       case 'page__index__public-art' :
       case 'page__index__brentwood' :
-        newTheme = UI_HEADER_THEME_WHITE;
-      break;
       case 'page__index__design' :
-        newTheme = UI_HEADER_THEME_BLUE;
+        newTheme = UI_HEADER_THEME_WHITE;
       break;
     }
 

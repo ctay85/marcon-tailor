@@ -44,5 +44,11 @@ export default {
     initial : { scale : 1.05 },
     enter : { scale : 1, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }},
     exit : { scale : 1.05, transition : { duration : INDEX_PANEL_TRANSITION_DURATION }}
+  },
+
+  indicator : {
+    initial : { opacity : 0, x : 100 },
+    enter : { opacity : 1, x : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION / 2, delay : 1.4 }},
+    exit : { opacity : 0, x : 100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION / 2 }}
   }
 }

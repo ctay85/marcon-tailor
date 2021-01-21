@@ -219,7 +219,7 @@
 
     &[data-panel-trigger="true"]{
       @media #{$screen-md-min} {
-        cursor:url('/svg/cursor-more_Americana.svg') 37.5 37.5, pointer;
+        //cursor:url('/svg/cursor-more_Americana.svg') 37.5 37.5, pointer;
       }
 
       article{
@@ -262,6 +262,85 @@
     .bg-image{
       z-index:-1;
     }
+
+    .desktop-click-indicator{
+    	width: 80px;
+    	height: 80px;
+    	min-width: 0;
+    	padding: 0;
+    	color: #fff;
+    	transition: color 0.3s;
+      position: absolute;
+      top:50%;
+      right:20px;
+      border-radius: 100%;
+      transform: translateY(-50%);
+      display: none;
+
+      @media #{$screen-sm-min} {
+        display: block;
+      }
+
+      &:hover{
+        &:before {
+        	box-shadow: inset 0 0 0 2px $brand-dusk;
+        	transform: scale3d(1, 1, 1);
+        }
+        span{
+          opacity:0;
+          transform: translate3d(-50%,calc(-50% + 5px),0);
+          transition: all .1s ease;
+        }
+        i{
+          opacity:1;
+          transform: translate3d(-50%,-50%,0) scale(1);
+          transition: all .3s ease .2s;
+        }
+      }
+
+      &:before {
+      	content: '';
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	width: 100%;
+      	height: 100%;
+      	border-radius: inherit;
+      	z-index: -1;
+      	box-shadow: inset 0 0 0 40px $brand-dusk;
+      	transform: scale3d(0.9, 0.9, 1);
+      	transition: box-shadow 0.3s, transform 0.3s;
+      }
+
+      span,
+      i{
+        display: block;
+        position: absolute;
+        top:50%;
+        left:50%;
+      }
+
+      span{
+        font-size:1.1rem;
+        letter-spacing: 0.5px;
+        font-family: $font-serif;
+        transition: all .3s ease .3s;
+        transform: translate3d(-50%,-50%,0);
+      }
+
+      i{
+        opacity:0;
+        transform: translate3d(-50%,-50%,0) scale(0);
+        transition: all .1s ease;
+        font-size:3rem;
+        line-height:1em;
+        color:white;
+      }
+    }
+
+
+
+
 
     .mobile-tap-indicator {
       position: absolute;
@@ -394,10 +473,10 @@
 
       .blind {
         position: absolute;
-        top:-5%;
+        top:-10%;
         left:-5%;
         width:110%;
-        height:110%;
+        height:120%;
         z-index:1;
         background:white;
       }
@@ -692,8 +771,6 @@
 
 
   &__design{
-    background:white;
-
     &:before{
       display: none;
     }
@@ -727,7 +804,7 @@
 
 
 
-
+  &__design,
   &__public-art{
     background:$brand-blue-dark;
 

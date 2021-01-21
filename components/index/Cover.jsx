@@ -71,13 +71,13 @@ export default function Cover ({ active }) {
         enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }},
         exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.2 }}
       }}>
-        <span className="section-title">Floorplans</span>
+        <span className="section-title">Own In Brentwood</span>
 
         <figure>
           <img src="/img/index/image2.jpg" />
         </figure>
 
-        <p className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p className="description">A premium collection of 193 homes starting at $359,900</p>
 
         {/*
           <div className="stat">

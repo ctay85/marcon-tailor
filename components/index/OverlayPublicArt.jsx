@@ -20,8 +20,6 @@ export default function OverlayPublicArt (props) {
 
         <p>Crucial to the concept is to have an ever changing experience inside and outside the building both during the day and night. Depending on the angles of the sunlight or artificial lights and the position of the viewer, the sky is reflected in the areas of the glass that are not laser etched.</p>
 
-        <blockquote><p>The image is an abstraction of points of light on water.</p></blockquote>
-
         <p>It was transformed from video footage of the moving surface of water where lights were reflected. The focus was changed so that the digital translation is one of perfect overlapping circles of different densities. It is similar to what we see if we half close our eyes.</p>
 
         <p>Our mind makes sense of this very abstract pattern because it has registered this arrangement of light points unconsciously over countless times of seeing light on water. Yet this image also refers to a universal visual language of the natural world that suggests different things to different people.</p>
