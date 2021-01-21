@@ -33,7 +33,7 @@ export default function Index () {
 
   //
   const changePanel = direction => {
-    if ( isAnimating || activeOverlayKey !== null ) return false
+    if ( isAnimating || activeOverlayKey !== null || (activePanelClass === 'page__index__cover' && direction === 'up') ) return false
     window.scrollTo(0,0)
 
     const activePanel = document.querySelector(`.${activePanelClass}`)

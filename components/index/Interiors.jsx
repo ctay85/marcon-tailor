@@ -2,6 +2,7 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import SVG from 'react-inlinesvg'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -38,7 +39,7 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
 
   //
   return (
-    <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container } onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) }>
+    <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
         <BgImage src={ isMobile ? '/img/index/tailor-int-02-1080x1920.png' : '/img/index/image3.jpg' } />
       </motion.div>
@@ -50,6 +51,11 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
       </article>
 
       <div className="mobile-tap-indicator"><span>Learn More</span></div>
+
+      <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
+        <span>More</span>
+        <SVG src="/svg/thin-arrow-down.svg" />
+      </motion.button>
     </motion.section>
   )
 }

@@ -2,6 +2,7 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import SVG from 'react-inlinesvg'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -45,9 +46,9 @@ export default function Design ({ active, setActiveOverlayKey }) {
 
       <div className="mobile-tap-indicator"><span>Learn More</span></div>
 
-      <motion.button class="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
+      <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>
-        <i className="material-icons">arrow_right_alt</i>
+        <SVG src="/svg/thin-arrow-down.svg" />
       </motion.button>
     </motion.section>
   )
