@@ -420,6 +420,70 @@ export default function Realtor () {
                 <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_F.pdf` }>Download PDF</a>
               </div>
             </div>
+
+            <div className="grid__item">
+              <div>
+                <span className="plan-type">TH1</span>
+                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
+                <img className="landscape" src={ `/rel/plans/Plan-TH1.svg` } />
+              </div>
+
+              <div>
+                <span className="total-living"><strong>Total Living</strong> 2,378 sf</span>
+                <span className="interior"><strong>Interior</strong> 1,701 sf</span>
+                <span className="outdoor"><strong>Outdoor</strong> 677 sf</span>
+
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf` }>Download PDF</a>
+              </div>
+            </div>
+
+            <div className="grid__item">
+              <div>
+                <span className="plan-type">TH2</span>
+                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
+                <img className="landscape" src={ `/rel/plans/Plan-TH2.svg` } />
+              </div>
+
+              <div>
+                <span className="total-living"><strong>Total Living</strong> 2,352 sf</span>
+                <span className="interior"><strong>Interior</strong> 1,679 sf</span>
+                <span className="outdoor"><strong>Outdoor</strong> 673 sf</span>
+
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_TH2.pdf` }>Download PDF</a>
+              </div>
+            </div>
+
+            <div className="grid__item">
+              <div>
+                <span className="plan-type">TH3-4</span>
+                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
+                <img className="landscape" src={ `/rel/plans/Plan-TH3-4.svg` } />
+              </div>
+
+              <div>
+                <span className="total-living"><strong>Total Living</strong> 2,352 sf</span>
+                <span className="interior"><strong>Interior</strong> 1,679 sf</span>
+                <span className="outdoor"><strong>Outdoor</strong> 673 sf</span>
+
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_TH3-4.pdf` }>Download PDF</a>
+              </div>
+            </div>
+
+            <div className="grid__item">
+              <div>
+                <span className="plan-type">TH5</span>
+                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
+                <img className="landscape" src={ `/rel/plans/Plan-TH5.svg` } />
+              </div>
+
+              <div>
+                <span className="total-living"><strong>Total Living</strong> 2,522 sf</span>
+                <span className="interior"><strong>Interior</strong> 1,701 sf</span>
+                <span className="outdoor"><strong>Outdoor</strong> 821 sf</span>
+
+                <a className="btn btn--solid" target="_blank" download href={ `/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf` }>Download PDF</a>
+              </div>
+            </div>
           </div>
 
 
