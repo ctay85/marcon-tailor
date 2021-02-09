@@ -16,7 +16,7 @@ const homes = [
   {
     name : 'A',
     type : '1 Bedroom + 1 Bath',
-    image : '/svg/plans/A.svg',
+    image : '/rel/plans/Plan-A.svg',
     pdf : 'Tailor_Floorplans_Sheets_A.pdf',
     area : {
       total : 670,
@@ -27,7 +27,7 @@ const homes = [
   {
     name : 'A1',
     type : '1 Bedroom + 1 Bath',
-    image : '/svg/plans/A1.svg',
+    image : '/rel/plans/Plan-A1.svg',
     pdf : 'Tailor_Floorplans_Sheets_A1.pdf',
     area : {
       total : 659,
@@ -38,7 +38,7 @@ const homes = [
   {
     name : 'B',
     type : '1 Bedroom + 1 Bath',
-    image : '/svg/plans/B.svg',
+    image : '/rel/plans/Plan-B.svg',
     pdf : 'Tailor_Floorplans_Sheets_B.pdf',
     area : {
       total : 723,
@@ -49,7 +49,7 @@ const homes = [
   {
     name : 'C',
     type : '2 Bedroom + 2 Bath',
-    image : '/svg/plans/C.svg',
+    image : '/rel/plans/Plan-C.svg',
     pdf : 'Tailor_Floorplans_Sheets_C.pdf',
     area : {
       total : 991,
@@ -60,7 +60,7 @@ const homes = [
   {
     name : 'C1',
     type : '2 Bedroom + 2 Bath',
-    image : '/svg/plans/C1.svg',
+    image : '/rel/plans/Plan-C1.svg',
     pdf : 'Tailor_Floorplans_Sheets_C1.pdf',
     area : {
       total : 960,
@@ -71,7 +71,7 @@ const homes = [
   {
     name : 'D',
     type : '2 Bedroom + 2 Bath',
-    image : '/svg/plans/D1.svg',
+    image : '/rel/plans/Plan-D1.svg',
     pdf : 'Tailor_Floorplans_Sheets_D.pdf',
     area : {
       total : 1116,
@@ -82,7 +82,7 @@ const homes = [
   {
     name : 'D1',
     type : '2 Bedroom + 2 Bath',
-    image : '/svg/plans/D1.svg',
+    image : '/rel/plans/Plan-D1.svg',
     pdf : 'Tailor_Floorplans_Sheets_D1.pdf',
     area : {
       interior : 893,
@@ -93,7 +93,7 @@ const homes = [
   {
     name : 'E',
     type : 'Jr 1 Bedroom + 1 Bath',
-    image : '/svg/plans/E.svg',
+    image : '/rel/plans/Plan-E.svg',
     pdf : 'Tailor_Floorplans_Sheets_E.pdf',
     area : {
       interior : 484,
@@ -104,7 +104,7 @@ const homes = [
   {
     name : 'F',
     type : 'Studio + 1 Bath',
-    image : '/svg/plans/F.svg',
+    image : '/rel/plans/Plan-F.svg',
     pdf : 'Tailor_Floorplans_Sheets_F.pdf',
     area : {
       interior : 366,
@@ -115,7 +115,7 @@ const homes = [
   {
     name : 'TH1',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : '/svg/plans/TH1.svg',
+    image : '/rel/plans/Plan-TH1.svg',
     pdf : 'Tailor_Floorplans_Sheets_TH1.pdf',
     area : {
       interior : 1701,
@@ -126,7 +126,7 @@ const homes = [
   {
     name : 'TH2',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : '/svg/plans/TH2.svg',
+    image : '/rel/plans/Plan-TH2.svg',
     pdf : 'Tailor_Floorplans_Sheets_TH2.pdf',
     area : {
       interior : 1679,
@@ -137,7 +137,7 @@ const homes = [
   {
     name : 'TH3/4',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : '/svg/plans/TH34.svg',
+    image : '/rel/plans/Plan-TH3-4.svg',
     pdf : 'Tailor_Floorplans_Sheets_TH3-4.pdf',
     area : {
       interior : 1679,
@@ -148,7 +148,7 @@ const homes = [
   {
     name : 'TH5',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : '/svg/plans/TH5.svg',
+    image : '/rel/plans/Plan-TH5.svg',
     pdf : 'Tailor_Floorplans_Sheets_TH5.pdf',
     area : {
       interior : 1701,
@@ -224,7 +224,7 @@ export default function Homes () {
                     <span className="area area--outdoor"><strong>Outdoor</strong> { home.area.outdoor } SF</span>
                   </div>
 
-                  <a href={ `/rel/plans/${home.pdf}` } className="btn__download btn btn--solid">Download PDF</a>
+                  <a href={ `/rel/plans/${home.pdf}` } target="_blank" rel="noopener noreferrer" className="btn__download btn btn--solid">Download PDF</a>
                 </div>
               ))
             }
