@@ -43,6 +43,7 @@
       width:50%;
       text-align: right;
       transform: translateY(-50%);
+      display: none;
     }
 
     .floor-plate{
@@ -54,11 +55,11 @@
     flex:0 0 70%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap:5rem 10rem;
+    grid-gap:10rem 10rem;
 
     &__item{
-      border-bottom:solid 2px $brand-dusk;
-      padding:0 0 2rem 0;
+      //border-bottom:solid 2px $brand-dusk;
+      //padding:0 0 2rem 0;
       display: flex;
       flex-wrap:wrap;
 
@@ -101,6 +102,7 @@
 
       .areas{
         align-self:flex-end;
+        margin:0 0 2rem 0;
       }
 
       .area{
@@ -109,6 +111,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         font-family: $font-sans-serif;
+      }
+
+      .btn__download{
+        width:100%;
+        align-self:flex-end;
       }
     }
   }

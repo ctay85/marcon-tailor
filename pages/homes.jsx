@@ -17,9 +17,10 @@ const homes = [
     name : 'A',
     type : '1 Bedroom + 1 Bath',
     image : '/svg/plans/A.svg',
+    pdf : 'Tailor_Floorplans_Sheets_A.pdf',
     area : {
-      total : 669,
-      interior : 537,
+      total : 670,
+      interior : 538,
       outdoor : 132
     }
   },
@@ -27,9 +28,10 @@ const homes = [
     name : 'A1',
     type : '1 Bedroom + 1 Bath',
     image : '/svg/plans/A1.svg',
+    pdf : 'Tailor_Floorplans_Sheets_A1.pdf',
     area : {
-      total : 755,
-      interior : 634,
+      total : 659,
+      interior : 538,
       outdoor : 121
     }
   },
@@ -37,6 +39,7 @@ const homes = [
     name : 'B',
     type : '1 Bedroom + 1 Bath',
     image : '/svg/plans/B.svg',
+    pdf : 'Tailor_Floorplans_Sheets_B.pdf',
     area : {
       total : 723,
       interior : 646,
@@ -47,9 +50,10 @@ const homes = [
     name : 'C',
     type : '2 Bedroom + 2 Bath',
     image : '/svg/plans/C.svg',
+    pdf : 'Tailor_Floorplans_Sheets_C.pdf',
     area : {
-      total : 1003,
-      interior : 776,
+      total : 991,
+      interior : 764,
       outdoor : 227
     }
   },
@@ -57,10 +61,99 @@ const homes = [
     name : 'C1',
     type : '2 Bedroom + 2 Bath',
     image : '/svg/plans/C1.svg',
+    pdf : 'Tailor_Floorplans_Sheets_C1.pdf',
     area : {
-      total : 955,
-      interior : 781,
+      total : 960,
+      interior : 786,
       outdoor : 174
+    }
+  },
+  {
+    name : 'D',
+    type : '2 Bedroom + 2 Bath',
+    image : '/svg/plans/D1.svg',
+    pdf : 'Tailor_Floorplans_Sheets_D.pdf',
+    area : {
+      total : 1116,
+      interior : 893,
+      outdoor : 223
+    }
+  },
+  {
+    name : 'D1',
+    type : '2 Bedroom + 2 Bath',
+    image : '/svg/plans/D1.svg',
+    pdf : 'Tailor_Floorplans_Sheets_D1.pdf',
+    area : {
+      interior : 893,
+      outdoor : 223,
+      total : 1116
+    }
+  },
+  {
+    name : 'E',
+    type : 'Jr 1 Bedroom + 1 Bath',
+    image : '/svg/plans/E.svg',
+    pdf : 'Tailor_Floorplans_Sheets_E.pdf',
+    area : {
+      interior : 484,
+      outdoor : 156,
+      total : 640
+    }
+  },
+  {
+    name : 'F',
+    type : 'Studio + 1 Bath',
+    image : '/svg/plans/F.svg',
+    pdf : 'Tailor_Floorplans_Sheets_F.pdf',
+    area : {
+      interior : 366,
+      outdoor : 163,
+      total : 529
+    }
+  },
+  {
+    name : 'TH1',
+    type : '2 Bedroom + 2 Bath + 2 Powder + Work',
+    image : '/svg/plans/TH1.svg',
+    pdf : 'Tailor_Floorplans_Sheets_TH1.pdf',
+    area : {
+      interior : 1701,
+      outdoor : 677,
+      total : 2378
+    }
+  },
+  {
+    name : 'TH2',
+    type : '2 Bedroom + 2 Bath + 2 Powder + Work',
+    image : '/svg/plans/TH2.svg',
+    pdf : 'Tailor_Floorplans_Sheets_TH2.pdf',
+    area : {
+      interior : 1679,
+      outdoor : 673,
+      total : 2352
+    }
+  },
+  {
+    name : 'TH3/4',
+    type : '2 Bedroom + 2 Bath + 2 Powder + Work',
+    image : '/svg/plans/TH34.svg',
+    pdf : 'Tailor_Floorplans_Sheets_TH3-4.pdf',
+    area : {
+      interior : 1679,
+      outdoor : 673,
+      total : 2352
+    }
+  },
+  {
+    name : 'TH5',
+    type : '2 Bedroom + 2 Bath + 2 Powder + Work',
+    image : '/svg/plans/TH5.svg',
+    pdf : 'Tailor_Floorplans_Sheets_TH5.pdf',
+    area : {
+      interior : 1701,
+      outdoor : 821,
+      total : 2522
     }
   }
 ]
@@ -82,6 +175,7 @@ export default function Homes () {
 
   //
   const onElevationSvgLoaded = () => {
+    return false
     const levelGroups = [...document.querySelectorAll('.elevation-view svg g[id^="L"]')]
     levelGroups.forEach( group => group.addEventListener('mouseenter', onMouseEnter) )
   }
@@ -125,10 +219,12 @@ export default function Homes () {
                   </figure>
 
                   <div className="areas">
-                    <span className="area area--total">Total Living { home.area.total } SF</span>
-                    <span className="area area--interior">Interior { home.area.interior } SF</span>
-                    <span className="area area--outdoor">Outdoor { home.area.outdoor } SF</span>
+                    <span className="area area--total"><strong>Total Living</strong> { home.area.total } SF</span>
+                    <span className="area area--interior"><strong>Interior</strong> { home.area.interior } SF</span>
+                    <span className="area area--outdoor"><strong>Outdoor</strong> { home.area.outdoor } SF</span>
                   </div>
+
+                  <a href={ `${process.env.BASE_PATH}/rel/plans/${home.pdf}` } className="btn__download btn btn--solid">Download PDF</a>
                 </div>
               ))
             }
