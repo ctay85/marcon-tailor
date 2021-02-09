@@ -224,7 +224,7 @@ export default function Homes () {
                     <span className="area area--outdoor"><strong>Outdoor</strong> { home.area.outdoor } SF</span>
                   </div>
 
-                  <a href={ `${process.env.BASE_PATH}/rel/plans/${home.pdf}` } className="btn__download btn btn--solid">Download PDF</a>
+                  <a href={ `/rel/plans/${home.pdf}` } className="btn__download btn btn--solid">Download PDF</a>
                 </div>
               ))
             }
