@@ -12,39 +12,13 @@ import { indexPanelAnimations } from 'utils'
 import { INDEX_OVERLAY_KEY_HOME } from 'store/constants'
 
 // Components
-import { BgImage } from 'components/ui'
+import { BgImage, SketchfabViewer } from 'components/ui'
 
 // Component
-export default function Homes ({ active, setActiveOverlayKey }) {
+export default function Homes ({ active, setActiveHome }) {
   const sectionClass = useRef('page__index__homes')
-  const sketchfabIframe = useRef(null)
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
-
-  //
-  const initSketchfab = () => {
-    const uid = '65493428a7f641cd9114bc938dceaa39'
-    const client = new window.Sketchfab( sketchfabIframe.current )
-
-    client.init( uid, {
-      ui_stop : 0,
-      transparent : 1,
-      ui_controls : 0,
-      ui_fullscreen : 0,
-      ui_general_controls : 0,
-      ui_help : 0,
-      ui_infos : 0,
-      ui_inspector : 0,
-      ui_settings : 0,
-      ui_watermark_link : 0,
-      ui_watermark : 0,
-      success : api => {
-        api.start()
-        api.addEventListener( 'viewerready', () => console.log( 'Viewer is ready' ))
-      },
-      error : () => console.log( 'Viewer error' )
-    })
-  }
 
   //
   useEffect( () => {
@@ -70,18 +44,14 @@ export default function Homes ({ active, setActiveOverlayKey }) {
     return () => window.removeEventListener('resize', onResize)
   }, [ isMobile ])
 
-  //
-  useEffect(initSketchfab, [])
+
 
   //
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
         {/* <BgImage src={ isMobile ? '/img/index/tailor-int-01-1080x1920.png' : '/img/index/3_200619-152_2400x1599.jpg' } /> */}
-
-        <div className="sketchfab-embed-wrapper">
-          <iframe ref={ sketchfabIframe }></iframe>
-        </div>
+        <SketchfabViewer setActiveHome={ setActiveHome } />
       </motion.div>
 
       <article>

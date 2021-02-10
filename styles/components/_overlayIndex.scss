@@ -411,7 +411,7 @@
         display: block;
       }
 
-      .unit-name{
+      .unit-number {
         font-size:5rem;
         line-height:1em;
         margin:0 0 1rem 0;
@@ -421,6 +421,10 @@
         font-size:1.5rem;
         line-height:1.5em;
         margin:0 0 3rem 0;
+      }
+
+      .unit-name{
+
       }
 
       .areas{
@@ -437,13 +441,14 @@
       flex:0 0 75%;
       height:100vh;
       overflow:auto;
+      padding:0 0 5rem 0;
 
       .view{
         height:250px;
         width:100%;
         background:$color-grey-200;
         cursor:grab;
-        margin:0 0 2rem 0;
+        margin:0 0 5rem 0;
 
         &:active{
           cursor:grabbing;
@@ -452,12 +457,10 @@
 
       .image{
         width:100%;
-        margin:0 0 5rem 0;
 
         img{
-          width:90%;
+          width:80%;
           height:auto;
-          max-width:$max-width-narrow;
           display: block;
           margin:0 auto 0 auto;
         }

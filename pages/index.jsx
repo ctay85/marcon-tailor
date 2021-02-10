@@ -5,9 +5,6 @@ import SVG from 'react-inlinesvg'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link'
 
-// Data
-import { unitData } from 'data'
-
 // Components
 import { Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire, OverlayHome } from 'components/index'
 import { Seo } from 'components/common'
@@ -26,6 +23,7 @@ export default function Index () {
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
+  const [ activeHome, setActiveHome ] = useState(null)
 
   //
   const blockExecution = () => {
@@ -144,6 +142,13 @@ export default function Index () {
   }, [])
 
   //
+  useEffect( () => {
+    if ( activeHome ) {
+      setActiveOverlayKey(INDEX_OVERLAY_KEY_HOME)
+    }
+  }, [ activeHome ])
+
+  //
   return (
     <>
       <Seo title="Made For Brentwood" description="The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon." />
@@ -152,7 +157,7 @@ export default function Index () {
         <Intro />
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
-        <Homes active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
+        <Homes active={ activePanelClass } setActiveHome={ setActiveHome } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
@@ -188,7 +193,7 @@ export default function Index () {
       <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
       <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
       <OverlayEnquire active={ activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE } fnClose={ closeOverlay } />
-      <OverlayHome active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOME } fnClose={ closeOverlay } activeHome={ unitData[0] } />
+      <OverlayHome active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOME } fnClose={ closeOverlay } activeHome={ activeHome } />
     </>
   )
 }
