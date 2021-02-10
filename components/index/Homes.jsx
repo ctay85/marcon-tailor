@@ -22,25 +22,7 @@ export default function Homes ({ active, setActiveOverlayKey }) {
   const [ isMobile, setIsMobile ] = useState(false)
 
   //
-  useEffect( () => {
-    const isActive = active === sectionClass.current
-    if ( isActive ) setAnimationState('enter')
-    if ( !isActive ) setAnimationState('exit')
-  }, [ active ])
-
-  //
-  useEffect( () => {
-    const onResize = () => {
-      if ( window.innerWidth < 767 && !isMobile ) setIsMobile(true)
-      if ( window.innerWidth > 767 && isMobile ) setIsMobile(false)
-    }
-    onResize()
-    window.addEventListener('resize', onResize)
-    return () => window.removeEventListener('resize', onResize)
-  }, [ isMobile ])
-
-  //
-  useEffect( () => {
+  const initSketchfab = () => {
     const uid = '65493428a7f641cd9114bc938dceaa39'
     const client = new window.Sketchfab( sketchfabIframe.current )
 
@@ -62,7 +44,34 @@ export default function Homes ({ active, setActiveOverlayKey }) {
       },
       error : () => console.log( 'Viewer error' )
     })
-  }, [])
+  }
+
+  //
+  useEffect( () => {
+    const isActive = active === sectionClass.current
+
+    if ( isActive ) {
+      setAnimationState('enter')
+    }
+
+    if ( !isActive ) {
+      setAnimationState('exit')
+    }
+  }, [ active ])
+
+  //
+  useEffect( () => {
+    const onResize = () => {
+      if ( window.innerWidth < 767 && !isMobile ) setIsMobile(true)
+      if ( window.innerWidth > 767 && isMobile ) setIsMobile(false)
+    }
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [ isMobile ])
+
+  //
+  useEffect(initSketchfab, [])
 
   //
   return (

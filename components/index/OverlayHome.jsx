@@ -5,7 +5,7 @@ import { Overlay } from 'components/index'
 //
 export default function OverlayHome (props) {
   const { activeHome } = props
-  console.log(activeHome);
+  
   return (
     <Overlay {...props}>
       <div className="home-detail">
