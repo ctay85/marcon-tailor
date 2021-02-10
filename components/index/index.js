@@ -13,9 +13,10 @@ import OverlayPublicArt from './OverlayPublicArt'
 import OverlayHomes from './OverlayHomes'
 import OverlayBrentwood from './OverlayBrentwood'
 import OverlayEnquire from './OverlayEnquire'
+import OverlayHome from './OverlayHome'
 
 export {
   Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood,
   Overlay, OverlayContent, OverlayImage, OverlayGallery,
-  OverlayDesign, OverlayHomes, OverlayInteriors, OverlayPublicArt, OverlayBrentwood, OverlayEnquire
+  OverlayDesign, OverlayHomes, OverlayInteriors, OverlayPublicArt, OverlayBrentwood, OverlayEnquire, OverlayHome
 }

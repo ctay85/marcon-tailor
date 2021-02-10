@@ -5,12 +5,15 @@ import SVG from 'react-inlinesvg'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link'
 
+// Data
+import { unitData } from 'data'
+
 // Components
-import { Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire } from 'components/index'
+import { Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire, OverlayHome } from 'components/index'
 import { Seo } from 'components/common'
 
 // Store
-import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_BRENTWOOD, INDEX_OVERLAY_KEY_ENQUIRE, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
+import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_HOME, INDEX_OVERLAY_KEY_BRENTWOOD, INDEX_OVERLAY_KEY_ENQUIRE, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
 import { uiUpdateHeaderTheme } from 'store/actions'
 
 // Component
@@ -20,7 +23,7 @@ export default function Index () {
   const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
-  const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
+  const [ activePanelClass, setActivePanelClass ] = useState('page__index__homes')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
 
@@ -185,6 +188,7 @@ export default function Index () {
       <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
       <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
       <OverlayEnquire active={ activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE } fnClose={ closeOverlay } />
+      <OverlayHome active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOME } fnClose={ closeOverlay } activeHome={ unitData[0] } />
     </>
   )
 }

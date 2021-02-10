@@ -9,7 +9,7 @@ import SVG from 'react-inlinesvg'
 import { indexPanelAnimations } from 'utils'
 
 // Store
-import { INDEX_OVERLAY_KEY_HOMES } from 'store/constants'
+import { INDEX_OVERLAY_KEY_HOME } from 'store/constants'
 
 // Components
 import { BgImage } from 'components/ui'
@@ -17,6 +17,7 @@ import { BgImage } from 'components/ui'
 // Component
 export default function Homes ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__homes')
+  const sketchfabIframe = useRef(null)
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
 
@@ -39,10 +40,39 @@ export default function Homes ({ active, setActiveOverlayKey }) {
   }, [ isMobile ])
 
   //
+  useEffect( () => {
+    const uid = '65493428a7f641cd9114bc938dceaa39'
+    const client = new window.Sketchfab( sketchfabIframe.current )
+
+    client.init( uid, {
+      ui_stop : 0,
+      transparent : 1,
+      ui_controls : 0,
+      ui_fullscreen : 0,
+      ui_general_controls : 0,
+      ui_help : 0,
+      ui_infos : 0,
+      ui_inspector : 0,
+      ui_settings : 0,
+      ui_watermark_link : 0,
+      ui_watermark : 0,
+      success : api => {
+        api.start()
+        api.addEventListener( 'viewerready', () => console.log( 'Viewer is ready' ))
+      },
+      error : () => console.log( 'Viewer error' )
+    })
+  }, [])
+
+  //
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <BgImage src={ isMobile ? '/img/index/tailor-int-01-1080x1920.png' : '/img/index/3_200619-152_2400x1599.jpg' } />
+        {/* <BgImage src={ isMobile ? '/img/index/tailor-int-01-1080x1920.png' : '/img/index/3_200619-152_2400x1599.jpg' } /> */}
+
+        <div className="sketchfab-embed-wrapper">
+          <iframe ref={ sketchfabIframe }></iframe>
+        </div>
       </motion.div>
 
       <article>
@@ -51,12 +81,14 @@ export default function Homes ({ active, setActiveOverlayKey }) {
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Modern architecture paired with a rare level of intimacy and connection, with only 8 homes on each floor.</motion.p>
       </article>
 
-      <div className="mobile-tap-indicator"><span>Learn More</span></div>
+      {/* <div className="mobile-tap-indicator"><span>Learn More</span></div> */}
 
-      <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_HOMES) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
-        <span>More</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
-      </motion.button>
+      {/*
+        <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_HOME) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
+          <span>More</span>
+          <SVG src="/svg/thin-arrow-down.svg" />
+        </motion.button>
+      */}
     </motion.section>
   )
 }
