@@ -44,7 +44,7 @@ export default function OverlayHome (props) {
               <span className="areas__total">Total Area: { unit.area.total } SF</span>
             </div>
 
-            <a href={ unit.pdf } className="btn btn--solid" target="_blank" rel="noreferrer noopener">Download PDF</a>
+            <a href={ `/rel/plans/${unit.pdf}` } className="btn btn--solid" target="_blank" rel="noreferrer noopener">Download PDF</a>
           </div>
         </div>
 
@@ -52,7 +52,7 @@ export default function OverlayHome (props) {
           <div className="view"></div>
 
           <div className="image">
-            <img src={ unit.image } />
+            <img src={ `/rel/plans/${unit.image}` } />
           </div>
         </div>
       </div>
