@@ -73,8 +73,11 @@
       height:100%;
       width:calc( 100% - #{$button-height} );
       position: relative;
+      overflow:hidden;
 
       &[data-open="true"] {
+        overflow:visible;
+
         .menu{
           opacity:1;
 
@@ -809,6 +812,32 @@
 
     &:before{
       display: none;
+    }
+
+    .elevation{
+      flex:0 0 100%;
+      align-self:flex-end;
+
+      .active-level{
+        display: block;
+      }
+
+      svg{
+        width:15vh;
+        height:auto;
+
+        g{
+          &[id^="L"]{
+            opacity:0.5;
+            cursor:pointer;
+
+            &:hover,
+            &.active{
+              opacity:1;
+            }
+          }
+        }
+      }
     }
 
     .bg-animation{

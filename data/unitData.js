@@ -3,8 +3,8 @@ export default [
   {
     name : 'A',
     type : '1 Bedroom + 1 Bath',
-    image : 'Plan-A.svg',
-    pdf : 'Tailor_Floorplans_Sheets_A.pdf',
+    image : '/rel/plans/Plan-A.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_A.pdf',
     area : {
       total : 670,
       interior : 538,
@@ -14,8 +14,8 @@ export default [
   {
     name : 'A1',
     type : '1 Bedroom + 1 Bath',
-    image : 'Plan-A1.svg',
-    pdf : 'Tailor_Floorplans_Sheets_A1.pdf',
+    image : '/rel/plans/Plan-A1.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_A1.pdf',
     area : {
       total : 659,
       interior : 538,
@@ -25,8 +25,8 @@ export default [
   {
     name : 'B',
     type : '1 Bedroom + 1 Bath',
-    image : 'Plan-B.svg',
-    pdf : 'Tailor_Floorplans_Sheets_B.pdf',
+    image : '/rel/plans/Plan-B.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_B.pdf',
     area : {
       total : 723,
       interior : 646,
@@ -36,8 +36,8 @@ export default [
   {
     name : 'C',
     type : '2 Bedroom + 2 Bath',
-    image : 'Plan-C.svg',
-    pdf : 'Tailor_Floorplans_Sheets_C.pdf',
+    image : '/rel/plans/Plan-C.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_C.pdf',
     area : {
       total : 991,
       interior : 764,
@@ -47,8 +47,8 @@ export default [
   {
     name : 'C1',
     type : '2 Bedroom + 2 Bath',
-    image : 'Plan-C1.svg',
-    pdf : 'Tailor_Floorplans_Sheets_C1.pdf',
+    image : '/rel/plans/Plan-C1.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_C1.pdf',
     area : {
       total : 960,
       interior : 786,
@@ -58,8 +58,8 @@ export default [
   {
     name : 'D',
     type : '2 Bedroom + 2 Bath',
-    image : 'Plan-D1.svg',
-    pdf : 'Tailor_Floorplans_Sheets_D.pdf',
+    image : '/rel/plans/Plan-D1.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_D.pdf',
     area : {
       total : 1116,
       interior : 893,
@@ -69,8 +69,8 @@ export default [
   {
     name : 'D1',
     type : '2 Bedroom + 2 Bath',
-    image : 'Plan-D1.svg',
-    pdf : 'Tailor_Floorplans_Sheets_D1.pdf',
+    image : '/rel/plans/Plan-D1.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_D1.pdf',
     area : {
       interior : 893,
       outdoor : 223,
@@ -80,8 +80,8 @@ export default [
   {
     name : 'E',
     type : 'Jr 1 Bedroom + 1 Bath',
-    image : 'Plan-E.svg',
-    pdf : 'Tailor_Floorplans_Sheets_E.pdf',
+    image : '/rel/plans/Plan-E.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_E.pdf',
     area : {
       interior : 484,
       outdoor : 156,
@@ -91,8 +91,8 @@ export default [
   {
     name : 'F',
     type : 'Studio + 1 Bath',
-    image : 'Plan-F.svg',
-    pdf : 'Tailor_Floorplans_Sheets_F.pdf',
+    image : '/rel/plans/Plan-F.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_F.pdf',
     area : {
       interior : 366,
       outdoor : 163,
@@ -102,8 +102,8 @@ export default [
   {
     name : 'TH1',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : 'Plan-TH1.svg',
-    pdf : 'Tailor_Floorplans_Sheets_TH1.pdf',
+    image : '/rel/plans/Plan-TH1.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf',
     area : {
       interior : 1701,
       outdoor : 677,
@@ -113,8 +113,8 @@ export default [
   {
     name : 'TH2',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : 'Plan-TH2.svg',
-    pdf : 'Tailor_Floorplans_Sheets_TH2.pdf',
+    image : '/rel/plans/Plan-TH2.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH2.pdf',
     area : {
       interior : 1679,
       outdoor : 673,
@@ -124,8 +124,8 @@ export default [
   {
     name : 'TH3/4',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : 'Plan-TH3-4.svg',
-    pdf : 'Tailor_Floorplans_Sheets_TH3-4.pdf',
+    image : '/rel/plans/Plan-TH3-4.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH3-4.pdf',
     area : {
       interior : 1679,
       outdoor : 673,
@@ -135,8 +135,8 @@ export default [
   {
     name : 'TH5',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : 'Plan-TH5.svg',
-    pdf : 'Tailor_Floorplans_Sheets_TH5.pdf',
+    image : '/rel/plans/Plan-TH5.svg',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf',
     area : {
       interior : 1701,
       outdoor : 821,

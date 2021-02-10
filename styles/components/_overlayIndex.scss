@@ -449,6 +449,7 @@
         background:$color-grey-200;
         cursor:grab;
         margin:0 0 5rem 0;
+        background-size:auto 100%;
 
         &:active{
           cursor:grabbing;

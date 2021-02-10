@@ -2,9 +2,13 @@
 // Dependencies
 import { useRef, useEffect, useState } from 'react'
 
+// Utils
+import { getNewPastilleURL } from 'utils'
+
 // Component
-export default function SketchfabViewer ({ setActiveHome }) {
+export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   const [ api, setApi ] = useState(null)
+  const [ annotations, setAnnotations ] = useState(null)
   const sketchfabIframe = useRef(null)
   const models = useRef({
     typical : '65493428a7f641cd9114bc938dceaa39'
@@ -30,15 +34,48 @@ export default function SketchfabViewer ({ setActiveHome }) {
     api.getAnnotation(i, ( err, annotation ) => {
       setActiveHome(annotation.name.split(' - '))
     })
+  }
 
-    api.hideAnnotationTooltips()
+  //
+  const setAnnotationTexture = () => {
+    let url = getNewPastilleURL(
+        'none',
+        'none',
+        '#000000',
+        'none',
+        activeLevel,
+        50,
+        512,
+        256
+    )
+    api.setAnnotationsTexture(url, function () {})
   }
 
   //
   useEffect( () => {
+    if ( !annotations ) return
+
+    annotations.forEach(( annotation, i ) => {
+      const [ num, plan ] = annotation.name.split(' - ')
+      const title = `${activeLevel}0${i+1} - ${plan}`
+      api.updateAnnotation(i, { title })
+    })
+
+    setAnnotationTexture()
+  }, [ activeLevel ])
+
+  //
+  useEffect( () => {
     if ( !api ) return
+
     api.start()
-    api.addEventListener( 'annotationSelect', onAnnotationSelect )
+
+    api.addEventListener('viewerready', () => {
+      api.addEventListener( 'annotationSelect', onAnnotationSelect )
+      api.hideAnnotationTooltips()
+      api.getAnnotationList(( err, annotations ) => setAnnotations(annotations))
+      setAnnotationTexture()
+    })
   }, [ api ])
 
   //
