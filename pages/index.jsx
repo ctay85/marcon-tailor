@@ -113,6 +113,11 @@ export default function Index () {
       const delta = isTouchPad ? config.current.touchDelta : config.current.wheelDelta
       const direction = e.deltaY > 0 ? 'down' : 'up'
 
+      console.log( `isTouchPad: ${isTouchPad}` )
+      console.log( `delta: ${delta}` )
+      console.log( `direction: ${direction}` )
+      console.log( `Math.abs(e.deltaY): ${Math.abs(e.deltaY)}` )
+
       if ( Math.abs(e.deltaY) > delta ) {
         blockExecution()
         changePanel(direction)
