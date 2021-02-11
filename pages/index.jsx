@@ -16,7 +16,7 @@ import { uiUpdateHeaderTheme } from 'store/actions'
 // Component
 export default function Index () {
   const dispatch = useDispatch()
-  const config = useRef({ wheelDelta : 150, touchDelta : 30, transitionDuration : 1000 })
+  const config = useRef({ wheelDelta : 90, touchDelta : 30, transitionDuration : 1000 })
   const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
