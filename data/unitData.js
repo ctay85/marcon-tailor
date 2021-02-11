@@ -4,6 +4,7 @@ export default [
     name : 'A',
     type : '1 Bedroom + 1 Bath',
     image : '/rel/plans/Plan-A.svg',
+    plate : '/rel/plans/Key-Plan-A.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_A.pdf',
     area : {
       total : 670,
@@ -15,6 +16,7 @@ export default [
     name : 'A1',
     type : '1 Bedroom + 1 Bath',
     image : '/rel/plans/Plan-A1.svg',
+    plate : '/rel/plans/Key-Plan-A1.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_A1.pdf',
     area : {
       total : 659,
@@ -26,6 +28,7 @@ export default [
     name : 'B',
     type : '1 Bedroom + 1 Bath',
     image : '/rel/plans/Plan-B.svg',
+    plate : '/rel/plans/Key-Plan-B.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_B.pdf',
     area : {
       total : 723,
@@ -37,6 +40,7 @@ export default [
     name : 'C',
     type : '2 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-C.svg',
+    plate : '/rel/plans/Key-Plan-C.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_C.pdf',
     area : {
       total : 991,
@@ -48,6 +52,7 @@ export default [
     name : 'C1',
     type : '2 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-C1.svg',
+    plate : '/rel/plans/Key-Plan-C1.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_C1.pdf',
     area : {
       total : 960,
@@ -59,6 +64,7 @@ export default [
     name : 'D',
     type : '2 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-D1.svg',
+    plate : '/rel/plans/Key-Plan-D.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_D.pdf',
     area : {
       total : 1116,
@@ -70,6 +76,7 @@ export default [
     name : 'D1',
     type : '2 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-D1.svg',
+    plate : '/rel/plans/Key-Plan-D1.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_D1.pdf',
     area : {
       interior : 893,
@@ -81,6 +88,7 @@ export default [
     name : 'E',
     type : 'Jr 1 Bedroom + 1 Bath',
     image : '/rel/plans/Plan-E.svg',
+    plate : '/rel/plans/Key-Plan-E.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_E.pdf',
     area : {
       interior : 484,
@@ -92,6 +100,7 @@ export default [
     name : 'F',
     type : 'Studio + 1 Bath',
     image : '/rel/plans/Plan-F.svg',
+    plate : '/rel/plans/Key-Plan-F.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_F.pdf',
     area : {
       interior : 366,
@@ -103,6 +112,7 @@ export default [
     name : 'TH1',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
     image : '/rel/plans/Plan-TH1.svg',
+    plate : '/rel/plans/Key-Plan-TH1.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf',
     area : {
       interior : 1701,
@@ -114,6 +124,7 @@ export default [
     name : 'TH2',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
     image : '/rel/plans/Plan-TH2.svg',
+    plate : '/rel/plans/Key-Plan-TH2.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH2.pdf',
     area : {
       interior : 1679,
@@ -125,6 +136,7 @@ export default [
     name : 'TH3/4',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
     image : '/rel/plans/Plan-TH3-4.svg',
+    plate : '/rel/plans/Key-Plan-TH3-4.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH3-4.pdf',
     area : {
       interior : 1679,
@@ -136,6 +148,7 @@ export default [
     name : 'TH5',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
     image : '/rel/plans/Plan-TH5.svg',
+    plate : '/rel/plans/Key-Plan-TH5.svg',
     pdf : '/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf',
     area : {
       interior : 1701,

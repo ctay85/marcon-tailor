@@ -16,16 +16,22 @@ import { BgImage, SketchfabViewer } from 'components/ui'
 
 // Component
 export default function Homes ({ active, setActiveHome }) {
+  const levelLabel = useRef(null)
   const sectionClass = useRef('page__index__homes')
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
   const [ activeLevel, setActiveLevel ] = useState('3')
 
   //
-  const onLevelClick = ({ currentTarget : group }) => {
+  const onLevelClick = ({ currentTarget : group, offsetY }) => {
     const level = group.id.replace('L', '')
     const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
 
+    //
+    levelLabel.current.innerText = `Level ${level}`
+    levelLabel.current.style = `top:${offsetY}px`
+
+    //
     levelGroups.forEach( levelGroup => levelGroup.classList.remove('active') )
     group.classList.add('active')
     setActiveLevel(level)
@@ -35,6 +41,16 @@ export default function Homes ({ active, setActiveHome }) {
   const onElevationSvgLoaded = () => {
     const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
     levelGroups.forEach( group => group.addEventListener('click', onLevelClick) )
+  }
+
+  //
+  const onMouseEnter = e => {
+    const y = e.offsetY
+    const group = e.currentTarget
+    const num = group.id.replace('L', '')
+
+    levelLabel.current.innerText = `Level ${num}`
+    levelLabel.current.style = `top:${y}px`
   }
 
   //
@@ -73,7 +89,7 @@ export default function Homes ({ active, setActiveHome }) {
 
         <div className="elevation">
           <SVG src="/svg/plans/Elevation-East-View.svg" onLoad={ onElevationSvgLoaded } />
-          <span className="active-level">Currently Viewing &mdash; Level { activeLevel }</span>
+          <span className="level-label" ref={ levelLabel }>Level 3</span>
         </div>
       </article>
     </motion.section>

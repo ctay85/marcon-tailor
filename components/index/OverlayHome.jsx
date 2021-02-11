@@ -1,6 +1,7 @@
 
 // Dependencies
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
 
 // Data
 import { unitData } from 'data'
@@ -11,8 +12,11 @@ import { Overlay } from 'components/index'
 // Component
 export default function OverlayHome (props) {
   const { activeHome } = props
+  const viewContainer = useRef(null)
+  const viewImage = useRef(null)
+  const [ viewLeftConstraint, setViewLeftConstraint ] = useState(0)
   const [ unit, setUnit ] = useState({
-    name : '', type : '', image : '', pdf : '', unitNumber : '', view : '',
+    name : '', type : '', image : '', plate : '', pdf : '', unitNumber : '', view : '',
     area : { total : 0, interior : 0, outdoor : 0 }
   })
 
@@ -57,6 +61,14 @@ export default function OverlayHome (props) {
   }
 
   //
+  const getViewLeftConstraint = () => {
+    return (viewImage.current.clientWidth - viewContainer.current.clientWidth) * -1
+  }
+
+  //
+  const onResize = () => setViewLeftConstraint(getViewLeftConstraint())
+
+  //
   useEffect( () => {
     if ( !activeHome ) return
     const [ unitNumber, planType ] = activeHome
@@ -69,6 +81,12 @@ export default function OverlayHome (props) {
       view : getViewImage(level)
     })
   }, [ activeHome ])
+
+  //
+  useEffect( () => {
+    window.addEventListener('resize', onResize)
+    return () => window.addEventListener('resize', onResize)
+  }, [ unit ])
 
   //
   return (
@@ -91,10 +109,13 @@ export default function OverlayHome (props) {
         </div>
 
         <div className="column__right">
-          <div className="view" style={{ backgroundImage : `url(${unit.view})` }}></div>
+          <div className="view" ref={ viewContainer }>
+            <motion.img ref={ viewImage } drag="x" dragConstraints={{ right : 0, left : viewLeftConstraint }} src={ unit.view } onLoad={ onResize } />
+          </div>
 
           <div className="image">
-            <img src={ `${unit.image}` } />
+            <img className="plan" src={ unit.image } />
+            <img className="plate" src={ unit.plate } />
           </div>
         </div>
       </div>

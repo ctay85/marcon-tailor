@@ -9,13 +9,14 @@ import { getNewPastilleURL } from 'utils'
 export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   const [ api, setApi ] = useState(null)
   const [ annotations, setAnnotations ] = useState(null)
+  const [ northIndicatorShown, setNorthIndicatorShown ] = useState(true)
   const sketchfabIframe = useRef(null)
   const models = useRef({
-    typical : '65493428a7f641cd9114bc938dceaa39'
+    typical : 'e8418e0adbdb40d6bbfa08bab0ab70c6'
   })
   const config = useRef({
     ui_stop : 0,
-    transparent : 1,
+    ui_hint : 0,
     ui_controls : 0,
     ui_fullscreen : 0,
     ui_general_controls : 0,
@@ -24,7 +25,9 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
     ui_inspector : 0,
     ui_settings : 0,
     ui_watermark_link : 0,
-    ui_watermark : 0
+    ui_watermark : 0,
+    transparent : 1,
+    annotation_tooltip_visible : 0
   })
 
   //
@@ -52,6 +55,13 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   }
 
   //
+  const onViewerClick = () => {
+    if ( northIndicatorShown ) {
+      setNorthIndicatorShown(false)
+    }
+  }
+
+  //
   useEffect( () => {
     if ( !annotations ) return
 
@@ -72,7 +82,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
 
     api.addEventListener('viewerready', () => {
       api.addEventListener( 'annotationSelect', onAnnotationSelect )
-      api.hideAnnotationTooltips()
+      api.addEventListener( 'click', onViewerClick )
       api.getAnnotationList(( err, annotations ) => setAnnotations(annotations))
       setAnnotationTexture()
     })
@@ -93,6 +103,11 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   return (
     <div className="sketchfab-embed-wrapper">
       <iframe ref={ sketchfabIframe }></iframe>
+
+      <div className="north-indicator" data-shown={ northIndicatorShown }>
+        <span>N</span>
+        <i className="material-icons">arrow_right_alt</i>
+      </div>
     </div>
   )
 }

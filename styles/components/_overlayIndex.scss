@@ -449,21 +449,36 @@
         background:$color-grey-200;
         cursor:grab;
         margin:0 0 5rem 0;
-        background-size:auto 100%;
 
         &:active{
           cursor:grabbing;
+        }
+
+        img{
+          min-width:100%;
+          max-width:none;
+          width:auto;
+          height:100%;
+          display: block;
+          margin:0;
         }
       }
 
       .image{
         width:100%;
 
-        img{
+        .plan{
           width:80%;
           height:auto;
           display: block;
+          margin:0 auto 6rem auto;
+        }
+
+        .plate{
+          display: block;
           margin:0 auto 0 auto;
+          width:200px;
+          height:auto;
         }
       }
     }
