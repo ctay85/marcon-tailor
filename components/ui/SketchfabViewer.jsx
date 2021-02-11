@@ -41,7 +41,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
     let url = getNewPastilleURL(
         'none',
         'none',
-        '#000000',
+        '#041C2A',
         'none',
         activeLevel,
         50,

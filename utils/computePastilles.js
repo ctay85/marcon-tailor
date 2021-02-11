@@ -39,10 +39,10 @@ export default function computePastilles(
               fill="${bgColor}"
             />`;
 
-            var textVG = `<text font-size="22"
+            var textVG = `<text font-size="24"
           stroke="${fgBorderColor}"
           fill="${fgColor}"
-          font-family="sans-serif"
+          font-family="serif"
           text-anchor="middle"
           alignment-baseline="baseline"
           x="${cx}"
