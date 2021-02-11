@@ -20,10 +20,10 @@ export default function computePastilles(
 
     var cx;
 
-    var cy = w * 0.5;
+    var cy = w * 0.2;
     //var cy = 24;
 
-    var ty = cy + 8;
+    var ty = cy + 33;
 
     var pastille = '';
     var num = 0;
@@ -35,8 +35,10 @@ export default function computePastilles(
 
             var circle = `<circle cx="${cx}"
               cy="${cy}"
-              r="20"
+              r="6"
               fill="${bgColor}"
+              stroke=${bgBorderColor}
+              stroke-width=0
             />`;
 
             var textVG = `<text font-size="24"

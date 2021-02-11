@@ -42,7 +42,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   //
   const setAnnotationTexture = () => {
     let url = getNewPastilleURL(
-        'none',
+        '#01516B',
         'none',
         '#041C2A',
         'none',
@@ -84,6 +84,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
       api.addEventListener( 'annotationSelect', onAnnotationSelect )
       api.addEventListener( 'click', onViewerClick )
       api.getAnnotationList(( err, annotations ) => setAnnotations(annotations))
+      api.setAnnotationCameraTransition(true, true)
       setAnnotationTexture()
     })
   }, [ api ])

@@ -113,11 +113,6 @@ export default function Index () {
       const delta = isTouchPad ? config.current.touchDelta : config.current.wheelDelta
       const direction = e.deltaY > 0 ? 'down' : 'up'
 
-      console.log( `isTouchPad: ${isTouchPad}` )
-      console.log( `delta: ${delta}` )
-      console.log( `direction: ${direction}` )
-      console.log( `Math.abs(e.deltaY): ${Math.abs(e.deltaY)}` )
-
       if ( Math.abs(e.deltaY) > delta ) {
         blockExecution()
         changePanel(direction)
@@ -162,8 +157,8 @@ export default function Index () {
         <Intro />
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
-        <Homes active={ activePanelClass } setActiveHome={ setActiveHome } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
+        <Homes active={ activePanelClass } setActiveHome={ setActiveHome } />
         <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
