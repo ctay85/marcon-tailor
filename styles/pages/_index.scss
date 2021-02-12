@@ -847,10 +847,14 @@
       position: relative;
 
       svg{
-        width:150px;
+        width:100px;
         height:auto;
         margin:0;
         display: block;
+
+        @media #{$screen-md-min} {
+          width:150px;
+        }
 
         g{
           &[id^="L"]{
@@ -868,28 +872,42 @@
       .penthouse-label {
         display: block;
         position: absolute;
-        top:3.5rem;
-        left:calc( 150px + 1rem );
+        top:1.25rem;
+        left:calc( 100px + 1rem );
         user-select: none;
+
+        @media #{$screen-md-min} {
+          top:3.5rem;
+          left:calc( 150px + 1rem );
+        }
       }
 
       .level-label{
         display: block;
         position: absolute;
         top:425px;
-        left:calc( 150px + 1rem );
+        left:calc( 100px + 1rem );
         transform: translate3d(0,-50%,0);
         line-height:1em;
         white-space: nowrap;
+
+        @media #{$screen-md-min} {
+          left:calc( 150px + 1rem );
+        }
       }
 
       .th-labels{
         position: absolute;
-        bottom:1.75rem;
-        left:calc( 150px + 1rem );
+        bottom:1rem;
+        left:calc( 100px + 1rem );
         cursor:pointer;
         opacity:0.5;
         user-select: none;
+
+        @media #{$screen-md-min} {
+          bottom:1.75rem;
+          left:calc( 150px + 1rem );
+        }
 
         span{
           display: block;

@@ -26,7 +26,8 @@ export default function Homes ({ active, setActiveHome }) {
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
     const level = group.id.replace('L', '')
     const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
-    const y = parseInt(level) > 25 ? 80 : offsetY
+    const penthouseY = window.innerWidth < 1024 ? 50 : 80
+    const y = parseInt(level) > 25 ? penthouseY : offsetY
 
     //
     levelLabel.current.innerText = `Level ${level}`
