@@ -40,7 +40,12 @@ export default function Design ({ active, setActiveOverlayKey }) {
 
       <figure className="image-trigger">
         <motion.div className="blind" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.blind }></motion.div>
-        <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" />
+        {/* <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" /> */}
+
+        <div className="video-container">
+          <video src="/vid/lobby-exterior-loop-v2.mp4" loop autoPlay muted playsInline></video>
+        </div>
+
         <span className="caption">A new perspective on intimate high-rise living in Brentwood.</span>
       </figure>
 

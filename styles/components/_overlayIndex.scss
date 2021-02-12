@@ -441,7 +441,7 @@
       flex:0 0 75%;
       height:100vh;
       overflow:auto;
-      padding:0 0 5rem 0;
+      padding:0 0 2.5rem 0;
 
       .view{
         height:250px;
@@ -477,10 +477,17 @@
 
         .plate{
           display: block;
-          margin:0 auto 0 auto;
+          margin:0 auto 5rem auto;
           width:200px;
           height:auto;
         }
+      }
+
+      .disclaimer{
+        font-size:0.7rem;
+        line-height:1.5em;
+        margin:0 0 0 0;
+        padding:0 5rem;
       }
     }
   }

@@ -117,6 +117,8 @@ export default function OverlayHome (props) {
             <img className="plan" src={ unit.image } />
             <img className="plate" src={ unit.plate } />
           </div>
+
+          <p className="disclaimer">The Developer reserves the right in its sole discretion to make modifications or changes to building design, floor plans, project designs, specifications, finishes, features, incentives and dimensions, without prior notice. Renderings and any depicted views are artistic concepts only. Square footages are approximate and have been calculated from architectural drawings. Actual final dimensions following completion of construction may vary from those set out herein. E.&O.E. Marcon Alpha (GP) Ltd.</p>
         </div>
       </div>
     </Overlay>

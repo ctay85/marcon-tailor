@@ -1,6 +1,7 @@
 
 // Dependencies
 import { useRef, useEffect, useState } from 'react'
+import SVG from 'react-inlinesvg'
 
 // Utils
 import { getNewPastilleURL } from 'utils'
@@ -106,8 +107,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
       <iframe ref={ sketchfabIframe }></iframe>
 
       <div className="north-indicator" data-shown={ northIndicatorShown }>
-        <span>N</span>
-        <i className="material-icons">arrow_right_alt</i>
+        <SVG src="/svg/compass.svg" />
       </div>
     </div>
   )
