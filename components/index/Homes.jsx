@@ -26,10 +26,11 @@ export default function Homes ({ active, setActiveHome }) {
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
     const level = group.id.replace('L', '')
     const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
+    const y = parseInt(level) > 25 ? 80 : offsetY
 
     //
     levelLabel.current.innerText = `Level ${level}`
-    levelLabel.current.style = `top:${offsetY}px`
+    levelLabel.current.style = `top:${y}px`
 
     //
     levelGroups.forEach( levelGroup => levelGroup.classList.remove('active') )
@@ -89,7 +90,17 @@ export default function Homes ({ active, setActiveHome }) {
 
         <div className="elevation">
           <SVG src="/svg/plans/Elevation-East-View.svg" onLoad={ onElevationSvgLoaded } />
+
+          <span className="penthouse-label">Penthouses</span>
+
           <span className="level-label" ref={ levelLabel }>Level 3</span>
+
+          <div className="th-labels">
+            <span className="title">Townhomes</span>
+            <span className="floor">Floor 3</span>
+            <span className="floor">Floor 2</span>
+            <span className="floor">Floor 1</span>
+          </div>
         </div>
       </article>
     </motion.section>

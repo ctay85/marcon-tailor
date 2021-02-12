@@ -28,9 +28,12 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   //
   const onAnnotationSelect = i => {
     if ( i === -1 ) return
-    
+
     viewerInstances[activeModel].api.getAnnotation(i, ( err, annotation ) => {
-      setActiveHome(annotation.name.split(' - '))
+      const [ unitNumber, planType ] = annotation.name.split(' - ')
+      const formattedPlanType = unitNumber.substring(0,2) === '26' ? `S${planType}` : planType
+
+      setTimeout( () => setActiveHome([ unitNumber, formattedPlanType ]), 250)
     })
   }
 
@@ -45,6 +48,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
     viewerInstances[key].annotations.forEach(( annotation, i ) => {
       const [ num, plan ] = annotation.name.split(' - ')
       const title = `${activeLevel}0${i+1} - ${plan}`
+
       viewerInstances[key].api.updateAnnotation(i, { title })
     })
 
@@ -119,11 +123,18 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
 
   //
   useEffect( () => {
-    if ( viewerInstances.typical.annotations && viewerInstances.penthouse.annotations && activeModel ) {
-      viewerInstances.typical.api.addEventListener( 'annotationSelect', onAnnotationSelect )
-      viewerInstances.penthouse.api.addEventListener( 'annotationSelect', onAnnotationSelect )
+    if ( activeModel ) {
+      console.log('registering annotation events');
+      viewerInstances[activeModel].api.addEventListener( 'annotationSelect', onAnnotationSelect )
     }
-  }, [ viewerInstances.typical.annotations, viewerInstances.penthouse.annotations, activeModel ])
+
+    return () => {
+      if ( activeModel ) {
+        console.log('deregistering annotation events');
+        viewerInstances[activeModel].api.removeEventListener( 'annotationSelect', onAnnotationSelect )
+      }
+    }
+  }, [ activeModel ])
 
   //
   useEffect( () => {

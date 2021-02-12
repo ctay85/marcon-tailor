@@ -829,23 +829,28 @@
       display: none;
     }
 
+    article{
+      flex:0 0 250px;
+      //background:blue;
+    }
+
+    .bg-animation{
+      left:auto;
+      right:0;
+      width:calc( 100% - 6rem - 250px );
+      //background:red;
+    }
+
     .elevation{
       flex:0 0 100%;
       align-self:flex-end;
       position: relative;
 
-      .level-label{
-        display: block;
-        position: absolute;
-        top:295px;
-        left:17vh;
-        transform: translate3d(0,-50%,0);
-        line-height:1em;
-      }
-
       svg{
-        width:15vh;
+        width:150px;
         height:auto;
+        margin:0;
+        display: block;
 
         g{
           &[id^="L"]{
@@ -859,12 +864,46 @@
           }
         }
       }
-    }
 
-    .bg-animation{
-      left:auto;
-      right:0;
-      width:calc( 70% - 1.5rem );
+      .penthouse-label {
+        display: block;
+        position: absolute;
+        top:3.5rem;
+        left:calc( 150px + 1rem );
+        user-select: none;
+      }
+
+      .level-label{
+        display: block;
+        position: absolute;
+        top:425px;
+        left:calc( 150px + 1rem );
+        transform: translate3d(0,-50%,0);
+        line-height:1em;
+        white-space: nowrap;
+      }
+
+      .th-labels{
+        position: absolute;
+        bottom:1.75rem;
+        left:calc( 150px + 1rem );
+        cursor:pointer;
+        opacity:0.5;
+        user-select: none;
+
+        span{
+          display: block;
+          line-height:1.5em;
+
+          &.title{
+
+          }
+          &.floor{
+            display: none;
+            cursor:pointer;
+          }
+        }
+      }
     }
 
     .sketchfab-embed-wrapper{

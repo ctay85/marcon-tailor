@@ -155,5 +155,53 @@ export default [
       outdoor : 821,
       total : 2522
     }
-  }
+  },
+  {
+    name : 'SPH1',
+    type : '3 Bedroom + 2 Bath',
+    image : '/rel/plans/',
+    plate : '/rel/plans/',
+    pdf : '/rel/plans/',
+    area : {
+      interior : 1389,
+      outdoor : 1326,
+      total : 2715
+    }
+  },
+  {
+    name : 'SPH2',
+    type : '3 Bedroom + 2 Bath',
+    image : '/rel/plans/',
+    plate : '/rel/plans/',
+    pdf : '/rel/plans/',
+    area : {
+      interior : 1378,
+      outdoor : 1642,
+      total : 3020
+    }
+  },
+  {
+    name : 'PH1',
+    type : '3 Bedroom + 2 Bath',
+    image : '/rel/plans/',
+    plate : '/rel/plans/',
+    pdf : '/rel/plans/',
+    area : {
+      interior : 1389,
+      outdoor : 953,
+      total : 2342
+    }
+  },
+  {
+    name : 'PH2',
+    type : '3 Bedroom + 2 Bath',
+    image : '/rel/plans/',
+    plate : '/rel/plans/',
+    pdf : '/rel/plans/',
+    area : {
+      interior : 1378,
+      outdoor : 1114,
+      total : 2492
+    }
+  },
 ]
