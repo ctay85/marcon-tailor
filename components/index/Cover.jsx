@@ -53,7 +53,7 @@ export default function Cover ({ active }) {
     }}>
 
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <video src={ isMobile ? '/vid/lobby-loop-mobile.mp4' : '/vid/lobby-exterior-loop-v2.mp4' } autoPlay muted playsInline loop />
+        <video src={ isMobile ? '/vid/cover-loop-mobile.mp4' : '/vid/cover-loop-desktop.mp4' } autoPlay muted playsInline loop />
       </motion.div>
 
       <div className="left-column">

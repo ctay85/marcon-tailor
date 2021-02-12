@@ -4,32 +4,15 @@ import { useRef, useEffect, useState } from 'react'
 import SVG from 'react-inlinesvg'
 
 // Utils
-import { getNewPastilleURL } from 'utils'
+import { getNewPastilleURL, sketchfabConfig } from 'utils'
 
 // Component
 export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
   const [ api, setApi ] = useState(null)
   const [ annotations, setAnnotations ] = useState(null)
   const [ northIndicatorShown, setNorthIndicatorShown ] = useState(true)
-  const sketchfabIframe = useRef(null)
-  const models = useRef({
-    typical : 'e8418e0adbdb40d6bbfa08bab0ab70c6'
-  })
-  const config = useRef({
-    ui_stop : 0,
-    ui_hint : 0,
-    ui_controls : 0,
-    ui_fullscreen : 0,
-    ui_general_controls : 0,
-    ui_help : 0,
-    ui_infos : 0,
-    ui_inspector : 0,
-    ui_settings : 0,
-    ui_watermark_link : 0,
-    ui_watermark : 0,
-    transparent : 1,
-    annotation_tooltip_visible : 0
-  })
+  const iframeModelTypical = useRef(null)
+  const iframeModelPenthouse = useRef(null)
 
   //
   const onAnnotationSelect = i => {
@@ -92,19 +75,29 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
 
   //
   useEffect( () => {
-    const client = new window.Sketchfab( sketchfabIframe.current )
+    const client = new window.Sketchfab( iframeModelTypical.current )
 
-    client.init( models.current.typical, {
-      ...config.current,
-      success : apiObj => setApi(apiObj),
-      error : () => console.log( 'Viewer error' )
+    client.init( sketchfabConfig.models.typical, {
+      ...sketchfabConfig.viewerArgs,
+      success : apiObj => {
+        console.log( 'Typical model loaded' )
+        setApi(apiObj)
+      },
+      error : () => console.log( 'Typical model error' )
     })
+
+    // client.init( models.current.penthouse, {
+    //   ...config.current,
+    //   success : () => console.log( 'Penthouse model loaded' ),
+    //   error : () => console.log( 'Penthouse model error' )
+    // })
   }, [])
 
   //
   return (
     <div className="sketchfab-embed-wrapper">
-      <iframe ref={ sketchfabIframe }></iframe>
+      <iframe className="model--typical" ref={ iframeModelTypical }></iframe>
+      <iframe className="model--penthouse" ref={ iframeModelPenthouse }></iframe>
 
       <div className="north-indicator" data-shown={ northIndicatorShown }>
         <SVG src="/svg/compass.svg" />
