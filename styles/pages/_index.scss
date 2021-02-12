@@ -879,14 +879,10 @@
         position: absolute;
         top:0;
         left:0;
+        display: none;
 
-        &.model{
-          &--typical{
-
-          }
-          &--penthouse{
-            display: none;
-          }
+        &[data-active="true"] {
+          display: block;
         }
       }
     }

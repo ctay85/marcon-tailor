@@ -20,7 +20,7 @@ export default function Homes ({ active, setActiveHome }) {
   const sectionClass = useRef('page__index__homes')
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
-  const [ activeLevel, setActiveLevel ] = useState('3')
+  const [ activeLevel, setActiveLevel ] = useState(3)
 
   //
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
@@ -34,7 +34,7 @@ export default function Homes ({ active, setActiveHome }) {
     //
     levelGroups.forEach( levelGroup => levelGroup.classList.remove('active') )
     group.classList.add('active')
-    setActiveLevel(level)
+    setActiveLevel(parseInt(level))
   }
 
   //
