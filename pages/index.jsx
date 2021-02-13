@@ -164,7 +164,7 @@ export default function Index () {
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
-        <Homes active={ activePanelClass } setActiveHome={ setActiveHome } />
+        <Homes active={ activePanelClass } setActivePanelClass={ setActivePanelClass } setActiveHome={ setActiveHome } />
         <PublicArt active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>

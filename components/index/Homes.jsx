@@ -9,13 +9,13 @@ import SVG from 'react-inlinesvg'
 import { indexPanelAnimations } from 'utils'
 
 // Store
-import { INDEX_OVERLAY_KEY_HOME } from 'store/constants'
+import { INDEX_OVERLAY_KEY_HOME, INDEX_OVERLAY_KEY_PUBLICART } from 'store/constants'
 
 // Components
 import { BgImage, SketchfabViewer } from 'components/ui'
 
 // Component
-export default function Homes ({ active, setActiveHome }) {
+export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   const levelLabel = useRef(null)
   const sectionClass = useRef('page__index__homes')
   const [ animationState, setAnimationState ] = useState('initial')
@@ -120,6 +120,11 @@ export default function Homes ({ active, setActiveHome }) {
         <span className="activeLevel">Level { activeLevel }</span>
         <button className="btn__next" onClick={ incrementActiveLevel }><SVG src="/svg/thin-arrow-down.svg" /></button>
       </div>
+
+      <button className="btn__continue" onClick={ () => setActivePanelClass('page__index__public-art') }>
+        <span>Continue</span>
+        <SVG src="/svg/thin-arrow-down.svg" />
+      </button>
     </motion.section>
   )
 }

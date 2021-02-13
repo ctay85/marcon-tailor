@@ -332,7 +332,7 @@
         height:125%;
         z-index:-2;
         transform: scale(0); opacity:0.6;
-        animation-name: scale;
+        animation-name: scaleInvis;
         animation-duration: 3s;
         animation-timing-function: cubic-bezier(0,.8,0,1);
         animation-iteration-count: infinite;
@@ -425,6 +425,10 @@
     @keyframes scale {
       0%{ transform: scale(0); opacity:1; }
       100%{ transform: scale(1); opacity:0.5; }
+    }
+    @keyframes scaleInvis {
+      0%{ transform: scale(0); opacity:1; }
+      100%{ transform: scale(1); opacity:0; }
     }
     @keyframes fade {
       0%{ opacity:0.5; }
@@ -958,7 +962,7 @@
 
     .north-indicator{
       position: absolute;
-      bottom:3rem;
+      bottom:2.25rem;
       right:3rem;
       transition:opacity 1s ease;
       display: none;
@@ -1010,6 +1014,38 @@
         svg{
           transform: rotate(-90deg);
         }
+      }
+    }
+
+    .btn__continue{
+      position: absolute;
+      bottom:4.5rem;
+      left:50%;
+      transform: translateX(-50%);
+      z-index:10;
+
+      @media #{$screen-md-min} {
+        bottom:3rem;
+      }
+
+      span{
+        display: block;
+        color:white;
+        font-family: $font-serif;
+        font-size:1.25rem;
+        line-height:1em;
+        margin:0 0 1rem 0;
+
+        @media #{$screen-md-min} {
+          margin:0 0 1.5rem 0;
+        }
+      }
+
+      svg{
+        width:15px;
+        height:auto;
+        display:block;
+        margin:0 auto;
       }
     }
   }
