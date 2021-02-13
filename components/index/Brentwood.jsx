@@ -50,7 +50,7 @@ export default function Brendwood ({ active, setActiveOverlayKey }) {
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon.</motion.p>
       </article>
 
-      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_BRENTWOOD) }><span>Learn More</span></div>
+      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_BRENTWOOD) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_BRENTWOOD) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>

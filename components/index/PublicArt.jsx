@@ -48,7 +48,7 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
         <span className="caption">The image is an abstraction of points of light on water.</span>
       </figure>
 
-      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) }><span>Learn More</span></div>
+      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>

@@ -50,7 +50,7 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
         <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Our interiors have been planned to maximize space and are finished to stand the test of time.</motion.p>
       </article>
 
-      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) }><span>Learn More</span></div>
+      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>

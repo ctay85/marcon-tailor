@@ -161,7 +161,7 @@ export default [
     type : '3 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-SPH1.svg',
     plate : '/rel/plans/Key-Plan-SPH1.svg',
-    pdf : '/rel/plans/Tailor_Penthouse_Floorplans_V3.pdf',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_SPH1.pdf',
     area : {
       interior : 1389,
       outdoor : 1326,
@@ -173,7 +173,7 @@ export default [
     type : '3 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-SPH2.svg',
     plate : '/rel/plans/Key-Plan-SPH2.svg',
-    pdf : '/rel/plans/Tailor_Penthouse_Floorplans_V3.pdf',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_SPH2.pdf',
     area : {
       interior : 1378,
       outdoor : 1642,
@@ -185,7 +185,7 @@ export default [
     type : '3 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-PH1.svg',
     plate : '/rel/plans/Key-Plan-PH1.svg',
-    pdf : '/rel/plans/Tailor_Penthouse_Floorplans_V3.pdf',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_PH1.pdf',
     area : {
       interior : 1389,
       outdoor : 953,
@@ -197,7 +197,7 @@ export default [
     type : '3 Bedroom + 2 Bath',
     image : '/rel/plans/Plan-PH2.svg',
     plate : '/rel/plans/Key-Plan-PH2.svg',
-    pdf : '/rel/plans/Tailor_Penthouse_Floorplans_V3.pdf',
+    pdf : '/rel/plans/Tailor_Floorplans_Sheets_PH2.pdf',
     area : {
       interior : 1378,
       outdoor : 1114,

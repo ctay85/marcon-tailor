@@ -49,7 +49,7 @@ export default function Design ({ active, setActiveOverlayKey }) {
         <span className="caption">A new perspective on intimate high-rise living in Brentwood.</span>
       </figure>
 
-      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }><span>Learn More</span></div>
+      <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>
