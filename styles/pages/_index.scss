@@ -196,10 +196,12 @@
   &__brentwood{
     width:100%;
     height:100vh;
+    height: -webkit-fill-available;
     position: absolute;
     top:0;
     left:0;
-    padding:5rem 1rem 11rem 1rem;
+    //padding:5rem 1rem 11rem 1rem;
+    padding:5rem 1rem calc( #{$button-height} + 2rem ) 1rem;
     display: flex;
     flex-wrap:wrap;
     background-color:white;
