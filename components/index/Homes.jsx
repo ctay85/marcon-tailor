@@ -56,6 +56,16 @@ export default function Homes ({ active, setActiveHome }) {
   }
 
   //
+  const incrementActiveLevel = () => {
+    setActiveLevel( activeLevel === 27 ? 27 : activeLevel+1 )
+  }
+
+  //
+  const deincrementActiveLevel = () => {
+    setActiveLevel( activeLevel === 3 ? 3 : activeLevel-1 )
+  }
+
+  //
   useEffect( () => {
     const isActive = active === sectionClass.current
 
@@ -104,6 +114,12 @@ export default function Homes ({ active, setActiveHome }) {
           </div>
         </div>
       </article>
+
+      <div className="mobile-nav">
+        <button className="btn__prev" onClick={ deincrementActiveLevel }><SVG src="/svg/thin-arrow-down.svg" /></button>
+        <span className="activeLevel">Level { activeLevel }</span>
+        <button className="btn__next" onClick={ incrementActiveLevel }><SVG src="/svg/thin-arrow-down.svg" /></button>
+      </div>
     </motion.section>
   )
 }

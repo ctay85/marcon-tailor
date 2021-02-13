@@ -832,13 +832,22 @@
     article{
       flex:0 0 250px;
       //background:blue;
+      display: none;
+
+      @media #{$screen-md-min} {
+        display: flex;
+      }
     }
 
     .bg-animation{
       left:auto;
       right:0;
-      width:calc( 100% - 6rem - 250px );
+      width:100%;
       //background:red;
+
+      @media #{$screen-md-min} {
+        width:calc( 100% - 6rem - 250px );
+      }
     }
 
     .elevation{
@@ -949,6 +958,11 @@
       bottom:3rem;
       right:3rem;
       transition:opacity 1s ease;
+      display: none;
+
+      @media #{$screen-md-min} {
+        display: block;
+      }
 
       &[data-shown="false"] {
         opacity:0;
@@ -958,6 +972,41 @@
         width:50px;
         height:auto;
         display:block;
+      }
+    }
+
+    .mobile-nav{
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top:calc(#{$header-height});
+      left:50%;
+      transform: translateX(-50%);
+
+      @media #{$screen-md-min} {
+        display: none;
+      }
+
+      button,
+      span{
+        color:white;
+        display: block;
+      }
+
+      span{
+        margin:0 2rem;
+      }
+
+      .btn__prev{
+        svg{
+          transform: rotate(90deg);
+        }
+      }
+
+      .btn__next{
+        svg{
+          transform: rotate(-90deg);
+        }
       }
     }
   }
