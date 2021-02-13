@@ -86,6 +86,10 @@ export default function Index () {
   useEffect( () => {
 
     //
+    const onResize = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+    onResize()
+
+    //
     const onScroll = () => {
       if ( !lastPanelActive ) window.scrollTo(0,0)
     }
@@ -124,12 +128,14 @@ export default function Index () {
     window.addEventListener( 'touchstart', onTouchStart )
     window.addEventListener( 'touchend', onTouchEnd )
     window.addEventListener( 'mousewheel', onMouseWheel )
+    window.addEventListener( 'resize', onResize )
 
     //
     return () => {
       window.removeEventListener( 'touchstart', onTouchStart )
       window.removeEventListener( 'touchend', onTouchEnd )
       window.removeEventListener( 'mousewheel', onMouseWheel )
+      window.removeEventListener( 'resize', onResize )
     }
   }, [ isAnimating, activePanelClass, activeOverlayKey ])
 
