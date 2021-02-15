@@ -36,7 +36,7 @@ export function AccordionItem ({ title, children }) {
     <div className="accordion__item" data-open={ isOpen }>
       <div className="accordion__item__header" onClick={ toggleAccordion }>
         <span>{ title }</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
+        <SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
       </div>
 
       <div className="accordion__item__content" ref={ content }>

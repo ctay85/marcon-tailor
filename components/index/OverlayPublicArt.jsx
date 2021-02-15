@@ -30,8 +30,8 @@ export default function OverlayPublicArt (props) {
       </OverlayContent>
 
       <OverlayImage images={[
-        "/img/index/BTB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg",
-        "/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg"
+        `${process.env.BASE_PATH}/img/index/BTB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg`,
+        `${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg`
       ]} />
     </Overlay>
   )

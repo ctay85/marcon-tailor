@@ -1,6 +1,11 @@
 
 // Dependencies
 import { useState, useRef, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+
+// Store
+import { UI_HEADER_THEME_BLUE } from 'store/constants'
+import { uiUpdateHeaderTheme } from 'store/actions'
 
 // Components
 import { Seo } from 'components/common'
@@ -10,6 +15,7 @@ const REALTOR_AUTHENTICATED = 'REALTOR_AUTHENTICATED'
 
 // Component
 export default function Realtor () {
+  const dispatch = useDispatch()
   const password = useRef('alpha')
   const [ userAuthorized, setUserAuthorized ] = useState(false)
 
@@ -30,6 +36,8 @@ export default function Realtor () {
     if ( lsEntry && lsEntry === 'true' ) {
       setUserAuthorized(true)
     }
+
+    dispatch(uiUpdateHeaderTheme(UI_HEADER_THEME_BLUE))
   }, [])
 
   //

@@ -42,7 +42,7 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
         {/* <BgImage src="/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL_1920x1920.jpg" /> */}
 
         <div className="video-container">
-          <video src="/vid/publicart-loop-desktop.mp4" loop autoPlay muted playsInline></video>
+          <video src={`${process.env.BASE_PATH}/vid/publicart-loop-desktop.mp4`} loop autoPlay muted playsInline></video>
         </div>
 
         <span className="caption">The image is an abstraction of points of light on water.</span>
@@ -52,7 +52,7 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
+        <SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
       </motion.button>
     </motion.section>
   )

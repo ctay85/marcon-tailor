@@ -125,7 +125,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
         <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Homes</span> &mdash; More Intimate</motion.span>
 
         <div className="elevation">
-          <SVG src="/svg/plans/Elevation-East-View.svg" onLoad={ onElevationSvgLoaded } />
+          <SVG src={`${process.env.BASE_PATH}/svg/plans/Elevation-East-View.svg`} onLoad={ onElevationSvgLoaded } />
 
           <div className="penthouse-labels" data-active={ activeLevel === 27 || activeLevel === 26 }>
             <button className="btn__toggle" onClick={ togglePenthouseNav }>Penthouses</button>
@@ -145,14 +145,14 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
       </article>
 
       <div className="mobile-nav">
-        <button className="btn__prev" onClick={ deincrementActiveLevel }><SVG src="/svg/thin-arrow-down.svg" /></button>
+        <button className="btn__prev" onClick={ deincrementActiveLevel }><SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} /></button>
         <span className="activeLevel">Level { activeLevel }</span>
-        <button className="btn__next" onClick={ incrementActiveLevel }><SVG src="/svg/thin-arrow-down.svg" /></button>
+        <button className="btn__next" onClick={ incrementActiveLevel }><SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} /></button>
       </div>
 
       <button className="btn__continue" onClick={ () => setActivePanelClass('page__index__public-art') }>
         <span>Continue</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
+        <SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
       </button>
     </motion.section>
   )

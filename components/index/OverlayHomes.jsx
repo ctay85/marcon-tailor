@@ -82,9 +82,9 @@ export default function OverlayPublicArt (props) {
       </OverlayContent>
 
       <OverlayImage images={[
-        "/img/index/homes/Tailor-Web-26.jpg",
-        "/img/index/homes/Tailor-Web-28.jpg",
-        "/img/index/homes/Tailor-Web-29.jpg"
+        `${process.env.BASE_PATH}/img/index/homes/Tailor-Web-26.jpg`,
+        `${process.env.BASE_PATH}/img/index/homes/Tailor-Web-28.jpg`,
+        `${process.env.BASE_PATH}/img/index/homes/Tailor-Web-29.jpg`
       ]} />
     </Overlay>
   )

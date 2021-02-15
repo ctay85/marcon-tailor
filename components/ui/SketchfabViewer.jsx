@@ -197,7 +197,7 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
       <iframe className="model--penthouse" data-active={ activeModel === 'penthouse' } ref={ iframeModelPenthouse }></iframe>
 
       <div className="north-indicator" data-shown={ northIndicatorShown }>
-        <SVG src="/svg/compass.svg" />
+        <SVG src={`${process.env.BASE_PATH}/svg/compass.svg`} />
       </div>
     </div>
   )

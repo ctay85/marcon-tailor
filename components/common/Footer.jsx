@@ -11,8 +11,8 @@ const Footer = () => {
     <footer className="global__footer" data-slug={ router.pathname }>
       <div className="wrap--flex">
         <div className="global__footer__left">
-          <a className="logo-marcon" href="https://marcon.ca"><SVG src={ `/svg/Logo-Marcon-01-231x34.svg` } /></a>
-          <SVG className="logo-building" src={ `/svg/Buildingforlife.svg` } />
+          <a className="logo-marcon" href="https://marcon.ca"><SVG src={ `${process.env.BASE_PATH}/svg/Logo-Marcon-01-231x34.svg` } /></a>
+          <SVG className="logo-building" src={ `${process.env.BASE_PATH}/svg/Buildingforlife.svg` } />
         </div>
 
         <div className="global__footer__right">
@@ -36,9 +36,9 @@ const Footer = () => {
           </ul>
 
           <ul className="link-list social">
-            <li><a href="https://www.facebook.com/MarconHomes" target="_blank" rel="noopener noreferrer"><SVG src={ `/svg/facebook.svg` } /></a></li>
-            <li><a href="https://www.instagram.com/MarconHomes" target="_blank" rel="noopener noreferrer"><SVG src={ `/svg/instagram.svg` } /></a></li>
-            <li><a href="https://www.linkedin.com/company/marcon" target="_blank" rel="noopener noreferrer"><SVG src={ `/svg/linkedin.svg` } /></a></li>
+            <li><a href="https://www.facebook.com/MarconHomes" target="_blank" rel="noopener noreferrer"><SVG src={ `${process.env.BASE_PATH}/svg/facebook.svg` } /></a></li>
+            <li><a href="https://www.instagram.com/MarconHomes" target="_blank" rel="noopener noreferrer"><SVG src={ `${process.env.BASE_PATH}/svg/instagram.svg` } /></a></li>
+            <li><a href="https://www.linkedin.com/company/marcon" target="_blank" rel="noopener noreferrer"><SVG src={ `${process.env.BASE_PATH}/svg/linkedin.svg` } /></a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
           <a href="https://rennie.com/" className="logo-rennie" target="_blank">
-            <SVG src={ `/img/common/Logo-Rennie-Sales-By.svg` } />
+            <SVG src={ `${process.env.BASE_PATH}/img/common/Logo-Rennie-Sales-By.svg` } />
           </a>
         </div>
         <div className="global__footer__reverse__bottom">

@@ -1,6 +1,5 @@
 
 // Dependencies
-import Image from 'next/image'
 import SVG from 'react-inlinesvg'
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
@@ -53,7 +52,7 @@ export default function Cover ({ active }) {
     }}>
 
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <video src={ isMobile ? '/vid/cover-loop-mobile.mp4' : '/vid/cover-loop-desktop.mp4' } autoPlay muted playsInline loop />
+        <video src={ isMobile ? `${process.env.BASE_PATH}/vid/cover-loop-mobile.mp4` : `${process.env.BASE_PATH}/vid/cover-loop-desktop.mp4` } autoPlay muted playsInline loop />
       </motion.div>
 
       <div className="left-column">
@@ -74,7 +73,7 @@ export default function Cover ({ active }) {
         <span className="section-title">Own In Brentwood</span>
 
         <figure>
-          <img src="/img/index/image2.jpg" />
+          <img src={ `${process.env.BASE_PATH}/img/index/image2.jpg` } />
         </figure>
 
         <p className="description">A premium collection of 193 homes starting at $359,900</p>

@@ -14,7 +14,7 @@ export default function Intro () {
       renderer: 'svg',
       loop: false,
       autoplay: true,
-      path : `/json/tailor-logo-v1.json`
+      path : `${process.env.BASE_PATH}/json/tailor-logo-v1.json`
     })
 
     anim.addEventListener('complete', () => {

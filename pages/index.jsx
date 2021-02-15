@@ -20,7 +20,7 @@ export default function Index () {
   const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
-  const [ activePanelClass, setActivePanelClass ] = useState('page__index__homes')
+  const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
   const [ activeHome, setActiveHome ] = useState(null)
@@ -189,7 +189,7 @@ export default function Index () {
         </div>
 
         <button className="btn__back-to-top" onClick={ reset } title="Back To Top">
-          <SVG src="/svg/thin-arrow-down.svg" />
+          <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
         </button>
       </div>
 

@@ -27,7 +27,7 @@ export default function OverlayInteriors (props) {
             E: <a href="mailto:sales@tailorbymarcon.ca">Sales@TailorbyMarcon.ca</a>
           </p>
 
-          <SVG src="/svg/Tailor_Map_Neighbourhood_v1.svg" />
+          <SVG src={`${process.env.BASE_PATH}/svg/Tailor_Map_Neighbourhood_v1.svg`} />
         </div>
 
         <RegisterSalesforce reversed={ true } />

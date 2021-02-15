@@ -43,7 +43,7 @@ export default function Design ({ active, setActiveOverlayKey }) {
         {/* <BgImage src="/img/index/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg" /> */}
 
         <div className="video-container">
-          <video src="/vid/lobby-exterior-loop-v2.mp4" loop autoPlay muted playsInline></video>
+          <video src={ `${process.env.BASE_PATH}/vid/lobby-exterior-loop-v2.mp4` } loop autoPlay muted playsInline></video>
         </div>
 
         <span className="caption">A new perspective on intimate high-rise living in Brentwood.</span>
@@ -53,7 +53,7 @@ export default function Design ({ active, setActiveOverlayKey }) {
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_DESIGN) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
         <span>More</span>
-        <SVG src="/svg/thin-arrow-down.svg" />
+        <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
       </motion.button>
     </motion.section>
   )
