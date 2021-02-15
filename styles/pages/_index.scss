@@ -885,16 +885,44 @@
         }
       }
 
-      .penthouse-label {
+      .penthouse-labels {
         display: block;
         position: absolute;
         top:1.25rem;
-        left:calc( 100px + 1rem );
+        left:calc( 150px + 1rem );
         user-select: none;
+        line-height:1em;
 
-        @media #{$screen-md-min} {
-          top:3.5rem;
-          left:calc( 150px + 1rem );
+        &[data-active="true"]{
+          .btn__toggle{
+            opacity:1;
+          }
+
+          .btn__floor{
+            display: block;
+          }
+        }
+
+        button{
+          color:white;
+          font-family:$font-serif;
+          opacity:0.5;
+
+          &[data-active="true"] {
+            opacity:1;
+          }
+
+          &.btn__toggle{
+            margin:0 0 0.75rem 0;
+          }
+
+          &.btn__floor--27{
+            margin:0 0 0.5rem 0;
+          }
+
+          &.btn__floor{
+            display: none;
+          }
         }
       }
 

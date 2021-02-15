@@ -25,8 +25,8 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   //
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
     const level = group.id.replace('L', '')
-    const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
-    const penthouseY = window.innerWidth < 1024 ? 50 : 80
+
+    const penthouseY = -100
     const y = parseInt(level) > 25 ? penthouseY : offsetY
 
     //
@@ -34,9 +34,15 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
     levelLabel.current.style = `top:${y}px`
 
     //
-    levelGroups.forEach( levelGroup => levelGroup.classList.remove('active') )
+    resetLevelGroups()
     group.classList.add('active')
     setActiveLevel(parseInt(level))
+  }
+
+  //
+  const resetLevelGroups = () => {
+    const levelGroups = [...document.querySelectorAll('.elevation svg g[id^="L"]')]
+    levelGroups.forEach( levelGroup => levelGroup.classList.remove('active') )
   }
 
   //
@@ -65,6 +71,25 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
     setActiveLevel( activeLevel === 3 ? 3 : activeLevel-1 )
   }
 
+  //
+  const activatePenthouseLevel = level => {
+    setActiveLevel(level)
+    resetLevelGroups()
+    document.querySelector(`.elevation svg g[id="L${level}"]`).classList.add('active')
+  }
+
+  //
+  const togglePenthouseNav = ({ currentTarget : button }) => {
+    const parent = button.parentNode
+    const isActive = parent.dataset.active === 'true'
+    const notPenthouseLevel = activeLevel < 26
+
+    if ( isActive && notPenthouseLevel ) {
+      return parent.removeAttribute('data-active')
+    }
+
+    return parent.setAttribute('data-active', 'true')
+  }
   //
   useEffect( () => {
     const isActive = active === sectionClass.current
@@ -102,7 +127,11 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
         <div className="elevation">
           <SVG src="/svg/plans/Elevation-East-View.svg" onLoad={ onElevationSvgLoaded } />
 
-          <span className="penthouse-label">Penthouses</span>
+          <div className="penthouse-labels" data-active={ activeLevel === 27 || activeLevel === 26 }>
+            <button className="btn__toggle" onClick={ togglePenthouseNav }>Penthouses</button>
+            <button className="btn__floor btn__floor--27" data-active={ activeLevel === 27 } onClick={ () => activatePenthouseLevel(27) }>Level 27</button>
+            <button className="btn__floor btn__floor--26" data-active={ activeLevel === 26 } onClick={ () => activatePenthouseLevel(26) }>Level 26</button>
+          </div>
 
           <span className="level-label" ref={ levelLabel }>Level 3</span>
 
