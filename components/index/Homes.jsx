@@ -76,6 +76,13 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
     setActiveLevel(level)
     resetLevelGroups()
     document.querySelector(`.elevation svg g[id="L${level}"]`).classList.add('active')
+    levelLabel.current.style = 'top:-100px;'
+  }
+
+  const activateTownhomeLevel = level => {
+    setActiveLevel(level)
+    resetLevelGroups()
+    levelLabel.current.style = 'top:-100px;'
   }
 
   //
@@ -90,6 +97,20 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
 
     return parent.setAttribute('data-active', 'true')
   }
+
+  //
+  const toggleTownhomesNav = ({ currentTarget : button }) => {
+    const parent = button.parentNode
+    const isActive = parent.dataset.active === 'true'
+    //const notPenthouseLevel = activeLevel < 26
+
+    // if ( isActive && notPenthouseLevel ) {
+    //   return parent.removeAttribute('data-active')
+    // }
+
+    return parent.setAttribute('data-active', 'true')
+  }
+
   //
   useEffect( () => {
     const isActive = active === sectionClass.current
@@ -135,11 +156,11 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
 
           <span className="level-label" ref={ levelLabel }>Level 3</span>
 
-          <div className="th-labels">
-            <span className="title">Townhomes</span>
-            <span className="floor">Floor 3</span>
-            <span className="floor">Floor 2</span>
-            <span className="floor">Floor 1</span>
+          <div className="th-labels" data-active={ activeLevel >= 0 && activeLevel < 3 }>
+            <span className="title" onClick={ toggleTownhomesNav }>Townhomes</span>
+            <span className="floor" data-active={ activeLevel === 2 } onClick={ () => activateTownhomeLevel(2) }>Floor 3</span>
+            <span className="floor" data-active={ activeLevel === 1 } onClick={ () => activateTownhomeLevel(1) }>Floor 2</span>
+            <span className="floor" data-active={ activeLevel === 0 } onClick={ () => activateTownhomeLevel(0) }>Floor 1</span>
           </div>
         </div>
       </article>
