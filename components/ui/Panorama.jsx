@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 // Component
-export default function Panorama ({ image, initialOffset = null }) {
+export default function Panorama ({ image, initialOffset = 0 }) {
   const panoramaImage = useRef(null)
   const container = useRef(null)
   const settings = useRef({ dampingFactor : 0.93, historySize : 5 })
@@ -67,6 +67,8 @@ export default function Panorama ({ image, initialOffset = null }) {
       return false
     }
 
+    console.log('recalc offset');
+
     offset = calcOffsetCenter()
     setBackgroundPosition()
   }
@@ -82,11 +84,10 @@ export default function Panorama ({ image, initialOffset = null }) {
   }
 
   //
-  useEffect( () => {
+  useEffect(onResize, [ initialOffset ])
 
-    if ( initialOffset ) {
-      onResize()
-    }
+  //
+  useEffect( () => {
 
     const loop = setInterval(tick, 16)
     panoramaImage.current.addEventListener('mousedown', onMouseDown)
