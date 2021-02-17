@@ -850,10 +850,88 @@
       left:auto;
       right:0;
       width:100%;
-      //background:red;
+      //background:white;
 
       @media #{$screen-md-min} {
         width:calc( 100% - 6rem - 255px );
+      }
+    }
+
+    .plate{
+      display: none;
+      width:800px;
+      max-width:80%;
+      height:auto;
+      position: absolute;
+      bottom:50%;
+      left:50%;
+      transform: translate3d(-50%,50%,0);
+      //background:red;
+
+      &[data-active="true"] {
+        display: block;
+      }
+
+      &.plate--townhome{
+        g[id^="trigger-"] {
+          text{
+            font-size:2.5px;
+          }
+        }
+      }
+
+      &.plate--tower{
+        g[id^="trigger-"] {
+          text{
+            font-size:1.7px;
+          }
+        }
+      }
+
+      #text-streets{
+        text,
+        text tspan{
+          font-family: $font-sans-serif;
+          fill:white;
+          stroke:none;
+          user-select: none;
+        }
+      }
+
+      #text-type {
+        display: none;
+      }
+
+      g[id^="trigger"] {
+        cursor:pointer;
+
+        polygon,
+        polyline,
+        text{
+          transition: fill .2s ease;
+        }
+
+        polygon,
+        polyline{
+          fill:white;
+          stroke:$brand-indigo;
+          stroke-width:0.2;
+        }
+
+        text{
+          font-family: $font-serif;
+          font-size:3px;
+        }
+
+        &:hover{
+          polygon,
+          polyline{
+            fill:$brand-indigo;
+          }
+          text{
+            fill:white;
+          }
+        }
       }
     }
 
@@ -943,7 +1021,7 @@
 
       .th-labels{
         position: absolute;
-        bottom:0;
+        bottom:1.75rem;
         left:calc( 150px + 1rem );
         cursor:pointer;
         user-select: none;
@@ -1067,6 +1145,7 @@
       left:50%;
       transform: translateX(-50%);
       z-index:10;
+      display: none;
 
       @media #{$screen-md-min} {
         bottom:3rem;

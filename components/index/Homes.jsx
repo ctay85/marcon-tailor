@@ -21,6 +21,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
   const [ activeLevel, setActiveLevel ] = useState(3)
+  const [ activePlate, setActivePlate ] = useState('tower')
 
   //
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
@@ -112,6 +113,57 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   }
 
   //
+  const onTriggerClick = ({ currentTarget : group }) => {
+    const planType = group.dataset.plan
+    const unitNumber = group.querySelector('text').innerHTML
+    const formattedUnitNumber = unitNumber === 'TH3' || unitNumber === 'TH4'
+      ? 'TH3/4'
+      : unitNumber
+    console.log(formattedUnitNumber, planType)
+    setActiveHome([ formattedUnitNumber, planType ])
+  }
+
+  //
+  const onPlateLoaded = key => {
+    const svg = document.querySelector(`.plate--${key}`)
+    const triggers = [...svg.querySelectorAll('g[id^=trigger]')]
+
+    triggers.forEach( trigger => trigger.addEventListener('click', onTriggerClick) )
+  }
+
+  //
+  const changePlateNumbers = () => {
+    const plate = document.querySelector('.plate--tower')
+    if ( !plate ) return
+
+    const groups = [...plate.querySelectorAll('g[id^=trigger]')]
+
+    groups.forEach( group => {
+      const unitNumber = group.querySelector('text').innerHTML
+      group.querySelector('text').innerHTML = `${activeLevel}${unitNumber.substr(unitNumber.length - 2)}`
+    })
+  }
+
+  //
+  useEffect( () => {
+    const isPenthouseLevel = activeLevel === 27
+    const isSubPenthouseLevel = activeLevel === 26
+    const isTowerLevel = activeLevel > 2 && activeLevel < 26
+    const isTownhomeLevel = activeLevel < 3
+
+    if ( isPenthouseLevel ) {
+      setActivePlate('penthouse')
+    } else if ( isSubPenthouseLevel ) {
+      setActivePlate('sub-penthouse')
+    } else if ( isTowerLevel ) {
+      setActivePlate('tower')
+      changePlateNumbers()
+    } else if ( isTownhomeLevel ) {
+      setActivePlate('townhome')
+    }
+  }, [ activeLevel ])
+
+  //
   useEffect( () => {
     const isActive = active === sectionClass.current
 
@@ -139,7 +191,15 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <SketchfabViewer setActiveHome={ setActiveHome } activeLevel={ activeLevel } />
+        {/* <SketchfabViewer setActiveHome={ setActiveHome } activeLevel={ activeLevel } /> */}
+
+        <SVG onLoad={ () => onPlateLoaded('penthouse') } data-active={ activePlate === 'penthouse' } className="plate plate--penthouse" src="/rel/plans/Keyplan_Penthouse.svg" />
+
+        <SVG onLoad={ () => onPlateLoaded('sub-penthouse') } data-active={ activePlate === 'sub-penthouse' } className="plate plate--sub-penthouse" src="/rel/plans/Keyplan_Sub-Penthouse.svg" />
+
+        <SVG onLoad={ () => onPlateLoaded('tower') } data-active={ activePlate === 'tower' } className="plate plate--tower" src="/rel/plans/Keyplan_Tower.svg" />
+
+        <SVG onLoad={ () => onPlateLoaded('townhome') } data-active={ activePlate === 'townhome' } className="plate plate--townhome" src="/rel/plans/Keyplan_Townhouse.svg" />
       </motion.div>
 
       <article>
@@ -157,10 +217,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
           <span className="level-label" ref={ levelLabel }>Level 3</span>
 
           <div className="th-labels" data-active={ activeLevel >= 0 && activeLevel < 3 }>
-            <span className="title" onClick={ toggleTownhomesNav }>Townhomes</span>
-            <span className="floor" data-active={ activeLevel === 2 } onClick={ () => activateTownhomeLevel(2) }>Floor 3</span>
-            <span className="floor" data-active={ activeLevel === 1 } onClick={ () => activateTownhomeLevel(1) }>Floor 2</span>
-            <span className="floor" data-active={ activeLevel === 0 } onClick={ () => activateTownhomeLevel(0) }>Floor 1</span>
+            <span className="title" onClick={ () => activateTownhomeLevel(0) }>Townhomes</span>
           </div>
         </div>
       </article>

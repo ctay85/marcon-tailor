@@ -20,7 +20,7 @@ export default function Index () {
   const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
-  const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
+  const [ activePanelClass, setActivePanelClass ] = useState('page__index__homes')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
   const [ activeHome, setActiveHome ] = useState(null)
@@ -160,7 +160,7 @@ export default function Index () {
       <Seo title="Made For Brentwood" description="The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon." />
 
       <main className="page__index">
-        <Intro />
+        {/* <Intro /> */}
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />

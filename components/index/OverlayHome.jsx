@@ -6,67 +6,20 @@ import { motion } from 'framer-motion'
 // Data
 import { unitData } from 'data'
 
+// Utils
+import { getViewImage, getViewOffset } from 'utils'
+
 // Components
 import { Overlay } from 'components/index'
+import { Panorama } from 'components/ui'
 
 // Component
 export default function OverlayHome (props) {
   const { activeHome } = props
-  const viewContainer = useRef(null)
-  const viewImage = useRef(null)
-  const [ viewLeftConstraint, setViewLeftConstraint ] = useState(0)
   const [ unit, setUnit ] = useState({
     name : '', type : '', image : '', plate : '', pdf : '', unitNumber : '', view : '',
     area : { total : 0, interior : 0, outdoor : 0 }
   })
-
-  //
-  const getViewImage = level => {
-    switch ( level ) {
-      case '3' :
-      case '4' :
-      case '5' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_1_web.jpg`
-      case '6' :
-      case '7' :
-      case '8' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_2_web.jpg`
-      case '9' :
-      case '10' :
-      case '11' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_3_web.jpg`
-      case '12' :
-      case '13' :
-      case '14' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_4_web.jpg`
-      case '15' :
-      case '16' :
-      case '17' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_5_web.jpg`
-      case '18' :
-      case '19' :
-      case '20' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_6_web.jpg`
-      case '21' :
-      case '22' :
-      case '23' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_7_web.jpg`
-      case '24' :
-      case '25' :
-      case '26' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_8_web.jpg`
-      case '27' :
-        return `${process.env.BASE_PATH}/img/views/Tailor_Panoramas_9_web.jpg`
-    }
-  }
-
-  //
-  const getViewLeftConstraint = () => {
-    return (viewImage.current.clientWidth - viewContainer.current.clientWidth) * -1
-  }
-
-  //
-  const onResize = () => setViewLeftConstraint(getViewLeftConstraint())
 
   //
   useEffect( () => {
@@ -74,19 +27,15 @@ export default function OverlayHome (props) {
     const [ unitNumber, planType ] = activeHome
     const [ unit ] = unitData.filter( unit => unit.name === planType )
     const level = parseInt(unitNumber) > 1000 ? unitNumber.substring(0,2) : unitNumber.substring(0,1)
+    const genericUnitNumber = parseInt(unitNumber) > 1000 ? unitNumber.substr(2,2) : unitNumber.substr(1,2)
 
     setUnit({
       ...unit,
       unitNumber,
-      view : getViewImage(level)
+      view : getViewImage(level),
+      offset : getViewOffset(genericUnitNumber)
     })
   }, [ activeHome ])
-
-  //
-  useEffect( () => {
-    window.addEventListener('resize', onResize)
-    return () => window.addEventListener('resize', onResize)
-  }, [ unit ])
 
   //
   return (
@@ -109,9 +58,7 @@ export default function OverlayHome (props) {
         </div>
 
         <div className="column__right">
-          <div className="view" ref={ viewContainer }>
-            <motion.img ref={ viewImage } drag="x" dragConstraints={{ right : 0, left : viewLeftConstraint }} src={ unit.view } onLoad={ onResize } />
-          </div>
+          <Panorama image={ unit.view } initialOffset={ unit.offset } />
 
           <div className="image">
             <img className="plan" src={ unit.image } />

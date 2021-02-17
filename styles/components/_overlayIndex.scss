@@ -454,32 +454,6 @@
         height:100vh;
       }
 
-      .view{
-        height:250px;
-        width:100vw;
-        background:$color-grey-200;
-        cursor:grab;
-        margin:0 0 5rem 0;
-        overflow:hidden;
-
-        @media #{$screen-md-min} {
-          width:100%;
-        }
-
-        &:active{
-          cursor:grabbing;
-        }
-
-        img{
-          min-width:100%;
-          max-width:none;
-          width:auto;
-          height:100%;
-          display: block;
-          margin:0;
-        }
-      }
-
       .image{
         width:100%;
 
