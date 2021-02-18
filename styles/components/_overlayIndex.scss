@@ -441,6 +441,17 @@
       .btn{
         padding:0;
         width:100%;
+        margin:0 0 1rem 0;
+      }
+
+      .btn__feature-sheet{
+        color:white;
+        text-decoration: none;
+        border-bottom:solid 1px $brand-dusk;
+        line-height:1.75rem;
+        display: inline-block;
+        font-size:0.9rem;
+        color:$brand-dusk;
       }
     }
 
@@ -456,6 +467,14 @@
 
       .image{
         width:100%;
+
+        .image-caption{
+          display: block;
+          text-align: center;
+          font-size:1.5rem;
+          font-weight:bold;
+          margin:0 0 2rem 0;
+        }
 
         .plan{
           max-width:500px;

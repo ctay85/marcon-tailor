@@ -20,7 +20,7 @@ export default function Index () {
   const ui = useSelector( state => state.ui )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
-  const [ activePanelClass, setActivePanelClass ] = useState('page__index__homes')
+  const [ activePanelClass, setActivePanelClass ] = useState('page__index__interiors')
   const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
   const [ activeHome, setActiveHome ] = useState(null)
@@ -176,21 +176,21 @@ export default function Index () {
           </button>
 
           <div className="menu">
-            <Link href="/realtor">
-              <a className="btn__realtor-hub">
-                <span>Realtor Hub</span>
-              </a>
-            </Link>
+            <a href="https://rennie.as.me/tailor" target="_blank" rel="noopener noreferrer" className="btn__realtor-hub">
+              <span>Arrange A Preview</span>
+            </a>
 
             <button onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
-              <span>Arrange A Preview</span>
+              <span>Sign Up</span>
             </button>
           </div>
         </div>
 
-        <button className="btn__back-to-top" onClick={ reset } title="Back To Top">
-          <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
-        </button>
+        {/*
+          <button className="btn__back-to-top" onClick={ reset } title="Back To Top">
+            <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
+          </button>
+          */}
       </div>
 
       <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />

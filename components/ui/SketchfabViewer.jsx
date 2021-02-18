@@ -303,10 +303,6 @@ export default function SketchfabViewer ({ setActiveHome, activeLevel }) {
       <iframe className="model--th-lvl-1" data-active={ activeModel === 'townhome_level_1' } ref={ iframeModelTH1 }></iframe>
       <iframe className="model--th-lvl-2" data-active={ activeModel === 'townhome_level_2' } ref={ iframeModelTH2 }></iframe>
       <iframe className="model--th-lvl-3" data-active={ activeModel === 'townhome_level_3' } ref={ iframeModelTH3 }></iframe>
-
-      <div className="north-indicator" data-shown={ northIndicatorShown }>
-        <SVG src={`${process.env.BASE_PATH}/svg/compass.svg`} />
-      </div>
     </div>
   )
 }

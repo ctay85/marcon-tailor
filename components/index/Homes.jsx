@@ -103,11 +103,6 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   const toggleTownhomesNav = ({ currentTarget : button }) => {
     const parent = button.parentNode
     const isActive = parent.dataset.active === 'true'
-    //const notPenthouseLevel = activeLevel < 26
-
-    // if ( isActive && notPenthouseLevel ) {
-    //   return parent.removeAttribute('data-active')
-    // }
 
     return parent.setAttribute('data-active', 'true')
   }
@@ -232,6 +227,10 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
         <span>Continue</span>
         <SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
       </button>
+
+      <div className="north-indicator">
+        <SVG src={`${process.env.BASE_PATH}/svg/compass.svg`} />
+      </div>
     </motion.section>
   )
 }

@@ -2,6 +2,7 @@
 // Dependencies
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import SVG from 'react-inlinesvg'
 
 // Data
 import { unitData } from 'data'
@@ -54,6 +55,7 @@ export default function OverlayHome (props) {
             </div>
 
             <a href={ `${unit.pdf}` } className="btn btn--solid" target="_blank" rel="noreferrer noopener">Download PDF</a>
+            <a href={ `${process.env.BASE_PATH}/pdf/P9_Tailor Feature Sheet_Aug20.pdf` } className="btn__feature-sheet" target="_blank" rel="noreferrer noopener">Feature Sheet</a>
           </div>
         </div>
 
@@ -61,7 +63,16 @@ export default function OverlayHome (props) {
           <Panorama unit={ unit } />
 
           <div className="image">
-            <img className="plan" src={ unit.image } />
+            { unit.image && <SVG className="plan" src={ unit.image } /> }
+            {
+              unit.images && unit.images.map(( image, i ) => (
+                <div className="level" key={ i }>
+                  <span className="image-caption">{ image.caption }</span>
+                  <img className="plan" src={ image.file } />
+                </div>
+              ))
+            }
+
             <img className="plate" src={ unit.plate } />
           </div>
 

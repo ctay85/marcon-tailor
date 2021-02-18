@@ -111,7 +111,11 @@ export default [
   {
     name : 'TH1',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : `${process.env.BASE_PATH}/rel/plans/Plan-TH1.svg`,
+    images : [
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH1-Lower.svg`, caption : 'Lower' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH1-Main.svg`, caption : 'Main' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH1-Upper.svg`, caption : 'Upper' }
+    ],
     plate : `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH1.svg`,
     pdf : `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf`,
     area : {
@@ -123,7 +127,11 @@ export default [
   {
     name : 'TH2',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : `${process.env.BASE_PATH}/rel/plans/Plan-TH2.svg`,
+    images : [
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH2-Lower.svg`, caption : 'Lower' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH2-Main.svg`, caption : 'Main' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH2-Upper.svg`, caption : 'Upper' }
+    ],
     plate : `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH2.svg`,
     pdf : `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH2.pdf`,
     area : {
@@ -135,7 +143,11 @@ export default [
   {
     name : 'TH3/4',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : `${process.env.BASE_PATH}/rel/plans/Plan-TH3-4.svg`,
+    images : [
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH3-4-Lower.svg`, caption : 'Lower' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH3-4-Main.svg`, caption : 'Main' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH3-4-Upper.svg`, caption : 'Upper' }
+    ],
     plate : `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH3-4.svg`,
     pdf : `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH3-4.pdf`,
     area : {
@@ -147,7 +159,11 @@ export default [
   {
     name : 'TH5',
     type : '2 Bedroom + 2 Bath + 2 Powder + Work',
-    image : `${process.env.BASE_PATH}/rel/plans/Plan-TH5.svg`,
+    images : [
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH5-Lower.svg`, caption : 'Lower' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH5-Main.svg`, caption : 'Main' },
+      { file : `${process.env.BASE_PATH}/rel/plans/Plan-TH5-Upper.svg`, caption : 'Upper' }
+    ],
     plate : `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH5.svg`,
     pdf : `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf`,
     area : {
