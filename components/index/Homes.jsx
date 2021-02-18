@@ -119,7 +119,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
     const formattedUnitNumber = unitNumber === 'TH3' || unitNumber === 'TH4'
       ? 'TH3/4'
       : unitNumber
-    console.log(formattedUnitNumber, planType)
+
     setActiveHome([ formattedUnitNumber, planType ])
   }
 

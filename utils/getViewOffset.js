@@ -4,11 +4,11 @@ export default function getViewOffset (unitNumber) {
 
     // NE
     case '01' :
-      return -881
+      return -998
 
     // SE
     case '02' :
-      return -881
+      return -30
 
     // S
     case '03' :
@@ -18,11 +18,11 @@ export default function getViewOffset (unitNumber) {
 
     // SW
     case '06' :
-      return -881
+      return -425
 
     // NW
     case '07' :
-      return -881
+      return -725
 
     // N
     case '08' :

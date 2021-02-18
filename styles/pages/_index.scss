@@ -913,9 +913,9 @@
 
         polygon,
         polyline{
-          fill:white;
-          stroke:$brand-indigo;
-          stroke-width:0.2;
+          fill:transparent;
+          //stroke:$brand-indigo;
+          //stroke-width:0.2;
         }
 
         text{

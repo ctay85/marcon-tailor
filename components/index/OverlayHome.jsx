@@ -58,7 +58,7 @@ export default function OverlayHome (props) {
         </div>
 
         <div className="column__right">
-          <Panorama image={ unit.view } initialOffset={ unit.offset } />
+          <Panorama unit={ unit } />
 
           <div className="image">
             <img className="plan" src={ unit.image } />

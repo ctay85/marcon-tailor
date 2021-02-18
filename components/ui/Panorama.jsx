@@ -1,13 +1,16 @@
 
 // Dependencies
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+//
+let sx, dx = 0, armed, offset = 0, prev, h = []
 
 // Component
-export default function Panorama ({ image, initialOffset = 0 }) {
+export default function Panorama ({ unit }) {
   const panoramaImage = useRef(null)
   const container = useRef(null)
   const settings = useRef({ dampingFactor : 0.93, historySize : 5 })
-  let sx, dx = 0, armed, offset = 0, prev, h = []
+  const [ viewOffset, setViewOffset ] = useState(0)
 
   //
 	const tick = () => {
@@ -62,20 +65,8 @@ export default function Panorama ({ image, initialOffset = 0 }) {
   }
 
   //
-  const onResize = () => {
-    if ( sx !== undefined ) {
-      return false
-    }
-
-    console.log('recalc offset');
-
-    offset = calcOffsetCenter()
-    setBackgroundPosition()
-  }
-
-  //
   const calcOffsetCenter = () => {
-    return initialOffset + (container.current.clientWidth / 2)
+    return viewOffset + (container.current.clientWidth / 2)
   }
 
   //
@@ -84,11 +75,29 @@ export default function Panorama ({ image, initialOffset = 0 }) {
   }
 
   //
-  useEffect(onResize, [ initialOffset ])
+  useEffect( () => {
+    offset = calcOffsetCenter()
+    setBackgroundPosition()
+  }, [ viewOffset ])
+
+  //
+  useEffect( () => {
+    setViewOffset(unit.offset || 0)
+  }, [ unit ])
 
   //
   useEffect( () => {
 
+    const onResize = () => {
+      if ( sx !== undefined ) {
+        return false
+      }
+
+      offset = calcOffsetCenter()
+      setBackgroundPosition()
+    }
+
+    //
     const loop = setInterval(tick, 16)
     panoramaImage.current.addEventListener('mousedown', onMouseDown)
     panoramaImage.current.addEventListener('touchstart', onMouseDown)
@@ -117,7 +126,7 @@ export default function Panorama ({ image, initialOffset = 0 }) {
   return (
     <div className="panorama" ref={ container }>
       <div className="panorama__image" ref={ panoramaImage } style={{
-        backgroundImage : `url(${image})`,
+        backgroundImage : `url(${unit.view})`,
         backgroundPosition : `0 0`
       }}></div>
     </div>
