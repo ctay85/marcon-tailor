@@ -604,24 +604,29 @@
 
     .bg-animation{
       video{
+        margin: auto;
         position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate3d(-50%,-50%,0);
-        min-width:100%;
-        min-height:100%;
+        z-index: 1;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        visibility: visible;
+        opacity: 1;
+        width: 103%;
+        height: 103%;
+        object-fit: cover;
 
-        @media #{$screen-sm-min} {
-          @media (min-aspect-ratio: 16/9) {
-            width:102%;
-            height:auto;
-          }
-
-          @media (max-aspect-ratio: 16/9) {
-            width:auto;
-            height:102%;
-          }
-        }
+        // @media #{$screen-sm-min} {
+        //   @media (min-aspect-ratio: 16/9) {
+        //     width:102%;
+        //     height:auto;
+        //   }
+        //
+        //   @media (max-aspect-ratio: 16/9) {
+        //     width:auto;
+        //     height:102%;
+        //   }
+        // }
       }
     }
 
