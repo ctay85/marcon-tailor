@@ -60,13 +60,13 @@ bb3<?xml version="1.0" encoding="utf-8"?>
 	<polygon class="bb3" points="45.4,26.7 37.6,26.7 37.6,25.7 35.5,25.7 35.5,16.9 33.7,16.9 33.7,16.1 24.4,16.1 24.4,21.5
 		13.4,21.5 13.4,27 13.2,27 13.2,33.5 13.4,33.5 13.4,44 26.8,44 45.4,44 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 21.2401 31.34)" class="bb4 bb5 bb6">2602</text>
+		<text transform="matrix(1 0 0 1 20 32)" class="bb4 bb5 bb6 title">2602</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 20.7001 35.2975)" class="bb4 bb5 bb6">3BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 20 35)" class="bb4 bb5 bb6 label">3BR + 2BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 20.7509 39.2521)" class="bb4 bb5 bb6">SPH2</text>
+		<text transform="matrix(1 0 0 1 20 38)" class="bb4 bb5 bb6 label">SPH2</text>
 	</g>
 </g>
 
@@ -77,13 +77,13 @@ bb3<?xml version="1.0" encoding="utf-8"?>
 	<polygon class="bb3" points="45.4,44 77.3,44 77.3,28.1 82.6,28.1 82.6,25.9 77.3,25.9 77.3,21.8 77.3,21.5 66.3,21.5 66.3,16.1
 		57,16.1 57,16.9 55.3,16.9 55.3,21.6 56.9,21.6 56.9,25.7 53.1,25.7 53.1,26.7 45.4,26.7 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 54.7863 31.34)" class="bb4 bb5 bb6">2601</text>
+		<text transform="matrix(1 0 0 1 54 32)" class="bb4 bb5 bb6 title">2601</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 54.2463 35.2975)" class="bb4 bb5 bb6">3BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 54 35)" class="bb4 bb5 bb6 label">3BR + 2BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 54.2971 39.2521)" class="bb4 bb5 bb6">SPH2</text>
+		<text transform="matrix(1 0 0 1 54 38)" class="bb4 bb5 bb6 label">SPH2</text>
 	</g>
 </g>
 </svg>

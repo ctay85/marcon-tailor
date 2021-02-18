@@ -195,6 +195,9 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
         <SVG onLoad={ () => onPlateLoaded('tower') } data-active={ activePlate === 'tower' } className="plate plate--tower" src="/rel/plans/Keyplan_Tower.svg" />
 
         <SVG onLoad={ () => onPlateLoaded('townhome') } data-active={ activePlate === 'townhome' } className="plate plate--townhome" src="/rel/plans/Keyplan_Townhouse.svg" />
+
+        <span className="street street--bottom">Alaska St.</span>
+        <span className="street street--right">Alpha Ave.</span>
       </motion.div>
 
       <article>

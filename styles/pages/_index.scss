@@ -859,31 +859,62 @@
 
     .plate{
       display: none;
-      width:800px;
-      max-width:80%;
+      width:700px;
+      max-width:70%;
       height:auto;
       position: absolute;
       bottom:50%;
       left:50%;
-      transform: translate3d(-50%,50%,0);
+      transform: translate3d(-60%,50%,0);
       //background:red;
 
       &[data-active="true"] {
         display: block;
       }
 
-      &.plate--townhome{
+      &.plate--penthouse,
+      &.plate--sub-penthouse {
         g[id^="trigger-"] {
           text{
-            font-size:2.5px;
+            &.title{
+              font-size:3px;
+            }
+            &.label{
+              font-size:2px;
+            }
+          }
+        }
+      }
+
+      &.plate--townhome{
+        g[id^="trigger-"] {
+          g{
+            text{
+              &.title{
+                font-size:3px;
+              }
+              &.label{
+                font-size:2px;
+              }
+            }
           }
         }
       }
 
       &.plate--tower{
         g[id^="trigger-"] {
-          text{
-            font-size:1.7px;
+          g{
+            &:nth-child(2){
+              text{
+                font-size:2.1px;
+              }
+            }
+            &:nth-child(3),
+            &:nth-child(4){
+              text{
+                font-size:1.4px;
+              }
+            }
           }
         }
       }
@@ -930,26 +961,29 @@
           font-family: $font-serif;
           font-size:3px;
         }
+      }
+    }
 
-        g{
-          &:nth-child(2){
-            text{
-              //font-size:2px;
-            }
-          }
-          &:nth-child(3){
-            text{
-              //font-size:1.5px;
-            }
-          }
-          &:nth-child(4){
-            text{
-              //font-size:1.5px;
-            }
-          }
-        }
+    .street{
+      position: absolute;
+      display: block;
+      color:white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      line-height: 1em;
+      font-family:$font-sans-serif;
+      z-index:5;
 
-
+      &--right{
+        bottom:50%;
+        right:0;
+        transform: translate3d(0,50%,0) rotate(-90deg);
+      }
+      &--bottom{
+        bottom:8rem;
+        left:50%;
+        transform: translate3d(-50%,0,0);
       }
     }
 

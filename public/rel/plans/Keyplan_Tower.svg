@@ -78,13 +78,13 @@
 	<polygon class="cc3" points="63.1,22.3 63.1,17.8 63.1,4.6 62.8,4.6 48.1,4.6 48.1,4.8 48.1,9 48.4,9 48.4,14.7 48.8,14.7
 		48.8,19.1 52.5,19.1 52.5,22.3 53.2,22.3 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 51.233 11.5703)" class="cc4 cc5 cc6">301</text>
+		<text transform="matrix(1 0 0 1 52 11.5703)" class="cc4 cc5 cc6">301</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 50.9137 13.695)" class="cc4 cc5 cc6">2BR+2BA</text>
+		<text transform="matrix(1 0 0 1 52 13.695)" class="cc4 cc5 cc6">2BR+2BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 50.943 15.6777)" class="cc4 cc5 cc6">C</text>
+		<text transform="matrix(1 0 0 1 52 15.6777)" class="cc4 cc5 cc6">C</text>
 	</g>
 </g>
 
@@ -95,13 +95,13 @@
 	<polygon class="cc3" points="53.2,25 53.2,22.3 63.1,22.3 63.1,21.7 68.8,21.7 68.8,35.9 68.8,36.3 60.6,36.3 60.6,30.5 58.2,30.5
 		58.2,25.8 53.2,25.8 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 58.8934 25.3771)" class="cc4 cc5 cc6">302</text>
+		<text transform="matrix(1 0 0 1 60.1 25.3771)" class="cc4 cc5 cc6">302</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 58.5741 27.5018)" class="cc4 cc5 cc6">1BR+1BA</text>
+		<text transform="matrix(1 0 0 1 60.1 27.5018)" class="cc4 cc5 cc6">1BR+1BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 58.6034 29.4845)" class="cc4 cc5 cc6">E</text>
+		<text transform="matrix(1 0 0 1 60.1 29.4845)" class="cc4 cc5 cc6">E</text>
 	</g>
 </g>
 
@@ -111,13 +111,13 @@
 <g id="trigger-f" data-plan="F">
 	<polygon class="cc3" points="48.8,25 53.2,25 53.2,25.8 58.2,25.8 58.2,30.5 60.6,30.5 60.6,36.3 49.4,36.3 48.8,36.3 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 49.6311 30.9827)" class="cc4 cc5 cc6">303</text>
+		<text transform="matrix(1 0 0 1 50 30.9827)" class="cc4 cc5 cc6">303</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 49.3117 33.1074)" class="cc4 cc5 cc6">STU+1BA</text>
+		<text transform="matrix(1 0 0 1 50 33.1074)" class="cc4 cc5 cc6">STU+1BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 49.341 35.0901)" class="cc4 cc5 cc6">F</text>
+		<text transform="matrix(1 0 0 1 50 35.0901)" class="cc4 cc5 cc6">F</text>
 	</g>
 </g>
 
@@ -127,13 +127,13 @@
 <g id="trigger-a" data-plan="A">
 	<polygon class="cc3" points="36.7,37.4 48.8,37.4 49.4,37.4 49.4,36.3 48.8,36.3 48.8,23 36.7,23 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 38.1642 29.2405)" class="cc4 cc5 cc6">304</text>
+		<text transform="matrix(1 0 0 1 38 29.2405)" class="cc4 cc5 cc6">304</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 37.8449 31.3652)" class="cc4 cc5 cc6">1BR+1BA</text>
+		<text transform="matrix(1 0 0 1 38 31.3652)" class="cc4 cc5 cc6">1BR+1BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 37.8742 33.3479)" class="cc4 cc5 cc6">A</text>
+		<text transform="matrix(1 0 0 1 38 33.3479)" class="cc4 cc5 cc6">A</text>
 	</g>
 </g>
 
@@ -143,13 +143,13 @@
 <g id="trigger-a1" data-plan="A1">
 	<polygon class="cc3" points="24.1,36.3 24.1,37.4 25.4,37.4 36.7,37.4 36.7,23 28,23 28,23.7 24.6,23.7 24.6,36.3 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 26.0821 29.2405)" class="cc4 cc5 cc6">305</text>
+		<text transform="matrix(1 0 0 1 26 29.2405)" class="cc4 cc5 cc6">305</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 25.7628 31.3652)" class="cc4 cc5 cc6">1BR+1BA</text>
+		<text transform="matrix(1 0 0 1 26 31.3652)" class="cc4 cc5 cc6">1BR+1BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 25.7921 33.3479)" class="cc4 cc5 cc6">A1</text>
+		<text transform="matrix(1 0 0 1 26 33.3479)" class="cc4 cc5 cc6">A1</text>
 	</g>
 </g>
 
@@ -160,13 +160,13 @@
 	<polygon class="cc3" points="21.2,22.3 24.6,22.3 24.6,23.7 24.6,36.3 24.1,36.3 4.9,36.3 4.6,36.3 4.6,23.4 4.6,21.7 8.7,21.7
 		8.7,22.3 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 9.704 27.6661)" class="cc4 cc5 cc6">306</text>
+		<text transform="matrix(1 0 0 1 9 27.6661)" class="cc4 cc5 cc6">306</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 9.3847 30.0079)" class="cc4 cc5 cc6">2BR+2BA</text>
+		<text transform="matrix(1 0 0 1 9 30.0079)" class="cc4 cc5 cc6">2BR+2BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 9.4145 32.3473)" class="cc4 cc5 cc6">D</text>
+		<text transform="matrix(1 0 0 1 9 32.3473)" class="cc4 cc5 cc6">D</text>
 	</g>
 </g>
 
@@ -177,13 +177,13 @@
 	<polygon class="cc3" points="23.1,17.3 23.1,4.6 22,4.6 18.2,4.6 8.7,4.6 8.7,4.9 8.7,21.7 8.7,22.3 21.2,22.3 21.2,19.3
 		23.1,19.3 23.1,19.1 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 11.2257 11.339)" class="cc4 cc5 cc6">307</text>
+		<text transform="matrix(1 0 0 1 10 11.339)" class="cc4 cc5 cc6">307</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 10.9064 13.6808)" class="cc4 cc5 cc6">2BR+2BA</text>
+		<text transform="matrix(1 0 0 1 10 13.6808)" class="cc4 cc5 cc6">2BR+2BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 10.9362 16.0202)" class="cc4 cc5 cc6">C1</text>
+		<text transform="matrix(1 0 0 1 10 16.0202)" class="cc4 cc5 cc6">C1</text>
 	</g>
 </g>
 
@@ -194,13 +194,13 @@
 	<polygon class="cc3" points="22,4.6 22,2.4 42.3,2.4 42.3,4.8 42.3,9 34.6,9 31.3,9 31.3,14.7 31.3,18.5 27.8,18.5 27.8,17.3
 		23.1,17.3 23.1,4.6 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 27.5513 4.2694)" class="cc4 cc5 cc6">308</text>
+		<text transform="matrix(1 0 0 1 25 5.5)" class="cc4 cc5 cc6">308</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 27.232 6.3941)" class="cc4 cc5 cc6">1BR+1BA</text>
+		<text transform="matrix(1 0 0 1 25 7.5)" class="cc4 cc5 cc6">1BR+1BA</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 27.2613 8.3768)" class="cc4 cc5 cc6">B</text>
+		<text transform="matrix(1 0 0 1 25 9.5)" class="cc4 cc5 cc6">B</text>
 	</g>
 </g>
 
