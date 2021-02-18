@@ -63,7 +63,7 @@ export default function OverlayHome (props) {
           <Panorama unit={ unit } />
 
           <div className="image">
-            { unit.image && <SVG className="plan" src={ unit.image } /> }
+            { unit.image && <img className="plan" src={ unit.image } /> }
             {
               unit.images && unit.images.map(( image, i ) => (
                 <div className="level" key={ i }>

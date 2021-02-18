@@ -905,24 +905,6 @@
       g[id^="trigger"] {
         cursor:pointer;
 
-        polygon,
-        polyline,
-        text{
-          transition: fill .2s ease;
-        }
-
-        polygon,
-        polyline{
-          fill:transparent;
-          //stroke:$brand-indigo;
-          //stroke-width:0.2;
-        }
-
-        text{
-          font-family: $font-serif;
-          font-size:3px;
-        }
-
         &:hover{
           polygon,
           polyline{
@@ -932,6 +914,42 @@
             fill:white;
           }
         }
+
+        polygon,
+        polyline,
+        text{
+          transition: fill .2s ease;
+        }
+
+        polygon,
+        polyline{
+          fill:transparent;
+        }
+
+        text{
+          font-family: $font-serif;
+          font-size:3px;
+        }
+
+        g{
+          &:nth-child(2){
+            text{
+              //font-size:2px;
+            }
+          }
+          &:nth-child(3){
+            text{
+              //font-size:1.5px;
+            }
+          }
+          &:nth-child(4){
+            text{
+              //font-size:1.5px;
+            }
+          }
+        }
+
+
       }
     }
 
