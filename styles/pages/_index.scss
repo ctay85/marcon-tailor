@@ -860,13 +860,18 @@
     .plate{
       display: none;
       width:700px;
-      max-width:70%;
+      max-width:90%;
       height:auto;
       position: absolute;
-      bottom:50%;
+      bottom:60%;
       left:50%;
       transform: translate3d(-50%,50%,0);
       //background:red;
+
+      @media #{$screen-md-min} {
+        bottom:50%;
+        max-width:70%;
+      }
 
       &[data-active="true"] {
         display: block;
@@ -977,13 +982,22 @@
 
       &--right{
         bottom:12rem;
-        right:0;
+        right:-2rem;
         transform: translate3d(0,0,0) rotate(-90deg);
+
+        @media #{$screen-sm-min} {
+          right:0;
+        }
       }
       &--bottom{
-        bottom:2.5rem;
-        right:9rem;
+        bottom:5rem;
+        right:4.5rem;
         transform: translate3d(0,0,0);
+
+        @media #{$screen-sm-min} {
+          bottom:2.5rem;
+          right:9rem;
+        }
       }
     }
 
@@ -1136,13 +1150,14 @@
 
     .north-indicator{
       position: absolute;
-      bottom:2.25rem;
-      right:3rem;
+      bottom:5rem;
+      right:1rem;
       transition:opacity 1s ease;
-      display: none;
+      display: block;
 
-      @media #{$screen-md-min} {
-        display: block;
+      @media #{$screen-sm-min} {
+        bottom:2.25rem;
+        right:3rem;
       }
 
       &[data-shown="false"] {
@@ -1150,9 +1165,13 @@
       }
 
       svg{
-        width:50px;
+        width:25px;
         height:auto;
         display:block;
+
+        @media #{$screen-sm-min} {
+          width:50px;
+        }
       }
     }
 

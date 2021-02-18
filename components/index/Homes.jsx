@@ -69,7 +69,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
 
   //
   const deincrementActiveLevel = () => {
-    setActiveLevel( activeLevel === 3 ? 3 : activeLevel-1 )
+    setActiveLevel( activeLevel === 2 ? 2 : activeLevel-1 )
   }
 
   //
@@ -222,7 +222,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
 
       <div className="mobile-nav">
         <button className="btn__prev" onClick={ deincrementActiveLevel }><SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} /></button>
-        <span className="activeLevel">Level { activeLevel }</span>
+        <span className="activeLevel">{ activeLevel === 2 ? 'Townhomes' : `Level ${activeLevel}` }</span>
         <button className="btn__next" onClick={ incrementActiveLevel }><SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} /></button>
       </div>
 
