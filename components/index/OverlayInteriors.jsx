@@ -8,7 +8,7 @@ export default function OverlayInteriors (props) {
   return (
     <Overlay {...props}>
       <OverlayGallery images={[
-        { file : `${process.env.BASE_PATH}/img/index/interiors/200619-291.jpg`, caption : '2 Bedroom', blurb : 'Living' },
+        { file : `${process.env.BASE_PATH}/img/index/interiors/200619-291.jpg`, caption : '2 Bedroom', blurb : 'Kitchen' },
         { file : `${process.env.BASE_PATH}/img/index/interiors/Tailor-Web-7.jpg`, caption : '2 Bedroom', blurb : 'Living' },
         { file : `${process.env.BASE_PATH}/img/index/interiors/200619-248.jpg`, caption : '2 Bedroom', blurb : 'Living' },
         { file : `${process.env.BASE_PATH}/img/index/interiors/200619-419.jpg`, caption : '2 Bedroom', blurb : 'Kitchen' },

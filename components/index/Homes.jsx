@@ -111,11 +111,18 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   const onTriggerClick = ({ currentTarget : group }) => {
     const planType = group.dataset.plan
     const unitNumber = group.querySelector('text').innerHTML
+
+    // Townhome 3/4 is combined
     const formattedUnitNumber = unitNumber === 'TH3' || unitNumber === 'TH4'
       ? 'TH3/4'
       : unitNumber
 
-    setActiveHome([ formattedUnitNumber, planType ])
+    // D plans between 3-19 should be d1
+    const formattedPlanType = planType === 'D' && parseInt(unitNumber.substr(0, unitNumber.length-2)) < 20
+      ? 'D1'
+      : planType
+
+    setActiveHome([ formattedUnitNumber, formattedPlanType ])
   }
 
   //
