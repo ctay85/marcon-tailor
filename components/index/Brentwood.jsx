@@ -41,7 +41,7 @@ export default function Brendwood ({ active, setActiveOverlayKey }) {
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
-        <BgImage src={ isMobile ? `${process.env.BASE_PATH}/img/index/tailor-aerial-01-1080x1920.png` : `${process.env.BASE_PATH}/img/index/19067_Marcon_TailorAerial_AerialL01_st.jpg` } />
+        <BgImage src={`${process.env.BASE_PATH}/img/index/19067_Marcon_TailorAerial_AerialL01.jpg`} />
       </motion.div>
 
       <article>
