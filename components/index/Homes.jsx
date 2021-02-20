@@ -195,13 +195,13 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
       <motion.div className="bg-animation" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.bgAnimation }>
         {/* <SketchfabViewer setActiveHome={ setActiveHome } activeLevel={ activeLevel } /> */}
 
-        <SVG onLoad={ () => onPlateLoaded('penthouse') } data-active={ activePlate === 'penthouse' } className="plate plate--penthouse" src="/rel/plans/Keyplan_Penthouse.svg" />
+        <SVG onLoad={ () => onPlateLoaded('penthouse') } data-active={ activePlate === 'penthouse' } className="plate plate--penthouse" src={ `${process.env.BASE_PATH}/rel/plans/Keyplan_Penthouse.svg` } />
 
-        <SVG onLoad={ () => onPlateLoaded('sub-penthouse') } data-active={ activePlate === 'sub-penthouse' } className="plate plate--sub-penthouse" src="/rel/plans/Keyplan_Sub-Penthouse.svg" />
+        <SVG onLoad={ () => onPlateLoaded('sub-penthouse') } data-active={ activePlate === 'sub-penthouse' } className="plate plate--sub-penthouse" src={ `${process.env.BASE_PATH}/rel/plans/Keyplan_Sub-Penthouse.svg` } />
 
-        <SVG onLoad={ () => onPlateLoaded('tower') } data-active={ activePlate === 'tower' } className="plate plate--tower" src="/rel/plans/Keyplan_Tower.svg" />
+        <SVG onLoad={ () => onPlateLoaded('tower') } data-active={ activePlate === 'tower' } className="plate plate--tower" src={ `${process.env.BASE_PATH}/rel/plans/Keyplan_Tower.svg` } />
 
-        <SVG onLoad={ () => onPlateLoaded('townhome') } data-active={ activePlate === 'townhome' } className="plate plate--townhome" src="/rel/plans/Keyplan_Townhouse.svg" />
+        <SVG onLoad={ () => onPlateLoaded('townhome') } data-active={ activePlate === 'townhome' } className="plate plate--townhome" src={ `${process.env.BASE_PATH}/rel/plans/Keyplan_Townhouse.svg` } />
 
         <span className="street street--bottom">Alaska St.</span>
         <span className="street street--right">Alpha Ave.</span>
