@@ -112,9 +112,9 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
     const planType = group.dataset.plan
     const unitNumber = group.querySelector('text').innerHTML
 
-    // Townhome 3/4 is combined
-    const formattedUnitNumber = unitNumber === 'TH3' || unitNumber === 'TH4'
-      ? 'TH3/4'
+    // Townhome 2/3 is combined
+    const formattedUnitNumber = unitNumber === 'TH2' || unitNumber === 'TH3'
+      ? 'TH2/3'
       : unitNumber
 
     // D plans between 3-19 should be d1

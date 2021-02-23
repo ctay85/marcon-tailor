@@ -68,6 +68,7 @@
 <g id="trigger-th5" data-plan="TH5">
 	<polygon class="aa2" points="6.9,32.2 7.6,32.2 18.2,32.2 18.2,28.7 26.1,28.7 26.4,28.7 26.4,17.1 27,17.1 27,14 17.6,14 17.6,17
 		6.9,17 	"/>
+
 	<g>
 		<text transform="matrix(1 0 0 1 9.5 23)" class="aa3 aa4 aa5 title">TH5</text>
 	</g>
@@ -82,17 +83,11 @@
 
 
 
-<g id="trigger-th3-th4" data-plan="TH3/4">
-	<polygon class="aa2" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14
-		56.4,17.1 46.5,17.1 45.8,17.1 45.8,28.7 	"/>
+<g id="trigger-th4" data-plan="TH4">
+
 	<polygon class="aa2" points="26.1,28.7 26.1,32.2 37.6,32.2 37.6,28.7 45.5,28.7 45.8,28.7 45.8,17.1 46.5,17.1 46.5,14 37,14
 		37,17.1 27,17.1 26.4,17.1 26.4,28.7 	"/>
-	<g>
-		<text transform="matrix(1 0 0 1 48.5 23)" class="aa3 aa4 aa5 title">TH3</text>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 48.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
-	</g>
+
 	<!-- <g>
 		<text transform="matrix(1 0 0 1 49.2433 27.3969)" class="aa3 aa4 aa5">plan type</text>
 	</g> -->
@@ -110,9 +105,18 @@
 
 
 
-<g id="trigger-th2" data-plan="TH2">
+<g id="trigger-th2-th3" data-plan="TH2/3">
 	<polygon class="aa2" points="64.9,28.7 64.9,32.2 76.5,32.2 76.5,28.7 84.4,28.7 84.6,28.7 84.6,17.1 85.3,17.1 85.3,14 75.9,14
 		75.9,17.1 65.9,17.1 65.2,17.1 65.2,28.7 	"/>
+		<polygon class="aa2" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14
+			56.4,17.1 46.5,17.1 45.8,17.1 45.8,28.7 	"/>
+
+		<g>
+			<text transform="matrix(1 0 0 1 48.5 23)" class="aa3 aa4 aa5 title">TH3</text>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 48.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
+		</g>
 	<g>
 		<text transform="matrix(1 0 0 1 67.5 23)" class="aa3 aa4 aa5 title">TH2</text>
 	</g>
