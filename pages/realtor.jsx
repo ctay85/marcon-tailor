@@ -3,6 +3,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
+// Data
+import { unitData } from 'data'
+
 // Store
 import { UI_HEADER_THEME_BLUE } from 'store/constants'
 import { uiUpdateHeaderTheme } from 'store/actions'
@@ -276,213 +279,30 @@ export default function Realtor () {
           <br /><br />
           <h2>Floorplans</h2>
           <div className="grid grid__floorplans" rel="3">
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">A</span>
-                <span className="plan-style">1 Bedroom + 1 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-A.svg` } />
-              </div>
+            {
+              unitData.map(( unit, i ) => (
+                <div className="grid__item" key={ i }>
+                  <div>
+                    <span className="plan-type">{ unit.name }</span>
+                    <span className="plan-style">{ unit.type }</span>
 
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 670 sf</span>
-                <span className="interior"><strong>Interior</strong> 538 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 132 sf</span>
+                    {
+                      unit.images
+                        ? <img src={ unit.images[0].file } />
+                        : <img src={ unit.image } />
+                    }
+                  </div>
 
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_A.pdf` }>Download PDF</a>
-              </div>
-            </div>
+                  <div>
+                    <span className="total-living"><strong>Total Living</strong> { unit.area.total } sf</span>
+                    <span className="interior"><strong>Interior</strong> { unit.area.interior } sf</span>
+                    <span className="outdoor"><strong>Outdoor</strong> { unit.area.outdoor } sf</span>
 
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">A1</span>
-                <span className="plan-style">1 Bedroom + 1 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-A1.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 659 sf</span>
-                <span className="interior"><strong>Interior</strong> 538 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 121 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_A1.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">B</span>
-                <span className="plan-style">1 Bedroom + 1 bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-B.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 723 sf</span>
-                <span className="interior"><strong>Interior</strong> 646 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 77 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_B.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">C</span>
-                <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-C.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 991 sf</span>
-                <span className="interior"><strong>Interior</strong> 764 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 227 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_C.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">C1</span>
-                <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img src={ `${process.env.BASE_PATH}/rel/plans/Plan-C1.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 960 sf</span>
-                <span className="interior"><strong>Interior</strong> 786 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 174 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_C1.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">D</span>
-                <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-D.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 1,116 sf</span>
-                <span className="interior"><strong>Interior</strong> 893 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 223 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_D.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">D1</span>
-                <span className="plan-style">2 Bedroom + 2 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-D1.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 1,116 sf</span>
-                <span className="interior"><strong>Interior</strong> 893 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 223 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_D1.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">E</span>
-                <span className="plan-style">Jr. 1 Bedroom + 1 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-E.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 640 sf</span>
-                <span className="interior"><strong>Interior</strong> 484 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 156 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_E.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">F</span>
-                <span className="plan-style">Studio + 1 Bath</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-F.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 529 sf</span>
-                <span className="interior"><strong>Interior</strong> 366 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 163 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_F.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">TH1</span>
-                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-TH1.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 2,378 sf</span>
-                <span className="interior"><strong>Interior</strong> 1,701 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 677 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">TH2</span>
-                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-TH2.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 2,352 sf</span>
-                <span className="interior"><strong>Interior</strong> 1,679 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 673 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH2.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">TH3-4</span>
-                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-TH3-4.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 2,352 sf</span>
-                <span className="interior"><strong>Interior</strong> 1,679 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 673 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH3-4.pdf` }>Download PDF</a>
-              </div>
-            </div>
-
-            <div className="grid__item">
-              <div>
-                <span className="plan-type">TH5</span>
-                <span className="plan-style">2 Bedroom + 2 Bath + 2 Powder + Work</span>
-                <img className="landscape" src={ `${process.env.BASE_PATH}/rel/plans/Plan-TH5.svg` } />
-              </div>
-
-              <div>
-                <span className="total-living"><strong>Total Living</strong> 2,522 sf</span>
-                <span className="interior"><strong>Interior</strong> 1,701 sf</span>
-                <span className="outdoor"><strong>Outdoor</strong> 821 sf</span>
-
-                <a className="btn btn--solid" target="_blank" download href={ `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf` }>Download PDF</a>
-              </div>
-            </div>
+                    <a className="btn btn--solid" target="_blank" download href={ unit.pdf }>Download PDF</a>
+                  </div>
+                </div>
+              ))
+            }
           </div>
 
           <div className="book-btn">
