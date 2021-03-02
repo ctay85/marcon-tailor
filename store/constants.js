@@ -1,5 +1,10 @@
 
 //
+export const LOCALE_UPDATE = 'LOCALE_UPDATE'
+export const LOCALE_ENGLISH = 'LOCALE_ENGLISH'
+export const LOCALE_CHINESE = 'LOCALE_CHINESE'
+
+//
 export const UI_HEADER_THEME_WHITE = 'white'
 export const UI_HEADER_THEME_BLUE = 'blue'
 export const UI_UPDATE_HEADER_THEME_SUCCESS = 'UI_UPDATE_HEADER_THEME_SUCCESS'

@@ -3,6 +3,7 @@
 import SVG from 'react-inlinesvg'
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useSelector } from 'react-redux'
 
 // Store
 import { INDEX_PANEL_TRANSITION_DURATION } from 'store/constants'
@@ -18,6 +19,7 @@ export default function Cover ({ active }) {
   const sectionClass = useRef('page__index__cover')
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
+  const { locale } = useSelector( state => state )
 
   //
   useEffect( () => {
@@ -56,12 +58,12 @@ export default function Cover ({ active }) {
       </motion.div>
 
       <div className="left-column">
-        <motion.h1 initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
+        <motion.h1 dangerouslySetInnerHTML={{ __html : locale.index.cover.title }} initial="initial" enter="enter" exit="exit" animate={ animationState } variants={{
           initial : { opacity : 1, y : 100 },
           enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.7 }},
           exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION }}
         }}>
-          Celebrate More<br /> in Brentwood.
+
         </motion.h1>
       </div>
 
@@ -70,13 +72,13 @@ export default function Cover ({ active }) {
         enter : { opacity : 1, y : 0, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.5 }},
         exit : { opacity : 0, y : -100, transition : { duration : INDEX_PANEL_TRANSITION_DURATION, delay : 0.2 }}
       }}>
-        <span className="section-title">Own In Brentwood</span>
+        <span className="section-title">{ locale.index.cover.ad_title }</span>
 
         <figure>
           <img src={ `${process.env.BASE_PATH}/img/index/image2.jpg` } />
         </figure>
 
-        <p className="description">A premium collection of 193 homes starting at $359,900</p>
+        <p className="description">{ locale.index.cover.ad_copy }</p>
 
         {/*
           <div className="stat">

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import SVG from 'react-inlinesvg'
+import { useSelector } from 'react-redux'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -22,6 +23,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
   const [ isMobile, setIsMobile ] = useState(false)
   const [ activeLevel, setActiveLevel ] = useState(3)
   const [ activePlate, setActivePlate ] = useState('tower')
+  const { locale } = useSelector( state => state )
 
   //
   const onLevelClick = ({ currentTarget : group, offsetY }) => {
@@ -208,7 +210,7 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
       </motion.div>
 
       <article>
-        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Homes</span> &mdash; More Intimate</motion.span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName } dangerouslySetInnerHTML={{ __html : locale.index.homes.title }}></motion.span>
 
         <div className="elevation">
           <SVG src={`${process.env.BASE_PATH}/svg/plans/Elevation-East-View.svg`} onLoad={ onElevationSvgLoaded } />

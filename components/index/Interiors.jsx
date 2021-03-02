@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import SVG from 'react-inlinesvg'
+import { useSelector } from 'react-redux'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -18,6 +19,7 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__interiors')
   const [ animationState, setAnimationState ] = useState('initial')
   const [ isMobile, setIsMobile ] = useState(false)
+  const { locale } = useSelector( state => state )
 
   //
   useEffect( () => {
@@ -45,15 +47,15 @@ export default function Interiors ({ active, setActiveOverlayKey }) {
       </motion.div>
 
       <article>
-        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Interiors</span> &mdash; More Space</motion.span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName } dangerouslySetInnerHTML={{ __html : locale.index.interiors.title }}></motion.span>
 
-        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>Our interiors have been planned to maximize space and are finished to stand the test of time.</motion.p>
+        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>{ locale.index.interiors.description }</motion.p>
       </article>
 
       <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_INTERIORS) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
-        <span>More</span>
+        <span>{ locale.global.more }</span>
         <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
       </motion.button>
     </motion.section>

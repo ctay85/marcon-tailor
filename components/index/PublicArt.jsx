@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import SVG from 'react-inlinesvg'
+import { useSelector } from 'react-redux'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
@@ -17,7 +18,7 @@ import { BgImage } from 'components/ui'
 export default function PublicArt ({ active, setActiveOverlayKey }) {
   const sectionClass = useRef('page__index__public-art')
   const [ animationState, setAnimationState ] = useState('initial')
-
+  const { locale } = useSelector( state => state )
 
   //
   useEffect( () => {
@@ -32,9 +33,9 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
   return (
     <motion.section className={ sectionClass.current } data-panel-trigger="true" data-active={ active === sectionClass.current } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.container }>
       <article>
-        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName }><span>Public Art</span> &mdash; More Function</motion.span>
+        <motion.span className="panel-name" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelName } dangerouslySetInnerHTML={{ __html : locale.index.publicArt.title }}></motion.span>
 
-        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.</motion.p>
+        <motion.p className="panel-description" initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.panelDescription }>{ locale.index.publicArt.description }</motion.p>
       </article>
 
       <figure className="image-trigger">
@@ -45,13 +46,13 @@ export default function PublicArt ({ active, setActiveOverlayKey }) {
           <video src={`${process.env.BASE_PATH}/vid/publicart-loop-desktop.mp4`} loop autoPlay muted playsInline></video>
         </div>
 
-        <span className="caption">The image is an abstraction of points of light on water.</span>
+        <span className="caption">{ locale.index.publicArt.caption }</span>
       </figure>
 
       <div className="mobile-tap-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) }><span>More</span></div>
 
       <motion.button className="desktop-click-indicator" onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_PUBLICART) } initial="initial" enter="enter" exit="exit" animate={ animationState } variants={ indexPanelAnimations.indicator }>
-        <span>More</span>
+        <span>{ locale.global.more }</span>
         <SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
       </motion.button>
     </motion.section>

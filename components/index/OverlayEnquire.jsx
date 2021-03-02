@@ -1,6 +1,7 @@
 
 // Dependencies
 import SVG from 'react-inlinesvg'
+import { useSelector } from 'react-redux'
 
 //
 import { Overlay, OverlayContent, OverlayImage, OverlayGallery } from 'components/index'
@@ -9,22 +10,21 @@ import { RegisterSalesforce } from 'components/common'
 
 //
 export default function OverlayInteriors (props) {
+  const { locale } = useSelector( state => state )
+
+  //
   return (
     <Overlay {...props}>
       <article className="enquire">
         <div className="wrap">
-          <p className="enquire__title">Get in Touch</p>
+          <p className="enquire__title">{ locale.overlays.enquire.title }</p>
+
+          <p dangerouslySetInnerHTML={{ __html : locale.overlays.enquire.address }}></p>
 
           <p>
-            Presentation Centre<br />
-            2421 Alpha Avenue,<br />
-            Burnaby, BC
-          </p>
-
-          <p>
-            To book a private sales appointment<br />
-            T: <a href="tel:6042991001">604.299.1001</a><br />
-            E: <a href="mailto:sales@tailorbymarcon.ca">Sales@TailorbyMarcon.ca</a>
+            { locale.overlays.enquire.bookTitle }<br />
+            { locale.overlays.enquire.t }: <a href="tel:6042991001">604.299.1001</a><br />
+          { locale.overlays.enquire.e }: <a href="mailto:sales@tailorbymarcon.ca">Sales@TailorbyMarcon.ca</a>
           </p>
 
           <img src={`${process.env.BASE_PATH}/svg/Tailor_Map_Neighbourhood_v1.svg`} />

@@ -17,11 +17,11 @@ import { uiUpdateHeaderTheme } from 'store/actions'
 export default function Index () {
   const dispatch = useDispatch()
   const config = useRef({ wheelDelta : 90, touchDelta : 30, transitionDuration : 1000 })
-  const ui = useSelector( state => state.ui )
+  const { ui, locale } = useSelector( state => state )
   const [ isAnimating, setIsAnimating ] = useState(false)
   const [ lastPanelActive, setLastPanelActive ] = useState(false)
   const [ activePanelClass, setActivePanelClass ] = useState('page__index__cover')
-  const [ activeOverlayKey, setActiveOverlayKey ] = useState(null)
+  const [ activeOverlayKey, setActiveOverlayKey ] = useState(INDEX_OVERLAY_KEY_ENQUIRE)
   const [ isEnquireOpen, setIsEnquireOpen ] = useState(false)
   const [ activeHome, setActiveHome ] = useState(null)
 
@@ -160,7 +160,7 @@ export default function Index () {
       <Seo title="Made For Brentwood" description="The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon." />
 
       <main className="page__index">
-        <Intro />
+        {/* <Intro /> */}
         <Cover active={ activePanelClass } />
         <Design active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
         <Interiors active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
@@ -172,7 +172,7 @@ export default function Index () {
       <div className="page__index__global-actions" data-theme={ ui.headerTheme }>
         <div className="btn__enquire" data-open={ isEnquireOpen } onClick={ () => setIsEnquireOpen(!isEnquireOpen) }>
           <button className="btn__toggle">
-            <span>Enquire</span>
+            <span>{ locale.global.enquire }</span>
           </button>
 
           <div className="menu">

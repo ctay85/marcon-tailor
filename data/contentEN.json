@@ -1,0 +1,197 @@
+{
+  "global" : {
+    "more" : "More",
+    "enquire" : "Enquire",
+
+    "footer" : {
+      "projects" : "Projects",
+      "allProjects" : "All Projects",
+      "hoSupport" : "Homeowner Support",
+      "overview" : "Overview",
+      "login" : "Log In",
+      "company" : "Our Company",
+      "news" : "News",
+      "community" : "Community ",
+      "careers" : "Careers",
+      "privacy" : "Privacy Policy",
+      "terms" : "Terms of use",
+      "covid" : "Covid Safety Plan"
+    }
+  },
+
+  "index" : {
+    "cover" : {
+      "title" : "Celebrate More<br /> in Brentwood.",
+      "ad_title" : "Own In Brentwood",
+      "ad_copy" : "A premium collection of 193 homes starting at $359,900"
+    },
+
+    "design" : {
+      "title" : "<span>Design</span> &mdash; More Thought",
+      "description" : "Designed by Shift Architecture, Tailor is a sleek, twenty-seven storey tower with a sculpted base.",
+      "caption" : "A new perspective on intimate high-rise living in Brentwood."
+    },
+
+    "interiors" : {
+      "title" : "<span>Interiors</span> &mdash; More Space",
+      "description" : "Our interiors have been planned to maximize space and are finished to stand the test of time."
+    },
+
+    "homes" : {
+      "title" : "<span>Homes</span> &mdash; More Intimate"
+    },
+
+    "publicArt" : {
+      "title" : "<span>Public Art</span> &mdash; More Function",
+      "description" : "The lobby at Tailor features forty-foot ceilings to accommodate “Wind Veil”, an environmental sculpture created by artist Catherine Widgery.",
+      "caption" : "The image is an abstraction of points of light on water."
+    },
+
+    "brentwood" : {
+      "title" : "<span>Brentwood</span> &mdash; Celebrate More",
+      "description" : "The homes at Tailor offer more than Brentwood has ever seen, built for life by Marcon."
+    }
+  },
+
+  "overlays" : {
+    "design" : {
+      "images" : [
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
+          "caption" : "Southwest View — Tower",
+          "blurb" : "Tailor sits at the corner of Alpha and Alaska"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg",
+          "caption" : "West View — Lobby",
+          "blurb" : "The residential lobby fronts Alpha St."
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_2400x2400.jpg",
+          "caption" : "Northwest View — Lobby",
+          "blurb" : "Expansive glazing welcomes sun from the south"
+        },
+        {
+          "file" : "/img/index/design/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg",
+          "caption" : "North View — Lobby",
+          "blurb" : "Public art as seen from Alaska St."
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_OUTDOOR_AMENITY_FINAL_2400x2400.jpg",
+          "caption" : "East View — Landscape",
+          "blurb" : "Extensive landscaping by PWL Partnership defines the back yard"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_STREET_VIEW_FINAL_2400x1357.jpg",
+          "caption" : "North View — Townhomes",
+          "blurb" : "Contemporary townhomes front Alaska St. at the South End"
+        }
+      ]
+    },
+
+    "interiors" : {
+      "images" : [
+        {
+          "file" : "/img/index/interiors/200619-291.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "Contemporary light filled interiors with wide-plank laminate hardwood flooring."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-7.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "Airy 9' ceilings with high efficiency heating and air conditioning system."
+        },
+        {
+          "file" : "/img/index/interiors/200619-248.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "Smart glass LowE2 panoramic windows welcome an abundance of natural light and fresh air."
+        },
+        {
+          "file" : "/img/index/interiors/200619-419.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "Premium Bosch stainless-steel appliances."
+        },
+        {
+          "file" : "/img/index/interiors/3_200619-152_3600x2399.jpg",
+          "caption" : "1 Bedroom",
+          "blurb" : "Cabinetry doors complete with soft close hardware and full-height pantries for added storage."
+        },
+        {
+          "file" : "/img/index/interiors/200619-088.jpg",
+          "caption" : "1 Bedroom",
+          "blurb" : "Solid quartz countertops in ‘Yixin White’ and statuario marble hexagon mosaic honed tile backsplash."
+        },
+        {
+          "file" : "/img/index/interiors/200619-210.jpg",
+          "caption" : "1 Bedroom",
+          "blurb" : "Floating vanity with under-cabinet motion sensor lighting complete with soft close hardware."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-18.jpg",
+          "caption" : "1 Bedroom",
+          "blurb" : "Spacious master bedrooms for ultimate relaxation."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-22.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "4\" flat stock baseboards and 2.5\" flat stock door trim."
+        },
+        {
+          "file" : "/img/index/interiors/200619-377.jpg",
+          "caption" : "2 Bedroom",
+          "blurb" : "Abundance of closet space."
+        }
+      ]
+    },
+
+    "home" : {
+
+    },
+
+    "publicArt" : {
+      "copy" : "<p>Wind Veil<br />Catherine Widgery<br />2019</p><p>Wind Veil brings to our attention the universal patterns that surround us; how light and wind interact constantly with surfaces and animate our world with a delicate wonder.</p><p>Projected color, reflected glints of light and shadows all are part of the ‘veil’ through which the surface of the glass is seen so a subtle and delicate dance of light and wind plays each day.</p><p>Crucial to the concept is to have an ever changing experience inside and outside the building both during the day and night. Depending on the angles of the sunlight or artificial lights and the position of the viewer, the sky is reflected in the areas of the glass that are not laser etched.</p><p>It was transformed from video footage of the moving surface of water where lights were reflected. The focus was changed so that the digital translation is one of perfect overlapping circles of different densities. It is similar to what we see if we half close our eyes.</p><p>Our mind makes sense of this very abstract pattern because it has registered this arrangement of light points unconsciously over countless times of seeing light on water. Yet this image also refers to a universal visual language of the natural world that suggests different things to different people.</p><h3>Widgery Studio</h3><p>Catherine Widgery and her team have created more than 40 site-specific public art projects across the US and Canada. Her particular interest and strength is working with communities and teams to create environmental sculptural experiences that respond to the unique spirit, shape and function of a place. Wind, light, water and computer-controlled lighting programs communicate energy and animate the space within her environmental works.</p>"
+    },
+
+    "brentwood" : {
+
+    },
+
+    "enquire" : {
+      "title" : "Get in Touch",
+      "address" : "Presentation Centre<br />2421 Alpha Avenue,<br />Burnaby, BC",
+      "bookTitle" : "To book a private sales appointment",
+      "t" : "T",
+      "e" : "E",
+      "form" : {
+        "title" : "Arrange A Preview",
+        "fName" : "First name",
+        "lName" : "Last name",
+        "email" : "Email",
+        "phone" : "Phone Number",
+        "postal" : "Postal Code/Zip",
+        "whatType" : {
+          "title" : "What type of home are you looking for?",
+          "studio" : "Studio",
+          "jr1bed" : "Jr. 1 Bedroom",
+          "oneBed" : "One Bedroom",
+          "twoBed" : "Two Bedroom",
+          "townhome" : "Townhome"
+        },
+        "howHear" : {
+          "title" : "How did you hear about us?",
+          "print" : "Print Ad/Mail",
+          "realtor" : "Realtor",
+          "online" : "Online Search",
+          "other" : "Other"
+        },
+        "isRealtor" : {
+          "title" : "Are you a Realtor?",
+          "yes" : "Yes",
+          "no" : "No"
+        },
+        "optin" : "I would like to receive future e-communications from Marcon and Rennie Marketing Systems.",
+        "submit" : "Register"
+      }
+    }
+  }
+}

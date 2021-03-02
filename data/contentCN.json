@@ -1,0 +1,197 @@
+{
+  "global" : {
+    "more" : "了解更多",
+    "enquire" : "查询",
+
+    "footer" : {
+      "projects" : "项目",
+      "allProjects" : "所有项目",
+      "hoSupport" : "业主支援",
+      "overview" : "概览",
+      "login" : "登录",
+      "company" : "关于我们",
+      "news" : "新闻",
+      "community" : "社区",
+      "careers" : "加入我们",
+      "privacy" : "隐私政策",
+      "terms" : "使用条款",
+      "covid" : "COVID 安全计划"
+    }
+  },
+
+  "index" : {
+    "cover" : {
+      "title" : "精彩纷呈在<br />Brentwood",
+      "ad_title" : "在Brentwood 置业",
+      "ad_copy" : "一系列共193套高端住宅售价由 $359,900起。"
+    },
+
+    "design" : {
+      "title" : "设计 – 更多细节",
+      "description" : "Tailor 由Shift Architecture 设计，是一栋27 层高的时尚住宅大楼，基座建筑带有雕刻元素。",
+      "caption" : "每层仅8户，邻里关系更亲近，为您带来高层公寓生活新视角。"
+    },
+
+    "interiors" : {
+      "title" : "室内设计 – 更多空间",
+      "description" : "我们的室内设计经过精心考虑，尽用空间，并经得起时间考验，耐用耐看，永不过时。"
+    },
+
+    "homes" : {
+      "title" : "住宅 – 更加亲近"
+    },
+
+    "publicArt" : {
+      "title" : "公共艺术 – 更多功能",
+      "description" : "Tailor 的大堂层高达40英尺，设置由艺术家Catherine Widgery创作的风之幔大型环境艺术品。",
+      "caption" : "图像是光点反映在水面上的抽象概念诠释。"
+    },
+
+    "brentwood" : {
+      "title" : "Brentwood – 精彩纷呈",
+      "description" : "Tailor由 Marcon 兴建，是Brentwood 社区内前所未见的高端住宅，定会令您不负期待。"
+    }
+  },
+
+  "overlays" : {
+    "design" : {
+      "images" : [
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_DUSK_UP_FINAL_2400x3199.jpg",
+          "caption" : "西南景观 – 大楼",
+          "blurb" : "Tailor 座落Alpha Avenue和Alaska Street的转角"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_LOBBY_ENTRANCE_FINAL_2400x2400.jpg",
+          "caption" : "西面景观 – 大堂",
+          "blurb" : "住宅大堂朝向Alpha Avenue"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL_2400x2400.jpg",
+          "caption" : "西北景观 – 大堂",
+          "blurb" : "偌大玻璃窗引入更多朝南阳光"
+        },
+        {
+          "file" : "/img/index/design/NEW_B&TB_MARCON_TAILOR_ARTWORK_NIGHT_FINAL.jpg",
+          "caption" : "北面景观 – 大堂",
+          "blurb" : "从Alaska Street 方向可看到公共艺术品"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_OUTDOOR_AMENITY_FINAL_2400x2400.jpg",
+          "caption" : "东面景观 – 园艺",
+          "blurb" : "多样化的园艺由 PWL Partnership打造, 给您优美的后园"
+        },
+        {
+          "file" : "/img/index/design/B&TB_MARCON_TAILOR_STREET_VIEW_FINAL_2400x1357.jpg",
+          "caption" : "北面景观 – 联排别墅",
+          "blurb" : "时尚的联排别墅朝向Alaska Street 的南端 "
+        }
+      ]
+    },
+
+    "interiors" : {
+      "images" : [
+        {
+          "file" : "/img/index/interiors/200619-291.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "Contemporary light filled interiors with wide-plank laminate hardwood flooring."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-7.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "Airy 9' ceilings with high efficiency heating and air conditioning system."
+        },
+        {
+          "file" : "/img/index/interiors/200619-248.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "Smart glass LowE2 panoramic windows welcome an abundance of natural light and fresh air."
+        },
+        {
+          "file" : "/img/index/interiors/200619-419.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "Premium Bosch stainless-steel appliances."
+        },
+        {
+          "file" : "/img/index/interiors/3_200619-152_3600x2399.jpg",
+          "caption" : "1 卧室",
+          "blurb" : "Cabinetry doors complete with soft close hardware and full-height pantries for added storage."
+        },
+        {
+          "file" : "/img/index/interiors/200619-088.jpg",
+          "caption" : "1 卧室",
+          "blurb" : "Solid quartz countertops in ‘Yixin White’ and statuario marble hexagon mosaic honed tile backsplash."
+        },
+        {
+          "file" : "/img/index/interiors/200619-210.jpg",
+          "caption" : "1 卧室",
+          "blurb" : "Floating vanity with under-cabinet motion sensor lighting complete with soft close hardware."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-18.jpg",
+          "caption" : "1 卧室",
+          "blurb" : "Spacious master bedrooms for ultimate relaxation."
+        },
+        {
+          "file" : "/img/index/interiors/Tailor-Web-22.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "4\" flat stock baseboards and 2.5\" flat stock door trim."
+        },
+        {
+          "file" : "/img/index/interiors/200619-377.jpg",
+          "caption" : "2 卧室",
+          "blurb" : "Abundance of closet space."
+        }
+      ]
+    },
+
+    "home" : {
+
+    },
+
+    "publicArt" : {
+      "copy" : "<p>风之幔<br />Catherine Widgery<br />2019</p><p>风之幔使我们留意周遭随处可见的图案; 光和风如何与不同的表面互动，从而为我们的世界带来点点微妙而精致的动态。</p><p>投影的色彩、闪烁的反射光和影都是「幔」的一部分，通过玻璃的表面，我们每天都可以看到光和风舞动的微妙而低调的动感。</p><p>此概念的重点是不论昼夜，建筑物内外带来的体验会有所不同。视乎阳光或人造光的角度以及观看者所在的位置，可以看到天空反射在没有被激光蚀刻的玻璃上。</p><p>视频里流动的水面反射出来的光线，通过数位处理，变焦成不同密度的圆圈，互相完美重叠。就像我们半闭眼睛所看到的，带有一份朦胧美。</p><p>由于我们在日常生活中已见过无数次水面上的光线，我们的潜意识已经纪录了光点的不同排列，因此我们的思维能理解这种非常抽象的图案。然而，这图像亦代表自然界的一种通用视觉语言，不同人会对它有不同的理解。</p><h3>Widgery 工作室</h3><p>Catherine Widgery和她的团队在美国和加拿大创作了超过40个特定选址的公共艺术项目。她擅于与社区和团队合作，而且对此特别感兴趣，并因应场所的特质、形状和功能，创作环境雕塑体验。风、光、水和以计算器控制的照明程序可以传达能量，并为她的环境艺术品的空间带来动感。</p>"
+    },
+
+    "brentwood" : {
+
+    },
+
+    "enquire" : {
+      "title" : "联系我们",
+      "address" : "展销中心<br />2421 Alpha Avenue,<br />Burnaby, BC",
+      "bookTitle" : "预约专属销售面谈",
+      "t" : "电话",
+      "e" : "电邮",
+      "form" : {
+        "title" : "安排预览",
+        "fName" : "名字",
+        "lName" : "姓氏",
+        "email" : "电邮",
+        "phone" : "电话",
+        "postal" : "邮编",
+        "whatType" : {
+          "title" : "您对哪种户型感兴趣?",
+          "studio" : "单间",
+          "jr1bed" : "灵活型 1 卧室",
+          "oneBed" : "1 卧室",
+          "twoBed" : "2 卧室",
+          "townhome" : "联排别墅"
+        },
+        "howHear" : {
+          "title" : "您是如何得知我们?",
+          "print" : "平面广告/邮件",
+          "realtor" : "房地产经纪",
+          "online" : "网上搜寻",
+          "other" : "其他"
+        },
+        "isRealtor" : {
+          "title" : "您是房地产经纪吗?",
+          "yes" : "是",
+          "no" : "不是"
+        },
+        "optin" : "我希望收取将来由Marcon 及Rennie Marketing Systems发出的电子通讯。",
+        "submit" : "注册"
+      }
+    }
+  }
+}

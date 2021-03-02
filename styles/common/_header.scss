@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content:center;
+  padding:0 2rem;
 
   &[data-theme="blue"] {
     .btn__logo{
@@ -18,6 +19,20 @@
         }
       }
     }
+  }
+
+  .left,
+  .center,
+  .right{
+    flex:1;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .right{
+    text-align: right;
   }
 
   .btn__logo{
@@ -33,6 +48,33 @@
       path{
         fill:white;
         transition:all 1s ease;
+      }
+    }
+  }
+
+  .locale{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    span{
+      display: block;
+      width:1px;
+      background:white;
+      height:1.75rem;
+      margin:0 0.5rem;
+      transform: translateY(-1px);
+    }
+
+    button{
+      color:white;
+      display: block;
+      border-bottom:solid 1px transparent;
+      padding:0 0 2px 0;
+
+      &[data-active="true"] {
+        border-bottom:solid 1px white;
       }
     }
   }

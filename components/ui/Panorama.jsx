@@ -111,13 +111,17 @@ export default function Panorama ({ unit }) {
     //
     return () => {
       clearInterval(loop)
-      panoramaImage.current.removeEventListener('mousedown', onMouseDown)
-      panoramaImage.current.removeEventListener('touchstart', onMouseDown)
-      panoramaImage.current.removeEventListener('mousemove', onMouseMove)
-      panoramaImage.current.removeEventListener('touchmove', onMouseMove)
-      panoramaImage.current.removeEventListener('mouseleave', onMouseLeave)
-      panoramaImage.current.removeEventListener('touchend', onMouseLeave)
-      panoramaImage.current.removeEventListener('mouseup', onMouseLeave)
+
+      if ( panoramaImage.current ) {
+        panoramaImage.current.removeEventListener('mousedown', onMouseDown)
+        panoramaImage.current.removeEventListener('touchstart', onMouseDown)
+        panoramaImage.current.removeEventListener('mousemove', onMouseMove)
+        panoramaImage.current.removeEventListener('touchmove', onMouseMove)
+        panoramaImage.current.removeEventListener('mouseleave', onMouseLeave)
+        panoramaImage.current.removeEventListener('touchend', onMouseLeave)
+        panoramaImage.current.removeEventListener('mouseup', onMouseLeave)
+      }
+
       window.removeEventListener('resize', onResize)
     }
   }, [])
