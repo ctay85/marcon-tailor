@@ -144,7 +144,19 @@ export default function Homes ({ active, setActiveHome, setActivePanelClass }) {
 
     groups.forEach( group => {
       const unitNumber = group.querySelector('text').innerHTML
+      const unitType = group.querySelector('g:last-child text')
+
       group.querySelector('text').innerHTML = `${activeLevel}${unitNumber.substr(unitNumber.length - 2)}`
+
+      if ( unitType.innerHTML === 'D' || unitType.innerHTML === 'D1' ) {
+        if ( activeLevel < 20 ) {
+          group.querySelector('g:last-child text').innerHTML = 'D1'
+        } else {
+          group.querySelector('g:last-child text').innerHTML = 'D'
+        }
+      }
+
+
     })
   }
 
