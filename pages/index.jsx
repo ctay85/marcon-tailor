@@ -176,11 +176,9 @@ export default function Index () {
           </button>
 
           <div className="menu">
-            {/*
-              <a href="https://rennie.as.me/tailor" target="_blank" rel="noopener noreferrer" className="btn__realtor-hub">
-                <span>Arrange A Preview</span>
-              </a>
-            */}
+            <a href="https://rennie.as.me/tailor" target="_blank" rel="noopener noreferrer" className="btn__realtor-hub">
+              <span>Arrange A Preview</span>
+            </a>
 
             <button onClick={ () => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE) }>
               <span>Sign Up</span>
