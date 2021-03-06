@@ -25,7 +25,7 @@ export default function ThankYou () {
 
       <div className="wrap--narrow">
         <h1>Thank You For Registering</h1>
-        <p>We've recieved your submission and will get back to you shortly.</p>
+        <p>We've received your submission and will get back to you shortly.</p>
       </div>
     </main>
   )
