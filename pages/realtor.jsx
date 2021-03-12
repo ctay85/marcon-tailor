@@ -157,12 +157,12 @@ export default function Realtor () {
 
 
           <h2>Sales</h2>
-          <h3>Sales are anticipated to commence in February 2021.</h3>
+          {/* <h3>Sales are anticipated to commence in February 2021.</h3> */}
           <p>You can schedule a private appointment to the Tailor Sales Centre located at 2421 Alpha Avenue in Burnaby. Please connect with our Tailor Sales Team to schedule a private tour: Call <a href="tel:6042991001">604.299.1001</a> or by email: <a href="mail:sales@tailorbymarcon.ca">sales@tailorbymarcon.ca</a></p>
 
           <h3>Deposit Structure</h3>
 
-          <p className="feature-box"><strong>Early purchasers will take advantage of a 15% total deposit for the first 75 homes sold.</strong></p>
+          {/* <p className="feature-box"><strong>Early purchasers will take advantage of a 15% total deposit for the first 75 homes sold.</strong></p> */}
 
           <div className="table">
             <ul>
@@ -193,7 +193,7 @@ export default function Realtor () {
           </div>
 
           <p><small>
-            *Early purchasers will receive the fourth deposit struck out, providing a 15% total deposit<br />
+            {/* *Early purchasers will receive the fourth deposit struck out, providing a 15% total deposit<br /> */}
             *Please note, foreign purchasers will be required to provide a total deposit of 20%
           </small></p>
 
@@ -224,35 +224,37 @@ export default function Realtor () {
           </div>
           <p><small>*Bonussing is non-retroactive</small></p>
 
-          <br />
-          <h3>Purchaser Incentives</h3>
-          <p><strong>We are pleased to reward our early purchasers with the following incentives:</strong></p>
-          <div className="table table__incentives">
-            <ul>
-              <li>Studio</li>
-              <li>$5,000</li>
-            </ul>
-            <ul>
-              <li>Jr. 1 Bed</li>
-              <li>$7,500</li>
-            </ul>
-            <ul>
-              <li>1 Bed</li>
-              <li>$7,500</li>
-            </ul>
-            <ul>
-              <li>2 Bed</li>
-              <li>$10,000</li>
-            </ul>
-            <ul>
-              <li>3 Bed PH</li>
-              <li>$30,000</li>
-            </ul>
-            <ul>
-              <li>2 Bed TH</li>
-              <li>$20,000</li>
-            </ul>
-          </div>
+          {/*
+            <br />
+            <h3>Purchaser Incentives</h3>
+            <p><strong>We are pleased to reward our early purchasers with the following incentives:</strong></p>
+            <div className="table table__incentives">
+              <ul>
+                <li>Studio</li>
+                <li>$5,000</li>
+              </ul>
+              <ul>
+                <li>Jr. 1 Bed</li>
+                <li>$7,500</li>
+              </ul>
+              <ul>
+                <li>1 Bed</li>
+                <li>$7,500</li>
+              </ul>
+              <ul>
+                <li>2 Bed</li>
+                <li>$10,000</li>
+              </ul>
+              <ul>
+                <li>3 Bed PH</li>
+                <li>$30,000</li>
+              </ul>
+              <ul>
+                <li>2 Bed TH</li>
+                <li>$20,000</li>
+              </ul>
+            </div>
+          */}
 
           <br />
           <h3>Starting Pricepoints</h3>
