@@ -192,37 +192,37 @@ export default function Realtor () {
             </ul>
           </div>
 
-          <p><small>
-            {/* *Early purchasers will receive the fourth deposit struck out, providing a 15% total deposit<br /> */}
-            *Please note, foreign purchasers will be required to provide a total deposit of 20%
-          </small></p>
+          <p><small>*Please note, foreign purchasers will be required to provide a total deposit of 25%</small></p>
 
           <br />
           <h3>Realtor Commissions & Incentives</h3>
           <p><strong>3% Flat Commissions paid 50/50</strong></p>
-          <div className="table table__commissions">
-            <ul>
-              <li>1st Deal</li>
-              <li>3 % Flat Commission</li>
-            </ul>
-            <ul>
-              <li>2nd Deal</li>
-              <li>3% Flat Commission</li>
-            </ul>
-            <ul>
-              <li>3rd Deal</li>
-              <li>3% Flat Commission +$3,000</li>
-            </ul>
-            <ul>
-              <li>4th Deal</li>
-              <li>3% Flat Commission +$4,000</li>
-            </ul>
-            <ul>
-              <li>5th Deal</li>
-              <li>3% Flat Commission +$5,000</li>
-            </ul>
-          </div>
-          <p><small>*Bonussing is non-retroactive</small></p>
+
+          {/*
+            <div className="table table__commissions">
+              <ul>
+                <li>1st Deal</li>
+                <li>3 % Flat Commission</li>
+              </ul>
+              <ul>
+                <li>2nd Deal</li>
+                <li>3% Flat Commission</li>
+              </ul>
+              <ul>
+                <li>3rd Deal</li>
+                <li>3% Flat Commission +$3,000</li>
+              </ul>
+              <ul>
+                <li>4th Deal</li>
+                <li>3% Flat Commission +$4,000</li>
+              </ul>
+              <ul>
+                <li>5th Deal</li>
+                <li>3% Flat Commission +$5,000</li>
+              </ul>
+            </div>
+            <p><small>*Bonussing is non-retroactive</small></p>
+          */}
 
           {/*
             <br />
@@ -256,26 +256,28 @@ export default function Realtor () {
             </div>
           */}
 
-          <br />
-          <h3>Starting Pricepoints</h3>
-          <div className="table table__starting">
-            <ul>
-              <li>Studio Homes</li>
-              <li>From Mid $300,000’s</li>
-            </ul>
-            <ul>
-              <li>Junior 1 Bedroom Homes</li>
-              <li>From High $400,000’s</li>
-            </ul>
-            <ul>
-              <li>1 Bedroom Homes</li>
-              <li>From Mid $500,000’s</li>
-            </ul>
-            <ul>
-              <li>2 Bedroom Homes</li>
-              <li>From Mid $700,000’s</li>
-            </ul>
-          </div>
+          {/*
+            <br />
+            <h3>Starting Pricepoints</h3>
+            <div className="table table__starting">
+              <ul>
+                <li>Studio Homes</li>
+                <li>From Mid $300,000’s</li>
+              </ul>
+              <ul>
+                <li>Junior 1 Bedroom Homes</li>
+                <li>From High $400,000’s</li>
+              </ul>
+              <ul>
+                <li>1 Bedroom Homes</li>
+                <li>From Mid $500,000’s</li>
+              </ul>
+              <ul>
+                <li>2 Bedroom Homes</li>
+                <li>From Mid $700,000’s</li>
+              </ul>
+            </div>
+          */}
 
 
           <br /><br />
