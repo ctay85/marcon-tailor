@@ -277,7 +277,7 @@
     	transition: color 0.3s;
       position: absolute;
       top:50%;
-      right:20px;
+      right:3rem;
       border-radius: 100%;
       transform: translateY(-50%);
       display: none;
@@ -470,7 +470,7 @@
       .panel-name{
         display: block;
         letter-spacing: 1px;
-        margin:0 0 1.5rem 0;
+        margin:2rem 0 1.5rem 0;
         line-height:2em;
         flex:0 0 100%;
         align-self:flex-start;

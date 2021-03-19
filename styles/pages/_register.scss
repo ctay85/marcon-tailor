@@ -1,0 +1,16 @@
+
+.page__register{
+  padding-bottom:5rem;
+
+  .enquire__title{
+    text-align:center;
+    font-size:2.75rem;
+  	letter-spacing: 2px;
+  	font-weight:normal;
+  	line-height:1.2em;
+
+  	@media #{$screen-sm-min} {
+  		font-size:3rem;
+  	}
+  }
+}

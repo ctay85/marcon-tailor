@@ -10,7 +10,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { contentCN, contentEN } from 'data'
 
 // Store
-import { localeUpdate } from 'store/actions'
+import { localeUpdate, uiUpdateNavOpen } from 'store/actions'
 import { LOCALE_ENGLISH, LOCALE_CHINESE } from 'store/constants'
 
 // Component
@@ -39,10 +39,15 @@ export default function Header () {
   }
 
   //
+  const toggleNavOpen = () => dispatch( uiUpdateNavOpen(!ui.navOpen) )
+
+  //
   return (
     <header className="global__header" data-theme={ ui.headerTheme }>
       <div className="left">
-        &nbsp;
+        <button className="hamburger" onClick={ toggleNavOpen } data-active={ ui.navOpen }>
+          <div className="lines"></div>
+        </button>
       </div>
 
       <div className="center">

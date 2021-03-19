@@ -1,13 +1,13 @@
 
 // Actions
-import { uiUpdateHeaderTheme } from './ui'
+import { uiUpdateHeaderTheme, uiUpdateNavOpen } from './ui'
 import { localeUpdate } from './locale'
 
 // Export
 export {
 
   // UI
-  uiUpdateHeaderTheme,
+  uiUpdateHeaderTheme, uiUpdateNavOpen,
 
   // Locale
   localeUpdate

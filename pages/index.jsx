@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 // Components
 import { Intro, Cover, Design, Homes, Interiors, PublicArt, Brentwood, OverlayDesign, OverlayInteriors, OverlayPublicArt, OverlayHomes, OverlayBrentwood, OverlayEnquire, OverlayHome } from 'components/index'
-import { Seo } from 'components/common'
+import { Seo, Nav } from 'components/common'
 
 // Store
 import { INDEX_OVERLAY_KEY_DESIGN, INDEX_OVERLAY_KEY_INTERIORS, INDEX_OVERLAY_KEY_PUBLICART, INDEX_OVERLAY_KEY_HOMES, INDEX_OVERLAY_KEY_HOME, INDEX_OVERLAY_KEY_BRENTWOOD, INDEX_OVERLAY_KEY_ENQUIRE, UI_HEADER_THEME_WHITE, UI_HEADER_THEME_BLUE } from 'store/constants'
@@ -169,6 +169,16 @@ export default function Index () {
         <Brentwood active={ activePanelClass } setActiveOverlayKey={ setActiveOverlayKey } />
       </main>
 
+      <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
+      <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />
+      <OverlayPublicArt active={ activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART } fnClose={ closeOverlay } />
+      <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
+      <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
+      <OverlayEnquire active={ activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE } fnClose={ closeOverlay } />
+      <OverlayHome active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOME } fnClose={ closeOverlay } activeHome={ activeHome } />
+
+      <Nav setActivePanelClass={ setActivePanelClass } activePanelClass={ activePanelClass } />
+
       <div className="page__index__global-actions" data-theme={ ui.headerTheme }>
         <div className="btn__enquire" data-open={ isEnquireOpen } onClick={ () => setIsEnquireOpen(!isEnquireOpen) }>
           <button className="btn__toggle">
@@ -194,14 +204,6 @@ export default function Index () {
           </button>
           */}
       </div>
-
-      <OverlayDesign active={ activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN } fnClose={ closeOverlay } />
-      <OverlayInteriors active={ activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS } fnClose={ closeOverlay } />
-      <OverlayPublicArt active={ activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART } fnClose={ closeOverlay } />
-      <OverlayHomes active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOMES } fnClose={ closeOverlay } />
-      <OverlayBrentwood active={ activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD } fnClose={ closeOverlay } />
-      <OverlayEnquire active={ activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE } fnClose={ closeOverlay } />
-      <OverlayHome active={ activeOverlayKey === INDEX_OVERLAY_KEY_HOME } fnClose={ closeOverlay } activeHome={ activeHome } />
     </>
   )
 }
