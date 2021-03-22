@@ -13,7 +13,8 @@ const nav = [
   { label : 'Interiors', cls : 'page__index__interiors' },
   { label : 'Homes', cls : 'page__index__homes' },
   { label : 'Public Art', cls : 'page__index__public-art' },
-  { label : 'Brentwood', cls : 'page__index__brentwood' }
+  { label : 'Brentwood', cls : 'page__index__brentwood' },
+  { label : 'Sign Up' }
 ]
 
 //
@@ -34,7 +35,12 @@ export default function Nav ({ setActivePanelClass, activePanelClass }) {
 
   //
   const changeActivePanel = cls => {
-    setActivePanelClass(cls)
+    if ( cls ) {
+      setActivePanelClass(cls)
+    } else {
+      document.querySelector('.btn__enquire .menu button').click()
+    }
+
     dispatch( uiUpdateNavOpen(false) )
   }
 
