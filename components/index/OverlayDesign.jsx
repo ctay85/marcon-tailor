@@ -1,19 +1,23 @@
-
 // Dependencies
 import { useSelector } from 'react-redux'
 
 // Components
-import { Overlay, OverlayContent, OverlayImage, OverlayGallery } from 'components/index'
-import { Accordion, AccordionItem } from 'components/ui'
+import { Overlay, OverlayGallery } from 'components/index'
 
 // Component
-export default function OverlayDesign (props) {
-  const { locale } = useSelector( state => state )
+export default function OverlayDesign(props) {
+	const { locale } = useSelector(state => state)
 
-  //
-  return (
-    <Overlay {...props}>
-      <OverlayGallery images={ locale.overlays.design.images.map( image => ({ ...image, file : `${process.env.BASE_PATH}${image.file}` }) )} />
-    </Overlay>
-  )
+	//
+	return (
+		<Overlay {...props}>
+			<OverlayGallery
+				active={props.active}
+				images={locale.overlays.design.images.map(image => ({
+					...image,
+					file: `${process.env.BASE_PATH}${image.file}`
+				}))}
+			/>
+		</Overlay>
+	)
 }
