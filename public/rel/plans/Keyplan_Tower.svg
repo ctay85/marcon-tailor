@@ -39,10 +39,10 @@
 	<polyline class="cc2" points="23.1,19.1 27.8,19.1 27.8,18.5 	"/>
 	<line class="cc2" x1="34.6" y1="11.8" x2="45.1" y2="11.8"/>
 </g>
-<g id="shape-f">
+<g id="shape-f" class="sold">
 	<polygon class="cc0" points="48.8,25 53.2,25 53.2,25.8 58.2,25.8 58.2,30.5 60.6,30.5 60.6,36.3 49.4,36.3 48.8,36.3 	"/>
 </g>
-<g id="shape-e">
+<g id="shape-e" class="sold">
 	<polygon class="cc0" points="53.2,25 53.2,22.3 63.1,22.3 63.1,21.7 68.8,21.7 68.8,35.9 68.8,36.3 60.6,36.3 60.6,30.5 58.2,30.5
 		58.2,25.8 53.2,25.8 	"/>
 </g>
@@ -58,14 +58,14 @@
 	<polygon class="cc0" points="63.1,22.3 63.1,17.8 63.1,4.6 62.8,4.6 48.1,4.6 48.1,4.8 48.1,9 48.4,9 48.4,14.7 48.8,14.7
 		48.8,19.1 52.5,19.1 52.5,22.3 53.2,22.3 	"/>
 </g>
-<g id="shape-b">
+<g id="shape-b" class="sold">
 	<polygon class="cc0" points="22,4.6 22,2.4 42.3,2.4 42.3,4.8 42.3,9 34.6,9 31.3,9 31.3,14.7 31.3,18.5 27.8,18.5 27.8,17.3
 		23.1,17.3 23.1,4.6 	"/>
 </g>
-<g id="shape-a1">
+<g id="shape-a1" class="sold">
 	<polygon class="cc0" points="24.1,36.3 24.1,37.4 25.4,37.4 36.7,37.4 36.7,23 28,23 28,23.7 24.6,23.7 24.6,36.3 	"/>
 </g>
-<g id="shape-a">
+<g id="shape-a" class="sold">
 	<polygon class="cc0" points="36.7,37.4 48.8,37.4 49.4,37.4 49.4,36.3 48.8,36.3 48.8,23 36.7,23 	"/>
 </g>
 
@@ -91,7 +91,7 @@
 
 
 
-<g id="trigger-e" data-plan="E">
+<g id="trigger-e" data-plan="E" class="sold">
 	<polygon class="cc3" points="53.2,25 53.2,22.3 63.1,22.3 63.1,21.7 68.8,21.7 68.8,35.9 68.8,36.3 60.6,36.3 60.6,30.5 58.2,30.5
 		58.2,25.8 53.2,25.8 	"/>
 	<g>
@@ -108,7 +108,7 @@
 
 
 
-<g id="trigger-f" data-plan="F">
+<g id="trigger-f" data-plan="F" class="sold">
 	<polygon class="cc3" points="48.8,25 53.2,25 53.2,25.8 58.2,25.8 58.2,30.5 60.6,30.5 60.6,36.3 49.4,36.3 48.8,36.3 	"/>
 	<g>
 		<text transform="matrix(1 0 0 1 50 30.9827)" class="cc4 cc5 cc6">303</text>
@@ -124,7 +124,7 @@
 
 
 
-<g id="trigger-a" data-plan="A">
+<g id="trigger-a" data-plan="A" class="sold">
 	<polygon class="cc3" points="36.7,37.4 48.8,37.4 49.4,37.4 49.4,36.3 48.8,36.3 48.8,23 36.7,23 	"/>
 	<g>
 		<text transform="matrix(1 0 0 1 38 29.2405)" class="cc4 cc5 cc6">304</text>
@@ -140,7 +140,7 @@
 
 
 
-<g id="trigger-a1" data-plan="A1">
+<g id="trigger-a1" data-plan="A1" class="sold">
 	<polygon class="cc3" points="24.1,36.3 24.1,37.4 25.4,37.4 36.7,37.4 36.7,23 28,23 28,23.7 24.6,23.7 24.6,36.3 	"/>
 	<g>
 		<text transform="matrix(1 0 0 1 26 29.2405)" class="cc4 cc5 cc6">305</text>
@@ -190,7 +190,7 @@
 
 
 
-<g id="trigger-b" data-plan="B">
+<g id="trigger-b" data-plan="B" class="sold">
 	<polygon class="cc3" points="22,4.6 22,2.4 42.3,2.4 42.3,4.8 42.3,9 34.6,9 31.3,9 31.3,14.7 31.3,18.5 27.8,18.5 27.8,17.3
 		23.1,17.3 23.1,4.6 	"/>
 	<g>

@@ -929,16 +929,30 @@
 				display: none;
 			}
 
+			g.sold {
+				polygon {
+					fill: $brand-dusk;
+				}
+			}
+
 			g[id^='trigger'] {
 				cursor: pointer;
 
-				&:hover {
+				&:hover:not(.sold) {
 					polygon,
 					polyline {
 						fill: $brand-indigo;
 					}
 					text {
 						fill: white;
+					}
+				}
+
+				&.sold {
+					cursor: default;
+
+					text {
+						fill: rgba($brand-blue-dark, 0.4);
 					}
 				}
 
@@ -1198,6 +1212,33 @@
 				svg {
 					transform: rotate(-90deg);
 				}
+			}
+		}
+
+		.sold-out-message {
+			position: absolute;
+			bottom: 5rem;
+			left: 1rem;
+			width: 200px;
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 0.9rem;
+			line-height: 1.5em;
+			font-family: $font-sans-serif;
+			z-index: 5;
+			display: block;
+
+			@media #{$screen-sm-min} {
+				bottom: 10rem;
+				left: 3rem;
+			}
+
+			@media #{$screen-md-min} {
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 2.5rem;
+				width: auto;
 			}
 		}
 
