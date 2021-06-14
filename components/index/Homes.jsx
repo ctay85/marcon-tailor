@@ -14,6 +14,54 @@ import { INDEX_OVERLAY_KEY_HOME, INDEX_OVERLAY_KEY_PUBLICART } from 'store/const
 // Components
 import { BgImage, SketchfabViewer } from 'components/ui'
 
+//
+const soldPlanTypes = ['A', 'A1', 'B', 'E', 'F']
+const soldUnitNumbers = [
+	'301',
+	'307',
+	'401',
+	'407',
+	'501',
+	'507',
+	'601',
+	'607',
+	'701',
+	'706',
+	'707',
+	'801',
+	'806',
+	'807',
+	'901',
+	'906',
+	'907',
+	'1001',
+	'1006',
+	'1007',
+	'1101',
+	'1107',
+	'1201',
+	'1206',
+	'1207',
+	'1306',
+	'1406',
+	'1407',
+	'1506',
+	'1507',
+	'1606',
+	'1607',
+	'1706',
+	'1707',
+	'1806',
+	'1807',
+	'1906',
+	'1907',
+	'2006',
+	'2007',
+	'2106',
+	'2206',
+	'2506'
+]
+
 // Component
 export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	const levelLabel = useRef(null)
@@ -109,13 +157,21 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	}
 
 	//
+	const isUnitSold = unitNumber => soldUnitNumbers.indexOf(unitNumber) !== -1
+
+	//
+	const isPlanTypeSold = planType => soldPlanTypes.indexOf(planType) !== -1
+
+	//
 	const onTriggerClick = ({ currentTarget: group }) => {
 		const planType = group.dataset.plan
 		const unitNumber = group.querySelector('text').innerHTML
-		const soldPlanTypes = ['A', 'A1', 'B', 'E', 'F']
+		const planTypeIsSold = isPlanTypeSold(planType)
+		const unitIsSold = isUnitSold(unitNumber)
 
 		// These plans are sold so disable the click
-		if (soldPlanTypes.indexOf(planType) !== -1) {
+		// If the unit it's self is sold, disable the click
+		if (planTypeIsSold || unitIsSold) {
 			return false
 		}
 
@@ -140,6 +196,26 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	}
 
 	//
+	const updateSoldStatus = group => {
+		const plate = document.querySelector('.plate--tower')
+		const unitNumber = group.querySelector('text').innerHTML
+		const unitType = [...group.querySelectorAll('g')].pop().children[0].innerHTML
+		const planTypeIsSold = isPlanTypeSold(unitType)
+		const unitIsSold = isUnitSold(unitNumber)
+		const shapeId = group.id.replace('trigger', 'shape')
+
+		if (unitIsSold) {
+			group.classList.add('sold')
+			plate.getElementById(shapeId).classList.add('sold')
+		}
+
+		if (!unitIsSold && !planTypeIsSold) {
+			group.classList.remove('sold')
+			plate.getElementById(shapeId).classList.remove('sold')
+		}
+	}
+
+	//
 	const changePlateNumbers = () => {
 		const plate = document.querySelector('.plate--tower')
 		if (!plate) return
@@ -148,19 +224,21 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 
 		groups.forEach(group => {
 			const unitNumber = group.querySelector('text').innerHTML
-			const unitType = group.querySelector('g:last-child text')
+			const unitType = [...group.querySelectorAll('g')].pop().children[0].innerHTML
 
 			group.querySelector('text').innerHTML = `${activeLevel}${unitNumber.substr(
 				unitNumber.length - 2
 			)}`
 
-			if (unitType.innerHTML === 'D' || unitType.innerHTML === 'D1') {
+			if (unitType === 'D' || unitType === 'D1') {
 				if (activeLevel < 20) {
 					group.querySelector('g:last-child text').innerHTML = 'D1'
 				} else {
 					group.querySelector('g:last-child text').innerHTML = 'D'
 				}
 			}
+
+			updateSoldStatus(group)
 		})
 	}
 
