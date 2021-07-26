@@ -37,7 +37,7 @@ export default function Nav({ setActivePanelClass, activePanelClass }) {
 		if (cls) {
 			setActivePanelClass(cls)
 		} else {
-			document.querySelector('.btn__enquire .menu button').click()
+			document.querySelector('.btn__enquire .btn__toggle').click()
 		}
 
 		dispatch(uiUpdateNavOpen(false))

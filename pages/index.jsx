@@ -273,10 +273,13 @@ export default function Index() {
 				<div
 					className="btn__enquire"
 					data-open={isEnquireOpen}
-					onClick={() => setIsEnquireOpen(!isEnquireOpen)}
+					//onClick={() => setIsEnquireOpen(!isEnquireOpen)}
 				>
-					<button className="btn__toggle">
-						<span>{locale.global.enquire}</span>
+					<button
+						className="btn__toggle"
+						onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}
+					>
+						<span>Sign Up</span>
 					</button>
 
 					<div className="menu">
@@ -286,9 +289,9 @@ export default function Index() {
               </a>
             */}
 
-						<button onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}>
+						{/* <button onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}>
 							<span>Sign Up</span>
-						</button>
+						</button> */}
 					</div>
 				</div>
 
