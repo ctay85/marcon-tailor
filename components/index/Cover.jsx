@@ -70,9 +70,7 @@ export default function Cover({ active }) {
 				variants={indexPanelAnimations.bgAnimation}
 			>
 				{/* <video src={ isMobile ? `${process.env.BASE_PATH}/vid/cover-loop-mobile.mp4` : `${process.env.BASE_PATH}/vid/cover-loop-desktop.mp4` } autoPlay muted playsInline loop /> */}
-				<BgImage
-					src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL.jpg`}
-				/>
+				<BgImage src={`${process.env.BASE_PATH}/img/index/tailor-th-image-resize.jpg`} />
 			</motion.div>
 
 			<div className="left-column">
