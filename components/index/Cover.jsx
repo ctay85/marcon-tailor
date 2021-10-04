@@ -118,7 +118,9 @@ export default function Cover({ active }) {
 				<span className="section-title">{locale.index.cover.ad_title}</span>
 
 				<figure>
-					<img src={`${process.env.BASE_PATH}/img/index/tailor-th-image-resize.jpg`} />
+					<img
+						src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg`}
+					/>
 				</figure>
 
 				<p className="description">{locale.index.cover.ad_copy}</p>
