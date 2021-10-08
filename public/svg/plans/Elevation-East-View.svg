@@ -30,7 +30,7 @@
 	<polygon class="ev6" points="340.72,0.5 336.76,0.5 276.93,0.5 276.93,99.01 167.62,99.01 167.62,271.57 383.06,271.57 383.06,0.5
 			"/>
 </g>
-<g id="L3" class="active">
+<g id="L3" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1288.15" class="ev7" width="328.36" height="25.55"/>
@@ -44,7 +44,7 @@
 		</g>
 	</g>
 </g>
-<g id="L4">
+<g id="L4" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1241.94" class="ev7" width="328.36" height="25.55"/>
@@ -58,7 +58,7 @@
 		</g>
 	</g>
 </g>
-<g id="L5">
+<g id="L5" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1195.73" class="ev7" width="328.36" height="25.55"/>
@@ -72,7 +72,7 @@
 		</g>
 	</g>
 </g>
-<g id="L6">
+<g id="L6" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1149.53" class="ev7" width="328.36" height="25.55"/>
@@ -86,7 +86,7 @@
 		</g>
 	</g>
 </g>
-<g id="L7">
+<g id="L7" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1103.32" class="ev7" width="328.36" height="25.55"/>
@@ -100,7 +100,7 @@
 		</g>
 	</g>
 </g>
-<g id="L8">
+<g id="L8" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1057.11" class="ev7" width="328.36" height="25.55"/>
@@ -114,7 +114,7 @@
 		</g>
 	</g>
 </g>
-<g id="L9">
+<g id="L9" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="1010.9" class="ev7" width="328.36" height="25.55"/>
@@ -128,7 +128,7 @@
 		</g>
 	</g>
 </g>
-<g id="L10">
+<g id="L10" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="964.69" class="ev7" width="328.36" height="25.55"/>
@@ -142,7 +142,7 @@
 		</g>
 	</g>
 </g>
-<g id="L11">
+<g id="L11" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="918.48" class="ev7" width="328.36" height="25.55"/>
@@ -156,7 +156,7 @@
 		</g>
 	</g>
 </g>
-<g id="L12">
+<g id="L12" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="872.28" class="ev7" width="328.36" height="25.55"/>
@@ -170,7 +170,7 @@
 		</g>
 	</g>
 </g>
-<g id="L13">
+<g id="L13" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="826.07" class="ev7" width="328.36" height="25.55"/>
@@ -184,7 +184,7 @@
 		</g>
 	</g>
 </g>
-<g id="L14">
+<g id="L14" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="779.86" class="ev7" width="328.36" height="25.55"/>
@@ -198,7 +198,7 @@
 		</g>
 	</g>
 </g>
-<g id="L15">
+<g id="L15" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="733.65" class="ev7" width="328.36" height="25.55"/>
@@ -212,7 +212,7 @@
 		</g>
 	</g>
 </g>
-<g id="L16">
+<g id="L16" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="687.44" class="ev7" width="328.36" height="25.55"/>
@@ -226,7 +226,7 @@
 		</g>
 	</g>
 </g>
-<g id="L17">
+<g id="L17" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="641.23" class="ev7" width="328.36" height="25.55"/>
@@ -240,7 +240,7 @@
 		</g>
 	</g>
 </g>
-<g id="L18">
+<g id="L18" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="595.02" class="ev7" width="328.36" height="25.55"/>
@@ -254,7 +254,7 @@
 		</g>
 	</g>
 </g>
-<g id="L19">
+<g id="L19" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="548.82" class="ev7" width="328.36" height="25.55"/>
@@ -268,7 +268,7 @@
 		</g>
 	</g>
 </g>
-<g id="L20">
+<g id="L20" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="502.61" class="ev7" width="328.36" height="25.55"/>
@@ -282,7 +282,7 @@
 		</g>
 	</g>
 </g>
-<g id="L21">
+<g id="L21" class="disabled">
 	<g>
 		<g>
 			<rect x="119.64" y="456.4" class="ev7" width="328.36" height="25.55"/>
@@ -296,7 +296,7 @@
 		</g>
 	</g>
 </g>
-<g id="L22">
+<g id="L22" class="active">
 	<g>
 		<g>
 			<rect x="119.64" y="410.19" class="ev7" width="328.36" height="25.55"/>

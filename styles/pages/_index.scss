@@ -1026,11 +1026,14 @@
 				g {
 					&[id^='L'] {
 						opacity: 0.5;
-						cursor: pointer;
 
-						&:hover,
-						&.active {
-							opacity: 1;
+						&:not(.disabled) {
+							cursor: pointer;
+
+							&:hover,
+							&.active {
+								opacity: 1;
+							}
 						}
 					}
 				}
@@ -1080,7 +1083,7 @@
 			.level-label {
 				display: block;
 				position: absolute;
-				top: 425px;
+				top: 137px;
 				left: calc(100px + 1rem);
 				transform: translate3d(0, -50%, 0);
 				line-height: 1em;

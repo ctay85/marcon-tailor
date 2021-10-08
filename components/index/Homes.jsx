@@ -59,7 +59,13 @@ const soldUnitNumbers = [
 	'2007',
 	'2106',
 	'2206',
-	'2506'
+	'2207',
+	'2306',
+	'2307',
+	'2406',
+	'2407',
+	'2506',
+	'2507'
 ]
 
 // Component
@@ -68,16 +74,20 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	const sectionClass = useRef('page__index__homes')
 	const [animationState, setAnimationState] = useState('initial')
 	const [isMobile, setIsMobile] = useState(false)
-	const [activeLevel, setActiveLevel] = useState(3)
+	const [activeLevel, setActiveLevel] = useState(22)
 	const [activePlate, setActivePlate] = useState('tower')
 	const { locale } = useSelector(state => state)
 
 	//
 	const onLevelClick = ({ currentTarget: group, offsetY }) => {
-		const level = group.id.replace('L', '')
+		const level = parseInt(group.id.replace('L', ''))
+		if (level < 22) {
+			return
+		}
+		console.log(level)
 
 		const penthouseY = -100
-		const y = parseInt(level) > 25 ? penthouseY : offsetY
+		const y = level > 25 ? penthouseY : offsetY
 
 		//
 		levelLabel.current.innerText = `Level ${level}`
@@ -86,7 +96,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		//
 		resetLevelGroups()
 		group.classList.add('active')
-		setActiveLevel(parseInt(level))
+		setActiveLevel(level)
 	}
 
 	//
@@ -219,7 +229,6 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	const changePlateNumbers = () => {
 		const plate = document.querySelector('.plate--tower')
 		if (!plate) return
-
 		const groups = [...plate.querySelectorAll('g[id^=trigger]')]
 
 		groups.forEach(group => {
@@ -255,7 +264,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 			setActivePlate('sub-penthouse')
 		} else if (isTowerLevel) {
 			setActivePlate('tower')
-			changePlateNumbers()
+			setTimeout(() => changePlateNumbers(), document.querySelector('.plate--tower') ? 10 : 1000)
 		} else if (isTownhomeLevel) {
 			setActivePlate('townhome')
 		}
@@ -377,7 +386,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</div>
 
 					<span className="level-label" ref={levelLabel}>
-						Level 3
+						Level 22
 					</span>
 
 					<div className="th-labels" data-active={activeLevel >= 0 && activeLevel < 3}>
@@ -399,8 +408,6 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					<SVG src={`${process.env.BASE_PATH}/svg/thin-arrow-down.svg`} />
 				</button>
 			</div>
-
-			<span className="sold-out-message">Plans A, A1, B, E and F are sold out</span>
 
 			<button
 				className="btn__continue"
