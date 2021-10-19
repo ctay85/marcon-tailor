@@ -42,8 +42,8 @@ export default [
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-C.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_C.pdf`,
 		area: {
-			total: 991,
-			interior: 764,
+			total: 982,
+			interior: 755,
 			outdoor: 227
 		}
 	},
@@ -118,9 +118,9 @@ export default [
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH1.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf`,
 		area: {
-			interior: 1701,
+			interior: 1699,
 			outdoor: 677,
-			total: 2378
+			total: 2376
 		}
 	},
 	{
@@ -134,9 +134,9 @@ export default [
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH2.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH2-3.pdf`,
 		area: {
-			interior: 1679,
+			interior: 1699,
 			outdoor: 673,
-			total: 2352
+			total: 2372
 		}
 	},
 	{
@@ -150,9 +150,9 @@ export default [
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH4.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH4.pdf`,
 		area: {
-			interior: 1679,
+			interior: 1699,
 			outdoor: 673,
-			total: 2352
+			total: 2372
 		}
 	},
 	{
@@ -166,9 +166,9 @@ export default [
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH5.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf`,
 		area: {
-			interior: 1701,
+			interior: 1699,
 			outdoor: 821,
-			total: 2522
+			total: 2520
 		}
 	},
 	{
