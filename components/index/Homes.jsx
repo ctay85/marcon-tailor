@@ -58,12 +58,15 @@ const soldUnitNumbers = [
 	'2006',
 	'2007',
 	'2106',
+	'2201',
 	'2206',
 	'2207',
+	'2301',
 	'2306',
 	'2307',
 	'2406',
 	'2407',
+	'2501',
 	'2506',
 	'2507'
 ]
@@ -81,10 +84,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	//
 	const onLevelClick = ({ currentTarget: group, offsetY }) => {
 		const level = parseInt(group.id.replace('L', ''))
-		if (level < 22) {
-			return
-		}
-		console.log(level)
+
+		if (level < 22) return
 
 		const penthouseY = -100
 		const y = level > 25 ? penthouseY : offsetY
