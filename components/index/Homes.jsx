@@ -77,15 +77,15 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	const sectionClass = useRef('page__index__homes')
 	const [animationState, setAnimationState] = useState('initial')
 	const [isMobile, setIsMobile] = useState(false)
-	const [activeLevel, setActiveLevel] = useState(22)
+	const [activeLevel, setActiveLevel] = useState(24)
 	const [activePlate, setActivePlate] = useState('tower')
 	const { locale } = useSelector(state => state)
 
 	//
 	const onLevelClick = ({ currentTarget: group, offsetY }) => {
 		const level = parseInt(group.id.replace('L', ''))
-
-		if (level < 22) return
+		console.log(level)
+		if (level !== 24) return
 
 		const penthouseY = -100
 		const y = level > 25 ? penthouseY : offsetY
@@ -387,7 +387,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</div>
 
 					<span className="level-label" ref={levelLabel}>
-						Level 22
+						Level 24
 					</span>
 
 					<div className="th-labels" data-active={activeLevel >= 0 && activeLevel < 3}>
