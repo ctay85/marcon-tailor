@@ -1011,7 +1011,7 @@
 			flex: 0 0 100%;
 			align-self: flex-end;
 			position: relative;
-			overflow: hidden;
+			//overflow: hidden;
 
 			svg {
 				width: 100px;
@@ -1083,7 +1083,7 @@
 			.level-label {
 				display: block;
 				position: absolute;
-				top: 108px;
+				top: 50%;
 				left: calc(100px + 1rem);
 				transform: translate3d(0, -50%, 0);
 				line-height: 1em;

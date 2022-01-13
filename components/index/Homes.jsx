@@ -1,21 +1,14 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import SVG from 'react-inlinesvg'
 import { useSelector } from 'react-redux'
 
 // Utils
 import { indexPanelAnimations } from 'utils'
 
-// Store
-import { INDEX_OVERLAY_KEY_HOME, INDEX_OVERLAY_KEY_PUBLICART } from 'store/constants'
-
-// Components
-import { BgImage, SketchfabViewer } from 'components/ui'
-
 //
-const soldPlanTypes = ['A', 'A1', 'B', 'E', 'F']
+const soldPlanTypes = ['A', 'A1', 'B', 'C', 'C1', 'D', 'D1', 'E', 'F']
 const soldUnitNumbers = [
 	'301',
 	'307',
@@ -53,17 +46,22 @@ const soldUnitNumbers = [
 	'1707',
 	'1806',
 	'1807',
+	'1901',
 	'1906',
 	'1907',
 	'2006',
+	'2001',
 	'2007',
+	'2101',
 	'2106',
+	'2107',
 	'2201',
 	'2206',
 	'2207',
 	'2301',
 	'2306',
 	'2307',
+	'2401',
 	'2406',
 	'2407',
 	'2501',
@@ -77,7 +75,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 	const sectionClass = useRef('page__index__homes')
 	const [animationState, setAnimationState] = useState('initial')
 	const [isMobile, setIsMobile] = useState(false)
-	const [activeLevel, setActiveLevel] = useState(24)
+	const [activeLevel, setActiveLevel] = useState(26)
 	const [activePlate, setActivePlate] = useState('tower')
 	const { locale } = useSelector(state => state)
 
@@ -91,8 +89,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		const y = level > 25 ? penthouseY : offsetY
 
 		//
-		levelLabel.current.innerText = `Level ${level}`
-		levelLabel.current.style = `top:${y}px`
+		//levelLabel.current.innerText = `Level ${level}`
+		//levelLabel.current.style = `top:${y}px`
 
 		//
 		resetLevelGroups()
@@ -118,8 +116,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		const group = e.currentTarget
 		const num = group.id.replace('L', '')
 
-		levelLabel.current.innerText = `Level ${num}`
-		levelLabel.current.style = `top:${y}px`
+		//levelLabel.current.innerText = `Level ${num}`
+		//levelLabel.current.style = `top:${y}px`
 	}
 
 	//
@@ -137,13 +135,13 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		setActiveLevel(level)
 		resetLevelGroups()
 		document.querySelector(`.elevation svg g[id="L${level}"]`).classList.add('active')
-		levelLabel.current.style = 'top:-100px;'
+		//levelLabel.current.style = 'top:-100px;'
 	}
 
 	const activateTownhomeLevel = level => {
 		setActiveLevel(level)
 		resetLevelGroups()
-		levelLabel.current.style = 'top:-100px;'
+		//levelLabel.current.style = 'top:-100px;'
 	}
 
 	//
@@ -178,7 +176,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		const planType = group.dataset.plan
 		const unitNumber = group.querySelector('text').innerHTML
 		const planTypeIsSold = isPlanTypeSold(planType)
-		const unitIsSold = isUnitSold(unitNumber)
+		const unitIsSold = activePlate === 'tower' //isUnitSold(unitNumber)
+		console.log(unitIsSold)
 
 		// These plans are sold so disable the click
 		// If the unit it's self is sold, disable the click
@@ -387,7 +386,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</div>
 
 					<span className="level-label" ref={levelLabel}>
-						Level 24
+						Tower Homes
+						<br /> Sold Out
 					</span>
 
 					<div className="th-labels" data-active={activeLevel >= 0 && activeLevel < 3}>
