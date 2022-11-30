@@ -71,9 +71,7 @@ export default function Cover({ active }) {
 			>
 				{/* <video src={ isMobile ? `${process.env.BASE_PATH}/vid/cover-loop-mobile.mp4` : `${process.env.BASE_PATH}/vid/cover-loop-desktop.mp4` } autoPlay muted playsInline loop /> */}
 				{/* <BgImage src={`${process.env.BASE_PATH}/img/index/tailor-th-image-resize.jpg`} /> */}
-				<BgImage
-					src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL.jpg`}
-				/>
+				<BgImage src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_INT_LOBBY_HALL_NEW_FINAL.jpg`} />
 			</motion.div>
 
 			<div className="left-column">
@@ -118,64 +116,19 @@ export default function Cover({ active }) {
 				<span className="section-title">{locale.index.cover.ad_title}</span>
 
 				<figure>
-					<img
-						src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg`}
-					/>
+					<img src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg`} />
 				</figure>
 
-				<p className="description">{locale.index.cover.ad_copy}</p>
-
-				{/*
-          <div className="stat">
-            <div className="left">
-              <span className="title">Studios</span>
-              <div className="progress"><span style={{ width : '40%' }}></span></div>
-            </div>
-            <div className="right">
-              <span className="number">46</span>
-            </div>
-          </div>
-
-          <div className="stat">
-            <div className="left">
-              <span className="title">One Bedrooms</span>
-              <div className="progress"><span style={{ width : '60%' }}></span></div>
-            </div>
-            <div className="right">
-              <span className="number">69</span>
-            </div>
-          </div>
-
-          <div className="stat">
-            <div className="left">
-              <span className="title">Two Bedrooms</span>
-              <div className="progress"><span style={{ width : '60%' }}></span></div>
-            </div>
-            <div className="right">
-              <span className="number">69</span>
-            </div>
-          </div>
-
-          <div className="stat">
-            <div className="left">
-              <span className="title">Penthouses</span>
-              <div className="progress"><span style={{ width : '10%' }}></span></div>
-            </div>
-            <div className="right">
-              <span className="number">4&nbsp;</span>
-            </div>
-          </div>
-
-          <div className="stat">
-            <div className="left">
-              <span className="title">Townhomes</span>
-              <div className="progress"><span style={{ width : '10%' }}></span></div>
-            </div>
-            <div className="right">
-              <span className="number">5&nbsp;</span>
-            </div>
-          </div>
-        */}
+				<p className="description">
+					<a
+						href="mailto:sales@tailorbymarcon.ca"
+						target="_blank"
+						className="btn btn--solid"
+						style={{ width: '100%' }}
+					>
+						Book Appointment
+					</a>
+				</p>
 			</motion.div>
 
 			<div className="icon-scroll">

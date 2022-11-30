@@ -53,14 +53,14 @@ export default function Nav({ setActivePanelClass, activePanelClass }) {
 		>
 			<nav>
 				{nav.map(({ label, cls }, i) => (
-					<button
-						key={i}
-						data-active={activePanelClass === cls}
-						onClick={() => changeActivePanel(cls)}
-					>
+					<button key={i} data-active={activePanelClass === cls} onClick={() => changeActivePanel(cls)}>
 						<motion.span variants={childVariants}>{label}</motion.span>
 					</button>
 				))}
+
+				<a href="mailto:sales@tailorbymarcon.ca" target="_blank">
+					<motion.span variants={childVariants}>Book Appointment</motion.span>
+				</a>
 			</nav>
 		</motion.section>
 	)

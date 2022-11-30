@@ -31,11 +31,7 @@ const Footer = () => {
 					<ul className="link-list">
 						<li>{locale.global.footer.hoSupport}</li>
 						<li>
-							<a
-								href="http://marcon.ca/en/home-owner/overview/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="http://marcon.ca/en/home-owner/overview/" target="_blank" rel="noopener noreferrer">
 								{locale.global.footer.overview}
 							</a>
 						</li>
@@ -53,38 +49,22 @@ const Footer = () => {
 					<ul className="link-list">
 						<li>{locale.global.footer.company}</li>
 						<li>
-							<a
-								href="http://marcon.ca/en/our-company/overview/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="http://marcon.ca/en/our-company/overview/" target="_blank" rel="noopener noreferrer">
 								{locale.global.footer.overview}
 							</a>
 						</li>
 						<li>
-							<a
-								href="http://marcon.ca/en/our-company/news/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="http://marcon.ca/en/our-company/news/" target="_blank" rel="noopener noreferrer">
 								{locale.global.footer.news}
 							</a>
 						</li>
 						<li>
-							<a
-								href="http://marcon.ca/en/our-company/community/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="http://marcon.ca/en/our-company/community/" target="_blank" rel="noopener noreferrer">
 								{locale.global.footer.community}
 							</a>
 						</li>
 						<li>
-							<a
-								href="http://marcon.ca/en/our-company/careers/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="http://marcon.ca/en/our-company/careers/" target="_blank" rel="noopener noreferrer">
 								{locale.global.footer.careers}
 							</a>
 						</li>
@@ -92,29 +72,17 @@ const Footer = () => {
 
 					<ul className="link-list social">
 						<li>
-							<a
-								href="https://www.facebook.com/MarconHomes"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="https://www.facebook.com/MarconHomes" target="_blank" rel="noopener noreferrer">
 								<SVG src={`${process.env.BASE_PATH}/svg/facebook.svg`} />
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://www.instagram.com/MarconHomes"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="https://www.instagram.com/MarconHomes" target="_blank" rel="noopener noreferrer">
 								<SVG src={`${process.env.BASE_PATH}/svg/instagram.svg`} />
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://www.linkedin.com/company/marcon"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="https://www.linkedin.com/company/marcon" target="_blank" rel="noopener noreferrer">
 								<SVG src={`${process.env.BASE_PATH}/svg/linkedin.svg`} />
 							</a>
 						</li>
@@ -125,12 +93,7 @@ const Footer = () => {
 			<div className="global__footer__reverse">
 				<div className="global__footer__reverse__left">
 					<div>
-						<a
-							href="tel:6042991001"
-							className="text-link"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
+						<a href="tel:6042991001" className="text-link" target="_blank" rel="noopener noreferrer">
 							604.299.1001
 						</a>
 						<br />
@@ -144,22 +107,21 @@ const Footer = () => {
 						</a>
 					</div>
 
-					<a href="https://rennie.com/" className="logo-rennie" target="_blank">
+					{/* <a href="https://rennie.com/" className="logo-rennie" target="_blank">
 						<SVG src={`${process.env.BASE_PATH}/img/common/Logo-Rennie-Sales-By.svg`} />
-					</a>
+					</a> */}
 				</div>
 				<div className="global__footer__reverse__bottom">
 					<p className="disclaimer">
-						The material provided herein is for general informational purposes only and is not
-						intended to depict as-built construction designs or finishes. The Developer reserves the
-						right in its sole discretion to make modifications or changes to building design, floor
-						plans, project designs, specifications, finishes, features, incentives and dimensions,
-						without prior notice or compensation to any person.  Renderings and any depicted views
-						are artistic concepts only.  Square footages are approximate and have been calculated
-						from architectural drawings.  Actual final dimensions following completion of
-						construction may vary from those set out herein. No information or material on this
-						website is to be considered to be an offer to sell or rent a home, even if a price for a
-						product or service may be indicated. E.&O.E.
+						The material provided herein is for general informational purposes only and is not intended to depict
+						as-built construction designs or finishes. The Developer reserves the right in its sole discretion to
+						make modifications or changes to building design, floor plans, project designs, specifications,
+						finishes, features, incentives and dimensions, without prior notice or compensation to any person. 
+						Renderings and any depicted views are artistic concepts only.  Square footages are approximate and have
+						been calculated from architectural drawings.  Actual final dimensions following completion of
+						construction may vary from those set out herein. No information or material on this website is to be
+						considered to be an offer to sell or rent a home, even if a price for a product or service may be
+						indicated. E.&O.E.
 					</p>
 
 					<nav className="nav-util">
