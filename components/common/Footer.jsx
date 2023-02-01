@@ -106,10 +106,6 @@ const Footer = () => {
 							Sales@TailorByMarcon.ca
 						</a>
 					</div>
-
-					{/* <a href="https://rennie.com/" className="logo-rennie" target="_blank">
-						<SVG src={`${process.env.BASE_PATH}/img/common/Logo-Rennie-Sales-By.svg`} />
-					</a> */}
 				</div>
 				<div className="global__footer__reverse__bottom">
 					<p className="disclaimer">
@@ -139,7 +135,7 @@ const Footer = () => {
 							{locale.global.footer.covid}
 						</a>
 						<span className="bullet">&bull;</span>
-						<span className="copywrite">&copy; 2020 Marcon</span>
+						<span className="copywrite">&copy; 2023 Marcon</span>
 					</nav>
 				</div>
 			</div>
