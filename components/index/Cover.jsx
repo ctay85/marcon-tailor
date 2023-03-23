@@ -116,7 +116,7 @@ export default function Cover({ active }) {
 				<span className="section-title">{locale.index.cover.ad_title}</span>
 
 				<figure>
-					<img src={`${process.env.BASE_PATH}/img/index/B&TB_MARCON_TAILOR_LOBBY_CORNER_FINAL.jpg`} />
+					<img src={`${process.env.BASE_PATH}/img/index/MicrosoftTeams-image.jpg`} />
 				</figure>
 
 				<p className="description">
@@ -126,7 +126,7 @@ export default function Cover({ active }) {
 						className="btn btn--solid"
 						style={{ width: '100%' }}
 					>
-						Book Appointment
+						Contact a Marcon Advisor
 					</a>
 				</p>
 			</motion.div>

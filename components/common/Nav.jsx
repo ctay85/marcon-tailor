@@ -59,7 +59,7 @@ export default function Nav({ setActivePanelClass, activePanelClass }) {
 				))}
 
 				<a href="mailto:sales@tailorbymarcon.ca" target="_blank">
-					<motion.span variants={childVariants}>Book Appointment</motion.span>
+					<motion.span variants={childVariants}>Contact a Marcon Advisor</motion.span>
 				</a>
 			</nav>
 		</motion.section>
