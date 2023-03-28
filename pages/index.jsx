@@ -1,8 +1,7 @@
 // Dependencies
 import { useEffect, useRef, useState } from 'react'
-import SVG from 'react-inlinesvg'
 import { useDispatch, useSelector } from 'react-redux'
-import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 // Components
 import {
@@ -32,8 +31,7 @@ import {
 	INDEX_OVERLAY_KEY_HOME,
 	INDEX_OVERLAY_KEY_BRENTWOOD,
 	INDEX_OVERLAY_KEY_ENQUIRE,
-	UI_HEADER_THEME_WHITE,
-	UI_HEADER_THEME_BLUE
+	UI_HEADER_THEME_WHITE
 } from 'store/constants'
 import { uiUpdateHeaderTheme } from 'store/actions'
 
@@ -48,6 +46,7 @@ export default function Index() {
 	const [activeOverlayKey, setActiveOverlayKey] = useState(null)
 	const [isEnquireOpen, setIsEnquireOpen] = useState(false)
 	const [activeHome, setActiveHome] = useState(null)
+	const [showPopup, setShowPopup] = useState(false)
 
 	//
 	const blockExecution = () => {
@@ -67,8 +66,7 @@ export default function Index() {
 		window.scrollTo(0, 0)
 
 		const activePanel = document.querySelector(`.${activePanelClass}`)
-		const nextPanel =
-			direction === 'down' ? activePanel.nextElementSibling : activePanel.previousElementSibling
+		const nextPanel = direction === 'down' ? activePanel.nextElementSibling : activePanel.previousElementSibling
 
 		if (nextPanel) {
 			setActivePanelClass(nextPanel.className)
@@ -80,10 +78,7 @@ export default function Index() {
 		const lastPanel = document.querySelector('.page__index__brentwood[data-active="true"]')
 
 		if (lastPanel) {
-			setTimeout(
-				() => document.documentElement.classList.remove('no-scroll'),
-				config.current.transitionDuration
-			)
+			setTimeout(() => document.documentElement.classList.remove('no-scroll'), config.current.transitionDuration)
 		} else {
 			document.documentElement.classList.add('no-scroll')
 		}
@@ -126,6 +121,11 @@ export default function Index() {
 
 	//
 	useEffect(() => {
+		setTimeout(() => setShowPopup(true), 4000)
+	}, [])
+
+	//
+	useEffect(() => {
 		let newTheme
 
 		switch (activePanelClass) {
@@ -145,8 +145,7 @@ export default function Index() {
 	//
 	useEffect(() => {
 		//
-		const onResize = () =>
-			document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
+		const onResize = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
 		onResize()
 
 		//
@@ -231,36 +230,17 @@ export default function Index() {
 				<Cover active={activePanelClass} />
 				<Design active={activePanelClass} setActiveOverlayKey={setActiveOverlayKey} />
 				<Interiors active={activePanelClass} setActiveOverlayKey={setActiveOverlayKey} />
-				<Homes
-					active={activePanelClass}
-					setActivePanelClass={setActivePanelClass}
-					setActiveHome={setActiveHome}
-				/>
+				<Homes active={activePanelClass} setActivePanelClass={setActivePanelClass} setActiveHome={setActiveHome} />
 				<PublicArt active={activePanelClass} setActiveOverlayKey={setActiveOverlayKey} />
 				<Brentwood active={activePanelClass} setActiveOverlayKey={setActiveOverlayKey} />
 			</main>
 
-			<OverlayDesign
-				active={activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN}
-				fnClose={closeOverlay}
-			/>
-			<OverlayInteriors
-				active={activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS}
-				fnClose={closeOverlay}
-			/>
-			<OverlayPublicArt
-				active={activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART}
-				fnClose={closeOverlay}
-			/>
+			<OverlayDesign active={activeOverlayKey === INDEX_OVERLAY_KEY_DESIGN} fnClose={closeOverlay} />
+			<OverlayInteriors active={activeOverlayKey === INDEX_OVERLAY_KEY_INTERIORS} fnClose={closeOverlay} />
+			<OverlayPublicArt active={activeOverlayKey === INDEX_OVERLAY_KEY_PUBLICART} fnClose={closeOverlay} />
 			<OverlayHomes active={activeOverlayKey === INDEX_OVERLAY_KEY_HOMES} fnClose={closeOverlay} />
-			<OverlayBrentwood
-				active={activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD}
-				fnClose={closeOverlay}
-			/>
-			<OverlayEnquire
-				active={activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE}
-				fnClose={closeOverlay}
-			/>
+			<OverlayBrentwood active={activeOverlayKey === INDEX_OVERLAY_KEY_BRENTWOOD} fnClose={closeOverlay} />
+			<OverlayEnquire active={activeOverlayKey === INDEX_OVERLAY_KEY_ENQUIRE} fnClose={closeOverlay} />
 			<OverlayHome
 				active={activeOverlayKey === INDEX_OVERLAY_KEY_HOME}
 				fnClose={closeOverlay}
@@ -270,37 +250,48 @@ export default function Index() {
 			<Nav setActivePanelClass={setActivePanelClass} activePanelClass={activePanelClass} />
 
 			<div className="page__index__global-actions" data-theme={ui.headerTheme}>
-				<div
-					className="btn__enquire"
-					data-open={isEnquireOpen}
-					//onClick={() => setIsEnquireOpen(!isEnquireOpen)}
-				>
-					<button
-						className="btn__toggle"
-						onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}
-					>
+				<div className="btn__enquire" data-open={isEnquireOpen}>
+					<button className="btn__toggle" onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}>
 						<span>Sign Up</span>
 					</button>
-
-					<div className="menu">
-						{/*
-              <a href="https://rennie.as.me/tailor" target="_blank" rel="noopener noreferrer" className="btn__realtor-hub">
-                <span>Arrange A Preview</span>
-              </a>
-            */}
-
-						{/* <button onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}>
-							<span>Sign Up</span>
-						</button> */}
-					</div>
 				</div>
-
-				{/*
-          <button className="btn__back-to-top" onClick={ reset } title="Back To Top">
-            <SVG src={ `${process.env.BASE_PATH}/svg/thin-arrow-down.svg` } />
-          </button>
-          */}
 			</div>
+
+			<motion.div
+				className="page__index__popup"
+				initial="hidden"
+				animate={showPopup ? 'visible' : 'hidden'}
+				variants={{
+					hidden: { opacity: 0, transitionEnd: { display: 'none' } },
+					visible: { opacity: 1, display: 'flex' }
+				}}
+			>
+				<div className="content">
+					<button className="btn__close" onClick={() => setShowPopup(false)}>
+						<span className="material-icons">close</span>
+					</button>
+
+					<span className="title">
+						5% Purchaser Incentive
+						<br />
+						8% Total Deposit
+					</span>
+
+					<p>With tower homes sold out, only a curated selection of Penthouse Residences and Townhomes remain.</p>
+
+					<p>
+						For a limited-time, you can secure a coveted home at Tailor with a 5% purchaser incentive and 8% total
+						deposit.
+					</p>
+
+					<p>
+						Connect with one of our in-house
+						<br /> Marcon Advisors to learn more!
+					</p>
+
+					<a href="mailto:sales@tailorbymarcon.ca" className="btn btn--solid"></a>
+				</div>
+			</motion.div>
 		</>
 	)
 }

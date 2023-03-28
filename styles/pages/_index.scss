@@ -1303,4 +1303,79 @@
 
 	&__brentwood {
 	}
+
+	&__popup {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		background: rgba($brand-blue-dark, 0.9);
+		display: none;
+		align-items: center;
+		justify-content: center;
+
+		.content {
+			background: white;
+			padding: 3rem 1rem 1rem 1rem;
+			width: 100%;
+			text-align: center;
+			font-size: 1.25rem;
+			position: relative;
+
+			@media #{$screen-sm-min} {
+				padding: 4rem 2rem;
+				max-width: 600px;
+				width: calc(100% - 1rem);
+			}
+
+			.title {
+				display: block;
+				font-size: 2rem;
+				letter-spacing: 2px;
+				line-height: 1.25em;
+				margin: 0 0 2rem 0;
+
+				@media #{$screen-sm-min} {
+					font-size: 2.75rem;
+					margin-bottom: 3rem;
+				}
+			}
+
+			p {
+				font-family: $font-sans-serif;
+			}
+
+			.btn__close {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+				background: white;
+				border-radius: 100%;
+				width: 3rem;
+				height: 3rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 0 10px 0 rgba(black, 0.1);
+
+				span {
+					display: block;
+					line-height: 1;
+				}
+			}
+
+			a {
+				&:before {
+					content: 'Connect with Marcon';
+
+					@media #{$screen-sm-min} {
+						content: 'Connect with a Marcon Advisor';
+					}
+				}
+			}
+		}
+	}
 }
