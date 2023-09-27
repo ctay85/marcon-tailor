@@ -280,7 +280,7 @@ export default function Index() {
 					<p>With tower homes sold out, only a curated selection of Penthouse Residences and Townhomes remain.</p>
 
 					<p>
-						For a limited-time, you can secure a coveted home at Tailor with a 5% purchaser incentive and 8% total
+						For a limited time, you can secure a coveted home at Tailor with a 5% purchaser incentive and 8% total
 						deposit.
 					</p>
 
