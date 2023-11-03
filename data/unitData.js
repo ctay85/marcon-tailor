@@ -111,9 +111,9 @@ export default [
 		name: 'TH1',
 		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
 		images: [
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH1_Access.svg`, caption: 'Access' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH1_Main.svg`, caption: 'Main' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH1_Upper.svg`, caption: 'Upper' }
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-1.svg`, caption: 'Access' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-2.svg`, caption: 'Main' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH1.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf`,
@@ -127,9 +127,9 @@ export default [
 		name: 'TH2/3',
 		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
 		images: [
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH2_Access.svg`, caption: 'Access' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH2_Main.svg`, caption: 'Main' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH2_Upper.svg`, caption: 'Upper' }
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-1.svg`, caption: 'Access' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-2.svg`, caption: 'Main' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH2.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH2-3.pdf`,
@@ -143,9 +143,9 @@ export default [
 		name: 'TH4',
 		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
 		images: [
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH4_Access.svg`, caption: 'Access' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH4_Main.svg`, caption: 'Main' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH4_Upper.svg`, caption: 'Upper' }
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-1.svg`, caption: 'Access' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-2.svg`, caption: 'Main' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH4.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH4.pdf`,
@@ -159,9 +159,9 @@ export default [
 		name: 'TH5',
 		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
 		images: [
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH5_Access.svg`, caption: 'Access' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH5_Main.svg`, caption: 'Main' },
-			{ file: `${process.env.BASE_PATH}/rel/plans/Plan_TH5_Upper.svg`, caption: 'Upper' }
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH5-1.svg`, caption: 'Access' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH5-2.svg`, caption: 'Main' },
+			{ file: `${process.env.BASE_PATH}/rel/plans/TH5-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH5.svg`,
 		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf`,
