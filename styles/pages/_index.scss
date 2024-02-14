@@ -1379,3 +1379,39 @@
 		}
 	}
 }
+
+.page__index__homes {
+	.panel-name {width: 500px;}
+	.brochures {
+		position: absolute;
+		width: 100%;
+    bottom: 120px;
+    text-align: center;
+		padding: 0 3.5rem;
+		@media #{$screen-sm-min} {
+			bottom: 120px;
+		}
+		@media #{$screen-md-min} {
+			bottom: 100px;
+		}
+		@media #{$screen-lg-min} {
+			bottom: 65px;
+		}
+		.street {
+			margin-bottom:10px;
+			position: relative;
+		}
+		.btn--solid {
+			padding: 0 1rem !important;
+			margin-top: 10px;
+			@media #{$screen-sm-min} {
+				padding: 0 2.5rem !important;
+		    width: auto !important;
+		    margin: 10px 10px;
+			}
+
+
+		}
+	}
+
+}

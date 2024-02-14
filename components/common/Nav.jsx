@@ -10,7 +10,7 @@ const nav = [
 	{ label: 'Home', cls: 'page__index__cover' },
 	{ label: 'Architecture', cls: 'page__index__design' },
 	{ label: 'Interiors', cls: 'page__index__interiors' },
-	{ label: 'Floorplans', cls: 'page__index__homes' },
+	{ label: 'Floorplans & Brochures', cls: 'page__index__homes' },
 	{ label: 'Public Art', cls: 'page__index__public-art' },
 	{ label: 'Brentwood', cls: 'page__index__brentwood' },
 	{ label: 'Sign Up' }

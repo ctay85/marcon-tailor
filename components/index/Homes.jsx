@@ -344,8 +344,29 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					src={`${process.env.BASE_PATH}/rel/plans/Keyplan_Townhouse.svg`}
 				/>
 
+				<div className="brochures">
+					<p className="street">Brochures</p>
+					<a
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/files/tailor-penthouse_collection.pdf"
+						target="_blank"
+						className="btn btn--solid"
+					>
+						Penthouse Collection
+					</a>
+
+					<a
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/files/tailor-townhomes_collection.pdf"
+						target="_blank"
+						className="btn btn--solid"
+					>
+						Townhomes Collection
+					</a>
+				</div>
+
 				<span className="street street--bottom">Alaska St.</span>
 				<span className="street street--right">Alpha Ave.</span>
+
+
 			</motion.div>
 
 			<article>
@@ -397,6 +418,8 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</div>
 				</div>
 			</article>
+
+
 
 			<div className="mobile-nav">
 				<button className="btn__prev" onClick={deincrementActiveLevel}>
