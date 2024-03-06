@@ -289,7 +289,7 @@ export default function Index() {
 						<br /> Marcon Advisors to learn more!
 					</p>
 
-					<a href="mailto:sales@tailorbymarcon.ca" className="btn btn--solid" target="_blank"></a>
+					<button className="btn btn--solid" onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}><span>Register Today</span></button>
 				</div>
 			</motion.div>
 		</>

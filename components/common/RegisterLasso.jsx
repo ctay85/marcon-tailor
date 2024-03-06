@@ -34,7 +34,7 @@ const Register = ({ reversed = true }) => {
 		})
 
 		//
-		if (emailInput.value.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}/g) === null) {
+		if (emailInput.value.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i) === null) {
 			emailInput.parentNode.classList.add('error')
 			formIsValid = false
 		} else {
