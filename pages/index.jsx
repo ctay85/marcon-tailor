@@ -265,8 +265,9 @@ export default function Index() {
 					hidden: { opacity: 0, transitionEnd: { display: 'none' } },
 					visible: { opacity: 1, display: 'flex' }
 				}}
+				onClick={() => setShowPopup(false)}
 			>
-				<div className="content">
+				<div className="content" onClick={(event) => event.stopPropagation()}>
 					<button className="btn__close" onClick={() => setShowPopup(false)}>
 						<span className="material-icons">close</span>
 					</button>
