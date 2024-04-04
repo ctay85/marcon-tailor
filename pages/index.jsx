@@ -273,15 +273,15 @@ export default function Index() {
 					</button>
 
 					<span className="title">
-						5% Purchaser Incentive
+						8.8% Purchaser Incentive
 						<br />
-						8% Total Deposit
+						2.5% Total Deposit
 					</span>
 
 					<p>With tower homes sold out, only a curated selection of Penthouse Residences and Townhomes remain.</p>
 
 					<p>
-						For a limited time, you can secure a coveted home at Tailor with a 5% purchaser incentive and 8% total
+						For a limited time, you can secure a coveted home at Tailor with a 8.8% purchaser incentive and 2.5% total
 						deposit.
 					</p>
 
