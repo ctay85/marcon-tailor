@@ -347,7 +347,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 				<div className="brochures">
 					<p className="street">Brochures</p>
 					<a
-						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/files/tailor-penthouse_collection.pdf"
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-penthouse_collection.pdf"
 						target="_blank"
 						className="btn btn--solid"
 					>
@@ -355,7 +355,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</a>
 
 					<a
-						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/files/tailor-townhomes_collection.pdf"
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-townhomes_collection.pdf"
 						target="_blank"
 						className="btn btn--solid"
 					>

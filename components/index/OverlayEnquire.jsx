@@ -16,7 +16,7 @@ export default function OverlayInteriors(props) {
 				<div className="wrap">
 					<p className="enquire__title">{locale.overlays.enquire.title}</p>
 
-					<p>Presentation Centre Now Closed</p>
+					<p>Sales Gallery – Available by Appointment.</p>
 
 					<p>
 						{locale.overlays.enquire.bookTitle}
