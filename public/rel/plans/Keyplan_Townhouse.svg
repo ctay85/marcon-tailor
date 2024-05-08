@@ -1,147 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 106.6 33.5" style="enable-background:new 0 0 106.6 33.5;" xml:space="preserve">
 <style type="text/css">
-	.aa0{fill:#FFFFFF;stroke:#00516B;stroke-width:0.1956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.aa1{fill:none;stroke:#00516B;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.aa2{fill:none;}
-	.aa3{fill:#245169;}
-	.aa4{font-family:'Gotham-Book';}
-	.aa5{font-size:3.0439px;}
+	.st0{fill:#FFFFFF;stroke:#00516B;stroke-width:0.1956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#00516B;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{fill:#245169;}
+	.st4{font-family:'Gotham-Book';}
+	.st5{font-size:3.0439px;}
 </style>
 <g id="base">
-	<polygon class="aa0" points="89.9,0.1 89.9,3.4 87.4,3.4 87.4,0.1 70.9,0.1 70.9,3.4 68,3.4 68,0.1 51.4,0.1 51.4,3.4 48.6,3.4
-		48.6,0.1 32,0.1 32,3.4 29.3,3.4 29.3,0.1 12.7,0.1 12.7,3.4 10,3.4 10,0.1 6.9,0.1 6.9,12.7 6.9,17 0.1,17 0.1,32.2 6.9,32.2
-		7.6,32.2 18.2,32.2 18.2,33.4 26.1,33.4 26.1,32.2 37.6,32.2 37.6,33.4 45.5,33.4 45.5,32.2 57.1,32.2 57.1,33.4 64.9,33.4
-		64.9,32.2 76.5,32.2 76.5,33.4 84.4,33.4 84.4,32.2 95.9,32.2 95.9,33.4 104.3,33.4 104.3,28.7 104.3,14 104.3,12.6 106.4,12.6
+	<polygon class="st0" points="89.9,0.1 89.9,3.4 87.4,3.4 87.4,0.1 70.9,0.1 70.9,3.4 68,3.4 68,0.1 51.4,0.1 51.4,3.4 48.6,3.4 
+		48.6,0.1 32,0.1 32,3.4 29.3,3.4 29.3,0.1 12.7,0.1 12.7,3.4 10,3.4 10,0.1 6.9,0.1 6.9,12.7 6.9,17 0.1,17 0.1,32.2 6.9,32.2 
+		7.6,32.2 18.2,32.2 18.2,33.4 26.1,33.4 26.1,32.2 37.6,32.2 37.6,33.4 45.5,33.4 45.5,32.2 57.1,32.2 57.1,33.4 64.9,33.4 
+		64.9,32.2 76.5,32.2 76.5,33.4 84.4,33.4 84.4,32.2 95.9,32.2 95.9,33.4 104.3,33.4 104.3,28.7 104.3,14 104.3,12.6 106.4,12.6 
 		106.4,0.1 	"/>
-	<line class="aa1" x1="104.3" y1="14" x2="104.3" y2="12.6"/>
-	<line class="aa1" x1="85.3" y1="14" x2="85.3" y2="12.6"/>
-	<line class="aa1" x1="65.9" y1="14" x2="65.9" y2="12.6"/>
-	<line class="aa1" x1="46.5" y1="14" x2="46.5" y2="12.6"/>
-	<line class="aa1" x1="27" y1="14" x2="27" y2="12.6"/>
-	<line class="aa1" x1="6.9" y1="17" x2="6.9" y2="12.7"/>
-	<line class="aa1" x1="10" y1="3.4" x2="12.7" y2="3.4"/>
-	<line class="aa1" x1="29.3" y1="3.4" x2="32" y2="3.4"/>
-	<line class="aa1" x1="48.6" y1="3.4" x2="51.4" y2="3.4"/>
-	<line class="aa1" x1="68" y1="3.4" x2="70.9" y2="3.4"/>
-	<line class="aa1" x1="87.4" y1="3.4" x2="89.9" y2="3.4"/>
-	<polyline class="aa1" points="18.2,32.2 18.2,33.4 26.1,33.4 26.1,32.2 	"/>
-	<polyline class="aa1" points="37.6,32.2 37.6,33.4 45.5,33.4 45.5,32.2 	"/>
-	<polyline class="aa1" points="57.1,32.2 57.1,33.4 64.9,33.4 64.9,32.2 	"/>
-	<polyline class="aa1" points="76.5,32.2 76.5,33.4 84.4,33.4 84.4,32.2 	"/>
-	<polyline class="aa1" points="95.9,32.2 95.9,33.4 104.3,33.4 104.3,28.7 	"/>
-	<polygon class="aa1" points="32,3.4 32,0.1 48.6,0.1 48.6,3.4 48.6,12.6 46.5,12.6 45.5,12.6 45.5,5.9 32,5.9 	"/>
-	<polygon class="aa1" points="51.4,3.4 51.4,0.1 68,0.1 68,3.4 68,12.6 65.9,12.6 64.9,12.6 64.9,5.9 51.4,5.9 	"/>
-	<polygon class="aa1" points="70.9,3.4 70.9,0.1 87.4,0.1 87.4,3.4 87.4,12.6 85.3,12.6 84.4,12.6 84.4,5.9 70.9,5.9 	"/>
-	<polygon class="aa1" points="89.9,3.4 89.9,0.1 106.4,0.1 106.4,12.6 104.3,12.6 103.4,12.6 103.4,5.9 89.9,5.9 	"/>
-	<polygon class="aa1" points="12.7,3.4 12.7,0.1 29.3,0.1 29.3,3.4 29.3,12.6 27,12.6 26.2,12.6 26.2,5.9 12.7,5.9 	"/>
-	<polygon class="aa1" points="6.9,12.7 10,12.7 10,3.4 10,0.1 6.9,0.1 	"/>
-	<line class="aa1" x1="3.5" y1="20.9" x2="6.9" y2="20.9"/>
-	<line class="aa1" x1="3.5" y1="28.8" x2="6.9" y2="28.8"/>
-	<polygon class="aa1" points="6.9,32.2 0.1,32.2 0.1,17 6.9,17 6.9,20.9 6.9,28.8 	"/>
-	<line class="aa1" x1="3.5" y1="28.8" x2="3.5" y2="20.9"/>
+	<line class="st1" x1="104.3" y1="14" x2="104.3" y2="12.6"/>
+	<line class="st1" x1="85.3" y1="14" x2="85.3" y2="12.6"/>
+	<line class="st1" x1="65.9" y1="14" x2="65.9" y2="12.6"/>
+	<line class="st1" x1="46.5" y1="14" x2="46.5" y2="12.6"/>
+	<line class="st1" x1="27" y1="14" x2="27" y2="12.6"/>
+	<line class="st1" x1="6.9" y1="17" x2="6.9" y2="12.7"/>
+	<line class="st1" x1="10" y1="3.4" x2="12.7" y2="3.4"/>
+	<line class="st1" x1="29.3" y1="3.4" x2="32" y2="3.4"/>
+	<line class="st1" x1="48.6" y1="3.4" x2="51.4" y2="3.4"/>
+	<line class="st1" x1="68" y1="3.4" x2="70.9" y2="3.4"/>
+	<line class="st1" x1="87.4" y1="3.4" x2="89.9" y2="3.4"/>
+	<polyline class="st1" points="18.2,32.2 18.2,33.4 26.1,33.4 26.1,32.2 	"/>
+	<polyline class="st1" points="37.6,32.2 37.6,33.4 45.5,33.4 45.5,32.2 	"/>
+	<polyline class="st1" points="57.1,32.2 57.1,33.4 64.9,33.4 64.9,32.2 	"/>
+	<polyline class="st1" points="76.5,32.2 76.5,33.4 84.4,33.4 84.4,32.2 	"/>
+	<polyline class="st1" points="95.9,32.2 95.9,33.4 104.3,33.4 104.3,28.7 	"/>
+	<polygon class="st1" points="32,3.4 32,0.1 48.6,0.1 48.6,3.4 48.6,12.6 46.5,12.6 45.5,12.6 45.5,5.9 32,5.9 	"/>
+	<polygon class="st1" points="51.4,3.4 51.4,0.1 68,0.1 68,3.4 68,12.6 65.9,12.6 64.9,12.6 64.9,5.9 51.4,5.9 	"/>
+	<polygon class="st1" points="70.9,3.4 70.9,0.1 87.4,0.1 87.4,3.4 87.4,12.6 85.3,12.6 84.4,12.6 84.4,5.9 70.9,5.9 	"/>
+	<polygon class="st1" points="89.9,3.4 89.9,0.1 106.4,0.1 106.4,12.6 104.3,12.6 103.4,12.6 103.4,5.9 89.9,5.9 	"/>
+	<polygon class="st1" points="12.7,3.4 12.7,0.1 29.3,0.1 29.3,3.4 29.3,12.6 27,12.6 26.2,12.6 26.2,5.9 12.7,5.9 	"/>
+	<polygon class="st1" points="6.9,12.7 10,12.7 10,3.4 10,0.1 6.9,0.1 	"/>
+	<line class="st1" x1="3.5" y1="20.9" x2="6.9" y2="20.9"/>
+	<line class="st1" x1="3.5" y1="28.8" x2="6.9" y2="28.8"/>
+	<polygon class="st1" points="6.9,32.2 0.1,32.2 0.1,17 6.9,17 6.9,20.9 6.9,28.8 	"/>
+	<line class="st1" x1="3.5" y1="28.8" x2="3.5" y2="20.9"/>
 </g>
 <g id="shape-th5">
-	<polygon class="aa0" points="6.9,32.2 7.6,32.2 18.2,32.2 18.2,28.7 26.1,28.7 26.4,28.7 26.4,17.1 27,17.1 27,14 17.6,14 17.6,17
+	<polygon class="st0" points="6.9,32.2 7.6,32.2 18.2,32.2 18.2,28.7 26.1,28.7 26.4,28.7 26.4,17.1 27,17.1 27,14 17.6,14 17.6,17 
 		6.9,17 	"/>
 </g>
 <g id="shape-th3-4">
-	<polygon class="aa0" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14
+	<polygon class="st0" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14 
 		56.4,17.1 46.5,17.1 45.8,17.1 45.8,28.7 	"/>
-	<polygon class="aa0" points="26.1,28.7 26.1,32.2 37.6,32.2 37.6,28.7 45.5,28.7 45.8,28.7 45.8,17.1 46.5,17.1 46.5,14 37,14
+	<polygon class="st0" points="26.1,28.7 26.1,32.2 37.6,32.2 37.6,28.7 45.5,28.7 45.8,28.7 45.8,17.1 46.5,17.1 46.5,14 37,14 
 		37,17.1 27,17.1 26.4,17.1 26.4,28.7 	"/>
 </g>
 <g id="shape-th2">
-	<polygon class="aa0" points="64.9,28.7 64.9,32.2 76.5,32.2 76.5,28.7 84.4,28.7 84.6,28.7 84.6,17.1 85.3,17.1 85.3,14 75.9,14
+	<polygon class="st0" points="64.9,28.7 64.9,32.2 76.5,32.2 76.5,28.7 84.4,28.7 84.6,28.7 84.6,17.1 85.3,17.1 85.3,14 75.9,14 
 		75.9,17.1 65.9,17.1 65.2,17.1 65.2,28.7 	"/>
 </g>
 <g id="shape-th1">
-	<polyline class="aa0" points="84.4,28.7 84.4,32.2 95.9,32.2 95.9,28.7 104.3,28.7 104.3,14 95.3,14 95.3,17.1 85.3,17.1
+	<polyline class="st0" points="84.4,28.7 84.4,32.2 95.9,32.2 95.9,28.7 104.3,28.7 104.3,14 95.3,14 95.3,17.1 85.3,17.1 
 		84.6,17.1 84.6,28.7 84.2,28.7 	"/>
 </g>
-
-
-
-
-<g id="trigger-th5" data-plan="TH5">
-	<polygon class="aa2" points="6.9,32.2 7.6,32.2 18.2,32.2 18.2,28.7 26.1,28.7 26.4,28.7 26.4,17.1 27,17.1 27,14 17.6,14 17.6,17
+<g id="trigger-th5">
+	<polygon class="st2" points="6.9,32.2 7.6,32.2 18.2,32.2 18.2,28.7 26.1,28.7 26.4,28.7 26.4,17.1 27,17.1 27,14 17.6,14 17.6,17 
 		6.9,17 	"/>
-
 	<g>
-		<text transform="matrix(1 0 0 1 9.5 23)" class="aa3 aa4 aa5 title">TH5</text>
+		<text transform="matrix(1 0 0 1 9.5 23)" class="st3 st4 st5">105</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 9.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 9.5 26)" class="st3 st4 st5">2BR + 2BA</text>
 	</g>
-	<!-- <g>
-		<text transform="matrix(1 0 0 1 9.9605 27.3969)" class="aa3 aa4 aa5">plan type</text>
-	</g> -->
 </g>
-
-
-
-
-<g id="trigger-th4" data-plan="TH4">
-
-	<polygon class="aa2" points="26.1,28.7 26.1,32.2 37.6,32.2 37.6,28.7 45.5,28.7 45.8,28.7 45.8,17.1 46.5,17.1 46.5,14 37,14
+<g id="trigger-th4">
+	<polygon class="st2" points="26.1,28.7 26.1,32.2 37.6,32.2 37.6,28.7 45.5,28.7 45.8,28.7 45.8,17.1 46.5,17.1 46.5,14 37,14 
 		37,17.1 27,17.1 26.4,17.1 26.4,28.7 	"/>
-
-	<!-- <g>
-		<text transform="matrix(1 0 0 1 49.2433 27.3969)" class="aa3 aa4 aa5">plan type</text>
-	</g> -->
 	<g>
-		<text transform="matrix(1 0 0 1 28.5 23)" class="aa3 aa4 aa5 title">TH4</text>
+		<text transform="matrix(1 0 0 1 28.5 23)" class="st3 st4 st5">104</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 28.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 28.5 26)" class="st3 st4 st5">2BR + 2BA</text>
 	</g>
-	<!-- <g>
-		<text transform="matrix(1 0 0 1 29.2433 27.3969)" class="aa3 aa4 aa5">plan type</text>
-	</g> -->
 </g>
-
-
-
-
-<g id="trigger-th2-th3" data-plan="TH2/3">
-	<polygon class="aa2" points="64.9,28.7 64.9,32.2 76.5,32.2 76.5,28.7 84.4,28.7 84.6,28.7 84.6,17.1 85.3,17.1 85.3,14 75.9,14
+<g id="trigger-th2-th3">
+	<polygon class="st2" points="64.9,28.7 64.9,32.2 76.5,32.2 76.5,28.7 84.4,28.7 84.6,28.7 84.6,17.1 85.3,17.1 85.3,14 75.9,14 
 		75.9,17.1 65.9,17.1 65.2,17.1 65.2,28.7 	"/>
-		<polygon class="aa2" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14
-			56.4,17.1 46.5,17.1 45.8,17.1 45.8,28.7 	"/>
-
-		<g>
-			<text transform="matrix(1 0 0 1 48.5 23)" class="aa3 aa4 aa5 title">TH3</text>
-		</g>
-		<g>
-			<text transform="matrix(1 0 0 1 48.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
-		</g>
+	<polygon class="st2" points="45.5,28.7 45.5,32.2 57.1,32.2 57.1,28.7 64.9,28.7 65.2,28.7 65.2,17.1 65.9,17.1 65.9,14 56.4,14 
+		56.4,17.1 46.5,17.1 45.8,17.1 45.8,28.7 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 67.5 23)" class="aa3 aa4 aa5 title">TH2</text>
+		<text transform="matrix(1 0 0 1 48.5 23)" class="st3 st4 st5">103</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 67.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 48.5 26)" class="st3 st4 st5">2BR + 2BA</text>
 	</g>
-	<!-- <g>
-		<text transform="matrix(1 0 0 1 68.37 27.3969)" class="aa3 aa4 aa5">plan type</text>
-	</g> -->
+	<g>
+		<text transform="matrix(1 0 0 1 67.5 23)" class="st3 st4 st5">102</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 67.5 26)" class="st3 st4 st5">2BR + 2BA</text>
+	</g>
 </g>
-
-
-
-
-<g id="trigger-th1" data-plan="TH1">
-	<polyline class="aa2" points="84.4,28.7 84.4,32.2 95.9,32.2 95.9,28.7 104.3,28.7 104.3,14 95.3,14 95.3,17.1 85.3,17.1
+<g id="trigger-th1">
+	<polyline class="st2" points="84.4,28.7 84.4,32.2 95.9,32.2 95.9,28.7 104.3,28.7 104.3,14 95.3,14 95.3,17.1 85.3,17.1 
 		84.6,17.1 84.6,28.7 84.2,28.7 	"/>
 	<g>
-		<text transform="matrix(1 0 0 1 87.5 23)" class="aa3 aa4 aa5 title">TH1</text>
+		<text transform="matrix(1 0 0 1 87.5 23)" class="st3 st4 st5">101</text>
 	</g>
 	<g>
-		<text transform="matrix(1 0 0 1 87.5 26)" class="aa3 aa4 aa5 label">2BR + 2BA</text>
+		<text transform="matrix(1 0 0 1 87.5 26)" class="st3 st4 st5">2BR + 2BA</text>
 	</g>
-	<!-- <g>
-		<text transform="matrix(1 0 0 1 88.1776 27.3969)" class="aa3 aa4 aa5">plan type</text>
-	</g> -->
 </g>
 </svg>

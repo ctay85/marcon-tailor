@@ -108,55 +108,55 @@ export default [
 		}
 	},
 	{
-		name: 'TH1',
-		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
+		name: '101',
+		type: '2 Bedroom + Family',
 		images: [
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-1.svg`, caption: 'Access' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-2.svg`, caption: 'Main' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH1-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH1.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH1.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_101.pdf`,
 		area: {
-			interior: 1699,
+			interior: 1687,
 			outdoor: 677,
-			total: 2376
+			total: 2364
 		}
 	},
 	{
-		name: 'TH2/3',
-		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
+		name: '102/103',
+		type: '2 Bedroom + Family',
 		images: [
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-1.svg`, caption: 'Access' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-2.svg`, caption: 'Main' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH2-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH2.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH2-3.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_102.pdf`,
 		area: {
-			interior: 1699,
+			interior: 1664,
 			outdoor: 673,
-			total: 2372
+			total: 2337
 		}
 	},
 	{
-		name: 'TH4',
-		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
+		name: '104',
+		type: '2 Bedroom + Family',
 		images: [
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-1.svg`, caption: 'Access' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-2.svg`, caption: 'Main' },
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH4-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH4.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH4.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_104.pdf`,
 		area: {
-			interior: 1699,
+			interior: 1664,
 			outdoor: 673,
-			total: 2372
+			total: 2337
 		}
 	},
 	{
-		name: 'TH5',
+		name: '105',
 		type: '2 Bedroom + 2 Bath + 2 Powder + Work',
 		images: [
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH5-1.svg`, caption: 'Access' },
@@ -164,59 +164,59 @@ export default [
 			{ file: `${process.env.BASE_PATH}/rel/plans/TH5-3.svg`, caption: 'Upper' }
 		],
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-TH5.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_TH5.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_105.pdf`,
 		area: {
-			interior: 1699,
+			interior: 1686,
 			outdoor: 821,
-			total: 2520
+			total: 2507
 		}
 	},
 	{
-		name: 'SPH1',
+		name: '2601',
 		type: '3 Bedroom + 2 Bath',
 		image: `${process.env.BASE_PATH}/rel/plans/Plan-SPH1.svg`,
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-SPH1.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_SPH1.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_2601.pdf`,
 		area: {
-			interior: 1298,
+			interior: 1291,
 			outdoor: 1326,
-			total: 2624
+			total: 2617
 		}
 	},
 	{
-		name: 'SPH2',
+		name: '2602',
 		type: '3 Bedroom + 2 Bath',
 		image: `${process.env.BASE_PATH}/rel/plans/Plan-SPH2.svg`,
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-SPH2.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_SPH2.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_2602.pdf`,
 		area: {
-			interior: 1309,
+			interior: 1308,
 			outdoor: 1642,
-			total: 2951
+			total: 2950
 		}
 	},
 	{
-		name: 'PH1',
+		name: '2701',
 		type: '3 Bedroom + 2 Bath',
 		image: `${process.env.BASE_PATH}/rel/plans/Plan-PH1.svg`,
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-PH1.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_PH1.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_2701.pdf`,
 		area: {
-			interior: 1289,
+			interior: 1291,
 			outdoor: 953,
-			total: 2251
+			total: 2244
 		}
 	},
 	{
-		name: 'PH2',
+		name: '2702',
 		type: '3 Bedroom + 2 Bath',
 		image: `${process.env.BASE_PATH}/rel/plans/Plan-PH2.svg`,
 		plate: `${process.env.BASE_PATH}/rel/plans/Key-Plan-PH2.svg`,
-		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_PH2.pdf`,
+		pdf: `${process.env.BASE_PATH}/rel/plans/Tailor_Floorplans_Sheets_2702.pdf`,
 		area: {
-			interior: 1309,
+			interior: 1308,
 			outdoor: 1114,
-			total: 2423
+			total: 2422
 		}
 	}
 ]
