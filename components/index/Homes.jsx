@@ -186,7 +186,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 		}
 
 		// Townhome 2/3 is combined
-		const formattedUnitNumber = unitNumber === 'TH2' || unitNumber === 'TH3' ? 'TH2/3' : unitNumber
+		const formattedUnitNumber = unitNumber === '102' || unitNumber === '103' ? '102-3' : unitNumber
 
 		// D plans between 3-19 should be d1
 		const formattedPlanType =
@@ -347,7 +347,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 				<div className="brochures">
 					<p className="street">Brochures</p>
 					<a
-						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-penthouse_collection.pdf"
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-penthouse_collection2.pdf"
 						target="_blank"
 						className="btn btn--solid"
 					>
@@ -355,7 +355,7 @@ export default function Homes({ active, setActiveHome, setActivePanelClass }) {
 					</a>
 
 					<a
-						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-townhomes_collection.pdf"
+						href="https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-townhomes_collection2.pdf"
 						target="_blank"
 						className="btn btn--solid"
 					>
