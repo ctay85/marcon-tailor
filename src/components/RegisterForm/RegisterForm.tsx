@@ -1,0 +1,243 @@
+"use client";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import { z } from "zod";
+
+export const homeTypeOptions = ["Studio", "Jr. 1 Bedroom", "One Bedroom", "Two Bedroom", "Townhome"] as const;
+export const homeTypeValues: Record<typeof homeTypeOptions[number], string> = {
+  "Studio": "340498",
+  "Jr. 1 Bedroom": "340500",
+  "One Bedroom": "281558",
+  "Two Bedroom": "281559",
+  "Townhome": "281562",
+}
+
+export const hearAboutUsOptions = [
+  "Realtor",
+  "Print Ad/Mail",
+  "Online Search",
+  "Other"
+] as const;
+export const hearAboutUsValues: Record<typeof hearAboutUsOptions[number], string> = {
+  "Realtor": "240192",
+  "Print Ad/Mail": "340499",
+  "Online Search": "240194",
+  "Other": "240200"
+}
+
+const registerFormSchema = z.object({
+  firstName: z.string({
+    required_error: "First name is required"
+  }).min(1, "First name is required"),
+  lastName: z.string({
+    required_error: "Last name is required"
+  }).min(1, "Last name is required"),
+  email: z.string({
+    required_error: "Email is required"
+  }).email("Email is invalid"),
+  phoneNumber: z.string({
+    required_error: "Phone number is required"
+  }).min(1, "Phone number is required"),
+  zip: z.string({
+    required_error: "Postal code is required"
+  }).min(1, "Postal code is required"),
+  homeType: z.enum(homeTypeOptions, { message: "You need to select an option" }),
+  hearAboutUs: z.enum(hearAboutUsOptions, { message: "You need to select an option" }),
+  isRealtor: z.string().toLowerCase().transform((x) => x === 'true').pipe(z.boolean()),
+  consent: z.boolean().refine((val) => val, "Consent is required"),
+})
+
+type RegisterForm = z.infer<typeof registerFormSchema>;
+
+export function RegisterForm() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const {
+    handleSubmit,
+    formState: { errors },
+    register
+  } = useForm<z.infer<typeof registerFormSchema>>({
+    resolver: zodResolver(registerFormSchema)
+  });
+
+  function onSubmit(formData: RegisterForm) {
+    const formattedData = {
+      LassoUID: "8As8FGoXwa",
+      ClientID: "374",
+      ProjectID: "10032",
+      RatingID: formData.isRealtor ? "31618" : "15627445",
+      SignupThankyouLink: "https://marcon.ca/tailor/thank-you",
+      SourceTypeID: "20327",
+
+      FirstName: formData.firstName,
+      LastName: formData.lastName,
+      "Emails[Primary]": formData.email,
+      "Phones[Home]": formData.phoneNumber,
+      PostalCode: formData.zip,
+      "Questions[94569]": homeTypeValues[formData.homeType],
+      "Questions[59106]": hearAboutUsValues[formData.hearAboutUs],
+      "Questions[10736]": formData.isRealtor ? "49630" : "49631",
+      "Questions[59107]": formData.consent ? "240201" : "999999",
+    }
+
+    setIsLoading(true);
+    axios.post("/api/register", formattedData)
+      .catch(() => toast.error("Something went wrong during register"))
+      .finally(() => setIsLoading(false));
+  }
+
+    return (
+      <div id="register-form" className="w-full box-border m-0 pl-4 pr-4 md:pl-8 md:pr-8 pb-20 md:pb-36">
+        <h1 className="w-11/12 md:w-2/3 lg:w-2/4 xl:w-2/5 text-primary font-americana-bold text-3xl md:text-5xl font-bold md:leading-[56px] mb-16 md:mb-24 md:ml-20">
+          Register for more details.
+        </h1>
+        <div className="flex justify-center">
+          <form onSubmit={handleSubmit(onSubmit)} className="md:w-2/3 space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="First Name *"
+                  {...register("firstName")}
+                  className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+                />
+                {errors.firstName && (
+                  <p className="text-red-500">{errors.firstName.message}</p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Last Name *"
+                  {...register("lastName")}
+                  className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+                />
+                {errors.lastName && (
+                  <p className="text-red-500">{errors.lastName.message}</p>
+                )}
+              </div>
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email *"
+                {...register("email")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              />
+              {errors.email && (
+                <p className="text-red-500">{errors.email.message}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="tel"
+                placeholder="Phone Number *"
+                {...register("phoneNumber")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              />
+              {errors.phoneNumber && (
+                <p className="text-red-500">{errors.phoneNumber.message}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Postal Code/Zip *"
+                {...register("zip")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              />
+              {errors.zip && (
+                <p className="text-red-500">{errors.zip.message}</p>
+              )}
+            </div>
+            <div>
+              <select
+                {...register("homeType")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              >
+                <option value="" className="text-primary">
+                  What type of home are you looking for? *
+                </option>
+                {homeTypeOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+              </select>
+              {errors.homeType && (
+                <p className="text-red-500">{errors.homeType.message}</p>
+              )}
+            </div>
+            <div>
+              <select
+                {...register("hearAboutUs")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              >
+                <option value="" className="text-primary">
+                  How did you hear about us? *
+                </option>
+                {hearAboutUsOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+              </select>
+              {errors.hearAboutUs && (
+                <p className="text-red-500">{errors.hearAboutUs.message}</p>
+              )}
+            </div>
+            <div>
+              <select
+                {...register("isRealtor")}
+                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              >
+                <option value="" className="text-primary">
+                  Are you a realtor? *
+                </option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+              {errors.isRealtor && (
+                <p className="text-red-500">{errors.isRealtor.message}</p>
+              )}
+            </div>
+            <div className="flex flex-col">
+              <div className="flex items-center pt-4 pb-6">
+                <input
+                  id="consent"
+                  type="checkbox"
+                  {...register("consent")}
+                  className="h-4 w-4 border-2 text-primary border-gray-300 rounded-full focus:ring-0"
+                />
+                <label
+                  htmlFor="consent"
+                  className="ml-2 block text-sm text-primary"
+                >
+                  I would like to receive future e-communications from Marcon.
+                </label>
+              </div>
+              {errors.consent && (
+                <p className="text-red-500">{errors.consent.message}</p>
+              )}
+            </div>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="font-americana-bold w-full bg-tertiary text-white py-4 px-4 border border-transparent shadow-sm text-sm font-medium text-center hover:bg-primary"
+            >
+              {isLoading ? "Loading..." : "Register"}
+            </button>
+            <p className="text-[11px] text-[#AABCCE] mt-2 text-justify">
+              By clicking the SUBMIT button, you consent to Marcon and their
+              current and future affiliates and partners sending you emails with
+              promotional messages such as newsletters, announcements, press
+              releases and event invitations regarding their products and
+              services; (2) receiving calls on behalf of Marcon to discuss
+              products and services; and (3) the collection, use and disclosure of
+              the personal information you have provided, by or on behalf of the
+              members of the Rennie Marketing, for the above purposes, in
+              accordance with Marcon’s Privacy Policy. You may withdraw your
+              consent at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    );
+  }
+  
