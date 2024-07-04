@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@/components/Image";
 import image1 from "~/public/images/image1.png";
 import image2 from "~/public/images/image2.png";
 import image3 from "~/public/images/image3.png";

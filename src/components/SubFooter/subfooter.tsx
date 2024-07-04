@@ -1,11 +1,11 @@
 import React from "react";
 import MarconLogo from "~/public/marcon-logo.svg";
 import BuildingForLife from "~/public/building-for-life.svg";
-import Image from "next/image";
 import LinkedinLogo from "~/public/icons/linkedin.svg";
 import FacebookLogo from "~/public/icons/facebook.svg";
 import InstagramLogo from "~/public/icons/instagram.svg";
 import Link from "next/link";
+import { Image } from "../Image";
 
 export function SubFooter() {
   return (

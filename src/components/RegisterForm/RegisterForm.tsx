@@ -91,7 +91,12 @@ export function RegisterForm() {
   }
 
     return (
-      <div id="register-form" className="w-full box-border m-0 pl-4 pr-4 md:pl-8 md:pr-8 pb-20 md:pb-36">
+      <div
+        data-aos="fade"
+        data-aos-duration="1200"
+        data-aos-delay="200"
+        className="w-full box-border m-0 pl-4 pr-4 md:pl-8 md:pr-8 pb-20 md:pb-36"
+      >
         <h1 className="w-11/12 md:w-2/3 lg:w-2/4 xl:w-2/5 text-primary font-americana-bold text-3xl md:text-5xl font-bold md:leading-[56px] mb-16 md:mb-24 md:ml-20">
           Register for more details.
         </h1>

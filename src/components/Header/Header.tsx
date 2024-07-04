@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Image } from "../Image";
 
 const links = [
   { text: "Design", url: "/design", size: 60, mobile: 44 },

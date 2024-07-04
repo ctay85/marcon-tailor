@@ -15,8 +15,15 @@ export function ScrollAnimProvider({ children }: Props) {
       disable:
         /bot|crawler|spider|crawling/i.test(navigator.userAgent) ||
         window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-        offset: 0
     });
+
+    // window.addEventListener('load', function() {
+    //   // This is needed when we have a lot of content shift on the page.
+    //   // This makes sures AOS use the correct element sizing to calculate
+    //   // the animation anchor points, preventing animations from
+    //   // playing to late.
+    //   AOS.refresh();
+    // });
   }, []);
 
   return children;

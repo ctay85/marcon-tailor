@@ -1,13 +1,16 @@
 import React from "react";
-import Image from "next/image";
 
 import Artboard from "~/public/images/MapSection/Artboard.svg";
 import ArtboardDescription from "~/public/images/MapSection/Artboard-description.svg";
 import ArtboardFull from "~/public/images/MapSection/Artboard-full.svg";
+import { Image } from "../Image";
 
 export function MapSection() {
   return (
     <div
+      data-aos="fade"
+      data-aos-duration="1200"
+      data-aos-delay="200"
       className="h-fit w-full flex mb-12"
     >
       <div className="flex md:hidden h-full w-full flex-col overflow-hidden">

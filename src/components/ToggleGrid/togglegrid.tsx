@@ -25,7 +25,11 @@ export function Togglegrid() {
       <div
         className="w-full gap-20 flex pl-1 md:pl-12"
       >
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+        >
           <input
             type="radio"
             className="hidden"
@@ -44,7 +48,11 @@ export function Togglegrid() {
             <span className="absolute left-0 right-0 bottom-0 h-3 w-[90px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.5rem]" />
           </label>
         </div>
-        <div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="400"
+        >
           <input
             type="radio"
             id="penthouses"
@@ -72,17 +80,35 @@ export function Togglegrid() {
       <div
         className="w-full gap-12 md:gap-20 flex pl-1 md:pl-12 mt-10"
       >
-        <Link href={"#"} className="cursor-pointer relative z-10 group">
+        <Link
+          href={"#"}
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+          className="cursor-pointer relative z-10 group"
+        >
           <span className="relative z-20 text-primary">FLOORPLANS</span>
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[100px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[94px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
         </Link>
-        <Link href={"#"} className="cursor-pointer relative z-10 group">
+        <Link
+          href={"#"}
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="400"
+          className="cursor-pointer relative z-10 group"
+        >
           <span className="relative z-20 text-primary">FEATURES</span>
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[80px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[74px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
         </Link>
-        <Link href={"#"} className="cursor-pointer relative z-10 group">
+        <Link
+          href={"#"}
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="600"
+          className="cursor-pointer relative z-10 group"
+        >
           <span className="relative z-20 text-primary">BROCHURE</span>
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[86px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[80px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />

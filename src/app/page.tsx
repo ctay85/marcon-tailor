@@ -1,4 +1,3 @@
-import Image from "next/image";
 import image7 from "~/public/images/image7.png";
 
 import { Header } from "@/components/Header";
@@ -10,6 +9,7 @@ import { Togglegrid } from "@/components/ToggleGrid";
 import { MapSection } from "@/components/MapSection";
 import { RegisterForm } from "@/components/RegisterForm";
 import { Intro } from "@/components/Intro";
+import { Image } from "@/components/Image";
 
 export default function Home() {
   return (
