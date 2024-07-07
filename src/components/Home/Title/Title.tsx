@@ -5,7 +5,7 @@ interface TitleProps {
 
 export function Title({ title, description }: TitleProps) {
   return (
-    <div className="md:flex justify-between items-center py-8 md:mx-4 lg:mx-24 mt-14 sm:mt-6 mb-12 md:mb-28 p-4 md:p-8">
+    <div id={title} className="md:flex justify-between items-center py-8 md:mx-4 lg:mx-24 mt-14 sm:mt-6 mb-12 md:mb-28 p-4 md:p-8">
       <h1
         data-aos="fade-up"
         data-aos-duration="1200"

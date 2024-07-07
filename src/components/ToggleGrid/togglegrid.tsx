@@ -92,7 +92,8 @@ export function Togglegrid() {
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[94px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
         </Link>
         <Link
-          href={"#"}
+          href="https://marcon.ca/tailor/pdf/P9_Tailor%20Feature%20Sheet_Aug20.pdf"
+          target="_blank"
           data-aos="fade-up"
           data-aos-duration="1200"
           data-aos-delay="400"

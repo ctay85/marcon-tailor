@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Image } from "../Image";
 
 const links = [
-  { text: "Design", url: "/design", size: 60, mobile: 44 },
-  { text: "Homes", url: "/homes", size: 57, mobile: 41 },
-  { text: "Interiors", url: "/interiors", size: 82, mobile: 0 },
-  { text: "Public Art", url: "/public-art", size: 90, mobile: 0 },
-  { text: "Brentwood", url: "/brentwood", size: 102, mobile: 76 },
+  { text: "Design", url: "#More Thought.", size: 60, mobile: 44 },
+  { text: "Homes", url: "#More Home.", size: 57, mobile: 41 },
+  // { text: "Interiors", url: "", size: 82, mobile: 0 },
+  { text: "Public Art", url: "#More Function.", size: 90, mobile: 0 },
+  { text: "Brentwood", url: "#Celebrate More.", size: 102, mobile: 76 },
 ];
 
 export function Header() {
@@ -58,7 +58,7 @@ export function Header() {
           className="py-4 w-28 md:w-[188px]"
         />
       </div>
-      <Link href="" className="h-[34px] w-[100px] md:w-auto md:h-[50px] text-center flex justify-center items-center bg-secondary font-thin text-white uppercase text-[8px] p-2 md:text-[13px] sm:flex-row tracking-widest">
+      <Link href="mailto:sales@tailorbymarcon.ca" className="pr-3 pl-3 h-[34px] w-[100px] md:w-auto md:h-[50px] text-center flex justify-center items-center bg-secondary font-thin text-white uppercase text-[8px] p-2 md:text-[13px] sm:flex-row tracking-widest">
         <span>Book Appointment</span>
       </Link>
     </div>
