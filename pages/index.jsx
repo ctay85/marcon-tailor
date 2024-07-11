@@ -46,7 +46,6 @@ export default function Index() {
 	const [activeOverlayKey, setActiveOverlayKey] = useState(null)
 	const [isEnquireOpen, setIsEnquireOpen] = useState(false)
 	const [activeHome, setActiveHome] = useState(null)
-	const [showPopup, setShowPopup] = useState(false)
 
 	//
 	const blockExecution = () => {
@@ -119,10 +118,6 @@ export default function Index() {
 		}
 	}
 
-	//
-	useEffect(() => {
-		setTimeout(() => setShowPopup(true), 4000)
-	}, [])
 
 	//
 	useEffect(() => {
@@ -257,42 +252,7 @@ export default function Index() {
 				</div>
 			</div>
 
-			<motion.div
-				className="page__index__popup"
-				initial="hidden"
-				animate={showPopup ? 'visible' : 'hidden'}
-				variants={{
-					hidden: { opacity: 0, transitionEnd: { display: 'none' } },
-					visible: { opacity: 1, display: 'flex' }
-				}}
-				onClick={() => setShowPopup(false)}
-			>
-				<div className="content" onClick={(event) => event.stopPropagation()}>
-					<button className="btn__close" onClick={() => setShowPopup(false)}>
-						<span className="material-icons">close</span>
-					</button>
-
-					<span className="title">
-						8.8% Purchaser Incentive
-						<br />
-						2.5% Total Deposit
-					</span>
-
-					<p>With tower homes sold out, only a curated selection of Penthouse Residences and Townhomes remain.</p>
-
-					<p>
-						For a limited time, you can secure a coveted home at Tailor with a 8.8% purchaser incentive and 2.5% total
-						deposit.
-					</p>
-
-					<p>
-						Connect with one of our in-house
-						<br /> Marcon Advisors to learn more!
-					</p>
-
-					<button className="btn btn--solid" onClick={() => setActiveOverlayKey(INDEX_OVERLAY_KEY_ENQUIRE)}><span>Register Today</span></button>
-				</div>
-			</motion.div>
+			
 		</>
 	)
 }
