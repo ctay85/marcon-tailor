@@ -5,7 +5,7 @@ import SVG from 'react-inlinesvg'
 import { useSelector } from 'react-redux'
 
 // Utils
-import { indexPanelAnimations } from 'utils'
+import { indexPanelAnimations } from '@/utils'
 
 //
 const soldPlanTypes = ['A', 'A1', 'B', 'C', 'C1', 'D', 'D1', 'E', 'F']

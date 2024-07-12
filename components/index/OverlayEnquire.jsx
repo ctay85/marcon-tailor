@@ -2,8 +2,8 @@
 import { useSelector } from 'react-redux'
 
 //
-import { Overlay } from 'components/index'
-import { RegisterSalesforce, RegisterLasso } from 'components/common'
+import { Overlay } from '@/components/index'
+import { RegisterSalesforce, RegisterLasso } from '@/components/common'
 
 //
 export default function OverlayInteriors(props) {

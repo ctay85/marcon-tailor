@@ -1,5 +1,5 @@
-import { LOCALE_UPDATE } from 'store/constants'
+import { LOCALE_UPDATE } from "@/store/constants";
 
 export function localeUpdate(locale) {
-  return { type : LOCALE_UPDATE, locale }
+  return { type: LOCALE_UPDATE, locale };
 }

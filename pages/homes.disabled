@@ -5,11 +5,11 @@ import { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 
 // Store
-import { uiUpdateHeaderTheme } from 'store/actions'
-import { UI_HEADER_THEME_BLUE } from 'store/constants'
+import { uiUpdateHeaderTheme } from '@/store/actions'
+import { UI_HEADER_THEME_BLUE } from '@/store/constants'
 
 // Components
-import { Seo } from 'components/common'
+import { Seo } from '@/components/common'
 
 // Component
 export default function Homes () {

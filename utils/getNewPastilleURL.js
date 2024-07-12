@@ -1,9 +1,17 @@
-
 // Utils
-import { computePastilles } from 'utils'
+import { computePastilles } from "@/utils";
 
 // getNewPastilleURL
-export default function getNewPastilleURL(bgColor, bgBorderColor, fgColor, fgBorderColor, activeLevel, numHotspot, w, h) {
+export default function getNewPastilleURL(
+  bgColor,
+  bgBorderColor,
+  fgColor,
+  fgBorderColor,
+  activeLevel,
+  numHotspot,
+  w,
+  h
+) {
   return computePastilles(
     w,
     h,
@@ -15,5 +23,5 @@ export default function getNewPastilleURL(bgColor, bgBorderColor, fgColor, fgBor
     numHotspot,
     w,
     h
-  )
+  );
 }
