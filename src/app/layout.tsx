@@ -4,7 +4,9 @@ import "./globals.css";
 
 import { ScrollAnimProvider } from "@/components/ScrollAnimProvider";
 import { ToastProvider } from "@/components/ToastProvider";
- 
+import { SubFooter } from "@/components/SubFooter";
+import { Footer } from "@/components/Footer";
+
 // Font files can be colocated inside of `app`
 const GothamBook = localFont({
   src: [
@@ -45,6 +47,8 @@ export default function RootLayout({
         <ScrollAnimProvider>
           <ToastProvider>
             {children}
+            <SubFooter />
+            <Footer />
           </ToastProvider>
         </ScrollAnimProvider>
       </body>

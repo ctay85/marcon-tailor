@@ -5,23 +5,26 @@ interface TitleProps {
 
 export function Title({ title, description }: TitleProps) {
   return (
-    <div id={title} className="md:flex justify-between items-center py-8 md:mx-4 lg:mx-24 mt-14 sm:mt-6 mb-12 md:mb-28 p-4 md:p-8">
-      <h1
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="300"
-        className="text-primary text-3xl md:text-5xl font-semibold font-americana-bold"
+    <div id={title} className="justify-center px-4 pt-32 pb-7 md:px-8 md:pb-10 lg:px-[10vw] xl:px-[15vw] 2xl:px-[20vw]">
+      <div className="flex flex-col gap-5 items-start md:flex-row md:justify-between">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="300"
+          className="text-primary text-2xl leading-[30px] md:text-3xl font-bold font-americana-bold"
         >
-        {title}
-      </h1>
-      <p
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="600"
-        className="text-primary text-base md:text-2xl max-w-md mt-6 md:mt-0 w-[75%] md:w-full font-americana-bold"
-      >
-        {description}
-      </p>
+          {title}
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          data-aos-delay="600"
+          className="font-americana-bold text-primary text-sm leading-[18px] w-3/4 md:text-balance md:w-1/2 lg:text-base xl:max-w-[400px] xl:w-full lg:leading-[20.8px]"
+        >
+          {description}
+        </p>
+      </div>
+
     </div>
   );
 }

@@ -8,15 +8,15 @@ import { Image } from '../Image'
 export function PenthousesGrid() {
     return (
         <>
-            <div className="hidden sm:flex flex-col w-full gap-4">
-                <div className="flex gap-4">
+            <div className="hidden sm:flex flex-col w-full gap-3">
+                <div className="flex gap-3 w-full">
                     <Image
                         src={penthouses}
                         alt="penthouses image"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="200"
-                        className="w-[35%]"
+                        className="w-[30%]"
                     />
                     <Image
                         src={penthouses2}
@@ -24,17 +24,18 @@ export function PenthousesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="400"
-                        className="w-[65%]"
+                        quality={100}
+                        className="w-[70%]"
                     />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3 w-full">
                     <Image
                         src={penthouses3}
                         alt="penthouses3 image"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="600"
-                        className="w-[35%]"
+                        className="w-[30%]"
                     />
                     <Image
                         src={penthouses4}
@@ -42,7 +43,7 @@ export function PenthousesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="800"
-                        className="w-[35%]"
+                        className="w-[40%]"
                     />
                     <Image
                         src={penthouses5}
@@ -50,7 +51,7 @@ export function PenthousesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="1000"
-                        className="w-[35%]"
+                        className="w-[29%]"
                     />
                 </div>
             </div>
@@ -95,6 +96,7 @@ export function PenthousesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="2000"
+                        className="w-full"
                     />
                 </div>
             </div>

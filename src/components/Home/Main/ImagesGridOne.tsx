@@ -8,30 +8,25 @@ import image6 from "~/public/images/image6.png";
 
 export function ImagesGridOne() {
   return (
-    <div className="w-full mb-12 md:mb-28 p-4 md:p-8">
+    <div className="w-full md:mb-10 px-4 md:px-8 lg:px-[10vw] xl:px-[15vw] 2xl:px-[20vw]">
       <div className="hidden sm:flex gap-4">
         <div className="w-2/3 relative flex flex-col">
           <Image
             src={image1}
-            alt="Image 1"
-            layout="responsive"
-            width={500}
-            height={0}
-            className="object-cover h-full-important"
+            alt="Marcon - Tailor Final Building"
+            className="object-cover size-full"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="300"
+            quality={100}
           />
         </div>
         <div className="w-1/3 flex flex-col gap-4">
           <div className="flex-1 relative">
             <Image
               src={image2}
-              alt="Image 2"
-              layout="responsive"
-              width={250}
-              height={250}
-              className="object-cover"
+              alt="Marcon - Tailor Lobby Entrance"
+              className="object-cover size-full"
               data-aos="fade-up"
               data-aos-duration="1200"
               data-aos-delay="500"
@@ -40,11 +35,8 @@ export function ImagesGridOne() {
           <div className="flex-1 relative">
             <Image
               src={image3}
-              alt="Image 3"
-              layout="responsive"
-              width={250}
-              height={250}
-              className="object-cover"
+              alt="Marcon - Tailor Lobby Entrance (Side View)"
+              className="object-cover size-full"
               data-aos="fade-up"
               data-aos-duration="1200"
               data-aos-delay="300"
@@ -53,11 +45,8 @@ export function ImagesGridOne() {
           <div className="flex-1 relative">
             <Image
               src={image4}
-              alt="Image 4"
-              layout="responsive"
-              width={250}
-              height={250}
-              className="object-cover"
+              alt="Marcon - Tailor Artwork Night"
+              className="object-cover size-full"
               data-aos="fade-up"
               data-aos-duration="1200"
               data-aos-delay="300"
@@ -69,11 +58,8 @@ export function ImagesGridOne() {
         <div className="w-1/3 relative flex flex-col">
           <Image
             src={image5}
-            alt="Image 1"
-            layout="responsive"
-            width={500}
-            height={750}
-            className="object-cover"
+            alt="Marcon - Tailor Outdoor Amenity"
+            className="object-cover size-full"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="300"
@@ -82,14 +68,12 @@ export function ImagesGridOne() {
         <div className="w-2/3 relative flex flex-col">
           <Image
             src={image6}
-            alt="Image 1"
-            layout="responsive"
-            width={500}
-            height={750}
-            className="object-cover h-full-important"
+            alt="Marcon - Tailor Street View"
+            className="object-cover size-full"
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-delay="500"
+            quality={90}
           />
         </div>
       </div>
@@ -100,7 +84,6 @@ export function ImagesGridOne() {
           <Image
             src={image1}
             alt="Image 1"
-            layout="responsive"
             width={500}
             height={750}
             className="object-cover"
@@ -112,7 +95,6 @@ export function ImagesGridOne() {
           <Image
             src={image2}
             alt="Image 2"
-            layout="responsive"
             width={500}
             height={750}
             className="object-cover"
@@ -122,7 +104,6 @@ export function ImagesGridOne() {
           <Image
             src={image3}
             alt="Image 3"
-            layout="responsive"
             width={500}
             height={750}
             className="object-cover"
@@ -134,7 +115,6 @@ export function ImagesGridOne() {
           <Image
             src={image4}
             alt="Image 4"
-            layout="responsive"
             width={500}
             height={100}
             className="object-cover min-h-full "
@@ -144,7 +124,6 @@ export function ImagesGridOne() {
           <Image
             src={image5}
             alt="Image 5"
-            layout="responsive"
             width={500}
             height={0}
             className="object-cover h-full"
@@ -156,7 +135,6 @@ export function ImagesGridOne() {
           <Image
             src={image6}
             alt="Image 6"
-            layout="responsive"
             width={500}
             height={750}
             className="object-cover"

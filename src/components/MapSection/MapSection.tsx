@@ -13,19 +13,19 @@ export function MapSection() {
       data-aos-delay="200"
       className="h-fit w-full flex mb-12"
     >
-      <div className="flex md:hidden h-full w-full flex-col overflow-hidden">
+      <div className="flex lg:hidden h-full w-full flex-col overflow-hidden">
         <Image
           alt="Artboard"
           src={Artboard}
-          className="h-auto w-full transform scale-[1.4] ml-[11%]"
+          className="h-auto w-full"
         />
         <Image
           alt="Artboard Description"
           src={ArtboardDescription}
-          className="h-auto w-full mt-[20%]"
+          className="h-auto w-full"
         />
       </div>
-      <div className="hidden md:flex h-full w-full flex-row overflow-hidden">
+      <div className="hidden lg:flex h-full w-full flex-row overflow-hidden">
         <Image alt="Artboard" src={ArtboardFull} className="h-auto w-full" />
       </div>
     </div>

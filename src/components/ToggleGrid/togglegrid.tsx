@@ -21,9 +21,9 @@ export function Togglegrid() {
     return null;
   };
   return (
-    <div className="flex-col md:flex justify-between items-center sm:mb-28 mt-14 sm:mt-6 mb-20 text-[13px] p-4 md:p-8">
+    <div className="text-[13px] px-4 justify-between items-center flex-col md:flex md:mb-10  md:px-8 lg:px-[10vw] xl:px-[15vw] 2xl:px-[20vw]">
       <div
-        className="w-full gap-20 flex pl-1 md:pl-12"
+        className="w-full gap-20 flex"
       >
         <div
           data-aos="fade-up"
@@ -44,8 +44,8 @@ export function Togglegrid() {
             className="cursor-pointer relative z-10 group"
           >
             <span className="relative z-20 text-primary">TOWNHOMES</span>
-            <span className="absolute left-0 right-0 bottom-0 h-3 w-24 bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.5rem]" />
-            <span className="absolute left-0 right-0 bottom-0 h-3 w-[90px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.5rem]" />
+            <span className={`absolute left-0 right-0 bottom-0 h-3 w-24 bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform group-hover:scale-x-100 origin-left top-[0.5rem] ${option === "townhomes" ? "scale-x-100" : "scale-x-0"}`} />
+            <span className={`absolute left-0 right-0 bottom-0 h-3 w-[90px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform group-hover:scale-x-100 origin-left top-[0.5rem] ${option === "townhomes" ? "scale-x-100" : "scale-x-0"}`} />
           </label>
         </div>
         <div
@@ -67,8 +67,8 @@ export function Togglegrid() {
             className="cursor-pointer relative z-10 group"
           >
             <span className="relative z-20 text-primary">PENTHOUSES</span>
-            <span className="absolute left-0 right-0 bottom-0 h-3 w-24 bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.5rem]" />
-            <span className="absolute left-0 right-0 bottom-0 h-3 w-[90px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.5rem]" />
+            <span className={`absolute left-0 right-0 bottom-0 h-3 w-24 bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform group-hover:scale-x-100 origin-left top-[0.5rem] ${option === "penthouses" ? "scale-x-100" : "scale-x-0"}`} />
+            <span className={`absolute left-0 right-0 bottom-0 h-3 w-[90px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform group-hover:scale-x-100 origin-left top-[0.5rem] ${option === "penthouses" ? "scale-x-100" : "scale-x-0"}`} />
           </label>
         </div>
       </div>
@@ -81,7 +81,8 @@ export function Togglegrid() {
         className="w-full gap-12 md:gap-20 flex pl-1 md:pl-12 mt-10"
       >
         <Link
-          href={"#"}
+          href={"https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-townhomes_collection2.pdf"}
+          target="_blank"
           data-aos="fade-up"
           data-aos-duration="1200"
           data-aos-delay="200"

@@ -38,7 +38,7 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
             Marcon Advisors to learn more!
           </p>
 
-          <Link href="#register-form" onClick={onClosePopup} className="flex items-center uppercase bg-[#00506a] text-white text-[0.7rem] h-[50px] px-16">Register Today</Link>
+          <Link href="/book-appointment" onClick={onClosePopup} className="flex items-center uppercase bg-[#00506a] text-white text-[0.7rem] h-[50px] px-16">Book Appointment</Link>
         </div>
       </div>
     </div>

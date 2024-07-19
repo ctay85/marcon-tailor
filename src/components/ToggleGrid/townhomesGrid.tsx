@@ -14,15 +14,15 @@ import { Image } from '../Image'
 export function TownhomesGrid() {
     return (
         <>
-            <div className=" hidden sm:flex flex-col w-full gap-4">
-                <div className="flex gap-4">
+            <div className=" hidden sm:flex flex-col w-full gap-3">
+                <div className="flex gap-3 w-full">
                     <Image
                         src={townhomes}
                         alt="townhomes image"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="200"
-                        className="w-[60%]"
+                        className="w-[70%]"
                     />
                     <Image
                         src={townhomes2}
@@ -30,17 +30,17 @@ export function TownhomesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="400"
-                        className="w-[40%]"
+                        className="w-[30%]"
                     />
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3 w-full">
                     <Image
-                        src={townhomes3}
+                        src={townhomes5}
                         alt="townhomes3 image"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="600"
-                        className="w-[35%]" 
+                        className="w-[40%]"
                     />
                     <Image
                         src={townhomes4}
@@ -51,12 +51,12 @@ export function TownhomesGrid() {
                         className="w-[35%]"
                     />
                     <Image
-                        src={townhomes5}
+                        src={townhomes3}
                         alt="townhomes5 image"
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="1000"
-                        className="w-[35%]"
+                        className="w-[24%]"
                     />
                 </div>
             </div>
@@ -88,9 +88,9 @@ export function TownhomesGrid() {
                         data-aos="fade-up"
                         data-aos-duration="1200"
                         data-aos-delay="1600"
-                        className="w-[100%]" 
+                        className="w-[100%]"
                     />
-                    </div>
+                </div>
                 <div className="flex gap-1">
                     <Image
                         src={townhomes9}
