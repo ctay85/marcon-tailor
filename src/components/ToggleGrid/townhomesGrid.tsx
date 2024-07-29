@@ -20,7 +20,7 @@ export function TownhomesGrid() {
                         src={townhomes}
                         alt="townhomes image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="200"
                         className="w-[70%]"
                     />
@@ -28,7 +28,7 @@ export function TownhomesGrid() {
                         src={townhomes2}
                         alt="townhomes2 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="400"
                         className="w-[30%]"
                     />
@@ -38,7 +38,7 @@ export function TownhomesGrid() {
                         src={townhomes5}
                         alt="townhomes3 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="600"
                         className="w-[40%]"
                     />
@@ -46,7 +46,7 @@ export function TownhomesGrid() {
                         src={townhomes4}
                         alt="townhomes4 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="800"
                         className="w-[35%]"
                     />
@@ -54,7 +54,7 @@ export function TownhomesGrid() {
                         src={townhomes3}
                         alt="townhomes5 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="1000"
                         className="w-[24%]"
                     />
@@ -68,7 +68,7 @@ export function TownhomesGrid() {
                         src={townhomes6}
                         alt="townhomes6 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="1200"
                         className="w-[100%]"
                     />
@@ -78,7 +78,7 @@ export function TownhomesGrid() {
                         src={townhomes7}
                         alt="townhomes7 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="1400"
                         className="w-[100%]"
                     />
@@ -86,7 +86,7 @@ export function TownhomesGrid() {
                         src={townhomes8}
                         alt="townhomes8 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="1600"
                         className="w-[100%]"
                     />
@@ -96,7 +96,7 @@ export function TownhomesGrid() {
                         src={townhomes9}
                         alt="townhomes9 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="1800"
                         className="w-[100%]"
                     />
@@ -104,7 +104,7 @@ export function TownhomesGrid() {
                         src={townhomes10}
                         alt="townhomes10 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="2000"
                         className="w-[100%]"
                     />

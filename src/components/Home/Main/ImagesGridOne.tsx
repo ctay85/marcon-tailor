@@ -16,8 +16,8 @@ export function ImagesGridOne() {
             alt="Marcon - Tailor Final Building"
             className="object-cover size-full"
             data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="300"
+            data-aos-duration="900"
+            data-aos-delay="225"
             quality={100}
           />
         </div>
@@ -28,7 +28,7 @@ export function ImagesGridOne() {
               alt="Marcon - Tailor Lobby Entrance"
               className="object-cover size-full"
               data-aos="fade-up"
-              data-aos-duration="1200"
+              data-aos-duration="900"
               data-aos-delay="500"
             />
           </div>
@@ -38,8 +38,8 @@ export function ImagesGridOne() {
               alt="Marcon - Tailor Lobby Entrance (Side View)"
               className="object-cover size-full"
               data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
+              data-aos-duration="900"
+              data-aos-delay="225"
             />
           </div>
           <div className="flex-1 relative">
@@ -48,8 +48,8 @@ export function ImagesGridOne() {
               alt="Marcon - Tailor Artwork Night"
               className="object-cover size-full"
               data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay="300"
+              data-aos-duration="900"
+              data-aos-delay="225"
             />
           </div>
         </div>
@@ -61,8 +61,8 @@ export function ImagesGridOne() {
             alt="Marcon - Tailor Outdoor Amenity"
             className="object-cover size-full"
             data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="300"
+            data-aos-duration="900"
+            data-aos-delay="225"
           />
         </div>
         <div className="w-2/3 relative flex flex-col">
@@ -71,7 +71,7 @@ export function ImagesGridOne() {
             alt="Marcon - Tailor Street View"
             className="object-cover size-full"
             data-aos="fade-up"
-            data-aos-duration="1200"
+            data-aos-duration="900"
             data-aos-delay="500"
             quality={90}
           />

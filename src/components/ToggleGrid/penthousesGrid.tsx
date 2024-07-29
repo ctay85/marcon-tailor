@@ -14,7 +14,7 @@ export function PenthousesGrid() {
                         src={penthouses}
                         alt="penthouses image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
+                        data-aos-duration="900"
                         data-aos-delay="200"
                         className="w-[30%]"
                     />
@@ -22,8 +22,8 @@ export function PenthousesGrid() {
                         src={penthouses2}
                         alt="penthouses2 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="400"
+                        data-aos-duration="900"
+                        data-aos-delay="300"
                         quality={100}
                         className="w-[70%]"
                     />
@@ -33,24 +33,24 @@ export function PenthousesGrid() {
                         src={penthouses3}
                         alt="penthouses3 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="600"
+                        data-aos-duration="900"
+                        data-aos-delay="500"
                         className="w-[30%]"
                     />
                     <Image
                         src={penthouses4}
                         alt="penthouses4 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="800"
+                        data-aos-duration="900"
+                        data-aos-delay="600"
                         className="w-[40%]"
                     />
                     <Image
                         src={penthouses5}
                         alt="penthouses5 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="1000"
+                        data-aos-duration="900"
+                        data-aos-delay="700"
                         className="w-[29%]"
                     />
                 </div>
@@ -62,8 +62,8 @@ export function PenthousesGrid() {
                         src={penthouses}
                         alt="penthouses image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="1200"
+                        data-aos-duration="900"
+                        data-aos-delay="900"
                     />
                 </div>
                 <div className="flex gap-1 flex-col">
@@ -71,15 +71,15 @@ export function PenthousesGrid() {
                         src={penthouses2}
                         alt="penthouses2 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="1400"
+                        data-aos-duration="900"
+                        data-aos-delay="1100"
                     />
                     <Image
                         src={penthouses3}
                         alt="penthouses3 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="1600"
+                        data-aos-duration="900"
+                        data-aos-delay="1300"
                     />
                 </div>
                 <div className="flex gap-1 flex-col">
@@ -87,15 +87,15 @@ export function PenthousesGrid() {
                         src={penthouses4}
                         alt="penthouses4 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="1800"
+                        data-aos-duration="900"
+                        data-aos-delay="1500"
                     />
                     <Image
                         src={penthouses5}
                         alt="penthouses5 image"
                         data-aos="fade-up"
-                        data-aos-duration="1200"
-                        data-aos-delay="2000"
+                        data-aos-duration="900"
+                        data-aos-delay="1700"
                         className="w-full"
                     />
                 </div>

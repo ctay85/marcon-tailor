@@ -15,14 +15,14 @@ export default function Home() {
       <Intro />
       <main
         data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="300"
+        data-aos-duration="900"
+        data-aos-delay="225"
       >
         <Header />
         <div
           data-aos="fade-up"
-          data-aos-duration="1200"
-          data-aos-delay="300"
+          data-aos-duration="900"
+          data-aos-delay="225"
         >
           <Title
             title="More Thought."
@@ -39,8 +39,8 @@ export default function Home() {
             src={image7}
             alt="Image 1"
             data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="300"
+            data-aos-duration="900"
+            data-aos-delay="225"
             quality={100}
             className="object-cover size-full"
           />

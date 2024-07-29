@@ -9,7 +9,7 @@ export function MapSection() {
   return (
     <div
       data-aos="fade"
-      data-aos-duration="1200"
+      data-aos-duration="900"
       data-aos-delay="200"
       className="h-fit w-full flex mb-12"
     >

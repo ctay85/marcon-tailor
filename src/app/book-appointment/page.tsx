@@ -18,7 +18,7 @@ export default function BookAppointment() {
       </header>
       <div className="flex flex-col gap-9 py-10 px-4 md:px-8 lg:py-5 lg:px-[10vw] xl:px-[15vw] 2xl:px-[20vw]">
         <div data-aos="fade"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="200"
           className="w-full"
         >

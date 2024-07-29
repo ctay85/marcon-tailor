@@ -44,7 +44,7 @@ export default function BookAppointmentForm() {
   return (
     <div
       data-aos="fade"
-      data-aos-duration="1200"
+      data-aos-duration="900"
       data-aos-delay="200"
       className="w-full h-full box-border"
       id="book-appointment-form"

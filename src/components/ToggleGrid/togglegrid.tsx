@@ -27,7 +27,7 @@ export function Togglegrid() {
       >
         <div
           data-aos="fade-up"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="200"
         >
           <input
@@ -50,7 +50,7 @@ export function Togglegrid() {
         </div>
         <div
           data-aos="fade-up"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="400"
         >
           <input
@@ -81,10 +81,10 @@ export function Togglegrid() {
         className="w-full gap-12 md:gap-20 flex pl-1 md:pl-12 mt-10"
       >
         <Link
-          href={"https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/website/pdfs/tailor-townhomes_collection2.pdf"}
+          href={`/files/tailor-${option}_floorplans.pdf`}
           target="_blank"
           data-aos="fade-up"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="200"
           className="cursor-pointer relative z-10 group"
         >
@@ -93,10 +93,10 @@ export function Togglegrid() {
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[94px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
         </Link>
         <Link
-          href="https://marcon.ca/tailor/pdf/P9_Tailor%20Feature%20Sheet_Aug20.pdf"
+          href={`/files/tailor-${option}_features.pdf`}
           target="_blank"
           data-aos="fade-up"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="400"
           className="cursor-pointer relative z-10 group"
         >
@@ -105,9 +105,10 @@ export function Togglegrid() {
           <span className="absolute left-0 right-0 bottom-0 h-3 w-[74px] bg-[#AABCCE] opacity-30 transition-transform duration-300 ease-in-out transform scale-x-0 group-hover:scale-x-100 origin-left top-[0.6rem]" />
         </Link>
         <Link
-          href={"#"}
+          href={`/files/tailor-${option}_brochure.pdf`}
+          target="_blank"
           data-aos="fade-up"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           data-aos-delay="600"
           className="cursor-pointer relative z-10 group"
         >

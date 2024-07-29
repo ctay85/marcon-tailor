@@ -25,17 +25,15 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
 
         <div className="flex flex-col justify-center items-center text-center gap-8 font-GothamBook text-[17.5px]">
           <span className="font-americana-bold text-[2rem] md:text-[2.6rem] md:mb-4">
-            8.8% Purchaser Incentive
+            Final Release
             <br />
-            2.5% Total Deposit
+            <span className="text-4xl">Townhomes & Penthouses</span>
           </span>
 
-          <p>With tower homes sold out, only a curated selection of Penthouse Residences and Townhomes remain.</p>
-          <p>For a limited time, you can secure a coveted home at Tailor with a 8.8% purchaser incentive and 2.5% total deposit.</p>
+          <p>With the tower homes sold out, only a curated selection of townhomes and penthouses are available.</p>
+          <p>For a limited time, you can secure a coveted home at Tailor with 5% GST included and a 2.5% deposit.</p>
           <p>
-            Connect with one of our in-house
-            <br />
-            Marcon Advisors to learn more!
+            Connect with a Marcon Advisor to learn more.
           </p>
 
           <Link href="/book-appointment" onClick={onClosePopup} className="flex items-center uppercase bg-[#00506a] text-white text-[0.7rem] h-[50px] px-16">Book Appointment</Link>
