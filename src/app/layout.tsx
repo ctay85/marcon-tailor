@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="has-[div[data-intro-visible=true]]:overflow-hidden has-[div[data-popup-open=true]]:overflow-hidden scroll-smooth">
-      <body className={`${GothamBook.className} ${GothamBook.variable} ${Americana.variable} bg-white`}>
+      <body className={`${GothamBook.className} ${GothamBook.variable} ${Americana.variable} bg-tertiary`}>
         <ScrollAnimProvider>
           <ToastProvider>
             {children}

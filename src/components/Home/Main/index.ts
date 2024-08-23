@@ -1,1 +1,2 @@
-export * from "./ImagesGridOne";
+export * from "./HeroImage";
+export * from "./DroneBanner"

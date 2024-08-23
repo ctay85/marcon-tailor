@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className="flex flex-col justify-evenly gap-6 overflow-hidden text-tertiary pb-8 p-4 md:p-8">
+    <div className="flex flex-col justify-evenly gap-6 overflow-hidden bg-white text-tertiary pb-8 p-4 md:p-8">
       <div className="text-2xl font-bold font-americana-bold">
         <Link href={'tel:+16042991001'}>
           <p>604.299.1001</p>

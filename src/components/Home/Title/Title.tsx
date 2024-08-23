@@ -11,7 +11,7 @@ export function Title({ title, description }: TitleProps) {
           data-aos="fade-up"
           data-aos-duration="900"
           data-aos-delay="225"
-          className="text-primary text-2xl leading-[30px] md:text-3xl font-bold font-americana-bold"
+          className="text-white text-2xl leading-[30px] md:text-3xl font-bold font-americana-bold"
         >
           {title}
         </h1>
@@ -19,7 +19,7 @@ export function Title({ title, description }: TitleProps) {
           data-aos="fade-up"
           data-aos-duration="900"
           data-aos-delay="450"
-          className="font-americana-bold text-primary text-sm md:text-base leading-[18px] w-3/4 md:text-balance md:w-1/2 lg:text-base xl:max-w-[400px] xl:w-full lg:leading-[20.8px]"
+          className="font-americana-bold text-white text-sm md:text-base leading-[18px] w-3/4 md:w-1/2 lg:text-base xl:max-w-[437px] xl:w-full lg:leading-[20.8px]"
         >
           {description}
         </p>

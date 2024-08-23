@@ -13,9 +13,17 @@ const config: Config = {
         secondary: "#8FA2B3",
         tertiary: "#041C2A"
       },
+      fontSize: {
+        'xxs': '7px',
+        'tiny': '10px',
+      },
       fontFamily: {
         "GothamBook": "var(--font-GothamBook)",
         "americana-bold": "var(--font-americana-bold)"
+      },
+      spacing: {
+        '21': '5.25rem',
+        '46': '11.75rem'
       },
       keyframes: {
         enterFromRight: {

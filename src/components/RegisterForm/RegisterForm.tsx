@@ -93,13 +93,13 @@ export function RegisterForm() {
 
   return (
     <div
-      data-aos="fade"
+      data-aos="fade-up"
       data-aos-duration="900"
-      data-aos-delay="200"
+      data-aos-delay="300"
       className="w-full box-border py-32 px-4 md:px-8 lg:px-[10vw] xl:px-[15vw] 2xl:px-[20vw]"
       id="register-form"
     >
-      <h1 className="text-primary font-americana-bold text-2xl leading-[30px] lg:text-3xl lg:leading-10 font-bold mb-9 md:mb-10 lg:mb-12 w-1/2 md:w-1/3">
+      <h1 className="text-white font-americana-bold text-2xl leading-[30px] lg:text-3xl lg:leading-10 font-bold mb-9 md:mb-10 lg:mb-12 w-1/2">
         Register for more details.
       </h1>
       <div className="flex w-full">
@@ -110,7 +110,7 @@ export function RegisterForm() {
                 type="text"
                 placeholder="First Name *"
                 {...register("firstName")}
-                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+                className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
               />
               {errors.firstName && (
                 <p className="text-red-500">{errors.firstName.message}</p>
@@ -121,41 +121,43 @@ export function RegisterForm() {
                 type="text"
                 placeholder="Last Name *"
                 {...register("lastName")}
-                className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+                className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
               />
               {errors.lastName && (
                 <p className="text-red-500">{errors.lastName.message}</p>
               )}
             </div>
           </div>
-          <div>
-            <input
-              type="email"
-              placeholder="Email *"
-              {...register("email")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
-            />
-            {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
-          </div>
-          <div>
-            <input
-              type="tel"
-              placeholder="Phone Number *"
-              {...register("phoneNumber")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
-            />
-            {errors.phoneNumber && (
-              <p className="text-red-500">{errors.phoneNumber.message}</p>
-            )}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <input
+                type="email"
+                placeholder="Email *"
+                {...register("email")}
+                className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
+              />
+              {errors.email && (
+                <p className="text-red-500">{errors.email.message}</p>
+              )}
+            </div>
+            <div>
+              <input
+                type="tel"
+                placeholder="Phone Number *"
+                {...register("phoneNumber")}
+                className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
+              />
+              {errors.phoneNumber && (
+                <p className="text-red-500">{errors.phoneNumber.message}</p>
+              )}
+            </div>
           </div>
           <div>
             <input
               type="text"
               placeholder="Postal Code/Zip *"
               {...register("zip")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
             />
             {errors.zip && (
               <p className="text-red-500">{errors.zip.message}</p>
@@ -164,12 +166,12 @@ export function RegisterForm() {
           <div>
             <select
               {...register("homeType")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
             >
-              <option value="" className="text-primary">
+              <option value="" className="text-white bg-tertiary">
                 What type of home are you looking for? *
               </option>
-              {homeTypeOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+              {homeTypeOptions.map((option) => <option className="bg-tertiary text-white" key={option} value={option}>{option}</option>)}
             </select>
             {errors.homeType && (
               <p className="text-red-500">{errors.homeType.message}</p>
@@ -178,12 +180,12 @@ export function RegisterForm() {
           <div>
             <select
               {...register("hearAboutUs")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
             >
-              <option value="" className="text-primary">
+              <option value="" className="text-white bg-tertiary">
                 How did you hear about us? *
               </option>
-              {hearAboutUsOptions.map((option) => <option key={option} value={option}>{option}</option>)}
+              {hearAboutUsOptions.map((option) => <option className="bg-tertiary text-white" key={option} value={option}>{option}</option>)}
             </select>
             {errors.hearAboutUs && (
               <p className="text-red-500">{errors.hearAboutUs.message}</p>
@@ -192,13 +194,13 @@ export function RegisterForm() {
           <div>
             <select
               {...register("isRealtor")}
-              className="mt-1 block w-full py-3 text-primary placeholder-primary border-0 border-b-[1px] border-primary sm:text-sm focus:outline-none focus:border-primary focus:ring-0"
+              className="mt-1 block w-full py-3 text-white bg-transparent placeholder-white border-0 border-b border-white text-xs focus:outline-none focus:border-white focus:ring-0"
             >
-              <option value="" className="text-primary">
+              <option value="" className="text-white bg-tertiary">
                 Are you a realtor? *
               </option>
-              <option value="true">Yes</option>
-              <option value="false">No</option>
+              <option className="bg-tertiary text-white" value="true">Yes</option>
+              <option className="bg-tertiary text-white" value="false">No</option>
             </select>
             {errors.isRealtor && (
               <p className="text-red-500">{errors.isRealtor.message}</p>
@@ -210,11 +212,11 @@ export function RegisterForm() {
                 id="consent"
                 type="checkbox"
                 {...register("consent")}
-                className="h-4 w-4 border-2 text-primary border-gray-300 rounded-full focus:ring-0"
+                className="h-4 w-4 border-2 text-white bg-transparent border-gray-300 rounded-full focus:ring-0"
               />
               <label
                 htmlFor="consent"
-                className="ml-2 block text-sm text-primary"
+                className="ml-2 block text-sm text-white bg-transparent"
               >
                 I would like to receive future e-communications from Marcon.
               </label>
@@ -226,11 +228,11 @@ export function RegisterForm() {
           <button
             type="submit"
             disabled={isLoading}
-            className="font-americana-bold w-full bg-tertiary text-white py-4 px-4 border border-transparent shadow-sm text-xl leading-[20px] font-medium text-center hover:bg-primary"
+            className="font-americana-bold w-full bg-white text-tertiary py-4 px-4 border border-transparent shadow-sm text-xl leading-[20px] font-medium text-center hover:bg-white/80"
           >
             {isLoading ? "Loading..." : "Register"}
           </button>
-          <p className="text-[11px] text-[#AABCCE] mt-2 text-justify">
+          <p className="text-tiny text-[#AABCCE] mt-2 text-justify">
             By clicking the SUBMIT button, you consent to Marcon and their
             current and future affiliates and partners sending you emails with
             promotional messages such as newsletters, announcements, press

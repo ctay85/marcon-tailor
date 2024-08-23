@@ -2,15 +2,31 @@
 
 import { useRef } from "react"
 import Link from "next/link";
-import { X } from "@phosphor-icons/react/dist/ssr";
 
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { cn } from "@/lib/utils";
+
+import PopUpImage1 from "~/public/images/tailor-intro-1.png"
+import PopUpImage2 from "~/public/images/tailor-intro-2.png"
+import { Image } from "../Image";
 
 interface Props {
   isOpen?: boolean;
   onClosePopup?: () => void;
 }
+
+const popupImages = [
+  {
+    image: PopUpImage1,
+    collection: "Penthouse",
+    startingValue: "$1,950,000"
+  },
+  {
+    image: PopUpImage2,
+    collection: "Townhomes",
+    startingValue: "$1,299,900"
+  },
+]
 
 export function Popup({ isOpen = false, onClosePopup }: Props) {
   const popupRef = useRef<HTMLDivElement>(null);
@@ -20,25 +36,63 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
 
   return (
     <div data-popup-open={isOpen} className={cn("fixed top-0 left-0 w-screen h-screen bg-[#041c2ae6] z-50 transition-opacity duration-500 flex justify-center items-center", popupClassname)}>
-      <div ref={popupRef} className="bg-white w-full flex justify-center p-4 pt-12 relative text-[#00506a] md:max-w-[600px] md:py-16 md:px-8">
-        <button className="absolute top-0 -translate-y-5 bg-white p-2 rounded-full shadow-lg" onClick={onClosePopup}><X size={24} color="#00506a" /></button>
-
-        <div className="flex flex-col justify-center items-center text-center gap-8 font-GothamBook text-[17.5px]">
-          <span className="font-americana-bold text-[2rem] md:text-[2.6rem] md:mb-4">
-            Final Release
-            <br />
-            <span className="text-4xl">Townhomes & Penthouses</span>
+      <div ref={popupRef} className="bg-tertiary shadow-sm w-full flex justify-center p-4 pt-12 text-white md:max-w-[600px] md:py-8 md:px-10 border border-secondary/20">
+        <div className="flex flex-col justify-center items-center text-center gap-8 border-t border-white/50">
+          <span className="font-GothamBook text-tiny pt-6 tracking-widest">
+            FINAL RELEASE OF PENTHOUSES & TOWNHOMES
           </span>
-
-          <p>With the tower homes sold out, only a curated selection of townhomes and penthouses are available.</p>
-          <p>For a limited time, you can secure a coveted home at Tailor with 5% GST included and a 2.5% deposit.</p>
-          <p>
-            Connect with a Marcon Advisor to learn more.
-          </p>
-
-          <Link href="/book-appointment" onClick={onClosePopup} className="flex items-center uppercase bg-[#00506a] text-white text-[0.7rem] h-[50px] px-16">Book Appointment</Link>
+          <p className="font-americana-bold text-2xl">Tour Our New Display Homes <br /> By Appointment Only</p>
+          <div className="grid grid-cols-2 gap-3">
+            {popupImages.map((item, index) => (
+              <div key={index} className="flex flex-col gap-6">
+                <Image src={item.image} alt={`${item.collection} interior image`} />
+                <div className="flex flex-col">
+                  <p className="uppercase tracking-widest text-xs">{item.collection} collection</p>
+                  <p className="text-tiny">Starting at {item.startingValue}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-col mt-4">
+            <p className="text-xl tracking-widest uppercase">5% GST included + 2.5% deposit</p>
+            <span className="text-tiny ">Limited time incentive.</span>
+          </div>
+          <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-0 justify-between w-full mt-4">
+            <div className="flex flex-col text-tiny items-start">
+              <p className="tracking-widest">SALES GALLERY</p>
+              <p>
+                Address: 2425 Alpha Ave, Burnaby, BC
+              </p>
+              <p>By Appointment Only</p>
+            </div>
+            <div className="flex gap-5">
+              <div className="flex flex-col text-tiny items-start">
+                <p>Jessica Zhang</p>
+                <Link href={'tel:+17787988245'}>
+                  <p>
+                    T: 778-798-8245
+                  </p>
+                </Link>
+                <Link href={'mailto:jzhang@marcon.ca'}>
+                  <p>E: jzhang@marcon.ca</p>
+                </Link>
+              </div>
+              <div className="flex flex-col text-tiny items-start">
+                <p>Sarah Fuchs</p>
+                <Link href={'tel:+17787921527'}>
+                  <p>
+                    T: 778-792-1527
+                  </p>
+                </Link>
+                <Link href={'mailto:sfuchs@marcon.ca'}>
+                  <p>E: sfuchs@marcon.ca</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <button type="button" onClick={onClosePopup} className="flex items-center uppercase bg-secondary/20 text-white text-tiny mt-1 px-12 py-4 tracking-widest hover:bg-secondary/50">Close</button>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

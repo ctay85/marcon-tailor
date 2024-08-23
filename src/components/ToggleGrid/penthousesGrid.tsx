@@ -1,104 +1,104 @@
-import penthouses from '~/public/images/penthouses-dark.png'
-import penthouses2 from '~/public/images/penthouses-dark-2.png'
-import penthouses3 from '~/public/images/penthouses-dark-3.png'
-import penthouses4 from '~/public/images/penthouses-dark-4.png'
-import penthouses5 from '~/public/images/penthouses-dark-5.png'
+import penthouses from '~/public/images/penthouses/penthouses-1.jpg'
+import penthouses2 from '~/public/images/penthouses/penthouses-2.jpg'
+import penthouses3 from '~/public/images/penthouses/penthouses-3.png'
+import penthouses4 from '~/public/images/penthouses/penthouses-4.jpg'
+import penthouses5 from '~/public/images/penthouses/penthouses-5.jpg'
+import penthouses6 from '~/public/images/penthouses/penthouses-6.jpg'
+import penthouses7 from '~/public/images/penthouses/penthouses-7.jpg'
+import penthouses8 from '~/public/images/penthouses/penthouses-8.jpg'
+import penthouses9 from '~/public/images/penthouses/penthouses-9.jpg'
+
 import { Image } from '../Image'
 
 export function PenthousesGrid() {
     return (
         <>
-            <div className="hidden sm:flex flex-col w-full gap-3">
-                <div className="flex gap-3 w-full">
-                    <Image
-                        src={penthouses}
-                        alt="penthouses image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="200"
-                        className="w-[30%]"
-                    />
-                    <Image
-                        src={penthouses2}
-                        alt="penthouses2 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="300"
-                        quality={100}
-                        className="w-[70%]"
-                    />
-                </div>
-                <div className="flex gap-3 w-full">
-                    <Image
-                        src={penthouses3}
-                        alt="penthouses3 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="500"
-                        className="w-[30%]"
-                    />
-                    <Image
-                        src={penthouses4}
-                        alt="penthouses4 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="600"
-                        className="w-[40%]"
-                    />
-                    <Image
-                        src={penthouses5}
-                        alt="penthouses5 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="700"
-                        className="w-[29%]"
-                    />
-                </div>
+            <div className="mb-10">
+                <p className="text-white text-sm">Featuring wrap-around balconies and floor-to-ceiling windows, the penthouse homes at <br className="hidden md:inline-flex" /> Tailor offer sweeping views of Brentwood´s skyline and the North Shore mountains.
+                </p>
             </div>
-
-            <div className="sm:hidden flex flex-col gap-1">
-                <div className="flex gap-1 flex-col">
-                    <Image
-                        src={penthouses}
-                        alt="penthouses image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="900"
-                    />
-                </div>
-                <div className="flex gap-1 flex-col">
-                    <Image
-                        src={penthouses2}
-                        alt="penthouses2 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="1100"
-                    />
-                    <Image
-                        src={penthouses3}
-                        alt="penthouses3 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="1300"
-                    />
-                </div>
-                <div className="flex gap-1 flex-col">
-                    <Image
-                        src={penthouses4}
-                        alt="penthouses4 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="1500"
-                    />
-                    <Image
-                        src={penthouses5}
-                        alt="penthouses5 image"
-                        data-aos="fade-up"
-                        data-aos-duration="900"
-                        data-aos-delay="1700"
-                        className="w-full"
-                    />
-                </div>
+            <div className="grid grid-cols-4 grid-rows-5 gap-3">
+                <video autoPlay={true}
+                    muted={true}
+                    playsInline
+                    className="object-cover size-full col-span-4 row-span-2"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="300">
+                    <source src={"/videos/Tailor_00011.mp4"} type="video/mp4" />
+                </video>
+                <Image
+                    src={penthouses}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="400"
+                    className="row-start-3 size-full"
+                />
+                <Image
+                    src={penthouses2}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="500"
+                    className="row-start-3 size-full"
+                />
+                <Image
+                    src={penthouses3}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="600"
+                    className="row-start-3 col-span-2 size-full"
+                />
+                <Image
+                    src={penthouses4}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="600"
+                    className="row-start-4 col-span-2 size-full"
+                />
+                <Image
+                    src={penthouses5}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="700"
+                    className="row-start-4 size-full"
+                />
+                <Image
+                    src={penthouses6}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="800"
+                    className="row-start-4 size-full"
+                />
+                <Image
+                    src={penthouses7}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="600"
+                    className="row-start-5 col-span-2 size-full"
+                />
+                <Image
+                    src={penthouses8}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="700"
+                    className="row-start-5 size-full"
+                />
+                <Image
+                    src={penthouses9}
+                    alt="penthouses image"
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="800"
+                    className="row-start-5 size-full"
+                />
             </div>
         </>
     )

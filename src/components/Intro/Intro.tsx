@@ -31,7 +31,7 @@ export function Intro() {
     });
 
     anim?.addEventListener('complete', hideIntro);
-    
+
     return () => {
       anim?.removeEventListener('complete', hideIntro);
       anim.destroy();
@@ -40,7 +40,7 @@ export function Intro() {
 
   return (
     <>
-      <section className={cn("fixed top-0 left-0 w-screen h-screen z-50 flex justify-center items-center transition-opacity duration-500 bg-[#041C2A]", sectionClassname)}>
+      <section className={cn("fixed top-0 left-0 w-screen h-screen z-50 flex justify-center items-center transition-opacity duration-500 bg-tertiary", sectionClassname)}>
         <div ref={animContainerRef} data-intro-visible={isIntroVisible} />
       </section>
       <Popup isOpen={isPopupOpen} onClosePopup={() => setIsPopupOpen(false)} />

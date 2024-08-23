@@ -10,17 +10,17 @@ import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 
 const links = [
   { text: "Design", url: "#More Thought.", size: 60, mobile: 44 },
-  { text: "Public Art", url: "#More Function.", size: 90, mobile: 66 },
+  { text: "Amenities", url: "#More Quality.", size: 90, mobile: 66 },
   { text: "Homes", url: "#More Home.", size: 57, mobile: 41 },
-  { text: "Brentwood", url: "#Celebrate More.", size: 102, mobile: 76 },
+  { text: "Downloads", url: "#Downloads.", size: 102, mobile: 76 },
   { text: "Register", url: "#register-form", size: 76, mobile: 56 },
   // { text: "Interiors", url: "", size: 82, mobile: 0 },
 ];
 
 export function Header() {
   return (
-    <NavigationMenu.Root className="sticky z-50 top-0 bg-white/90 shadow-sm">
-      <NavigationMenu.List className="flex relative justify-between items-center p-4 md:p-8 lg:px-14 xl:px-16">
+    <NavigationMenu.Root className="sticky z-50 top-0 bg-tertiary">
+      <NavigationMenu.List className="flex relative justify-between items-center p-4 md:px-8 md:py-5 lg:px-14 xl:px-16">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger
             onPointerMove={(event) => event.preventDefault()}
@@ -28,15 +28,15 @@ export function Header() {
             className="flex items-center justify-center w-10 h-6">
             <Image src={MenuIcon} alt="Menu Navbar" />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="absolute pt-7 px-3 bg-white/90 data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight">
+          <NavigationMenu.Content className="absolute pt-7 px-3 bg-tertiary data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight">
             {links.map((link, index) => (
               <div
                 key={index}
-                className={`relative group text-[10px] md:text-sm`}
+                className={`relative group text-tiny md:text-sm`}
               >
                 <Link
                   href={link.url}
-                  className="text-primary uppercase block mb-4 relative z-10"
+                  className="text-white uppercase block mb-4 relative z-10"
                 >
                   <span className="relative z-20">{link.text}</span>
                   <span
@@ -66,13 +66,13 @@ export function Header() {
           <Image
             src="/images/TailorLogo.svg"
             alt="Tailor Logo"
-            width={0}
-            height={30.78}
-            className="py-4 w-28 md:w-[188px]"
+            width={104}
+            height={26.4}
+            className="md:w-36 md:h-9"
           />
         </NavigationMenu.Item>
-        <NavigationMenu.Link href="/book-appointment" className="pr-3 pl-3 h-[34px] w-[100px] md:w-auto md:h-[50px] text-center flex justify-center items-center bg-secondary font-thin text-white uppercase text-[8px] p-2 md:text-[13px] sm:flex-row tracking-widest">
-          <span>Book Appointment</span>
+        <NavigationMenu.Link target="_blank" href="https://calendly.com/tailorbymarcon" className="w-21 h-9 p-3 bg-secondary bg-opacity-20 flex text-center items-center md:h-10 md:w-auto md:px-3">
+          <span className="font-normal uppercase text-white text-xxs md:text-tiny">Book <span className="hidden md:inline-flex">an</span> Appointment</span>
         </NavigationMenu.Link>
       </NavigationMenu.List>
     </NavigationMenu.Root>
