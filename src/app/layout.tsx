@@ -2,11 +2,6 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
 
-import { ScrollAnimProvider } from "@/components/ScrollAnimProvider";
-import { ToastProvider } from "@/components/ToastProvider";
-import { SubFooter } from "@/components/SubFooter";
-import { Footer } from "@/components/Footer";
-
 // Font files can be colocated inside of `app`
 const GothamBook = localFont({
   src: [
@@ -44,13 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="has-[div[data-intro-visible=true]]:overflow-hidden has-[div[data-popup-open=true]]:overflow-hidden scroll-smooth">
       <body className={`${GothamBook.className} ${GothamBook.variable} ${Americana.variable} bg-tertiary`}>
-        <ScrollAnimProvider>
-          <ToastProvider>
-            {children}
-            <SubFooter />
-            <Footer />
-          </ToastProvider>
-        </ScrollAnimProvider>
+        {children}
       </body>
     </html>
   );

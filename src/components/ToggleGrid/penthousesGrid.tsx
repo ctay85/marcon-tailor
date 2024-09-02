@@ -5,8 +5,8 @@ import penthouses4 from '~/public/images/penthouses/penthouses-4.jpg'
 import penthouses5 from '~/public/images/penthouses/penthouses-5.jpg'
 import penthouses6 from '~/public/images/penthouses/penthouses-6.jpg'
 import penthouses7 from '~/public/images/penthouses/penthouses-7.jpg'
-import penthouses8 from '~/public/images/penthouses/penthouses-8.jpg'
-import penthouses9 from '~/public/images/penthouses/penthouses-9.jpg'
+import penthouses8 from '~/public/images/penthouses/penthouses-8.png'
+import penthouses9 from '~/public/images/penthouses/penthouses-9.png'
 
 import { Image } from '../Image'
 
@@ -34,6 +34,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="400"
                     className="row-start-3 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses2}
@@ -42,6 +43,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="500"
                     className="row-start-3 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses3}
@@ -50,6 +52,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="600"
                     className="row-start-3 col-span-2 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses4}
@@ -58,6 +61,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="600"
                     className="row-start-4 col-span-2 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses5}
@@ -66,6 +70,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="700"
                     className="row-start-4 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses6}
@@ -74,6 +79,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="800"
                     className="row-start-4 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses7}
@@ -82,6 +88,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="600"
                     className="row-start-5 col-span-2 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses8}
@@ -90,6 +97,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="700"
                     className="row-start-5 size-full"
+                    unoptimized
                 />
                 <Image
                     src={penthouses9}
@@ -98,6 +106,7 @@ export function PenthousesGrid() {
                     data-aos-duration="900"
                     data-aos-delay="800"
                     className="row-start-5 size-full"
+                    unoptimized
                 />
             </div>
         </>

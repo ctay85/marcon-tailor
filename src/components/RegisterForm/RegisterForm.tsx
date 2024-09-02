@@ -2,17 +2,15 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { z } from "zod";
 
-export const homeTypeOptions = ["Studio", "Jr. 1 Bedroom", "One Bedroom", "Two Bedroom", "Townhome"] as const;
+export const homeTypeOptions = ["Penthouse", "Townhome"] as const;
 export const homeTypeValues: Record<typeof homeTypeOptions[number], string> = {
-  "Studio": "340498",
-  "Jr. 1 Bedroom": "340500",
-  "One Bedroom": "281558",
-  "Two Bedroom": "281559",
+  "Penthouse": "378427",
   "Townhome": "281562",
 }
 
@@ -55,6 +53,7 @@ type RegisterForm = z.infer<typeof registerFormSchema>;
 
 export function RegisterForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter()
 
   const {
     handleSubmit,
@@ -88,7 +87,8 @@ export function RegisterForm() {
     axios.post("/api/register", formattedData)
       .then(() => toast.success("Registered successfully"))
       .catch(() => toast.error("Something went wrong during register"))
-      .finally(() => setIsLoading(false));
+      .finally(() => setIsLoading(false))
+      .then(() => router.push('/thank-you'));
   }
 
   return (
@@ -240,7 +240,7 @@ export function RegisterForm() {
             services; (2) receiving calls on behalf of Marcon to discuss
             products and services; and (3) the collection, use and disclosure of
             the personal information you have provided, by or on behalf of the
-            members of the Rennie Marketing, for the above purposes, in
+            members of Marcon, for the above purposes, in
             accordance with Marcon’s Privacy Policy. You may withdraw your
             consent at any time.
           </p>

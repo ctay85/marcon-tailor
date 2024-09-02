@@ -1,6 +1,6 @@
-import TailorBrochure from "~/public/images/Download/tailor-brochures.png"
-import TailorFloorplans from "~/public/images/Download/tailor-floorplans.png"
-import TailorFeatures from "~/public/images/Download/tailor-features.png"
+import TailorBrochure from "~/public/images/Download/Townhome_Brochure.png"
+import TailorFloorplans from "~/public/images/Download/Townhome_Floorplans.png"
+import TailorFeatures from "~/public/images/Download/Townhome_Features.png"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -26,7 +26,7 @@ const downloadItems = [
 ]
 
 export default function DownloadTownhomes() {
-  
+
   return (
     <div id="Downloads." className="pt-32 pb-7 md:pb-10 w-full flex flex-col">
       <h1

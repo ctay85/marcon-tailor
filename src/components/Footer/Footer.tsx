@@ -12,18 +12,17 @@ export function Footer() {
         </Link>
       </div>
       <p className="text-xs text-[#616161] text-justify">
-        This is currently not an offering for sale. Such an offering can only be
-        made by way of a disclosure statement issuant pursuant to the Real
-        Estate Development Marketing Act. The material provided herein is for
-        general informational purposes only and is not intended to depict
-        as-built construction designs. The Developer reserves the right in its
-        sole discretion to make modifications or changes to building design,
-        floor plans, project designs, specifications, finishes, features, and
-        dimensions, without prior notice. Renderings are artistic concepts only.
-        Square footages are approximate and have been calculated from
-        architectural drawings. Actual final dimensions following completion of
-        construction may vary from those set out herein. E.&O.E. Marcon Alpha
-        (GP) Ltd.
+        The material provided herein is for general informational purposes only and
+        is not intended to depict as-built construction designs or finishes.
+        The Developer reserves the right in its sole discretion to make modifications
+        or changes to building design, floor plans, project designs, specifications,
+        finishes, features, incentives and dimensions, without prior notice or compensation
+        to any person. Renderings and any depicted views are artistic concepts only.
+        Square footages are approximate and have been calculated from architectural
+        drawings. Actual final dimensions following completion of construction may vary
+        from those set out herein. No information or material on this website is to be
+        considered to be an offer to sell or rent a home, even if a price for a product
+        or service may be indicated. E.&O.E.
       </p>
 
       <div className="md:flex md:gap-6 text-xs">

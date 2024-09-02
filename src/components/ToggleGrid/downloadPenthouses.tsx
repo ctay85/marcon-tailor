@@ -1,6 +1,6 @@
-import TailorBrochure from "~/public/images/Download/tailor-penthouses-brochure.png"
-import TailorFloorplans from "~/public/images/Download/tailor-penthouses-floorplans.png"
-import TailorFeatures from "~/public/images/Download/tailor-features.png"
+import TailorBrochure from "~/public/images/Download/Penthouse_Brochure.png"
+import TailorFloorplans from "~/public/images/Download/Penthouse_Floorplans.png"
+import TailorFeatures from "~/public/images/Download/Penthouse_Features.png"
 import Image from "next/image"
 import Link from "next/link"
 
