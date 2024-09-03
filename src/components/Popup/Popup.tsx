@@ -23,7 +23,7 @@ const popupImages = [
   },
   {
     image: PopUpImage2,
-    collection: "Townhomes",
+    collection: "Townhome",
     startingValue: "$1,299,000"
   },
 ]
