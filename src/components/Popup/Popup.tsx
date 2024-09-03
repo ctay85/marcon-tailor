@@ -24,7 +24,7 @@ const popupImages = [
   {
     image: PopUpImage2,
     collection: "Townhomes",
-    startingValue: "$1,299,900"
+    startingValue: "$1,299,000"
   },
 ]
 
@@ -55,13 +55,13 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
           </div>
           <div className="flex flex-col mt-2 md:mt-4">
             <p className="text-base tracking-widest uppercase md:text-xl">5% GST included + 2.5% deposit</p>
-            <span className="text-tiny ">Limited time incentive.</span>
+            
           </div>
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-0 justify-between w-full mt-4">
             <div className="flex flex-col text-tiny items-start">
               <p className="tracking-widest">SALES GALLERY</p>
               <p>
-                Address: 2425 Alpha Ave, Burnaby, BC
+                2425 Alpha Ave, Burnaby, BC
               </p>
               <p>By Appointment Only</p>
             </div>
@@ -70,7 +70,7 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
                 <p>Jessica Zhang</p>
                 <Link href={'tel:+17787988245'}>
                   <p>
-                    T: 778-798-8245
+                    T: 778.798.8245
                   </p>
                 </Link>
                 <Link href={'mailto:jzhang@marcon.ca'}>
@@ -81,7 +81,7 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
                 <p>Sarah Fuchs</p>
                 <Link href={'tel:+17787921527'}>
                   <p>
-                    T: 778-792-1527
+                    T: 778.792.1527
                   </p>
                 </Link>
                 <Link href={'mailto:sfuchs@marcon.ca'}>
