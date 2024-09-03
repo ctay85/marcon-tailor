@@ -71,6 +71,7 @@ export function RegisterForm() {
       RatingID: formData.isRealtor ? "31618" : "15627445",
       SignupThankyouLink: "https://marcon.ca/tailor/thank-you",
       SourceTypeID: "20327",
+      ThankYouEmailTemplateId: "1058061",
 
       FirstName: formData.firstName,
       LastName: formData.lastName,
