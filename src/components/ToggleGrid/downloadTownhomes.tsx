@@ -8,7 +8,7 @@ const downloadItems = [
   {
     title: "Brochure",
     image: TailorBrochure,
-    link: "https://cdnmarcon.sfo3.cdn.digitaloceanspaces.com/tailor/emails/36-townhomes-and-penthouses-thank-you/Tailor_PenthouseInformationPackage_FINALP.pdf",
+    link: "/files/Tailor_TownhomeBooklet_2024-08-30.pdf",
     delay: 200,
   },
   {
