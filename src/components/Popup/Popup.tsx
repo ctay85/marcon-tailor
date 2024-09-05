@@ -89,7 +89,6 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
             <p className="text-sm tracking-widest uppercase md:text-xl">
               5% GST included + 2.5% deposit
             </p>
-            <span className="text-tiny ">Limited time incentive.</span>
           </div>
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-0 justify-between w-full mt-4">
             <div className="flex flex-col text-tiny items-start">
