@@ -24,7 +24,7 @@ const popupImages = [
   {
     image: PopUpImage2,
     collection: "Townhomes",
-    startingValue: "$1,299,000",
+    startingValue: "$1,299,900",
   },
 ];
 
@@ -89,18 +89,19 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
             <p className="text-sm tracking-widest uppercase md:text-xl">
               5% GST included + 2.5% deposit
             </p>
+            <span className="text-tiny ">Limited time incentive.</span>
           </div>
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-0 justify-between w-full mt-4">
             <div className="flex flex-col text-tiny items-start">
               <p className="tracking-widest">SALES GALLERY</p>
-              <p>2425 Alpha Ave, Burnaby, BC</p>
+              <p>Address: 2425 Alpha Ave, Burnaby, BC</p>
               <p>By Appointment Only</p>
             </div>
             <div className="flex gap-5">
               <div className="flex flex-col text-tiny items-start">
                 <p>Jessica Zhang</p>
                 <Link href={"tel:+17787988245"}>
-                  <p>T: 778.798.8245</p>
+                  <p>T: 778-798-8245</p>
                 </Link>
                 <Link href={"mailto:jzhang@marcon.ca"}>
                   <p>E: jzhang@marcon.ca</p>
@@ -109,7 +110,7 @@ export function Popup({ isOpen = false, onClosePopup }: Props) {
               <div className="flex flex-col text-tiny items-start">
                 <p>Sarah Fuchs</p>
                 <Link href={"tel:+17787921527"}>
-                  <p>T: 778.792.1527</p>
+                  <p>T: 778-792-1527</p>
                 </Link>
                 <Link href={"mailto:sfuchs@marcon.ca"}>
                   <p>E: sfuchs@marcon.ca</p>

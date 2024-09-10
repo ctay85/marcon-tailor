@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
+import { GoogleTagManager } from '@next/third-parties/google';
 import "./globals.css";
 
 // Font files can be colocated inside of `app`
@@ -38,6 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="has-[div[data-intro-visible=true]]:overflow-hidden has-[div[data-popup-open=true]]:overflow-hidden scroll-smooth">
+      <GoogleTagManager gtmId="GTM-NXGTHLD" />
       <body className={`${GothamBook.className} ${GothamBook.variable} ${Americana.variable} bg-tertiary`}>
         {children}
       </body>
