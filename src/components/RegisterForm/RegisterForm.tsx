@@ -1,6 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { sendGTMEvent } from "@next/third-parties/google";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -85,7 +86,10 @@ export function RegisterForm() {
 
     setIsLoading(true);
     axios.post("/api/register", formattedData)
-      .then(() => toast.success("Registered successfully"))
+      .then(() => {
+        toast.success("Registered successfully");
+        sendGTMEvent({ event: 'tailor_register_formSubmission' });
+      })
       .catch(() => toast.error("Something went wrong during register"))
       .finally(() => setIsLoading(false))
       .then(() => router.push('/thank-you'));
