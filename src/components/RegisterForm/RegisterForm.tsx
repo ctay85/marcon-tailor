@@ -88,7 +88,7 @@ export function RegisterForm() {
     axios.post("/api/register", formattedData)
       .then(() => {
         toast.success("Registered successfully");
-        sendGTMEvent({ event: 'tailor_register_formSubmission' });
+        sendGTMEvent({ event: 'formSubmissionSuccess', formID: 'tailor-register' });
       })
       .catch(() => toast.error("Something went wrong during register"))
       .finally(() => setIsLoading(false))
