@@ -70,7 +70,7 @@ export function RegisterForm() {
       ClientID: "374",
       ProjectID: "10032",
       RatingID: formData.isRealtor ? "31618" : "15627445",
-      SignupThankyouLink: "https://marcon.ca/tailor/thank-you",
+      SignupThankyouLink: "https://tailor.marcon.ca/thank-you",
       SourceTypeID: "20327",
 
       FirstName: formData.firstName,

@@ -24,7 +24,7 @@ export function SubFooter() {
             <div className="flex flex-col pt-6 lg:pt-14 gap-2 lg:gap-5 text-base-white">
               <Image src={BuildingForLife} alt="Building for life." className="w-48 md:w-52" />
               <span className="text-base text-white">
-                marcon.ca/tailor
+                tailor.marcon.ca
               </span>
             </div>
           </div>
